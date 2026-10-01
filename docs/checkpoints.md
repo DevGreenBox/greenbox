@@ -481,3 +481,4 @@
   - Корень репозитория — папка `projects/new/greenbox` (свой git внутри монорепо `novi`, в `novi` исключён через `.git/info/exclude`): весь `novi` не пушится — в нём проекты других клиентов.
   - В репозитории сайт, документы, исходники медиа и прототип вариантов; не входят сборки, зависимости, логи, `.env` и ~135 МБ скриншотов и отчётов Lighthouse из `.impeccable/review` (остаются локально, корневой `.gitignore`).
   - Создан помощником окружения `publish` (приватный `DevGreenBox/<имя папки>`). Для Vercel Root Directory — `site`.
+- **Копия в личном GitHub** (заказчик 01.10.2026: «запушь на мой гитхаб репо»): `godmodde/greenbox`, приватный — remote `personal`. Основной — `origin` (`DevGreenBox/greenbox`), `main` отслеживает его; личную копию обновлять `git push personal main`.
