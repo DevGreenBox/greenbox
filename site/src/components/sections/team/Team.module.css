@@ -1,0 +1,17 @@
+/* Проявка портретов (фазы — motion/Reveal.tsx): карточка вошла в экран — снимок из ч/б и мягкого расфокуса
+   приходит в цвет и резкость и чуть отъезжает назад, как камера, которая навелась на людей. Вторая
+   карточка — с задержкой по номеру в пачке (--i). Карточка режет края (overflow: hidden), раскладка
+   не двигается. Без JS и при reduced-motion — сразу цветной снимок. */
+@media (prefers-reduced-motion: no-preference) {
+  :global(.reveal-on) [data-reveal]:not([data-revealed]) .photo {
+    filter: grayscale(1) blur(6px);
+    scale: 1.06;
+  }
+
+  :global(.reveal-on) [data-revealed] .photo {
+    transition:
+      filter var(--dur-draw) var(--ease-out),
+      scale calc(var(--dur-draw) * 1.3) var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 0.2s);
+  }
+}

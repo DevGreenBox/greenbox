@@ -1,0 +1,660 @@
+{
+  "390": {
+    "etag": "\"3d40zc0ulf5hxl\"",
+    "W": 390,
+    "H": 844,
+    "theme": "light",
+    "fonts": [
+      {
+        "family": "onest",
+        "weight": "400 700",
+        "style": "normal",
+        "status": "loaded",
+        "unicodeRange": "U+0-10FFFF"
+      },
+      {
+        "family": "onest Fallback",
+        "weight": "normal",
+        "style": "normal",
+        "status": "unloaded",
+        "unicodeRange": "U+0-10FFFF"
+      },
+      {
+        "family": "unbounded",
+        "weight": "400 500",
+        "style": "normal",
+        "status": "loaded",
+        "unicodeRange": "U+0-10FFFF"
+      },
+      {
+        "family": "unbounded Fallback",
+        "weight": "normal",
+        "style": "normal",
+        "status": "unloaded",
+        "unicodeRange": "U+0-10FFFF"
+      },
+      {
+        "family": "mono",
+        "weight": "400",
+        "style": "normal",
+        "status": "loaded",
+        "unicodeRange": "U+0-10FFFF"
+      }
+    ],
+    "faceRules": [
+      {
+        "family": "onest",
+        "src": "url(\"../media/Onest_var-s.p.07wn6-amdtlx_.woff2\") format(\"woff2\")",
+        "sizeAdjust": ""
+      },
+      {
+        "family": "\"onest Fallback\"",
+        "src": "local(\"Arial\")",
+        "sizeAdjust": "106.1%"
+      },
+      {
+        "family": "unbounded",
+        "src": "url(\"../media/Unbounded_var-s.p.2zdw5bud2uobx.woff2\") format(\"woff2\")",
+        "sizeAdjust": ""
+      },
+      {
+        "family": "\"unbounded Fallback\"",
+        "src": "local(\"Arial\")",
+        "sizeAdjust": "136.07%"
+      },
+      {
+        "family": "mono",
+        "src": "url(\"../media/JetBrainsMono_400_latin.0ni2-qfwxnnia.woff2\") format(\"woff2\")",
+        "sizeAdjust": ""
+      }
+    ],
+    "cssHits": [
+      {
+        "hits": [
+          "Roboto",
+          "Helvetica",
+          "Arial"
+        ],
+        "rule": "html, :host { text-size-adjust: 100%; tab-size: 4; line-height: 1.5; font-family: var(--default-font-family,-apple-system, BlinkMacSystemFont, \"Segoe UI\", Robot",
+        "sheet": "1g9nq5uaanlab.css"
+      },
+      {
+        "hits": [
+          "Roboto",
+          "Helvetica",
+          "Arial"
+        ],
+        "rule": "@layer base {\n  *, ::after, ::before, ::backdrop { box-sizing: border-box; border: 0px solid; margin: 0px; padding: 0px; }\n  ::file-selector-button { box-sizing",
+        "sheet": "1g9nq5uaanlab.css"
+      }
+    ],
+    "fontResources": [
+      "Onest_var-s.p.07wn6-amdtlx_.woff2",
+      "Unbounded_var-s.p.2zdw5bud2uobx.woff2",
+      "JetBrainsMono_400_latin.0ni2-qfwxnnia.woff2"
+    ],
+    "stacks": {
+      "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif": 4671,
+      "unbounded, \"unbounded Fallback\", sans-serif, onest, \"onest Fallback\", sans-serif, sans-serif": 963,
+      "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace": 81
+    },
+    "logos": [
+      {
+        "rect": [
+          20,
+          23,
+          173.46875,
+          41
+        ],
+        "h": 18,
+        "w": 153.46875
+      }
+    ],
+    "textPx": 79990,
+    "h1": {
+      "box": {
+        "x": 20,
+        "y": 104,
+        "w": 288,
+        "h": 124.8
+      },
+      "fontSize": "40px",
+      "lineHeight": "41.6px",
+      "letterSpacing": "-1.2px",
+      "maxWidth": "288px",
+      "family": "unbounded, \"unbounded Fallback\", sans-serif, onest, \"onest Fallback\", sans-serif, sans-serif",
+      "weight": "500",
+      "lines": [
+        {
+          "text": "",
+          "width": null
+        },
+        {
+          "text": "Интернет-",
+          "width": 241.6
+        },
+        {
+          "text": "магазины",
+          "width": 244.1
+        },
+        {
+          "text": "под ключ",
+          "width": 228.2
+        }
+      ]
+    },
+    "lead": {
+      "box": {
+        "x": 20,
+        "y": 248.8,
+        "w": 350,
+        "h": 105.4
+      },
+      "fontSize": "17px",
+      "lineHeight": "26.35px",
+      "letterSpacing": "normal",
+      "maxWidth": "510px",
+      "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+      "weight": "400",
+      "lines": [
+        {
+          "text": "Пишем магазин под ваш бизнес — без",
+          "width": 312.3
+        },
+        {
+          "text": "шаблонов и конструкторов —",
+          "width": 239.8
+        },
+        {
+          "text": "на собственной платформе управления.",
+          "width": 329.1
+        },
+        {
+          "text": "Запуск в среднем за 2–⁠2,5 недели.",
+          "width": 285.5
+        }
+      ]
+    },
+    "rects": {
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 1071.4,
+        "bottom": 1071.4
+      },
+      "textColumn": {
+        "x": 20,
+        "y": 104,
+        "w": 350,
+        "h": 406.2,
+        "bottom": 510.2
+      },
+      "cta": {
+        "x": 20,
+        "y": 386.2,
+        "w": 350,
+        "h": 124,
+        "bottom": 510.2
+      },
+      "demo": {
+        "x": 20,
+        "y": 566.2,
+        "w": 350,
+        "h": 433.2,
+        "bottom": 999.3
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 65,
+        "bottom": 65
+      }
+    },
+    "ctaFonts": [
+      {
+        "text": "Обсудить проект",
+        "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+        "weight": "600",
+        "size": "16px",
+        "w": 350
+      },
+      {
+        "text": "Рассказать о проекте",
+        "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+        "weight": "600",
+        "size": "16px",
+        "w": 350
+      }
+    ],
+    "htmlFont": {
+      "htmlComputed": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+      "bodyComputed": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+      "rules": [
+        "html, :host { font-family: var(--default-font-family,-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\") }"
+      ],
+      "defaultFontFamilyVar": "\"onest\", \"onest Fallback\", sans-serif, system-ui, sans-serif"
+    },
+    "familyArea": {
+      "table": [
+        {
+          "family": "Onest",
+          "px2": 41150,
+          "pctViewport": 12.5,
+          "pctOfText": 47.9
+        },
+        {
+          "family": "Unbounded",
+          "px2": 35694,
+          "pctViewport": 10.84,
+          "pctOfText": 41.6
+        },
+        {
+          "family": "JetBrains Mono (под маской фона)",
+          "px2": 6239,
+          "pctViewport": 1.9,
+          "pctOfText": 7.3
+        },
+        {
+          "family": "Логотип SVG: кривые Inter 800 (bbox)",
+          "px2": 2762,
+          "pctViewport": 0.84,
+          "pctOfText": 3.2
+        }
+      ],
+      "glyphsWholePage": {
+        "Onest": 4893,
+        "JetBrains Mono": 81,
+        "Unbounded": 988
+      },
+      "fallbackSamples": [],
+      "textUnionPctViewport": 24.3
+    },
+    "pseudoTexts": [
+      {
+        "text": "grid: 4 col · gap 16",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": true
+      },
+      {
+        "text": "0 × 0",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": false,
+        "masked": true,
+        "inFirstScreen": false
+      },
+      {
+        "text": "350 × 467",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": false,
+        "masked": true,
+        "inFirstScreen": false
+      },
+      {
+        "text": "167 × 200",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": false,
+        "masked": true,
+        "inFirstScreen": false
+      },
+      {
+        "text": "16",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": false,
+        "masked": true,
+        "inFirstScreen": false
+      },
+      {
+        "text": "76",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": true
+      },
+      {
+        "text": "16",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": false
+      },
+      {
+        "text": "64",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": false,
+        "masked": true,
+        "inFirstScreen": false
+      }
+    ]
+  },
+  "1440": {
+    "etag": "\"3d40zc0ulf5hxl\"",
+    "W": 1440,
+    "H": 900,
+    "theme": "light",
+    "fonts": [
+      {
+        "family": "onest",
+        "weight": "400 700",
+        "style": "normal",
+        "status": "loaded",
+        "unicodeRange": "U+0-10FFFF"
+      },
+      {
+        "family": "onest Fallback",
+        "weight": "normal",
+        "style": "normal",
+        "status": "unloaded",
+        "unicodeRange": "U+0-10FFFF"
+      },
+      {
+        "family": "unbounded",
+        "weight": "400 500",
+        "style": "normal",
+        "status": "loaded",
+        "unicodeRange": "U+0-10FFFF"
+      },
+      {
+        "family": "unbounded Fallback",
+        "weight": "normal",
+        "style": "normal",
+        "status": "unloaded",
+        "unicodeRange": "U+0-10FFFF"
+      },
+      {
+        "family": "mono",
+        "weight": "400",
+        "style": "normal",
+        "status": "loaded",
+        "unicodeRange": "U+0-10FFFF"
+      }
+    ],
+    "faceRules": [
+      {
+        "family": "onest",
+        "src": "url(\"../media/Onest_var-s.p.07wn6-amdtlx_.woff2\") format(\"woff2\")",
+        "sizeAdjust": ""
+      },
+      {
+        "family": "\"onest Fallback\"",
+        "src": "local(\"Arial\")",
+        "sizeAdjust": "106.1%"
+      },
+      {
+        "family": "unbounded",
+        "src": "url(\"../media/Unbounded_var-s.p.2zdw5bud2uobx.woff2\") format(\"woff2\")",
+        "sizeAdjust": ""
+      },
+      {
+        "family": "\"unbounded Fallback\"",
+        "src": "local(\"Arial\")",
+        "sizeAdjust": "136.07%"
+      },
+      {
+        "family": "mono",
+        "src": "url(\"../media/JetBrainsMono_400_latin.0ni2-qfwxnnia.woff2\") format(\"woff2\")",
+        "sizeAdjust": ""
+      }
+    ],
+    "cssHits": [
+      {
+        "hits": [
+          "Roboto",
+          "Helvetica",
+          "Arial"
+        ],
+        "rule": "html, :host { text-size-adjust: 100%; tab-size: 4; line-height: 1.5; font-family: var(--default-font-family,-apple-system, BlinkMacSystemFont, \"Segoe UI\", Robot",
+        "sheet": "1g9nq5uaanlab.css"
+      },
+      {
+        "hits": [
+          "Roboto",
+          "Helvetica",
+          "Arial"
+        ],
+        "rule": "@layer base {\n  *, ::after, ::before, ::backdrop { box-sizing: border-box; border: 0px solid; margin: 0px; padding: 0px; }\n  ::file-selector-button { box-sizing",
+        "sheet": "1g9nq5uaanlab.css"
+      }
+    ],
+    "fontResources": [
+      "Onest_var-s.p.07wn6-amdtlx_.woff2",
+      "Unbounded_var-s.p.2zdw5bud2uobx.woff2",
+      "JetBrainsMono_400_latin.0ni2-qfwxnnia.woff2"
+    ],
+    "stacks": {
+      "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif": 4748,
+      "unbounded, \"unbounded Fallback\", sans-serif, onest, \"onest Fallback\", sans-serif, sans-serif": 963,
+      "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace": 96
+    },
+    "logos": [
+      {
+        "rect": [
+          100,
+          30,
+          270.515625,
+          50
+        ],
+        "h": 20,
+        "w": 170.515625
+      }
+    ],
+    "textPx": 194410,
+    "h1": {
+      "box": {
+        "x": 100,
+        "y": 255.1,
+        "w": 534.9,
+        "h": 234.6
+      },
+      "fontSize": "75.2px",
+      "lineHeight": "78.208px",
+      "letterSpacing": "-2.256px",
+      "maxWidth": "541.44px",
+      "family": "unbounded, \"unbounded Fallback\", sans-serif, onest, \"onest Fallback\", sans-serif, sans-serif",
+      "weight": "500",
+      "lines": [
+        {
+          "text": "",
+          "width": null
+        },
+        {
+          "text": "Интернет-",
+          "width": 454.1
+        },
+        {
+          "text": "магазины",
+          "width": 458.8
+        },
+        {
+          "text": "под ключ",
+          "width": 428.9
+        }
+      ]
+    },
+    "lead": {
+      "box": {
+        "x": 100,
+        "y": 516.5,
+        "w": 534.9,
+        "h": 88.3
+      },
+      "fontSize": "19px",
+      "lineHeight": "29.45px",
+      "letterSpacing": "normal",
+      "maxWidth": "570px",
+      "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+      "weight": "400",
+      "lines": [
+        {
+          "text": "Пишем магазин под ваш бизнес — без шаблонов",
+          "width": 444.9
+        },
+        {
+          "text": "и конструкторов — на собственной платформе",
+          "width": 428.2
+        },
+        {
+          "text": "управления. Запуск в среднем за 2–⁠2,5 недели.",
+          "width": 435.9
+        }
+      ]
+    },
+    "rects": {
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900,
+        "bottom": 900
+      },
+      "textColumn": {
+        "x": 100,
+        "y": 255.1,
+        "w": 534.9,
+        "h": 445.7,
+        "bottom": 700.8
+      },
+      "cta": {
+        "x": 100,
+        "y": 644.8,
+        "w": 534.9,
+        "h": 56,
+        "bottom": 700.8
+      },
+      "demo": {
+        "x": 698.1,
+        "y": 249.1,
+        "w": 641.9,
+        "h": 457.8,
+        "bottom": 706.9
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 81,
+        "bottom": 81
+      }
+    },
+    "ctaFonts": [
+      {
+        "text": "Обсудить проект",
+        "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+        "weight": "600",
+        "size": "16px",
+        "w": 221
+      },
+      {
+        "text": "Рассказать о проекте",
+        "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+        "weight": "600",
+        "size": "16px",
+        "w": 229
+      }
+    ],
+    "htmlFont": {
+      "htmlComputed": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+      "bodyComputed": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+      "rules": [
+        "html, :host { font-family: var(--default-font-family,-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\") }"
+      ],
+      "defaultFontFamilyVar": "\"onest\", \"onest Fallback\", sans-serif, system-ui, sans-serif"
+    },
+    "familyArea": {
+      "table": [
+        {
+          "family": "Unbounded",
+          "px2": 124789,
+          "pctViewport": 9.63,
+          "pctOfText": 59.9
+        },
+        {
+          "family": "Onest",
+          "px2": 69667,
+          "pctViewport": 5.38,
+          "pctOfText": 33.5
+        },
+        {
+          "family": "JetBrains Mono (под маской фона)",
+          "px2": 10341,
+          "pctViewport": 0.8,
+          "pctOfText": 5
+        },
+        {
+          "family": "Логотип SVG: кривые Inter 800 (bbox)",
+          "px2": 3410,
+          "pctViewport": 0.26,
+          "pctOfText": 1.6
+        }
+      ],
+      "glyphsWholePage": {
+        "Onest": 4975,
+        "JetBrains Mono": 96,
+        "Unbounded": 994
+      },
+      "fallbackSamples": [],
+      "textUnionPctViewport": 15
+    },
+    "pseudoTexts": [
+      {
+        "text": "grid: 12 col · gap 24",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": true
+      },
+      {
+        "text": "608 × 48",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": false,
+        "masked": true,
+        "inFirstScreen": false
+      },
+      {
+        "text": "608 × 561",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": false,
+        "masked": true,
+        "inFirstScreen": false
+      },
+      {
+        "text": "187 × 200",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": true
+      },
+      {
+        "text": "24",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": true
+      },
+      {
+        "text": "128",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": true
+      },
+      {
+        "text": "24",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": true
+      },
+      {
+        "text": "100",
+        "family": "mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "vis": true,
+        "masked": true,
+        "inFirstScreen": true
+      }
+    ]
+  }
+}

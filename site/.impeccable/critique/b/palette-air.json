@@ -1,0 +1,236 @@
+{
+  "390": {
+    "current": {
+      "file": "current-390.png",
+      "size": "780×1688",
+      "dominant": "#0a0a14",
+      "dominantPct": 54.53,
+      "uniqueColors": 9040,
+      "clustersDE10": {
+        "ge1": 4,
+        "ge05": 8,
+        "ge01": 18,
+        "top": [
+          "#0a0a14 60.27%",
+          "#ffffff 16.68%",
+          "#1a1a2e 9.66%",
+          "#00e676 5.71%",
+          "#a0a0b8 0.95%",
+          "#353547 0.67%",
+          "#00c853 0.51%",
+          "#07bf67 0.51%",
+          "#d6d6e2 0.42%",
+          "#00dbc3 0.32%"
+        ]
+      },
+      "clustersDE5": {
+        "ge1": 5,
+        "ge05": 7,
+        "ge01": 27,
+        "top": [
+          "#0a0a14 60.04%",
+          "#ffffff 14.28%",
+          "#1a1a2e 9.30%",
+          "#00e676 5.70%",
+          "#e8e8f0 2.43%",
+          "#a0a0b8 0.83%",
+          "#353547 0.60%",
+          "#00c853 0.42%",
+          "#00cf7f 0.24%",
+          "#111121 0.23%"
+        ]
+      },
+      "hue": {
+        "green": 7.29,
+        "cyan": 1.13,
+        "other": 0.77,
+        "neutral": 90.82
+      },
+      "accentByRegion": {
+        "cyan:backdrop": 0.01,
+        "cyan:demo": 0.03,
+        "cyan:text": 1.09,
+        "green:backdrop": 0.21,
+        "green:demo": 0.46,
+        "green:header": 0.16,
+        "green:text": 6.46
+      },
+      "nearBgPixelsPct": 60.06,
+      "emptyTiles8pxPct": 43.4
+    },
+    "nodecor": {
+      "file": "nodecor-390.png",
+      "size": "780×1688",
+      "dominant": "#0a0a14",
+      "dominantPct": 55.23,
+      "uniqueColors": 8766,
+      "clustersDE10": {
+        "ge1": 4,
+        "ge05": 7,
+        "ge01": 17,
+        "top": [
+          "#0a0a14 60.73%",
+          "#ffffff 16.68%",
+          "#1a1a2e 9.66%",
+          "#00e676 5.67%",
+          "#a0a0b8 0.93%",
+          "#353547 0.65%",
+          "#00c853 0.57%",
+          "#d6d6e2 0.42%",
+          "#00cf7f 0.40%",
+          "#00d5a0 0.33%"
+        ]
+      },
+      "clustersDE5": {
+        "ge1": 5,
+        "ge05": 7,
+        "ge01": 24,
+        "top": [
+          "#0a0a14 60.64%",
+          "#ffffff 14.28%",
+          "#1a1a2e 9.30%",
+          "#00e676 5.66%",
+          "#e8e8f0 2.43%",
+          "#a0a0b8 0.83%",
+          "#353547 0.59%",
+          "#00c853 0.42%",
+          "#111121 0.24%",
+          "#00cf7f 0.24%"
+        ]
+      },
+      "hue": {
+        "green": 6.98,
+        "cyan": 1.09,
+        "other": 0.77,
+        "neutral": 91.16
+      },
+      "accentByRegion": {
+        "cyan:demo": 0,
+        "cyan:text": 1.09,
+        "green:demo": 0.36,
+        "green:header": 0.16,
+        "green:text": 6.46
+      },
+      "nearBgPixelsPct": 60.65,
+      "emptyTiles8pxPct": 47.1
+    },
+    "domTextUnionPct": 24.3
+  },
+  "1440": {
+    "current": {
+      "file": "current-1440.png",
+      "size": "1440×900",
+      "dominant": "#0a0a14",
+      "dominantPct": 71.57,
+      "uniqueColors": 5976,
+      "clustersDE10": {
+        "ge1": 4,
+        "ge05": 7,
+        "ge01": 20,
+        "top": [
+          "#0a0a14 77.32%",
+          "#ffffff 11.02%",
+          "#1a1a2e 4.46%",
+          "#00e676 1.37%",
+          "#00c853 0.67%",
+          "#272730 0.66%",
+          "#a0a0b8 0.58%",
+          "#6a6a80 0.48%",
+          "#00cf7e 0.39%",
+          "#dfdfe0 0.31%"
+        ]
+      },
+      "clustersDE5": {
+        "ge1": 5,
+        "ge05": 7,
+        "ge01": 25,
+        "top": [
+          "#0a0a14 76.75%",
+          "#ffffff 9.61%",
+          "#1a1a2e 4.37%",
+          "#e8e8f0 1.51%",
+          "#00e676 1.36%",
+          "#181821 0.57%",
+          "#00c853 0.51%",
+          "#a0a0b8 0.49%",
+          "#6a6a80 0.32%",
+          "#272730 0.31%"
+        ]
+      },
+      "hue": {
+        "green": 2.87,
+        "cyan": 1,
+        "other": 0.03,
+        "neutral": 96.1
+      },
+      "accentByRegion": {
+        "cyan:backdrop": 0.03,
+        "cyan:demo": 0,
+        "cyan:text": 0.96,
+        "green:backdrop": 0.06,
+        "green:demo": 0.6,
+        "green:header": 0.56,
+        "green:text": 1.64
+      },
+      "nearBgPixelsPct": 76.83,
+      "emptyTiles8pxPct": 65.8
+    },
+    "nodecor": {
+      "file": "nodecor-1440.png",
+      "size": "1440×900",
+      "dominant": "#0a0a14",
+      "dominantPct": 72.6,
+      "uniqueColors": 7959,
+      "clustersDE10": {
+        "ge1": 4,
+        "ge05": 6,
+        "ge01": 18,
+        "top": [
+          "#0a0a14 77.72%",
+          "#ffffff 10.96%",
+          "#1a1a2e 4.49%",
+          "#00e676 1.36%",
+          "#00c853 0.68%",
+          "#a0a0b8 0.51%",
+          "#00cf7e 0.37%",
+          "#6a6a80 0.34%",
+          "#353547 0.33%",
+          "#00d5a0 0.30%"
+        ]
+      },
+      "clustersDE5": {
+        "ge1": 5,
+        "ge05": 6,
+        "ge01": 19,
+        "top": [
+          "#0a0a14 77.66%",
+          "#ffffff 9.56%",
+          "#1a1a2e 4.33%",
+          "#e8e8f0 1.49%",
+          "#00e676 1.35%",
+          "#00c853 0.51%",
+          "#a0a0b8 0.39%",
+          "#6a6a80 0.29%",
+          "#353547 0.25%",
+          "#00cf7e 0.16%"
+        ]
+      },
+      "hue": {
+        "green": 2.8,
+        "cyan": 0.97,
+        "other": 0.37,
+        "neutral": 95.86
+      },
+      "accentByRegion": {
+        "cyan:demo": 0,
+        "cyan:text": 0.97,
+        "green:demo": 0.6,
+        "green:header": 0.56,
+        "green:text": 1.64
+      },
+      "nearBgPixelsPct": 77.66,
+      "emptyTiles8pxPct": 72.7
+    },
+    "domTextUnionPct": 15
+  }
+}

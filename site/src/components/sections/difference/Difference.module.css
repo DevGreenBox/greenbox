@@ -1,0 +1,562 @@
+/* «Не просто сайт»: асимметрия «сцена с админкой + колонка отличий». Цвет — только токены сцены. */
+
+.layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* От 1024: сцена слева (7 колонок) во всю высоту правой колонки — верх и низ у них общие, админка
+   по центру сцены (раньше сцена была липкой и кончалась на ~50 px выше колонки). Справа главное
+   отличие и два остальных с одним шагом 2rem между всеми тремя. До 1024 — столбиком: главное
+   отличие, сцена, остальные. */
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    /* Если сцена выше колонки (широкий экран), остаток уходит во вторую строку — под список,
+       а не в зазор между главным отличием и остальными. */
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: 0 var(--gap-lg);
+  }
+
+  .stage {
+    grid-column: 1 / 8;
+    grid-row: 1 / span 2;
+    align-self: stretch;
+  }
+
+  .featured,
+  .list {
+    grid-column: 8 / -1;
+  }
+}
+
+/* Линейка над каждым отличием: одна система для главного и двух остальных. */
+.featured,
+.point {
+  border-top: 1px solid var(--line-strong);
+  padding-top: 1.5rem;
+}
+
+.featured {
+  padding-bottom: 1rem;
+}
+
+/* Десктоп: между главным отличием и остальными тот же шаг, что между остальными (gap списка). */
+@media (min-width: 1024px) {
+  .featured {
+    padding-bottom: 0;
+  }
+}
+
+.list {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .list {
+    margin-top: 0;
+    padding-top: 2rem;
+  }
+}
+
+/* ---------- Знаки отличий ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 2rem;
+  padding: 0.25rem 0.875rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  color: var(--text-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.chip :global(.icon) {
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 2;
+}
+
+/* «Не Tilda, не WordPress, не конструктор»: зачёркнуто линией через всю пилюлю. */
+.chipStruck::after {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  top: 50%;
+  height: 1px;
+  background: currentColor;
+  transform-origin: 0 50%;
+}
+
+.chipOn {
+  border-color: transparent;
+  background: var(--inset);
+}
+
+/* Функция, которую добавят, когда понадобится: пунктир и «+». */
+.chipNext {
+  border-style: dashed;
+  border-color: var(--line-control);
+  color: var(--accent-ink);
+}
+
+/* ---------- Сцена с админкой (рисунок интерфейса на токенах: светлая и тёмная темы) ---------- */
+
+.stage {
+  container-type: inline-size;
+  display: grid;
+  place-items: center;
+  padding: 9% 8%;
+  overflow: hidden;
+  border-radius: var(--radius-panel);
+}
+
+/* 1em = 1/40 ширины сцены: рисунок масштабируется целиком, как устройства первого экрана. */
+.window {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--elev-2);
+  font-size: clamp(0.5625rem, 100cqi / 40, 1rem);
+  line-height: 1.2;
+}
+
+.top {
+  /* Над списком: новый товар въезжает из-под панели вкладок (см. «Движение»). */
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1em 1.2em;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.2em;
+  padding: 0.25em;
+  border-radius: 2em;
+  background: var(--inset);
+}
+
+/* Вкладка — подпись с нативным radio поверх: нажимается вся пилюля, стрелки и фокус работают сами.
+   Выбранная — поверхность и тень, как сегмент. Кегль не мельче 11 px: это настоящие кнопки, а сцена
+   на телефоне мелкая (1em ≈ 9 px). */
+.tab {
+  position: relative;
+  padding: 0.5em 1.05em;
+  border-radius: 2em;
+  color: var(--text-2);
+  font-size: max(11px, 0.95em);
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-hover) var(--ease-out),
+    box-shadow var(--dur-hover) var(--ease-out),
+    color var(--dur-hover) var(--ease-out);
+}
+
+.tabInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tab:has(.tabInput:checked) {
+  background: var(--surface);
+  box-shadow: var(--elev-1);
+  color: var(--text);
+}
+
+.tab:has(.tabInput:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .tab:hover {
+    color: var(--text);
+  }
+}
+
+/* Таймер автопоказа (AdminTour): невидимая полоска под подписью выбранной вкладки — только отмеряет такт,
+   её конец переключает раздел (видимую полоску заказчик попросил спрятать, 01.10.2026). Наведение на окно
+   ставит таймер на паузу. */
+.tab::after {
+  content: '';
+  visibility: hidden;
+  position: absolute;
+  right: 1.05em;
+  bottom: 0.32em;
+  left: 1.05em;
+  height: max(1.5px, 0.12em);
+  border-radius: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+.window[data-playing] .tab:has(.tabInput:checked)::after {
+  animation: tab-timer 3.2s linear forwards;
+}
+
+@media (hover: hover) {
+  .window[data-playing]:hover .tab::after {
+    animation-play-state: paused;
+  }
+}
+
+.add {
+  display: grid;
+  place-items: center;
+  width: 2.3em;
+  height: 2.3em;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.add svg {
+  width: 1.2em;
+  height: 1.2em;
+  stroke-width: 2.2;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2.9em minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.1em;
+  padding: 0.75em 1.2em;
+}
+
+.row + .row {
+  border-top: 1px solid var(--line);
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 0.6em;
+  background: var(--inset);
+  color: var(--text);
+}
+
+.thumb svg {
+  width: 72%;
+  height: 72%;
+}
+
+/* Иконки заказов и страниц — меньше силуэтов товаров, вторыми чернилами. */
+.thumb :global(.icon) {
+  width: 50%;
+  height: 50%;
+  color: var(--text-2);
+}
+
+.rows > .row:nth-child(1) .thumb {
+  color: var(--accent);
+}
+
+.rows > .row:nth-child(3) .thumb {
+  color: var(--text-3);
+}
+
+.rows > .row:nth-child(4) .thumb {
+  color: var(--text-2);
+}
+
+.info {
+  display: grid;
+  gap: 0.45em;
+  min-width: 0;
+}
+
+.name {
+  overflow: hidden;
+  font-size: 1.05em;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Состав заказа, адрес страницы. */
+.detail {
+  overflow: hidden;
+  color: var(--text-2);
+  font-size: 0.85em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.status {
+  padding: 0.35em 0.75em;
+  border-radius: 2em;
+  background: var(--inset);
+  color: var(--text-2);
+  font-size: 0.85em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.statusPaid {
+  background: var(--accent-tint);
+  color: var(--accent-ink);
+}
+
+/* Цены нет — полоска-заглушка под названием, как в витрине первого экрана. */
+.price {
+  width: 4.6em;
+  height: 0.6em;
+  border-radius: 0.4em;
+  background: var(--inset);
+}
+
+.switch {
+  position: relative;
+  width: 2.3em;
+  height: 1.35em;
+  border-radius: 1em;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line-control);
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  top: 0.22em;
+  left: 0.22em;
+  width: 0.91em;
+  height: 0.91em;
+  border-radius: 50%;
+  background: var(--text-3);
+}
+
+.switchOn {
+  background: var(--accent);
+  box-shadow: none;
+}
+
+.switchOn::after {
+  background: var(--on-accent);
+  transform: translateX(0.95em);
+}
+
+/* ---------- Разделы: список выбранной вкладки ---------- */
+
+/* Три списка в одной ячейке сетки: высота окна — по самому высокому, переключение раскладку не двигает.
+   Виден список выбранной вкладки (:has); без поддержки :has — только «Товары». Новый список проявляется
+   построчно снизу вверх, уходящий гаснет быстрее. */
+.panels {
+  display: grid;
+}
+
+.panel {
+  grid-area: 1 / 1;
+}
+
+.panel:not([data-panel='goods']) {
+  visibility: hidden;
+}
+
+@supports selector(:has(*)) {
+  .panel {
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      opacity calc(var(--dur-hover) * 0.6) var(--ease-out),
+      visibility 0s linear calc(var(--dur-hover) * 0.6);
+  }
+
+  .panel .row {
+    opacity: 0;
+    translate: 0 0.6em;
+  }
+
+  .window:has(.tabInput[value='goods']:checked) .panel[data-panel='goods'],
+  .window:has(.tabInput[value='orders']:checked) .panel[data-panel='orders'],
+  .window:has(.tabInput[value='pages']:checked) .panel[data-panel='pages'] {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  .window:has(.tabInput[value='goods']:checked) .panel[data-panel='goods'] .row,
+  .window:has(.tabInput[value='orders']:checked) .panel[data-panel='orders'] .row,
+  .window:has(.tabInput[value='pages']:checked) .panel[data-panel='pages'] .row {
+    opacity: 1;
+    translate: none;
+    transition:
+      opacity var(--dur-move) var(--ease-out),
+      translate var(--dur-move) var(--ease-out);
+    transition-delay: calc(80ms + var(--n, 0) * var(--stagger));
+  }
+}
+
+/* У каждого раздела своё действие, когда он открывается: в «Заказах» верхний заказ — новый (подложка
+   вспыхивает и гаснет), в «Страницах» публикуется акция «Новая коллекция» — включается её переключатель.
+   «Товары» — новый товар при появлении сцены (ниже). */
+@media (prefers-reduced-motion: no-preference) {
+  .window:has(.tabInput[value='orders']:checked) .panel[data-panel='orders'] .row:first-child {
+    animation: row-flash calc(var(--dur-draw) + var(--dur-reveal)) var(--ease-out) 0.3s;
+  }
+
+  .window:has(.tabInput[value='pages']:checked) .panel[data-panel='pages'] .row:last-child {
+    animation: row-flash calc(var(--dur-draw) + var(--dur-reveal)) var(--ease-out) 0.9s;
+  }
+
+  .window:has(.tabInput[value='pages']:checked) .panel[data-panel='pages'] .row:last-child .switch {
+    animation: switch-on var(--dur-hover) var(--ease-out) 0.9s backwards;
+  }
+
+  .window:has(.tabInput[value='pages']:checked) .panel[data-panel='pages'] .row:last-child .switch::after {
+    animation: knob-on var(--dur-move) var(--ease-out) 0.9s backwards;
+  }
+}
+
+/* ---------- Движение (фазы — motion/Reveal.tsx: data-revealed, когда элемент вошёл в экран) ---------- */
+
+/* Админка в работе — главное отличие блока показано, а не описано. Сцена вошла в экран: «+» нажимается,
+   список сдвигается на строку вниз и сверху из-под вкладок въезжает новый товар (его подложка вспыхивает
+   зелёным и гаснет), затем включается его переключатель «на сайте». Только трансформации, прозрачность
+   и цвет — раскладка не двигается. Исходное состояние (:not([data-revealed])) повторяет первые кадры
+   анимаций, поэтому старт без скачка. Без JS, при reduced-motion и если сцена видна сразу при загрузке —
+   итог: четыре товара, первый включён. */
+@media (prefers-reduced-motion: no-preference) {
+  :global(.reveal-on) .stage:not([data-revealed]) .rows {
+    translate: 0 -25%;
+  }
+
+  :global(.reveal-on) .stage:not([data-revealed]) .rows > .row:first-child {
+    opacity: 0;
+  }
+
+  :global(.reveal-on) .stage:not([data-revealed]) .rows > .row:first-child .switch {
+    background: var(--surface);
+    box-shadow: inset 0 0 0 1px var(--line-control);
+  }
+
+  :global(.reveal-on) .stage:not([data-revealed]) .rows > .row:first-child .switch::after {
+    background: var(--text-3);
+    transform: none;
+  }
+
+  :global(.reveal-on) .stage[data-revealed] .add {
+    animation: add-press var(--dur-reveal) var(--ease-out) 0.25s;
+  }
+
+  :global(.reveal-on) .stage[data-revealed] .rows {
+    animation: rows-in var(--dur-reveal) var(--ease-out) 0.5s backwards;
+  }
+
+  :global(.reveal-on) .stage[data-revealed] .rows > .row:first-child {
+    animation: row-new calc(var(--dur-draw) + var(--dur-reveal)) var(--ease-out) 0.5s backwards;
+  }
+
+  :global(.reveal-on) .stage[data-revealed] .rows > .row:first-child .switch {
+    animation: switch-on var(--dur-hover) var(--ease-out) 1.25s backwards;
+  }
+
+  :global(.reveal-on) .stage[data-revealed] .rows > .row:first-child .switch::after {
+    animation: knob-on var(--dur-move) var(--ease-out) 1.25s backwards;
+  }
+
+  /* «Не Tilda, не WordPress, не конструктор» — зачёркиваются по очереди, слева направо. */
+  :global(.reveal-on) .chips:not([data-revealed]) .chipStruck::after {
+    transform: scaleX(0);
+  }
+
+  :global(.reveal-on) .chips[data-revealed] .chipStruck::after {
+    transition: transform var(--dur-move) var(--ease-out);
+    transition-delay: calc(0.4s + var(--k, 0) * 0.2s);
+  }
+}
+
+@keyframes add-press {
+  35% {
+    transform: scale(0.84);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+
+  to {
+    box-shadow: 0 0 0 0.8em color-mix(in srgb, var(--accent) 0%, transparent);
+  }
+}
+
+@keyframes rows-in {
+  from {
+    translate: 0 -25%;
+  }
+}
+
+@keyframes row-new {
+  from {
+    opacity: 0;
+    background-color: color-mix(in srgb, var(--accent) 16%, transparent);
+  }
+
+  30% {
+    opacity: 1;
+    background-color: color-mix(in srgb, var(--accent) 16%, transparent);
+  }
+
+  to {
+    background-color: color-mix(in srgb, var(--accent) 0%, transparent);
+  }
+}
+
+@keyframes row-flash {
+  from,
+  30% {
+    background-color: color-mix(in srgb, var(--accent) 16%, transparent);
+  }
+
+  to {
+    background-color: color-mix(in srgb, var(--accent) 0%, transparent);
+  }
+}
+
+@keyframes tab-timer {
+  to {
+    transform: none;
+  }
+}
+
+@keyframes switch-on {
+  from {
+    background-color: var(--surface);
+    box-shadow: inset 0 0 0 1px var(--line-control);
+  }
+}
+
+@keyframes knob-on {
+  from {
+    background-color: var(--text-3);
+    transform: none;
+  }
+}

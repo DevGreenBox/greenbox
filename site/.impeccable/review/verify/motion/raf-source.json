@@ -1,0 +1,25 @@
+{
+  "stacks": [
+    [
+      "at e (/_next/static/chunks/2w6a05k9p9po9.js:1:34314)",
+      300
+    ],
+    [
+      "at ty (/_next/static/chunks/2w6a05k9p9po9.js:1:13772)",
+      20
+    ]
+  ],
+  "scripts": [
+    "/_next/static/chunks/0g3aa_l8iihn_.js",
+    "/_next/static/chunks/1h4okjjbv6zqq.js",
+    "/_next/static/chunks/2hkvghyc7h286.js",
+    "/_next/static/chunks/1xd7ah0wg_0q1.js",
+    "/_next/static/chunks/turbopack-1x0kisu7-bjak.js",
+    "/_next/static/chunks/3158wc4af_prg.js",
+    "/_next/static/chunks/1vbxyals05_-1.js",
+    "/_next/static/chunks/0n6zaj74g03x6.js",
+    "/_next/static/chunks/04uo2fma28byz.js",
+    "/_next/static/chunks/3fphk9vnfo7vj.js",
+    "/_next/static/chunks/2w6a05k9p9po9.js"
+  ]
+}

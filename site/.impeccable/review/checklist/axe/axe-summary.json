@@ -1,0 +1,22 @@
+[
+ {
+  "key": "home-1440-light",
+  "theme": "light",
+  "violations": []
+ },
+ {
+  "key": "home-1440-dark",
+  "theme": "dark",
+  "violations": []
+ },
+ {
+  "key": "home-390-light",
+  "theme": "light",
+  "violations": []
+ },
+ {
+  "key": "home-390-dark",
+  "theme": "dark",
+  "violations": []
+ }
+]

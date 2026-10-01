@@ -1,0 +1,788 @@
+{
+  "390": {
+    "tokens": {
+      "--section-y": "72.034px",
+      "--space-head": "40px",
+      "--space-lead": "20px",
+      "--gutter": "20px",
+      "--gap-lg": "32px",
+      "--header-h": "64px"
+    },
+    "sections": [
+      {
+        "id": "top",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 0,
+        "height": 1071,
+        "padTop": "104px",
+        "padBottom": "72.034px",
+        "heading": {
+          "tag": "h1",
+          "text": "Интернет-магазины под ключ",
+          "fontSize": "40px",
+          "h": 125,
+          "w": 288,
+          "textW": 244,
+          "lines": 3,
+          "boxH": 125
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": -104,
+          "to": "i:"
+        },
+        "headerBottomToH1": 39,
+        "above": {
+          "px": 104,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 22,
+          "to": "text:Пишем магазин под ваш бизнес —"
+        },
+        "besideTextFragments": 0,
+        "ratio": 4.73,
+        "lastContentToBottom": 0
+      },
+      {
+        "id": "difference",
+        "scene": "light",
+        "bg": "rgb(250, 251, 252)",
+        "top": 1071,
+        "height": 1383,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Не просто сайт — платформа для продаж",
+          "fontSize": "30px",
+          "h": 99,
+          "w": 350,
+          "textW": 319,
+          "lines": 3,
+          "boxH": 99
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 40,
+          "to": "div:Difference-module__WNXgHG__fea"
+        },
+        "besideTextFragments": 0,
+        "ratio": 1.8,
+        "lastContentToBottom": 72
+      },
+      {
+        "id": "get",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 2455,
+        "height": 798,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Что вы получаете",
+          "fontSize": "30px",
+          "h": 33,
+          "w": 350,
+          "textW": 321,
+          "lines": 1,
+          "boxH": 33
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 40,
+          "to": "dl:Get-module__NDxnoa__list"
+        },
+        "besideTextFragments": 0,
+        "ratio": 1.8,
+        "lastContentToBottom": 72
+      },
+      {
+        "id": "quiz",
+        "scene": "light",
+        "bg": "rgb(250, 251, 252)",
+        "top": 3253,
+        "height": 1162,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Расскажите о проекте",
+          "fontSize": "30px",
+          "h": 66,
+          "w": 350,
+          "textW": 228,
+          "lines": 2,
+          "boxH": 66
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 262,
+          "to": "span:"
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 22,
+          "to": "text:Не знаете, какой сайт вам нуже"
+        },
+        "besideTextFragments": 0,
+        "ratio": 3.27,
+        "lastContentToBottom": 72
+      },
+      {
+        "id": "process",
+        "scene": "light-2",
+        "bg": "rgb(240, 242, 245)",
+        "top": 4415,
+        "height": 801,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Как мы работаем",
+          "fontSize": "30px",
+          "h": 33,
+          "w": 350,
+          "textW": 321,
+          "lines": 1,
+          "boxH": 33
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 40,
+          "to": "span:Process-module__PhXd_W__num"
+        },
+        "besideTextFragments": 0,
+        "ratio": 1.8,
+        "lastContentToBottom": 229
+      },
+      {
+        "id": "cases",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 5216,
+        "height": 914,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Кейсы",
+          "fontSize": "30px",
+          "h": 33,
+          "w": 117,
+          "textW": 117,
+          "lines": 1,
+          "boxH": 33
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 7,
+          "to": "text:01"
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 40,
+          "to": "div:Cases-module__cMnabG__frame"
+        },
+        "besideTextFragments": 3,
+        "ratio": 1.8,
+        "lastContentToBottom": 87
+      },
+      {
+        "id": "reviews",
+        "scene": "light",
+        "bg": "rgb(250, 251, 252)",
+        "top": 6130,
+        "height": 1321,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Отзывы",
+          "fontSize": "30px",
+          "h": 33,
+          "w": 350,
+          "textW": 143,
+          "lines": 1,
+          "boxH": 33
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 288,
+          "to": "text:»"
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 40,
+          "to": "figure:border-t border-line-strong pt"
+        },
+        "besideTextFragments": 0,
+        "ratio": 1.8,
+        "lastContentToBottom": 72
+      },
+      {
+        "id": "team",
+        "scene": "light-2",
+        "bg": "rgb(240, 242, 245)",
+        "top": 7451,
+        "height": 1506,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Люди за ЗелёнойКоробкой",
+          "fontSize": "30px",
+          "h": 66,
+          "w": 350,
+          "textW": 338,
+          "lines": 2,
+          "boxH": 66
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 40,
+          "to": "div:overflow-hidden rounded-panel "
+        },
+        "besideTextFragments": 0,
+        "ratio": 1.8,
+        "lastContentToBottom": 74
+      },
+      {
+        "id": "why",
+        "scene": "green",
+        "bg": "rgb(10, 10, 20)",
+        "top": 8957,
+        "height": 1271,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Почему ЗелёнаяКоробка",
+          "fontSize": "30px",
+          "h": 66,
+          "w": 350,
+          "textW": 314,
+          "lines": 2,
+          "boxH": 66
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 40,
+          "to": "li:border-t border-line-strong pt"
+        },
+        "besideTextFragments": 0,
+        "ratio": 1.8,
+        "lastContentToBottom": 72
+      },
+      {
+        "id": "faq",
+        "scene": "light",
+        "bg": "rgb(250, 251, 252)",
+        "top": 10228,
+        "height": 933,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Вопросы и ответы",
+          "fontSize": "30px",
+          "h": 33,
+          "w": 350,
+          "textW": 331,
+          "lines": 1,
+          "boxH": 33
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 40,
+          "to": "div:Faq-module__O4jPwW__list"
+        },
+        "besideTextFragments": 0,
+        "ratio": 1.8,
+        "lastContentToBottom": 72
+      },
+      {
+        "id": "contact",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 11161,
+        "height": 1043,
+        "padTop": "72.034px",
+        "padBottom": "72.034px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Расскажите, какой магазин вам нужен",
+          "fontSize": "30px",
+          "h": 99,
+          "w": 350,
+          "textW": 272,
+          "lines": 3,
+          "boxH": 99
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 798,
+          "to": "svg:icon Contact-module__P7Lsea__l"
+        },
+        "above": {
+          "px": 72,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 22,
+          "to": "text:Если пока не знаете, какой сай"
+        },
+        "besideTextFragments": 0,
+        "ratio": 3.27,
+        "lastContentToBottom": 72
+      },
+      {
+        "id": "footer",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 12204,
+        "height": 1050,
+        "padTop": "48px",
+        "padBottom": "32px",
+        "sameBgAsPrev": true
+      }
+    ],
+    "etag": "\"3d40zc0ulf5hxl\""
+  },
+  "1440": {
+    "tokens": {
+      "--section-y": "144.064px",
+      "--space-head": "71.92px",
+      "--space-lead": "26.8px",
+      "--gutter": "100px",
+      "--gap-lg": "63.2px",
+      "--header-h": "80px"
+    },
+    "sections": [
+      {
+        "id": "top",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 0,
+        "height": 900,
+        "padTop": "128px",
+        "padBottom": "72px",
+        "heading": {
+          "tag": "h1",
+          "text": "Интернет-магазины под ключ",
+          "fontSize": "75.2px",
+          "h": 235,
+          "w": 535,
+          "textW": 459,
+          "lines": 3,
+          "boxH": 235
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": -255,
+          "to": "i:"
+        },
+        "headerBottomToH1": 174,
+        "above": {
+          "px": 255,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 29,
+          "to": "text:Пишем магазин под ваш бизнес —"
+        },
+        "besideTextFragments": 18,
+        "ratio": 8.86,
+        "lastContentToBottom": 0
+      },
+      {
+        "id": "difference",
+        "scene": "light",
+        "bg": "rgb(250, 251, 252)",
+        "top": 900,
+        "height": 1190,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Не просто сайт — платформа для продаж",
+          "fontSize": "51.36px",
+          "h": 113,
+          "w": 822,
+          "textW": 779,
+          "lines": 2,
+          "boxH": 113
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 488,
+          "to": "li:Difference-module__WNXgHG__chi"
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 72,
+          "to": "div:Difference-module__WNXgHG__fea"
+        },
+        "besideTextFragments": 0,
+        "ratio": 2,
+        "lastContentToBottom": 144
+      },
+      {
+        "id": "get",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 2090,
+        "height": 869,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Что вы получаете",
+          "fontSize": "51.36px",
+          "h": 581,
+          "w": 392,
+          "textW": 330,
+          "lines": 2,
+          "boxH": 581
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 0,
+          "to": "dl:Get-module__NDxnoa__list"
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": null,
+          "to": "nothing below in column"
+        },
+        "besideTextFragments": 0,
+        "lastContentToBottom": 144
+      },
+      {
+        "id": "quiz",
+        "scene": "light",
+        "bg": "rgb(250, 251, 252)",
+        "top": 2959,
+        "height": 827,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Расскажите о проекте",
+          "fontSize": "51.36px",
+          "h": 113,
+          "w": 490,
+          "textW": 391,
+          "lines": 2,
+          "boxH": 113
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 0,
+          "to": "div:panel Quiz-module__-16zKW__pan"
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 29,
+          "to": "text:Не знаете, какой сайт вам нуже"
+        },
+        "besideTextFragments": 7,
+        "ratio": 5,
+        "lastContentToBottom": 144
+      },
+      {
+        "id": "process",
+        "scene": "light-2",
+        "bg": "rgb(240, 242, 245)",
+        "top": 3786,
+        "height": 701,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Как мы работаем",
+          "fontSize": "51.36px",
+          "h": 56,
+          "w": 1240,
+          "textW": 549,
+          "lines": 1,
+          "boxH": 56
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 128,
+          "to": "span:Process-module__PhXd_W__num"
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 72,
+          "to": "span:Process-module__PhXd_W__num"
+        },
+        "besideTextFragments": 0,
+        "ratio": 2,
+        "lastContentToBottom": 372
+      },
+      {
+        "id": "cases",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 4487,
+        "height": 8655,
+        "padTop": "0px",
+        "padBottom": "0px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Кейсы",
+          "fontSize": "51.36px",
+          "h": 56,
+          "w": 200,
+          "textW": 200,
+          "lines": 1,
+          "boxH": 56
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 30,
+          "to": "text:01"
+        },
+        "above": {
+          "px": 203,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 37,
+          "to": "div:Cases-module__cMnabG__frame"
+        },
+        "besideTextFragments": 3,
+        "ratio": 5.48,
+        "lastContentToBottom": 7890
+      },
+      {
+        "id": "reviews",
+        "scene": "light",
+        "bg": "rgb(250, 251, 252)",
+        "top": 13142,
+        "height": 1071,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Отзывы",
+          "fontSize": "51.36px",
+          "h": 56,
+          "w": 1240,
+          "textW": 244,
+          "lines": 1,
+          "boxH": 56
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 128,
+          "to": "li:border-t border-line-strong pt"
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 60,
+          "to": "text:«"
+        },
+        "besideTextFragments": 0,
+        "ratio": 2.4,
+        "lastContentToBottom": 144
+      },
+      {
+        "id": "team",
+        "scene": "light-2",
+        "bg": "rgb(240, 242, 245)",
+        "top": 14213,
+        "height": 1304,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Люди за ЗелёнойКоробкой",
+          "fontSize": "51.36px",
+          "h": 56,
+          "w": 1240,
+          "textW": 861,
+          "lines": 1,
+          "boxH": 56
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 72,
+          "to": "div:overflow-hidden rounded-panel "
+        },
+        "besideTextFragments": 0,
+        "ratio": 2,
+        "lastContentToBottom": 146
+      },
+      {
+        "id": "why",
+        "scene": "green",
+        "bg": "rgb(10, 10, 20)",
+        "top": 15518,
+        "height": 892,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Почему ЗелёнаяКоробка",
+          "fontSize": "51.36px",
+          "h": 56,
+          "w": 1240,
+          "textW": 789,
+          "lines": 1,
+          "boxH": 56
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 128,
+          "to": "li:border-t border-line-strong pt"
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 72,
+          "to": "li:border-t border-line-strong pt"
+        },
+        "besideTextFragments": 0,
+        "ratio": 2,
+        "lastContentToBottom": 144
+      },
+      {
+        "id": "faq",
+        "scene": "light",
+        "bg": "rgb(250, 251, 252)",
+        "top": 16409,
+        "height": 1089,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Вопросы и ответы",
+          "fontSize": "51.36px",
+          "h": 113,
+          "w": 392,
+          "textW": 283,
+          "lines": 2,
+          "boxH": 113
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": 0,
+          "to": "div:Faq-module__O4jPwW__list"
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": null,
+          "to": "nothing below in column"
+        },
+        "besideTextFragments": 1,
+        "lastContentToBottom": 144
+      },
+      {
+        "id": "contact",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 17499,
+        "height": 812,
+        "padTop": "144.064px",
+        "padBottom": "144.064px",
+        "sameBgAsPrev": false,
+        "heading": {
+          "tag": "h2",
+          "text": "Расскажите, какой магазин вам нужен",
+          "fontSize": "51.36px",
+          "h": 169,
+          "w": 535,
+          "textW": 466,
+          "lines": 3,
+          "boxH": 169
+        },
+        "besideContentTopMinusHeadingTop": {
+          "px": -1,
+          "to": "input:"
+        },
+        "above": {
+          "px": 144,
+          "to": "section edge"
+        },
+        "below": {
+          "px": 29,
+          "to": "text:Если пока не знаете, какой сай"
+        },
+        "besideTextFragments": 6,
+        "ratio": 5,
+        "lastContentToBottom": 144
+      },
+      {
+        "id": "footer",
+        "scene": "dark",
+        "bg": "rgb(10, 10, 20)",
+        "top": 18311,
+        "height": 526,
+        "padTop": "72px",
+        "padBottom": "45.6px",
+        "sameBgAsPrev": true
+      }
+    ],
+    "etag": "\"3d40zc0ulf5hxl\""
+  }
+}

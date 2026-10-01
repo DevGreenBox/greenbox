@@ -1,0 +1,434 @@
+{
+  "cases-390-dark": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(85)"
+    ]
+  },
+  "cases-390-light": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(85)"
+    ]
+  },
+  "cases-reduced-dark": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(8)"
+    ]
+  },
+  "cases-reduced-light": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(8)"
+    ]
+  },
+  "contact-errors-dark": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  "contact-errors-light": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  "header-scrolled-dark": {
+    "violations": [],
+    "incomplete": []
+  },
+  "header-scrolled-light": {
+    "violations": [],
+    "incomplete": []
+  },
+  "menu-open-dark": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(1)"
+    ]
+  },
+  "menu-open-light": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(1)"
+    ]
+  },
+  "nojs-home-390-dark": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": ".GridBackdrop-module__0j9sMW__c2 > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">.product-card</span>",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_kkh5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_kkh5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          },
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      "color-contrast(93)"
+    ]
+  },
+  "nojs-home-390-light": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": ".GridBackdrop-module__0j9sMW__c2 > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">.product-card</span>",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_kkh5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_kkh5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#1a1a2e",
+              "parentColor": "#4a4a68"
+            }
+          },
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      "color-contrast(94)"
+    ]
+  },
+  "nojs-home-dark": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": ".GridBackdrop-module__0j9sMW__hdr > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;header&gt;</span>",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;section class=\"hero\"&gt;</span>",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_kkh5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_kkh5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          },
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      "color-contrast(15)"
+    ]
+  },
+  "nojs-home-light": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": ".GridBackdrop-module__0j9sMW__hdr > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;header&gt;</span>",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;section class=\"hero\"&gt;</span>",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_kkh5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_kkh5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#1a1a2e",
+              "parentColor": "#4a4a68"
+            }
+          },
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      "color-contrast(16)"
+    ]
+  },
+  "quiz-contacts-dark": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_kkh5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_kkh5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  "quiz-contacts-light": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_kkh5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_kkh5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#1a1a2e",
+              "parentColor": "#4a4a68"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  "quiz-errors-dark": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_kkh5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_kkh5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  "quiz-errors-light": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_kkh5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_kkh5flb_\">персональных данных</a>",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#1a1a2e",
+              "parentColor": "#4a4a68"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  }
+}

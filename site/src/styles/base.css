@@ -1,0 +1,103 @@
+/* Основа: элементы по умолчанию, поверхности браузера (выделение, каретка, фокус, скроллбар,
+   подчёркивания), reduced-motion. Появлений блоков при скролле нет: авторские движения секций
+   (линейки «Что вы получаете», шкала процесса) — в их CSS-модулях, фазы ставит motion/Reveal.tsx. */
+
+@layer base {
+  /* Холст тёмный: верх (шапка, первый экран) и низ (подвал) тёмные в обеих темах, поэтому
+     «оттяжка» прокрутки на телефоне не мигает светлым. Сама страница красится body и сценами. */
+  html {
+    background-color: #0a0a14;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h-compact);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scrollbar-color: var(--scroll-thumb) var(--bg);
+    accent-color: var(--accent);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Сцена красит себя сама: фон, текст и тонкий скроллбар вложенных прокруток. */
+  [data-scene] {
+    background-color: var(--bg);
+    color: var(--text);
+    scrollbar-color: var(--scroll-thumb) transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  p,
+  li,
+  dd,
+  figcaption,
+  blockquote {
+    text-wrap: pretty;
+    /* Длинное слово («ЗелёнаяКоробка») при крупном системном шрифте переносится, а не распирает
+       страницу. Именно anywhere: break-word не уменьшает min-content, и ячейки grid всё равно растут. */
+    overflow-wrap: anywhere;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  input,
+  textarea {
+    caret-color: var(--focus);
+  }
+
+  /* Ссылки в тексте (без своего класса): тонкое подчёркивание с отступом, на наведении плотнее.
+     Без :where() — иначе специфичность 0 и preflight Tailwind a{text-decoration:inherit} снимает
+     подчёркивание (WCAG 1.4.1). Навигация без классов (меню, подвал) снимает его сама в слое components. */
+  a:not([class]),
+  .link {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+    text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+    transition: text-decoration-color var(--dur-hover) var(--ease-out);
+  }
+
+  a:not([class]):hover,
+  .link:hover {
+    text-decoration-color: currentColor;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0s !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

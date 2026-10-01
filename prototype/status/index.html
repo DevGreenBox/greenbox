@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>ЗелёнаяКоробка — ход работы</title>
+<style>
+  :root { --bg: #0A0A14; --panel: #12121F; --line: rgba(255,255,255,.08); --text: #E8E8F0; --muted: #A0A0B8; --green: #00E676; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { margin: 0; font-size: 24px; }
+  .meta { color: var(--muted); font-size: 13px; margin: 4px 0 24px; }
+  .stage { display: inline-block; margin-bottom: 20px; padding: 6px 12px; border-radius: 999px; background: rgba(0,230,118,.12); color: var(--green); font-weight: 600; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+  h2 { margin: 0 0 12px; font-size: 15px; color: var(--muted); font-weight: 600; }
+  ol, ul { margin: 0; padding: 0; list-style: none; }
+  li { padding: 10px 0; border-top: 1px solid var(--line); }
+  li:first-child { border-top: 0; padding-top: 0; }
+  .st { display: flex; gap: 10px; align-items: baseline; }
+  .dot { flex: none; width: 10px; height: 10px; border-radius: 50%; border: 2px solid #6A6A80; transform: translateY(1px); }
+  .done .dot { background: var(--green); border-color: var(--green); }
+  .active .dot { border-color: var(--green); box-shadow: 0 0 0 4px rgba(0,230,118,.18); animation: pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(0,230,118,.05); } }
+  @media (prefers-reduced-motion: reduce) { .active .dot { animation: none; } }
+  .todo { color: var(--muted); }
+  .agent { font-weight: 600; }
+  .since { color: var(--muted); font-size: 12px; margin-left: 6px; }
+  .task { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .run .agent::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--green); animation: pulse 1.4s ease-in-out infinite; }
+  a { color: var(--green); text-underline-offset: 3px; }
+  .links li { padding: 6px 0; border: 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ЗелёнаяКоробка — ход работы</h1>
+  <p class="meta" id="meta">Загрузка…</p>
+  <div class="stage" id="stage"></div>
+  <div class="grid">
+    <section><h2>Этапы</h2><ol id="stages"></ol></section>
+    <section><h2>Работает сейчас</h2><ul id="running"></ul><h2 style="margin-top:18px">Следом</h2><ul id="queued"></ul></section>
+    <section><h2>Готово</h2><ul id="done"></ul></section>
+    <section><h2>Ссылки</h2><ul class="links" id="links"></ul><h2 style="margin-top:18px">Ждёт от вас (не блокирует)</h2><ul id="client"></ul></section>
+  </div>
+</main>
+<script>
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+async function load() {
+  try {
+    const d = await (await fetch('status.json?t=' + Date.now(), { cache: 'no-store' })).json();
+    document.getElementById('meta').textContent = 'Обновлено: ' + (d.updated || '—') + ' · страница обновляется сама каждые 10 секунд';
+    document.getElementById('stage').textContent = d.stage;
+    document.getElementById('stages').innerHTML = d.stages.map((s) => `<li class="st ${s.state}"><span class="dot"></span><span><b>${s.n}.</b> ${esc(s.name)}</span></li>`).join('');
+    document.getElementById('running').innerHTML = d.running.length ? d.running.map((r) => `<li class="run"><div class="agent">${esc(r.agent)}<span class="since">с ${esc(r.since)}</span></div><div class="task">${esc(r.task)}</div></li>`).join('') : '<li class="todo">Никто — жду вашего ответа или следующего шага</li>';
+    document.getElementById('queued').innerHTML = d.queued.map((r) => `<li><div class="agent">${esc(r.agent)}</div><div class="task">${esc(r.task)}</div></li>`).join('');
+    document.getElementById('done').innerHTML = d.done.map((r) => `<li><div class="agent">✓ ${esc(r.agent)}</div><div class="task">${esc(r.result)}</div></li>`).join('');
+    document.getElementById('links').innerHTML = d.links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('');
+    document.getElementById('client').innerHTML = d.waiting_client.map((c) => `<li class="task">${esc(c)}</li>`).join('');
+  } catch (e) { document.getElementById('meta').textContent = 'Не удалось загрузить статус, повторю через 10 с'; }
+}
+load(); setInterval(load, 10000);
+</script>
+</body>
+</html>

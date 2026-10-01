@@ -1,0 +1,8 @@
+chromium 1440 light: overflow 0px; console: чисто
+chromium 390 light: overflow 0px; console: чисто
+chromium 1440 dark: overflow 0px; console: чисто
+chromium 390 dark: overflow 0px; console: чисто
+webkit 1440: console: чисто
+webkit 390: console: чисто
+plan chromium 1440: замер (data-live) через 1256 мс после начала загрузки
+plan chromium 390: замер (data-live) через 1222 мс после начала загрузки

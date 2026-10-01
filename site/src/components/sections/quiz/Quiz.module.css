@@ -1,0 +1,357 @@
+/* Квиз. Пошаговый режим держится на классе .js у <html>: его ставит скрипт темы до отрисовки,
+   поэтому шаги не мигают. Без JS видны все шаги одной формой и только кнопка «Отправить». */
+
+.panel {
+  /* Нижняя граница — не больше 5vw: при крупном системном шрифте поля панели не съедают узкий экран. */
+  padding: clamp(min(1.25rem, 5vw), 0.6rem + 3vw, 3rem);
+  /* Смена шага прокручивает к началу панели: под фиксированной шапкой остаётся тег выделения и воздух. */
+  scroll-margin-top: 2.75rem;
+}
+
+/* ---------- Выделение, как в инспекторе «Сетки макета» первого экрана ----------
+   Единственная реплика языка первого экрана ниже него: контур по рамке панели, маркеры по углам,
+   моноширинный тег с номером шага над левым верхним углом. Контур — акцент, как деления прогресса;
+   тег — --accent-ink и --text-2 (от 4,5:1 на фоне сцены: тег — единственный видимый номер шага). */
+
+.form {
+  position: relative;
+}
+
+.pick {
+  --pick: color-mix(in srgb, var(--accent) 80%, transparent);
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--pick);
+  pointer-events: none;
+}
+
+.pick i {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  margin: -4px;
+  border: 1px solid var(--pick);
+  background: var(--bg);
+}
+
+.pick i:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.pick i:nth-child(2) {
+  right: 0;
+  top: 0;
+}
+
+.pick i:nth-child(3) {
+  left: 0;
+  bottom: 0;
+}
+
+.pick i:nth-child(4) {
+  right: 0;
+  bottom: 0;
+}
+
+.pick b {
+  position: absolute;
+  left: -1px;
+  bottom: 100%;
+  margin-bottom: 0.5rem;
+  color: var(--accent-ink);
+  font-family: var(--font-martian-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  white-space: nowrap;
+}
+
+.pick b span {
+  margin-left: 1ch;
+  color: var(--text-2);
+}
+
+/* ---------- Прогресс ---------- */
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
+  color: var(--text-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+/* Не короче 6rem: на узкой панели пометка «Вопросы можно пропускать» уходит на свою строку. */
+.bar {
+  display: flex;
+  flex: 1 1 6rem;
+  gap: 0.375rem;
+  max-width: 20rem;
+}
+
+.counter {
+  color: var(--text);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.skipNote {
+  font-weight: 400;
+  white-space: normal;
+}
+
+.bar > span {
+  flex: 1;
+  height: 0.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--line-strong);
+  transition: background-color var(--dur-reveal) var(--ease-out);
+}
+
+.bar > [data-on] {
+  background: var(--accent);
+}
+
+/* Выбранный оффер (пришли по «Обсудить со скидкой»): между прогрессом и вопросом, отступ — как у прогресса. */
+.offerNote {
+  margin-bottom: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
+}
+
+/* ---------- Шаги ---------- */
+
+.steps {
+  display: grid;
+}
+
+.step {
+  min-width: 0;
+}
+
+/* legend как обычный блок: иначе браузер сажает его на рамку fieldset и отступы ведут себя странно */
+.legend {
+  float: left;
+  width: 100%;
+}
+
+.legend + * {
+  clear: both;
+}
+
+.question {
+  max-width: 24ch;
+}
+
+/* Программный фокус при смене шага — для скринридера; заголовок не контрол, кольцо не нужно. */
+.question:focus {
+  outline: none;
+}
+
+.hint {
+  padding-top: 0.625rem;
+  color: var(--text-2);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+.chips > * {
+  max-width: 100%;
+}
+
+/* Чипы и флаг СДЭК при крупном шрифте на узком экране переносят даже длинное слово или «1 000–10 000»
+   (typograf связал их неразрывно), а не раздвигают панель. В обычном размере всё помещается целиком. */
+.chips,
+.offer {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* Флаг «Есть договор со СДЭК»: отдельно от чипов, на зелёной подложке оффера. */
+.offer {
+  margin-top: 1.5rem;
+  padding: 1rem 1.125rem;
+  border-radius: var(--radius-card);
+  background: var(--accent-tint);
+}
+
+.offer :global(.check) {
+  align-items: center;
+  font-size: 0.9375rem;
+}
+
+.offerLabel {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* До 1024 — во всю ширину панели, края полей совпадают с кнопкой «Отправить». */
+.fields {
+  display: grid;
+  gap: 1.25rem;
+  padding-top: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+/* ---------- Десктоп: вопрос слева, ответы справа ----------
+   Панель во всю ширину сетки, внутри — пропорция страницы 4 : 8 (как «Что вы получаете»): слева вопрос
+   и подсказка «Можно выбрать несколько», справа чипы и флаг СДЭК, у контактов — поля. Так же стоит
+   экран успеха: отметка и сообщение слева, сводка справа. Шаги ниже и почти одной высоты. */
+@media (min-width: 1024px) {
+  .step,
+  .sent {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: var(--gap-lg);
+    align-items: start;
+  }
+
+  .step {
+    grid-template-areas: 'q a' 'h a' '. a';
+  }
+
+  .legend {
+    grid-area: q;
+  }
+
+  .hint {
+    grid-area: h;
+  }
+
+  .answers {
+    grid-area: a;
+  }
+
+  .chips,
+  .fields {
+    padding-top: 0;
+  }
+
+  /* Поля шире 44rem только растягивают строку ввода. */
+  .fields {
+    max-width: 44rem;
+  }
+
+  .sent {
+    grid-template-areas: 'm s' 't s' '. s';
+  }
+
+  .sent > :first-child {
+    grid-area: m;
+  }
+
+  .sent > h3 {
+    grid-area: t;
+  }
+
+  .sent > dl {
+    grid-area: s;
+    margin-top: 0;
+  }
+}
+
+/* ---------- Навигация ---------- */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: clamp(2rem, 1.6rem + 1.2vw, 2.75rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.back {
+  margin-right: auto;
+}
+
+.skip {
+  margin-left: auto;
+}
+
+.nav + * {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 639px) {
+  .nav {
+    gap: 0.5rem 1rem;
+  }
+
+  .next,
+  .submit {
+    flex: 1;
+  }
+
+  /* Кнопки во всю ширину: боковые поля кнопки не нужны, при крупном шрифте «Отправить» помещается. */
+  .nav :global(.btn--primary) {
+    --btn-px: min(1.75rem, 5vw);
+  }
+
+  /* Пропуск — отдельной строкой под кнопками, по центру: большая «Далее» остаётся под пальцем.
+     При крупном системном шрифте подпись переносится, а не раздвигает панель. */
+  .skip {
+    order: 1;
+    width: 100%;
+    margin: 0;
+    white-space: normal;
+  }
+}
+
+/* ---------- Без JS: одна длинная форма ---------- */
+
+:global(html:not(.js)) .jsOnly {
+  display: none;
+}
+
+:global(html:not(.js)) .step + .step {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- С JS: по шагу ---------- */
+
+:global(html.js) .step:not([data-active]) {
+  display: none;
+}
+
+:global(html.js) .form:not([data-last]) .submit {
+  display: none;
+}
+
+/* Новый шаг въезжает со стороны движения; первая отрисовка — без анимации (data-dir ещё нет). */
+.form[data-dir] .step[data-active] {
+  animation: step-next var(--dur-reveal) var(--ease-out) both;
+}
+
+.form[data-dir='back'] .step[data-active] {
+  animation-name: step-back;
+}
+
+@keyframes step-next {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+}
+
+@keyframes step-back {
+  from {
+    opacity: 0;
+    transform: translateX(-1.5rem);
+  }
+}

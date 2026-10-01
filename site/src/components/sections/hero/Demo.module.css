@@ -1,0 +1,702 @@
+/* Витрина + админка первого экрана. Экраны устройств — изображения интерфейса. Витрина на ноутбуке —
+   светлая сцена (data-scene="light" в Demo.tsx): следует теме сайта — светлая в светлой теме, тёмная
+   (#12121F) в тёмной, цвета — токены сцены. Админка на телефоне светлая всегда, её цвета палитры заданы
+   прямо (docs/03-design-system.md, §3.2 и §8). Масштаб: в экране ноутбука 1em = 1/60 его ширины, в экране
+   телефона — 1/19 (Device.tsx). */
+
+/* ---------- Композиция ---------- */
+
+/* Сцена устройств — ::before задаёт её высоту, устройства стоят в ней абсолютно. Подписи под сценой нет
+   (заказчик 30.09.2026). Контейнер (cqi) — устройства по долям её ширины.
+   Десктоп (от 640): ноутбук слева, телефон справа почти вровень с ним — верх чуть выше, низ ниже на
+   строку; одна композиция, выровненная с текстом по центру (гармония прототипа 29.09.2026).
+   Телефон (до 640) — своя компактная сцена над заголовком (решение заказчика 30.09.2026, Hero.module.css):
+   ноутбук 86% (как на десктопе), телефон вровень с ним и обрезан мягким затуханием сразу под переключателями
+   витрины — заказы и переключатели видны, интеграции и таб-бар уходят за край. Высота сцены — 70% ширины,
+   но не меньше 15.5rem: переключатели с кеглем не мельче 11 px на узком телефоне стоят ниже. */
+.demo {
+  --phone-w: 46%;
+  --stage: max(70cqi, 15.5rem);
+  position: relative;
+  margin: 0;
+  container-type: inline-size;
+}
+
+.demo::before {
+  content: '';
+  display: block;
+  padding-top: max(70%, 15.5rem); /* = --stage: % здесь — от ширины фигуры, как cqi */
+}
+
+.laptop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 86%;
+}
+
+.phone {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: var(--phone-w);
+}
+
+/* Телефон на узком экране: низ телефона гаснет к краю сцены (последние 1.5rem), ниже его нет — поверх
+   заголовка ничего не заходит. overflow-y: clip на всякий случай режет и тень ниже фигуры. */
+@media (max-width: 639px) {
+  .demo {
+    overflow-y: clip;
+  }
+
+  .phone {
+    mask-image: linear-gradient(#000 calc(var(--stage) - 1.5rem), transparent var(--stage));
+  }
+}
+
+@media (min-width: 640px) {
+  .demo {
+    --phone-w: 30%;
+    max-width: 44rem;
+  }
+
+  .demo::before {
+    padding-top: 60.5%; /* 30% × 38.3 / 19 */
+  }
+
+  /* высота ноутбука — 0.594 ширины: 51.1cqi, телефон выходит ниже на ~7cqi */
+  .laptop {
+    top: 2cqi;
+    width: 86%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .demo {
+    max-width: none;
+  }
+}
+
+/* ---------- Витрина (ноутбук) ---------- */
+
+.store {
+  /* Высоты выключаемых блоков в em ноутбука — постоянны при любой ширине (всё в витрине в em): баннер
+     с зазором — 12.49em, новинки — 13.99em (замер 390 и 1440 px, 01.10.2026). Меняете блок — перемерьте. */
+  --promo-h: 12.49em;
+  --fresh-h: 13.99em;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  /* Правило внутреннего и внешнего: между блоками витрины — 1.8em, как поле страницы по бокам; внутри
+     блока всё теснее (баннер — 1.6em, заголовок → карточки и карточки между собой — 1em, картинка →
+     название — 0.6em, название → полоска цены — 0.4em). Шкала подобрана так, чтобы край экрана резал
+     полоски цен, а не проходил по самому низу карточек. */
+  gap: 1.8em;
+  padding: 0 1.8em;
+}
+
+/* Блоки не сжимаются: страница длиннее экрана и обрезается его краем, как настоящая. */
+.store > * {
+  flex: none;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 2.4em;
+  height: 3.6em;
+  margin: 0 -1.8em;
+  padding: 0 1.8em;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  position: relative;
+  flex: none;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 0.5em;
+  background: var(--text);
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  inset: 0.55em;
+  border-radius: 50%;
+  background: #00e676;
+}
+
+.nav {
+  display: flex;
+  gap: 1.6em;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: 1.2em;
+  margin-left: auto;
+}
+
+.storeIcon {
+  width: 1.5em;
+  height: 1.5em;
+  stroke-width: 1.9;
+}
+
+/* Баннер — тёмный блок в обеих темах: в светлой витрине контрастный, в тёмной — приподнятый над фоном. */
+
+/* Выключаемые блоки: раскладка витрины неподвижна — блоки ниже съезжают вверх сдвигом, выключенный
+   гаснет. За баннер отвечает translate, за новинки — transform: два свойства, два независимых перехода
+   (оба переключателя можно щёлкать вперемешку). Только трансформации: без пересчёта раскладки в каждом
+   кадре и без сдвигов макета (CLS 0) — раньше высота 1fr ↔ 0fr двигала «Каталог» раскладкой. */
+.fresh,
+.catalog,
+.footer {
+  transition:
+    translate var(--dur-reveal) var(--ease-out),
+    transform var(--dur-reveal) var(--ease-out),
+    opacity var(--dur-hover) var(--ease-out);
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.6em;
+  overflow: hidden;
+  border-radius: 1em;
+  background: #1a1a2e;
+  transform-origin: 50% 0;
+  transition:
+    opacity var(--dur-move) var(--ease-out) 0.12s,
+    transform var(--dur-reveal) var(--ease-out);
+}
+
+.chip {
+  padding: 0.35em 0.8em;
+  border-radius: 1em;
+  background: #00e676;
+  color: #0a0a14;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.headline {
+  margin: 0.3em 0 0.57em; /* в кегле заголовка: 0.6em и 1.2em витрины */
+  color: #ffffff;
+  font-size: 2.1em;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.bannerButton {
+  padding: 0.55em 1.3em;
+  border-radius: 1em;
+  background: #ffffff;
+  color: #1a1a2e;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.art {
+  position: absolute;
+  /* Высота баннера; правый край круга (x = 160 из 170) — на поле баннера 1.6em. */
+  top: 0;
+  right: 0.6em;
+  width: 17.1em;
+  height: 100%;
+}
+
+.heading {
+  margin: 0 0 0.77em; /* 1em витрины */
+  font-size: 1.3em;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1em;
+}
+
+.product {
+  transition:
+    opacity var(--dur-move) var(--ease-out),
+    transform var(--dur-reveal) var(--ease-out);
+  transition-delay: calc(120ms + var(--i, 0) * var(--stagger));
+}
+
+.productArt {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.7em;
+  background: var(--inset);
+  color: var(--text);
+}
+
+.productArt svg {
+  width: 64%;
+  height: 86%;
+}
+
+.product:nth-child(1) .productArt {
+  color: var(--accent);
+}
+
+.product:nth-child(3) .productArt {
+  color: var(--text-3);
+}
+
+.product:nth-child(4) .productArt {
+  color: var(--text-2);
+}
+
+.productName {
+  display: block;
+  margin-top: 0.63em; /* 0.6em витрины */
+  overflow: hidden;
+  font-size: 0.95em;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Цен нет (PRODUCT.md) — полоска-заглушка. */
+.price {
+  display: block;
+  width: 4.6em;
+  height: 0.75em;
+  margin-top: 0.4em;
+  border-radius: 0.4em;
+  background: var(--line);
+}
+
+.category {
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 2 / 1;
+  padding: 0.84em; /* 0.8em витрины со всех сторон */
+  border-radius: 0.7em;
+  background: var(--inset);
+  font-size: 0.95em;
+  font-weight: 600;
+}
+
+/* Подвал прижат к низу экрана, когда блоки выключены и страница короче экрана. Светлее фона
+   витрины в обеих темах: тёмный сливался бы с рамкой ноутбука. */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 1.6em;
+  margin: auto -1.8em 0;
+  /* Низ с запасом: когда оба блока выключены, подвал поднимается сдвигом, и его фон должен доходить до
+     края экрана, а не оставлять под собой пустую полосу. Лишнее режет экран. */
+  padding: 2em 1.8em 30em;
+  border-top: 1px solid var(--line);
+  background: var(--surface-hover);
+}
+
+.footer i {
+  width: 6em;
+  height: 0.7em;
+  border-radius: 0.4em;
+  background: var(--line);
+}
+
+/* ---------- Админка (телефон) ---------- */
+
+/* Кегли с нижней границей: телефон бывает узким (138 px на 1024), а подписи в нём не мельче 10 px,
+   подписи настоящих переключателей и их группы — не мельче 11 px. Строки растут вместе с кеглем (em). */
+.admin {
+  --focus: #008638;
+  --divider: 1px solid rgb(26 26 46 / 0.1);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  /* Высота экрана больше содержимого: остаток поровну между группами (заказы, витрина, интеграции,
+     таб-бар), а не одной дырой. */
+  justify-content: space-between;
+  padding: 2.6em 1.05em 0;
+}
+
+.adminTitle {
+  margin: 0 0.15em 0.4em;
+  font-size: 1.65em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Строки списков прямо на фоне экрана, с разделителями — без карточной подложки. */
+.rows {
+  border-block: var(--divider);
+}
+
+.rows > li {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  min-height: 2.5em;
+  font-size: max(10px, 0.92em);
+}
+
+.rows > li + li {
+  border-top: var(--divider);
+}
+
+.rows b {
+  flex: none;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Длинный статус на узком телефоне обрезается многоточием, как в настоящей админке. */
+.status {
+  min-width: 0;
+  margin-left: auto;
+  overflow: hidden;
+  color: #4a4a68;
+  font-size: max(10px, 0.92em);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dot {
+  flex: none;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+}
+
+.dotPaid {
+  background: #00c853;
+}
+
+.dotPacked {
+  background: #8888a0;
+}
+
+.dotShip {
+  box-shadow: inset 0 0 0 0.16em #00c853;
+}
+
+.label {
+  margin: 0.85em 0.2em 0.4em;
+  color: #4a4a68;
+  font-size: max(11px, 0.78em);
+  font-weight: 500;
+}
+
+/* Строка-переключатель целиком: подпись + дорожка. Нативный checkbox растянут поверх строки —
+   нажимается вся строка, фокус и Space работают сами. */
+.toggle {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6em;
+  min-height: 2.9em;
+  margin-inline: -0.55em;
+  padding-inline: 0.55em;
+  border-radius: 0.7em;
+  cursor: pointer;
+  transition: background-color var(--dur-hover) var(--ease-out);
+}
+
+/* На самом узком телефоне подпись переносится на вторую строку, дорожка остаётся справа. */
+.toggleLabel {
+  font-size: max(11px, 1em);
+  line-height: 1.2;
+}
+
+@media (hover: hover) {
+  .toggle:hover {
+    background: rgb(26 26 46 / 0.04);
+  }
+}
+
+.switch {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Выключен: белая дорожка, рамка 3.1:1 к фону экрана #F0F2F5 (WCAG 1.4.11 — от 3:1), ползунок слева.
+   Включён: зелёная дорожка, тёмный ползунок справа (8.8:1) — как подпись на зелёной кнопке сайта. */
+.track {
+  position: relative;
+  flex: none;
+  width: 2.6em;
+  height: 1.5em;
+  border-radius: 1em;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px #8888a0;
+  transition:
+    background-color var(--dur-hover) var(--ease-out),
+    box-shadow var(--dur-hover) var(--ease-out);
+}
+
+.knob {
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: #6a6a80;
+  transition:
+    transform var(--dur-move) var(--ease-out),
+    background-color var(--dur-hover) var(--ease-out);
+}
+
+.switch:checked + .track {
+  background: #00c853;
+  box-shadow: inset 0 0 0 1px #00c853;
+}
+
+.switch:checked + .track > .knob {
+  background: #0a0a14;
+  transform: translateX(1.1em);
+}
+
+.switch:focus-visible + .track {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Интеграции: плашки по ширине подписи, «amoCRM» не рвётся. Телефону уже 165 px на них не хватает
+   ни ширины, ни высоты — блок уходит, остаются заказы и переключатели витрины. */
+.apps {
+  display: flex;
+  gap: 0.5em;
+}
+
+.apps li {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  gap: 0.7em;
+  padding: 0.75em 0.7em 0.7em;
+  border-radius: 1em;
+  background: #ffffff;
+  font-size: max(10px, 0.85em);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+@container (max-width: 164px) {
+  .integrations {
+    display: none;
+  }
+}
+
+.check {
+  display: grid;
+  place-items: center;
+  width: 1.35em;
+  height: 1.35em;
+  border-radius: 50%;
+  background: #00c853;
+  color: #0a0a14;
+}
+
+.check svg {
+  width: 0.85em;
+  height: 0.85em;
+  stroke-width: 3;
+}
+
+.tabbar {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 -1.05em;
+  padding: 0.9em 0 1.5em;
+  border-top: var(--divider);
+  background: #ffffff;
+  color: #8888a0;
+}
+
+.tabbar svg {
+  width: 1.45em;
+  height: 1.45em;
+  stroke-width: 1.9;
+}
+
+.tabbar .active {
+  color: #008638;
+}
+
+/* Телефон на узком экране обрезан под переключателями (см. «Композиция»): группы прижаты к верху, как
+   в настоящем приложении, — переключатели стоят на одной высоте при любой ширине, таб-бар внизу. */
+@media (max-width: 639px) {
+  .admin {
+    justify-content: flex-start;
+  }
+
+  .tabbar {
+    margin-top: auto;
+  }
+}
+
+/* ---------- Ответ витрины на переключатели ---------- */
+
+/* Автопроход (DemoTour): строка «Акции на главной» подсвечена, пока её переключает сам сайт. */
+.demo[data-tour] .toggle:has(.promoSwitch) {
+  background: rgb(0 200 83 / 0.14);
+}
+
+/* Выключение: содержимое гаснет быстро, блоки ниже подтягиваются следом. */
+.demo:has(.promoSwitch:not(:checked)) :is(.fresh, .catalog, .footer) {
+  translate: 0 calc(-1 * var(--promo-h));
+  transition-delay: 60ms, 60ms, 0s;
+}
+
+.demo:has(.freshSwitch:not(:checked)) :is(.catalog, .footer) {
+  transform: translateY(calc(-1 * var(--fresh-h)));
+  transition-delay: 60ms, 60ms, 0s;
+}
+
+.demo:has(.freshSwitch:not(:checked)) .fresh {
+  opacity: 0;
+}
+
+.demo:has(.promoSwitch:not(:checked)) .banner {
+  opacity: 0;
+  transform: scale(0.96);
+  transition-duration: var(--dur-hover), var(--dur-move);
+  transition-delay: 0s;
+}
+
+.demo:has(.freshSwitch:not(:checked)) .product {
+  opacity: 0;
+  transform: translateY(0.8em);
+  transition-duration: var(--dur-hover), var(--dur-move);
+  transition-delay: 0s;
+}
+
+/* ---------- Вход (CSS, сразу при загрузке; без JS и при reduced-motion всё видно сразу) ---------- */
+
+/* Ноутбук, затем телефон; когда телефон встал, админка «включает» баннер и новинки —
+   первое, что видит посетитель: переключатель → витрина отвечает. Заливка backwards: после
+   входа действует обычное состояние переключателей. */
+@keyframes device-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+}
+
+@keyframes phone-in {
+  from {
+    opacity: 0;
+    transform: translate(6%, 5%);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Вход витрины: сначала баннера и новинок нет — блоки ниже подняты, затем встают на место. */
+@keyframes promo-in {
+  from {
+    translate: 0 calc(-1 * var(--promo-h));
+  }
+}
+
+@keyframes fresh-in {
+  from {
+    transform: translateY(calc(-1 * var(--fresh-h)));
+  }
+}
+
+@keyframes banner-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes product-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.8em);
+  }
+}
+
+@keyframes track-off {
+  from {
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 1px #8888a0;
+  }
+}
+
+@keyframes knob-off {
+  from {
+    background-color: #6a6a80;
+    transform: none;
+  }
+}
+
+:global(.js) .laptop {
+  animation: device-rise var(--dur-enter) var(--ease-out) 0.2s backwards;
+}
+
+:global(.js) .phone {
+  animation: phone-in var(--dur-enter) var(--ease-out) 0.36s backwards;
+}
+
+
+:global(.js) .banner {
+  animation: banner-in var(--dur-reveal) var(--ease-out) 1.2s backwards;
+}
+
+:global(.js) .fresh {
+  animation:
+    promo-in var(--dur-reveal) var(--ease-out) 1.1s backwards,
+    fade var(--dur-reveal) var(--ease-out) 1.4s backwards;
+}
+
+:global(.js) :is(.catalog, .footer) {
+  animation:
+    promo-in var(--dur-reveal) var(--ease-out) 1.1s backwards,
+    fresh-in var(--dur-reveal) var(--ease-out) 1.4s backwards;
+}
+
+:global(.js) .product {
+  animation: product-in var(--dur-reveal) var(--ease-out) backwards;
+  animation-delay: calc(1.5s + var(--i, 0) * var(--stagger));
+}
+
+:global(.js) .promoSwitch + .track,
+:global(.js) .freshSwitch + .track {
+  animation: track-off var(--dur-hover) var(--ease-out) 1.05s backwards;
+}
+
+:global(.js) .promoSwitch + .track > .knob,
+:global(.js) .freshSwitch + .track > .knob {
+  animation: knob-off var(--dur-move) var(--ease-out) 1.05s backwards;
+}
+
+:global(.js) .freshSwitch + .track,
+:global(.js) .freshSwitch + .track > .knob {
+  animation-delay: 1.35s;
+}

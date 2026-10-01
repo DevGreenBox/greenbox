@@ -1,0 +1,1074 @@
+/* Классы компонентов из src/components/ui и src/components/layout. Слой components: утилиты
+   Tailwind в разметке их переопределяют (например, pt-0 у .section). Цвета — только токены сцены. */
+
+@layer components {
+  /* ---------- Сетка ---------- */
+
+  .wrap {
+    width: 100%;
+    padding-inline: var(--gutter);
+  }
+
+  .section {
+    padding-block: var(--section-y);
+  }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-panel);
+    box-shadow: var(--elev-1);
+  }
+
+  /* Единственный градиентный текст сайта: слово «Интернет-магазины» в первом экране. */
+  .text-gradient-hero {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #00e676;
+  }
+
+  .text-gradient-hero::selection {
+    -webkit-text-fill-color: var(--on-accent);
+  }
+
+  @media (forced-colors: active) {
+    .text-gradient-hero {
+      background: none;
+      -webkit-text-fill-color: currentColor;
+    }
+  }
+
+  /* ---------- Иконка ---------- */
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ---------- Кнопки ---------- */
+
+  .btn {
+    --btn-h: 3.5rem;
+    --btn-px: min(1.75rem, 6vw);
+    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    min-height: var(--btn-h);
+    padding-inline: var(--btn-px);
+    border: 1px solid transparent;
+    /* В одну строку — та же пилюля (радиус = половина высоты). Если подпись переносится (узкий экран,
+       шрифт 200 %), кнопка растёт в скруглённый прямоугольник, и строки не заходят на скругления. */
+    border-radius: min(var(--radius-pill), var(--btn-h) / 2);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding-block: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    /* Подпись переносится, а не вылезает: при системном шрифте 200 % длинные кнопки иначе шире экрана */
+    text-wrap: balance;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+      background-color var(--dur-hover) var(--ease-out),
+      border-color var(--dur-hover) var(--ease-out),
+      color var(--dur-hover) var(--ease-out),
+      transform var(--dur-hover) var(--ease-out);
+  }
+
+  .btn--sm {
+    --btn-h: 2.75rem;
+    --btn-px: 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Слово шире кнопки (шрифт 200 % на телефоне) переносится внутри, а не вылезает за края рядом с иконкой. */
+  .btn__label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .btn__icon,
+  .btn__spinner {
+    width: 1.125rem;
+    height: 1.125rem;
+    stroke-width: 2;
+  }
+
+  .btn__icon {
+    transition: transform var(--dur-move) var(--ease-out);
+  }
+
+  .btn:active:not(:disabled, [aria-disabled='true']) {
+    transform: translateY(1px);
+  }
+
+  .btn--primary {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  .btn--secondary {
+    background: var(--surface);
+    border-color: var(--line-strong);
+    color: var(--text);
+  }
+
+  .btn--text {
+    --btn-h: 2.75rem;
+    --btn-px: 0;
+    gap: 0.375rem;
+    border-radius: 0.375rem;
+    color: var(--text);
+  }
+
+  .btn--text .btn__icon {
+    color: var(--accent-ink);
+  }
+
+  @media (hover: hover) {
+    .btn:hover:not(:disabled, [aria-disabled='true']) .btn__icon {
+      transform: translateX(3px);
+    }
+
+    .btn:hover:not(:disabled, [aria-disabled='true']) .btn__icon[data-icon='arrow-up-right'] {
+      transform: translate(2px, -2px);
+    }
+
+    .btn:hover:not(:disabled, [aria-disabled='true']) .btn__icon[data-icon='arrow-left'] {
+      transform: translateX(-3px);
+    }
+
+    .btn--primary:hover:not(:disabled, [aria-disabled='true']) {
+      background: var(--accent-hover);
+    }
+
+    .btn--secondary:hover:not(:disabled, [aria-disabled='true']) {
+      background: var(--surface-hover);
+      border-color: var(--line-control);
+    }
+
+    .btn--text:hover:not(:disabled, [aria-disabled='true']) {
+      color: var(--accent-ink);
+    }
+
+    .btn--text:hover:not(:disabled, [aria-disabled='true']) .btn__label {
+      text-decoration: underline 1px;
+      text-underline-offset: 0.25em;
+    }
+  }
+
+  .btn:disabled,
+  .btn[aria-disabled='true'] {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+
+  /* Отправка: кнопка не тускнеет (идёт работа, а не запрет), клики мышью не проходят.
+     Повторную отправку с клавиатуры отсекает форма по своему статусу. */
+  .btn[aria-busy='true'] {
+    cursor: progress;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .btn__spinner {
+    animation: gb-spin 0.8s linear infinite;
+  }
+
+  @keyframes gb-spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  /* ---------- Поля ---------- */
+
+  .field {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .field__label {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--text);
+  }
+
+  .field__req {
+    margin-left: 0.15em;
+    color: var(--text-2);
+  }
+
+  .field__hint {
+    margin-top: -0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: var(--text-2);
+  }
+
+  .field__control {
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 0.9375rem 1.125rem;
+    border: 1px solid var(--line-control);
+    border-radius: var(--radius-control);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition:
+      border-color var(--dur-hover) var(--ease-out),
+      background-color var(--dur-hover) var(--ease-out);
+  }
+
+  textarea.field__control {
+    min-height: 8.5rem;
+    resize: vertical;
+  }
+
+  .field__control::placeholder {
+    color: var(--text-2);
+    opacity: 1;
+  }
+
+  .field__control:hover:not(:disabled, :focus) {
+    border-color: var(--text-2);
+  }
+
+  .field__control:focus-visible {
+    border-color: var(--focus);
+    outline-offset: 2px;
+  }
+
+  .field__control[aria-invalid='true'] {
+    border-color: var(--error);
+  }
+
+  .field__control:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+
+  /* Автозаполнение Chrome красит поле жёлтым — возвращаем поверхность сцены. */
+  .field__control:-webkit-autofill {
+    -webkit-text-fill-color: var(--text);
+    box-shadow: 0 0 0 100px var(--surface) inset;
+    caret-color: var(--focus);
+  }
+
+  .field__error {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--error);
+  }
+
+  .field__error .icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-top: 0.0625rem;
+  }
+
+  /* ---------- Чекбокс ---------- */
+
+  .check-field {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: var(--text-2);
+    cursor: pointer;
+  }
+
+  .check__box {
+    position: relative;
+    display: grid;
+    flex: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.0625rem;
+  }
+
+  .check__input {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 1px solid var(--line-control);
+    border-radius: 0.5rem;
+    background: var(--surface);
+    cursor: pointer;
+    transition:
+      background-color var(--dur-hover) var(--ease-out),
+      border-color var(--dur-hover) var(--ease-out);
+  }
+
+  .check__input:hover {
+    border-color: var(--text-2);
+  }
+
+  .check__input:checked {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .check__input[aria-invalid='true']:not(:checked) {
+    border-color: var(--error);
+  }
+
+  .check__input:focus-visible {
+    outline-offset: 2px;
+  }
+
+  .check__mark {
+    position: absolute;
+    inset: 0;
+    width: 1rem;
+    height: 1rem;
+    margin: auto;
+    stroke-width: 2.5;
+    color: var(--on-accent);
+    opacity: 0;
+    transform: scale(0.6);
+    pointer-events: none;
+    transition:
+      opacity var(--dur-hover) var(--ease-out),
+      transform var(--dur-move) var(--ease-out);
+  }
+
+  .check__input:checked + .check__mark {
+    opacity: 1;
+    transform: none;
+  }
+
+  .check__label a {
+    color: var(--text);
+  }
+
+  /* ---------- Чипы квиза ---------- */
+
+  .chip {
+    position: relative;
+    display: inline-flex;
+  }
+
+  /* Настоящий radio/checkbox поверх чипа: клик, клавиатура и скринридер работают сами. */
+  .chip__input {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .chip__body {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    min-height: 2.75rem;
+    padding: 0.5rem 1.125rem 0.5rem 0.875rem;
+    border: 1px solid var(--line-control);
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.3;
+    transition:
+      background-color var(--dur-hover) var(--ease-out),
+      border-color var(--dur-hover) var(--ease-out),
+      color var(--dur-hover) var(--ease-out);
+  }
+
+  /* Метка выбора: круг у radio, квадрат у checkbox — форма подсказывает «один» или «несколько». */
+  .chip__mark {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 1.5px solid var(--line-control);
+    border-radius: 50%;
+    transition:
+      background-color var(--dur-hover) var(--ease-out),
+      border-color var(--dur-hover) var(--ease-out);
+  }
+
+  .chip__input[type='checkbox'] + .chip__body .chip__mark {
+    border-radius: 0.3125rem;
+  }
+
+  .chip__mark .icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    stroke-width: 3;
+    color: var(--accent);
+    opacity: 0;
+    transform: scale(0.5);
+    transition:
+      opacity var(--dur-hover) var(--ease-out),
+      transform var(--dur-move) var(--ease-out);
+  }
+
+  .chip__input:hover + .chip__body {
+    border-color: var(--text-2);
+  }
+
+  .chip__input:checked + .chip__body {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+
+  .chip__input:checked:hover + .chip__body {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+  }
+
+  .chip__input:checked + .chip__body .chip__mark {
+    background: var(--on-accent);
+    border-color: var(--on-accent);
+  }
+
+  .chip__input:checked + .chip__body .chip__mark .icon {
+    opacity: 1;
+    transform: none;
+  }
+
+  .chip__input:focus-visible + .chip__body {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  .chip__input:disabled {
+    cursor: not-allowed;
+  }
+
+  .chip__input:disabled + .chip__body {
+    opacity: 0.45;
+  }
+
+  /* ---------- Заглушка ---------- */
+
+  /* Честная пустая ячейка: пунктир и цвет второго текста, без красного — это не ошибка. */
+  .placeholder {
+    display: inline-block;
+    padding: 0 0.45em;
+    border: 1px dashed color-mix(in srgb, var(--line-control) 70%, transparent);
+    border-radius: 0.375rem;
+    color: var(--text-2);
+    white-space: nowrap;
+  }
+
+  .placeholder--block {
+    display: block;
+    padding: 0.3125rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  /* ---------- Устройства ---------- */
+
+  /* Масштаб от собственной ширины: внутри экрана ноутбука 1em = 1/60 его ширины, телефона — 1/19. */
+  .device-laptop {
+    position: relative;
+    container-type: inline-size;
+  }
+
+  .device-laptop__lid,
+  .device-laptop__base {
+    font-size: calc(100cqi / 60);
+  }
+
+  .device-laptop__lid {
+    position: relative;
+    width: 52em;
+    margin-inline: auto;
+    padding: 1.1em 1.1em 1.5em;
+    border-radius: 1.8em 1.8em 0.5em 0.5em;
+    background: #1a1a2e;
+    box-shadow:
+      inset 0 0 0 1px rgb(255 255 255 / 0.12),
+      0 2.4em 4.8em -1.6em rgb(4 4 12 / 0.8);
+  }
+
+  .device-laptop__lid::before {
+    content: '';
+    position: absolute;
+    top: 0.38em;
+    left: 50%;
+    width: 0.38em;
+    height: 0.38em;
+    margin-left: -0.19em;
+    border-radius: 50%;
+    background: #4a4a68;
+  }
+
+  .device-laptop__screen,
+  .device-phone__screen {
+    position: relative;
+    overflow: hidden;
+    color: #1a1a2e;
+    line-height: 1.2;
+  }
+
+  .device-laptop__screen {
+    aspect-ratio: 16 / 10;
+    border-radius: 0.45em;
+    background: #ffffff;
+  }
+
+  .device-laptop__base {
+    position: relative;
+    height: 1.9em;
+    border-radius: 0.2em 0.2em 2.6em 2.6em / 0.2em 0.2em 1.5em 1.5em;
+    background: #a0a0b8;
+    box-shadow:
+      inset 0 0.16em 0 #e8e8f0,
+      inset 0 -0.7em 0 #6a6a80,
+      0 1.6em 3em -1em rgb(4 4 12 / 0.9);
+  }
+
+  .device-laptop__base::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 9em;
+    height: 0.55em;
+    margin-left: -4.5em;
+    border-radius: 0 0 0.7em 0.7em;
+    background: #6a6a80;
+  }
+
+  .device-phone {
+    position: relative;
+    container-type: inline-size;
+  }
+
+  .device-phone__body {
+    font-size: calc(100cqi / 19);
+    padding: 0.65em;
+    border-radius: 3em;
+    background: #1a1a2e;
+    box-shadow:
+      inset 0 0 0 1px rgb(255 255 255 / 0.12),
+      -1.2em 2.2em 3.2em -0.4em rgb(10 10 20 / 0.55),
+      -0.3em 0.6em 1.2em rgb(10 10 20 / 0.35);
+  }
+
+  .device-phone__screen {
+    aspect-ratio: 17.7 / 37;
+    border-radius: 2.4em;
+    background: #f0f2f5;
+  }
+
+  .device-phone__island {
+    position: absolute;
+    top: 0.75em;
+    left: 50%;
+    z-index: 2;
+    width: 5.2em;
+    height: 1.45em;
+    margin-left: -2.6em;
+    border-radius: 1em;
+    background: #0a0a14;
+  }
+
+  /* ---------- Переключатель темы ---------- */
+
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: none;
+    color: var(--text);
+    font: inherit;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  html:not(.js) .theme-toggle {
+    display: none;
+  }
+
+  .theme-toggle__track {
+    position: relative;
+    display: block;
+    flex: none;
+    width: 3.25rem;
+    height: 2rem;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    transition: border-color var(--dur-hover) var(--ease-out);
+  }
+
+  .theme-toggle:hover .theme-toggle__track {
+    border-color: var(--line-control);
+  }
+
+  .theme-toggle__knob {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--text);
+    color: var(--bg);
+    transition: transform var(--dur-move) var(--ease-out);
+
+    @variant dark {
+      transform: translateX(1.25rem);
+    }
+  }
+
+  .theme-toggle__knob .icon {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    stroke-width: 2;
+  }
+
+  .theme-toggle__sun {
+    @variant dark {
+      display: none;
+    }
+  }
+
+  .theme-toggle__moon {
+    display: none;
+
+    @variant dark {
+      display: block;
+    }
+  }
+
+  /* ---------- Шапка ---------- */
+
+  /* Шапка — всегда тёмная сцена: читается над любой секцией. Над первым экраном (data-overlay)
+     прозрачна, пока страница у самого верха; без JS — всегда плотная. */
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 50;
+    border-bottom: 1px solid var(--line-strong);
+    transition:
+      background-color var(--dur-move) var(--ease-out),
+      border-color var(--dur-move) var(--ease-out);
+  }
+
+  .js .site-header[data-overlay]:not([data-scrolled]) {
+    background-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  .site-header__row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* Высота меняется скачком (один пересчёт на пороге прокрутки), а не анимацией height:
+       её маскирует плавная смена фона шапки. */
+    height: var(--header-h);
+  }
+
+  .site-header__logo {
+    display: inline-flex;
+    flex: none;
+    padding-block: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .site-header__logo svg {
+    width: auto;
+    /* vw-потолок: при системном шрифте 200 % логотип и бургер не выталкивают шапку за экран */
+    height: min(1.125rem, 4.8vw);
+  }
+
+  .site-header__nav {
+    display: none;
+    margin-inline: auto;
+  }
+
+  .site-header__nav ul {
+    display: flex;
+  }
+
+  .site-header__link {
+    display: block;
+    padding: 0.625rem 0.75rem;
+    border-radius: var(--radius-pill);
+    color: var(--text-2);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+      color var(--dur-hover) var(--ease-out),
+      background-color var(--dur-hover) var(--ease-out);
+  }
+
+  .site-header__link:hover {
+    color: var(--text);
+    background: var(--inset);
+  }
+
+  /* Отдельная страница, на которой стоим (/about, /partner): текст сцены, как на наведении, без подложки. */
+  .site-header__link[aria-current='page'] {
+    color: var(--text);
+  }
+
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+  }
+
+  .site-header__partner,
+  .site-header__theme,
+  .site-header__cta-rest {
+    display: none;
+  }
+
+  /* Узкий телефон: кнопка короче («Обсудить») и с меньшими полями — логотип, кнопка и бургер в одну строку. */
+  .site-header__cta {
+    --btn-px: 0.875rem;
+    flex: none;
+  }
+
+  .burger {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: min(2.75rem, 12vw);
+    height: min(2.75rem, 12vw);
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color var(--dur-hover) var(--ease-out);
+  }
+
+  .burger:hover {
+    border-color: var(--line-control);
+  }
+
+  html:not(.js) .burger,
+  .burger--nojs {
+    display: none;
+  }
+
+  @media (max-width: 1279px) {
+    html:not(.js) .burger--nojs {
+      display: inline-grid;
+    }
+  }
+
+  @media (min-width: 420px) {
+    .site-header__cta {
+      --btn-px: 1.25rem;
+    }
+
+    .site-header__cta-rest {
+      display: inline;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .site-header__logo svg {
+      height: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .site-header[data-scrolled] .site-header__row {
+      height: var(--header-h-compact);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .site-header__nav {
+      display: block;
+    }
+
+    .site-header__actions {
+      margin-left: 0;
+    }
+
+    .site-header__partner {
+      display: block;
+    }
+
+    .site-header__theme {
+      display: inline-flex;
+    }
+
+    .burger {
+      display: none;
+    }
+  }
+
+  /* ---------- Мобильное меню ---------- */
+
+  .menu {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .menu[open] {
+    display: flex;
+    flex-direction: column;
+    animation: gb-fade-in var(--dur-move) var(--ease-out);
+  }
+
+  .menu::backdrop {
+    background: transparent;
+  }
+
+  .menu__top {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: var(--header-h);
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .menu__nav a {
+    display: block;
+    padding-block: 1.125rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 1.1rem + 2vw, 2rem);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    transition: color var(--dur-hover) var(--ease-out);
+  }
+
+  .menu__nav a:hover,
+  .menu__nav a[aria-current='page'] {
+    color: var(--accent-ink);
+  }
+
+  .menu__nav li {
+    animation: gb-rise var(--dur-reveal) var(--ease-out) both;
+    animation-delay: calc(80ms + var(--i, 0) * var(--stagger));
+  }
+
+  .menu__foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem 1.5rem;
+    margin-top: auto;
+    padding-top: 2rem;
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+
+  .menu__links {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  @media (max-width: 639px) {
+    .menu__foot .btn {
+      width: 100%;
+    }
+  }
+
+  .menu__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    color: var(--text-2);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--dur-hover) var(--ease-out);
+  }
+
+  .menu__links a:hover {
+    color: var(--text);
+  }
+
+  @keyframes gb-fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes gb-rise {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+  }
+
+  /* ---------- Подвал ---------- */
+
+  .site-footer {
+    padding-block: clamp(3rem, 2rem + 3vw, 4.5rem) clamp(2rem, 1.5rem + 1.5vw, 3rem);
+    border-top: 1px solid var(--line-strong);
+    font-size: 0.9375rem;
+  }
+
+  .site-footer__top {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .site-footer__logo {
+    display: inline-flex;
+    justify-self: start;
+    padding-block: 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .site-footer__logo svg {
+    width: auto;
+    height: min(1.375rem, 5.6vw);
+  }
+
+  .site-footer__brand {
+    display: grid;
+    gap: 1.25rem;
+    align-content: start;
+    justify-items: start;
+  }
+
+  .site-footer__about {
+    max-width: 34ch;
+    color: var(--text-2);
+    line-height: 1.55;
+  }
+
+  .site-footer__title {
+    margin-bottom: 0.5rem;
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .site-footer__links {
+    display: grid;
+    gap: 0.25rem;
+    align-content: start;
+  }
+
+  .site-footer__links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+    color: var(--text);
+    text-decoration: none;
+    transition: color var(--dur-hover) var(--ease-out);
+  }
+
+  .site-footer__links a:hover {
+    color: var(--accent-ink);
+  }
+
+  .site-footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    margin-top: clamp(2.5rem, 2rem + 2vw, 4rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .site-footer__req {
+    max-width: 62ch;
+  }
+
+  /* Телефон — компактно: разделы и «Компания» рядом, в две колонки; контакты (длинная почта) — строкой
+     ниже во всю ширину. Порядок в разметке прежний. Кнопку рядом с логотипом не ставим: на 390 не влезает. */
+  @media (max-width: 639px) {
+    .site-footer__top {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.75rem 1.25rem;
+    }
+
+    .site-footer__brand {
+      grid-column: 1 / -1;
+    }
+
+    .site-footer__col--contacts {
+      grid-column: 1 / -1;
+      grid-row: 3;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .site-footer__top {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2.5rem 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .site-footer__top {
+      grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr));
+    }
+  }
+}

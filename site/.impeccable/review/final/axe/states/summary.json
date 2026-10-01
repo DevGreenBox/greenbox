@@ -1,0 +1,94 @@
+{
+  "quiz-contacts-light": {
+    "violations": [],
+    "incomplete": []
+  },
+  "quiz-contacts-dark": {
+    "violations": [],
+    "incomplete": []
+  },
+  "quiz-errors-light": {
+    "violations": [],
+    "incomplete": []
+  },
+  "quiz-errors-dark": {
+    "violations": [],
+    "incomplete": []
+  },
+  "contact-errors-light": {
+    "violations": [],
+    "incomplete": []
+  },
+  "contact-errors-dark": {
+    "violations": [],
+    "incomplete": []
+  },
+  "menu-open-light": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(1)"
+    ]
+  },
+  "menu-open-dark": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(1)"
+    ]
+  },
+  "header-scrolled-light": {
+    "violations": [],
+    "incomplete": []
+  },
+  "header-scrolled-dark": {
+    "violations": [],
+    "incomplete": []
+  },
+  "cases-reduced-light": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(5)"
+    ]
+  },
+  "cases-reduced-dark": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(5)"
+    ]
+  },
+  "cases-390-light": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(49)"
+    ]
+  },
+  "cases-390-dark": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(49)"
+    ]
+  },
+  "nojs-home-light": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(14)"
+    ]
+  },
+  "nojs-home-dark": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(13)"
+    ]
+  },
+  "nojs-home-390-light": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(60)"
+    ]
+  },
+  "nojs-home-390-dark": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast(59)"
+    ]
+  }
+}

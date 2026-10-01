@@ -1,0 +1,230 @@
+/* «Как мы работаем»: шкала из 4 шагов (прототип). Телефон — вертикальная шкала, от 1024 px — горизонтальная
+   и размерная линия со сроком. Итоговое состояние — базовые стили; появление только добавляет переходы. */
+
+.track {
+  --dot: 3.5rem; /* маркер шага */
+  --ring: 0.625rem; /* зазор цветом фона между маркером и линией */
+  --col-gap: 2rem;
+  --beat: 0.32s; /* каскад: маркер загорается, когда до него доехала линия */
+  --fill-from: scaleY(0);
+  margin-top: var(--space-head);
+}
+
+.steps {
+  display: grid;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--dot) minmax(0, 1fr);
+  column-gap: 1.25rem;
+  align-content: start;
+  padding-bottom: 2.5rem;
+}
+
+.step:last-child {
+  padding-bottom: 0;
+}
+
+/* Отрезок шкалы от центра маркера до центра следующего: серая база и зелёная заливка поверх. */
+.step::before,
+.step::after {
+  content: '';
+  position: absolute;
+  top: calc(var(--dot) / 2);
+  bottom: calc(var(--dot) / -2);
+  left: calc(var(--dot) / 2 - 1px);
+  width: 2px;
+}
+
+.step:last-child::before,
+.step:last-child::after {
+  display: none;
+}
+
+.step::before {
+  background: var(--line-strong);
+}
+
+.step::after {
+  background: var(--accent);
+  transform-origin: center top;
+}
+
+.num {
+  position: relative;
+  z-index: 1;
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: var(--dot);
+  height: var(--dot);
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 0 0 var(--ring) var(--bg);
+}
+
+.title {
+  margin-top: 0.875rem;
+}
+
+.text {
+  margin-top: 0.375rem;
+}
+
+/* Срок: на телефоне — плашка под шкалой, от 1024 px — подпись на размерной линии во всю ширину. */
+.duration {
+  position: relative;
+  display: flex;
+  margin-top: clamp(2.5rem, 2rem + 2vw, 4.5rem);
+}
+
+.note {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 500;
+  box-shadow: var(--elev-1);
+}
+
+.clock {
+  width: 1.375rem;
+  height: 1.375rem;
+  color: var(--accent-ink);
+}
+
+@media (min-width: 1024px) {
+  .track {
+    --fill-from: scaleX(0);
+  }
+
+  .steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--col-gap);
+  }
+
+  .step {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .step::before,
+  .step::after {
+    top: calc(var(--dot) / 2 - 1px);
+    bottom: auto;
+    left: calc(var(--dot) / 2);
+    width: calc(100% + var(--col-gap));
+    height: 2px;
+    transform-origin: left center;
+  }
+
+  /* У последнего шага шкала идёт до края — как размерная линия под ней. */
+  .step:last-child::before,
+  .step:last-child::after {
+    display: block;
+    width: calc(100% - var(--dot) / 2);
+  }
+
+  .title {
+    margin-top: 2rem;
+  }
+
+  .text {
+    max-width: 24ch;
+    margin-top: 0.625rem;
+  }
+
+  .duration {
+    justify-content: center;
+  }
+
+  /* Размерная линия: засечки на концах и линия через всю ширину шкалы. */
+  .duration::before,
+  .duration::after {
+    content: '';
+    position: absolute;
+    inset: 50% 0 auto;
+  }
+
+  .duration::before {
+    height: 1rem;
+    margin-top: -0.5rem;
+    border-inline: 1px solid var(--line-strong);
+  }
+
+  .duration::after {
+    height: 1px;
+    background: var(--line-strong);
+  }
+
+  .note {
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-pill);
+    font-size: 1.0625rem;
+  }
+}
+
+/* ---------- Появление (Reveal ставит data-revealed на .track) ---------- */
+
+/* Авторское движение секции: шкала дорисовывается и маркеры шагов загораются по очереди, в конце
+   раскрывается размерная линия срока. Текст шагов и срок стоят на месте — движется только графика.
+   Переходы включаются только с data-revealed: при монтировании Reveal исходное состояние встаёт сразу,
+   а не доезжает до него (иначе ранняя прокрутка застаёт шкалу на полпути). */
+@media (prefers-reduced-motion: no-preference) {
+  :global(.reveal-on) .track[data-revealed] .num {
+    transition:
+      background-color var(--dur-reveal) var(--ease-out),
+      color var(--dur-reveal) var(--ease-out),
+      box-shadow var(--dur-reveal) var(--ease-out);
+    transition-delay: calc(var(--n) * var(--beat));
+  }
+
+  :global(.reveal-on) .track:not([data-revealed]) .num {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow:
+      0 0 0 var(--ring) var(--bg),
+      inset 0 0 0 1px var(--line-strong);
+  }
+
+  :global(.reveal-on) .track[data-revealed] .step::after {
+    transition: transform var(--dur-reveal) var(--ease-out);
+    transition-delay: calc(var(--n) * var(--beat) + 0.15s);
+  }
+
+  :global(.reveal-on) .track:not([data-revealed]) .step::after {
+    transform: var(--fill-from);
+  }
+
+  /* Срок — последним: линия раскрывается от центра, засечки проявляются. */
+  :global(.reveal-on) .track[data-revealed] .duration::before,
+  :global(.reveal-on) .track[data-revealed] .duration::after {
+    transition:
+      opacity var(--dur-reveal) var(--ease-out),
+      transform calc(var(--dur-reveal) * 1.4) var(--ease-out);
+    transition-delay: calc(4 * var(--beat));
+  }
+
+  :global(.reveal-on) .track:not([data-revealed]) .duration::before {
+    opacity: 0;
+  }
+
+  :global(.reveal-on) .track:not([data-revealed]) .duration::after {
+    transform: scaleX(0);
+  }
+}

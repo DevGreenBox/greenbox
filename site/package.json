@@ -1,0 +1,30 @@
+{
+  "name": "greenbox-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && if [ -d .next/standalone ]; then cp -r .next/static .next/standalone/.next/ && if [ -d public ]; then cp -r public .next/standalone/; fi; fi",
+    "start": "node .next/standalone/server.js",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --test 'src/**/*.test.ts'"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "next": "16.2.10",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24",
+    "@types/react": "~19.2.18",
+    "@types/react-dom": "~19.2.7",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5"
+  }
+}

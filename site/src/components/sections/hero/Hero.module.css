@@ -1,0 +1,203 @@
+/* Первый экран: раскладка, фон-слот и вход. Цвет — токены тёмной сцены (--bg = #0A0A14 в обеих темах). */
+
+/* Шапка поверх (fixed): отступ сверху = её высота + воздух. От 1024 — экран целиком, содержимое по центру.
+   На невысоком экране (1366 × 768, 1280 × 720, 1536 × 864) отступ сверху больше: верх телефона (он у верха
+   фигуры демо, её высота — 0.605 ширины колонки 1.2fr из 2.2fr) не выше 192 px —
+   168 px контура <section> фона-чертежа плюс 24. Верх фигуры по центру = (100svh + отступ сверху − снизу − её высота) / 2; если
+   содержимое выше экрана, верх фигуры = отступу сверху — отсюда потолок 192 px. */
+.hero {
+  position: relative;
+  overflow-x: clip;
+  padding-top: calc(var(--header-h) + 1.5rem);
+  padding-bottom: var(--section-y);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 100svh;
+    padding-top: clamp(
+      var(--header-h) + 3rem,
+      384px + (100vw - 2 * var(--gutter) - var(--gap-lg)) * 1.2 / 2.2 * 0.605 + 4.5rem - 100svh,
+      192px
+    );
+    padding-bottom: 4.5rem;
+  }
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  gap: 3.5rem;
+}
+
+/* До 1024 иллюстрация над заголовком (решение заказчика 30.09.2026): только визуально, в разметке первым
+   идёт текст. Фона-чертежа здесь нет (GridBackdrop.module.css) — иллюстрация сразу под шапкой.
+   Телефон 390 × 844: иллюстрация, заголовок, лид, обе кнопки и офферы — в первом экране без прокрутки;
+   360 × 780 — до главной кнопки. Отсюда на телефоне плотнее зазор и офферы мелким кеглем. */
+@media (max-width: 1023px) {
+  .demo {
+    order: -1;
+  }
+}
+
+@media (max-width: 639px) {
+  .grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: var(--gap-lg);
+  }
+}
+
+/* Три ровные строки на любой ширине: «Интернет-» / «магазины» / «под ключ» (самое длинное — 6.3em в
+   Martian Grotesk ширины 115: на 1024 px колонка ещё вмещает его целиком). */
+.title {
+  max-width: 7.2em;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 639px) {
+  .cta {
+    margin-top: 1.5rem;
+  }
+
+  .cta > * {
+    flex: 1 1 100%;
+  }
+}
+
+/* Офферы под кнопками: тихий список второго текста, галочка — акцент. */
+.offers {
+  display: grid;
+  gap: 0.375rem;
+  margin-top: 1.25rem;
+  color: var(--text-2);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.offers li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.offerIcon {
+  flex: none;
+  width: 1.1em;
+  height: 1.45em;
+  stroke-width: 2.5;
+  color: var(--accent);
+}
+
+@media (max-width: 639px) {
+  .offers {
+    gap: 0.125rem;
+    margin-top: 0.875rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* ---------- Фон (слот HeroBackdrop) ---------- */
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.backdropImage {
+  object-fit: cover;
+}
+
+/* Вуаль #0A0A14 (--bg тёмной сцены) — только у фото. Узкий экран — текст сверху, макеты ниже:
+   вуаль сверху вниз. Замер контраста этих значений на шести фото — assets/source/hero/SOURCES.md. */
+.veil::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--bg) 90%, transparent) 0%,
+    color-mix(in srgb, var(--bg) 86%, transparent) 48%,
+    color-mix(in srgb, var(--bg) 60%, transparent) 70%,
+    color-mix(in srgb, var(--bg) 60%, transparent) 86%,
+    var(--bg) 100%
+  );
+}
+
+/* Две колонки: плотнее слева под текстом, светлее справа за устройствами; под шапкой и к низу — плотнее. */
+@media (min-width: 1024px) {
+  .veil::after {
+    background:
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--bg) 75%, transparent) 0,
+        color-mix(in srgb, var(--bg) 40%, transparent) 100px,
+        transparent 200px,
+        transparent 60%,
+        var(--bg) 100%
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--bg) 90%, transparent) 0%,
+        color-mix(in srgb, var(--bg) 86%, transparent) 36%,
+        color-mix(in srgb, var(--bg) 60%, transparent) 62%,
+        color-mix(in srgb, var(--bg) 50%, transparent) 100%
+      );
+  }
+}
+
+/* ---------- Вход ---------- */
+
+/* Каскад текста. Заголовок и подзаголовок — элементы LCP (десктоп и телефон): видны с первого
+   кадра и только приподнимаются. Прозрачность или размытие на входе прятали бы их от отрисовки до
+   конца анимации, и LCP ждал бы её вместе со всем JS. Кнопки проявляются следом с шагом --stagger.
+   Только с JS (класс js ставит скрипт в <head> до отрисовки), без JS и при reduced-motion (base.css)
+   всё стоит на месте сразу. Устройства — Demo.module.css. */
+@keyframes title-in {
+  from {
+    transform: translateY(0.25em);
+  }
+}
+
+@keyframes lift {
+  from {
+    transform: translateY(1.25rem);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+}
+
+:global(.js) .title {
+  animation: title-in var(--dur-enter) var(--ease-out) backwards;
+}
+
+:global(.js) .enter {
+  animation: rise var(--dur-reveal) var(--ease-out) backwards;
+  animation-delay: calc(var(--i) * var(--stagger));
+}
+
+:global(.js) .lift {
+  animation: lift var(--dur-reveal) var(--ease-out) backwards;
+  animation-delay: calc(var(--i) * var(--stagger));
+}

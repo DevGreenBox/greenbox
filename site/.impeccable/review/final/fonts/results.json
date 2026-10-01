@@ -1,0 +1,176 @@
+{
+  "files": {
+    "MartianGrotesk_wdth100_wght600-s.3_52sb65t9o_n.woff2": 10144,
+    "MartianGrotesk_wdth115_wght650-s.p.003ufijvgcdgd.woff2": 10348,
+    "MartianMono_wdth100_wght400.1u3erghxpzohz.woff2": 12560,
+    "Onest_var-s.p.3grfyx3_17jd5.woff2": 22528
+  },
+  "preloads": [
+    "MartianGrotesk_wdth115_wght650-s.p.003ufijvgcdgd.woff2",
+    "Onest_var-s.p.3grfyx3_17jd5.woff2"
+  ],
+  "runs": {
+    "390": {
+      "atLoad": [
+        {
+          "file": "MartianGrotesk_wdth115_wght650-s.p.003ufijvgcdgd.woff2",
+          "startMs": 71,
+          "endMs": 99,
+          "transfer": 10648,
+          "body": 10348,
+          "initiator": "link"
+        },
+        {
+          "file": "Onest_var-s.p.3grfyx3_17jd5.woff2",
+          "startMs": 78,
+          "endMs": 102,
+          "transfer": 22828,
+          "body": 22528,
+          "initiator": "link"
+        },
+        {
+          "file": "MartianGrotesk_wdth100_wght600-s.3_52sb65t9o_n.woff2",
+          "startMs": 224,
+          "endMs": 362,
+          "transfer": 10444,
+          "body": 10144,
+          "initiator": "css"
+        },
+        {
+          "file": "MartianMono_wdth100_wght400.1u3erghxpzohz.woff2",
+          "startMs": 549,
+          "endMs": 570,
+          "transfer": 12860,
+          "body": 12560,
+          "initiator": "css"
+        }
+      ],
+      "afterScroll": [
+        {
+          "file": "MartianGrotesk_wdth115_wght650-s.p.003ufijvgcdgd.woff2",
+          "startMs": 71,
+          "endMs": 99,
+          "transfer": 10648,
+          "body": 10348,
+          "initiator": "link"
+        },
+        {
+          "file": "Onest_var-s.p.3grfyx3_17jd5.woff2",
+          "startMs": 78,
+          "endMs": 102,
+          "transfer": 22828,
+          "body": 22528,
+          "initiator": "link"
+        },
+        {
+          "file": "MartianGrotesk_wdth100_wght600-s.3_52sb65t9o_n.woff2",
+          "startMs": 224,
+          "endMs": 362,
+          "transfer": 10444,
+          "body": 10144,
+          "initiator": "css"
+        },
+        {
+          "file": "MartianMono_wdth100_wght400.1u3erghxpzohz.woff2",
+          "startMs": 549,
+          "endMs": 570,
+          "transfer": 12860,
+          "body": 12560,
+          "initiator": "css"
+        }
+      ],
+      "faces": [
+        "onest 400 700 loaded",
+        "onest Fallback normal unloaded",
+        "martianWide 650 loaded",
+        "martianWide Fallback normal unloaded",
+        "martian 600 loaded",
+        "martian Fallback normal error",
+        "martianMono 400 loaded"
+      ],
+      "atLoadKB": 54.3,
+      "afterScrollKB": 54.3
+    },
+    "1440": {
+      "atLoad": [
+        {
+          "file": "MartianGrotesk_wdth115_wght650-s.p.003ufijvgcdgd.woff2",
+          "startMs": 28,
+          "endMs": 51,
+          "transfer": 10648,
+          "body": 10348,
+          "initiator": "link"
+        },
+        {
+          "file": "Onest_var-s.p.3grfyx3_17jd5.woff2",
+          "startMs": 28,
+          "endMs": 57,
+          "transfer": 22828,
+          "body": 22528,
+          "initiator": "link"
+        },
+        {
+          "file": "MartianGrotesk_wdth100_wght600-s.3_52sb65t9o_n.woff2",
+          "startMs": 103,
+          "endMs": 258,
+          "transfer": 10444,
+          "body": 10144,
+          "initiator": "css"
+        },
+        {
+          "file": "MartianMono_wdth100_wght400.1u3erghxpzohz.woff2",
+          "startMs": 400,
+          "endMs": 420,
+          "transfer": 12860,
+          "body": 12560,
+          "initiator": "css"
+        }
+      ],
+      "afterScroll": [
+        {
+          "file": "MartianGrotesk_wdth115_wght650-s.p.003ufijvgcdgd.woff2",
+          "startMs": 28,
+          "endMs": 51,
+          "transfer": 10648,
+          "body": 10348,
+          "initiator": "link"
+        },
+        {
+          "file": "Onest_var-s.p.3grfyx3_17jd5.woff2",
+          "startMs": 28,
+          "endMs": 57,
+          "transfer": 22828,
+          "body": 22528,
+          "initiator": "link"
+        },
+        {
+          "file": "MartianGrotesk_wdth100_wght600-s.3_52sb65t9o_n.woff2",
+          "startMs": 103,
+          "endMs": 258,
+          "transfer": 10444,
+          "body": 10144,
+          "initiator": "css"
+        },
+        {
+          "file": "MartianMono_wdth100_wght400.1u3erghxpzohz.woff2",
+          "startMs": 400,
+          "endMs": 420,
+          "transfer": 12860,
+          "body": 12560,
+          "initiator": "css"
+        }
+      ],
+      "faces": [
+        "onest 400 700 loaded",
+        "onest Fallback normal unloaded",
+        "martianWide 650 loaded",
+        "martianWide Fallback normal unloaded",
+        "martian 600 loaded",
+        "martian Fallback normal error",
+        "martianMono 400 loaded"
+      ],
+      "atLoadKB": 54.3,
+      "afterScrollKB": 54.3
+    }
+  }
+}

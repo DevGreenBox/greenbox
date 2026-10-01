@@ -1,0 +1,49 @@
+{
+  "contactJs": {
+    "consentError": {
+      "invalid": "true",
+      "describedBy": [
+        "Нужно согласие на обработку персональных данных"
+      ],
+      "activeIsConsent": true,
+      "errorsShown": [
+        "Нужно согласие на обработку персональных данных"
+      ],
+      "alert": [],
+      "valuesKept": [
+        "ТЕСТ verify форма",
+        "test-form@example.invalid"
+      ]
+    },
+    "errorClearedOnChange": true,
+    "success": {
+      "heading": "Заявка отправлена. Мы свяжемся с вами",
+      "focused": "H3 Заявка отправлена. Мы свяжемся с вами",
+      "summary": [
+        "ИмяТЕСТ verify форма",
+        "Как с вами связатьсяtest-form@example.invalid",
+        "Пара слов о задачеПроверка формы, удалить"
+      ]
+    },
+    "api": [
+      {
+        "status": 400,
+        "body": "{\"ok\":false,\"error\":\"Проверьте поля формы\",\"fields\":{\"consent\":\"Нужно согласие на обработку персональных данных\"}}"
+      },
+      {
+        "status": 200,
+        "body": "{\"ok\":true}"
+      }
+    ]
+  },
+  "noJsSent": {
+    "error": "таймаут 30 с"
+  },
+  "noJsError": {
+    "error": "таймаут 30 с"
+  },
+  "noJsRequired": {
+    "error": "таймаут 30 с"
+  },
+  "noJsHops": []
+}

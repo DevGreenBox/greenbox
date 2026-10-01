@@ -1,0 +1,106 @@
+[
+  {
+    "url": "/",
+    "w": 1280,
+    "run": 1,
+    "ok": true,
+    "ms": 9643,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 1280,
+    "run": 2,
+    "ok": true,
+    "ms": 9536,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 1280,
+    "run": 3,
+    "ok": true,
+    "ms": 9689,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 1280,
+    "run": 4,
+    "ok": true,
+    "ms": 9555,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 1280,
+    "run": 5,
+    "ok": true,
+    "ms": 9469,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 390,
+    "run": 1,
+    "ok": true,
+    "ms": 7147,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 390,
+    "run": 2,
+    "ok": true,
+    "ms": 7041,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 390,
+    "run": 3,
+    "ok": true,
+    "ms": 7052,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 390,
+    "run": 4,
+    "ok": true,
+    "ms": 7045,
+    "errors": []
+  },
+  {
+    "url": "/",
+    "w": 390,
+    "run": 5,
+    "ok": true,
+    "ms": 7103,
+    "errors": []
+  },
+  {
+    "url": "/privacy",
+    "w": 1280,
+    "run": 1,
+    "ok": true,
+    "ms": 1800,
+    "errors": []
+  },
+  {
+    "url": "/privacy",
+    "w": 1280,
+    "run": 2,
+    "ok": true,
+    "ms": 1821,
+    "errors": []
+  },
+  {
+    "url": "/privacy",
+    "w": 1280,
+    "run": 3,
+    "ok": true,
+    "ms": 1747,
+    "errors": []
+  }
+]

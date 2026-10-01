@@ -1,0 +1,503 @@
+{
+  "tour-1440": {
+    "width": 1440,
+    "reduced": false,
+    "theme": "light",
+    "marks": [
+      {
+        "label": "после прохода",
+        "t": 7150
+      },
+      {
+        "label": "вернулись к демо",
+        "t": 8472
+      },
+      {
+        "label": "конец",
+        "t": 13480
+      }
+    ],
+    "figure": {
+      "top": 253,
+      "height": 449,
+      "visibleShare": 1
+    },
+    "hint": {
+      "exists": true,
+      "text": "переключите — витрина поменяется",
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "12px",
+      "color": "rgb(232, 232, 240)",
+      "bg": "rgb(10, 10, 20)",
+      "rect": {
+        "left": 850,
+        "top": 636,
+        "right": 1135,
+        "width": 285,
+        "height": 34
+      },
+      "insideFigure": true,
+      "insideViewportX": true,
+      "lines": 4,
+      "notCovered": true,
+      "monoFonts": [
+        "martianMono:loaded"
+      ]
+    },
+    "scene": {
+      "theme": "light",
+      "body": "rgb(250, 251, 252)",
+      "hero": "rgb(10, 10, 20)",
+      "store": "rgb(250, 251, 252)",
+      "storeText": "rgb(26, 26, 46)",
+      "admin": "rgba(0, 0, 0, 0)"
+    },
+    "timeline": [
+      {
+        "t": 271,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": false
+      },
+      {
+        "t": 447,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": true
+      },
+      {
+        "t": 2634,
+        "scrollY": 0,
+        "promo": false,
+        "fresh": true,
+        "tour": true,
+        "live": true
+      },
+      {
+        "t": 4233,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": true,
+        "live": true
+      },
+      {
+        "t": 4934,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": true
+      }
+    ],
+    "promoOff": 1,
+    "promoOn": 1,
+    "freshChanges": 0,
+    "tourStarts": 1,
+    "errors": []
+  },
+  "tour-390": {
+    "width": 390,
+    "reduced": false,
+    "theme": "light",
+    "marks": [
+      {
+        "label": "5 с без прокрутки",
+        "t": 5440
+      },
+      {
+        "label": "демо в экране",
+        "t": 5445
+      },
+      {
+        "label": "вернулись к демо",
+        "t": 11316
+      },
+      {
+        "label": "конец",
+        "t": 16378
+      }
+    ],
+    "figureAtLoad": {
+      "top": 630,
+      "height": 399,
+      "visibleShare": 0.54
+    },
+    "figure": {
+      "top": 255,
+      "height": 399,
+      "visibleShare": 1
+    },
+    "hint": {
+      "exists": true,
+      "text": "переключите — витрина поменяется",
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "11.9px",
+      "color": "rgb(232, 232, 240)",
+      "bg": "rgb(10, 10, 20)",
+      "rect": {
+        "left": 20,
+        "top": 930,
+        "right": 173,
+        "width": 153,
+        "height": 50
+      },
+      "insideFigure": true,
+      "insideViewportX": true,
+      "lines": 5,
+      "notCovered": true,
+      "monoFonts": [
+        "martianMono:loaded"
+      ]
+    },
+    "scene": {
+      "theme": "light",
+      "body": "rgb(250, 251, 252)",
+      "hero": "rgb(10, 10, 20)",
+      "store": "rgb(250, 251, 252)",
+      "storeText": "rgb(26, 26, 46)",
+      "admin": "rgba(0, 0, 0, 0)"
+    },
+    "timeline": [
+      {
+        "t": 339,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": false
+      },
+      {
+        "t": 510,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": true
+      },
+      {
+        "t": 5898,
+        "scrollY": 375,
+        "promo": false,
+        "fresh": true,
+        "tour": true,
+        "live": true
+      },
+      {
+        "t": 7495,
+        "scrollY": 375,
+        "promo": true,
+        "fresh": true,
+        "tour": true,
+        "live": true
+      },
+      {
+        "t": 8195,
+        "scrollY": 375,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": true
+      }
+    ],
+    "promoOff": 1,
+    "promoOn": 1,
+    "freshChanges": 0,
+    "tourStarts": 1,
+    "errors": []
+  },
+  "reduced-1440": {
+    "width": 1440,
+    "reduced": true,
+    "theme": "light",
+    "marks": [
+      {
+        "label": "демо в экране",
+        "t": 1072
+      },
+      {
+        "label": "через 8 с",
+        "t": 9085
+      }
+    ],
+    "hint": {
+      "exists": true,
+      "text": "переключите — витрина поменяется",
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "12px",
+      "color": "rgb(232, 232, 240)",
+      "bg": "rgb(10, 10, 20)",
+      "rect": {
+        "left": 850,
+        "top": 636,
+        "right": 1135,
+        "width": 285,
+        "height": 34
+      },
+      "insideFigure": true,
+      "insideViewportX": true,
+      "lines": 4,
+      "notCovered": true,
+      "monoFonts": [
+        "martianMono:loaded"
+      ]
+    },
+    "running": 0,
+    "timeline": [
+      {
+        "t": 443,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": false
+      },
+      {
+        "t": 1019,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": true
+      }
+    ],
+    "promoOff": 0,
+    "promoOn": 0,
+    "freshChanges": 0,
+    "tourStarts": 0,
+    "errors": []
+  },
+  "reduced-390": {
+    "width": 390,
+    "reduced": true,
+    "theme": "light",
+    "marks": [
+      {
+        "label": "демо в экране",
+        "t": 861
+      },
+      {
+        "label": "через 8 с",
+        "t": 8866
+      }
+    ],
+    "hint": {
+      "exists": true,
+      "text": "переключите — витрина поменяется",
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "11.9px",
+      "color": "rgb(232, 232, 240)",
+      "bg": "rgb(10, 10, 20)",
+      "rect": {
+        "left": 20,
+        "top": 930,
+        "right": 173,
+        "width": 153,
+        "height": 50
+      },
+      "insideFigure": true,
+      "insideViewportX": true,
+      "lines": 5,
+      "notCovered": true,
+      "monoFonts": [
+        "martianMono:loaded"
+      ]
+    },
+    "running": 0,
+    "timeline": [
+      {
+        "t": 571,
+        "scrollY": 0,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": false
+      },
+      {
+        "t": 845,
+        "scrollY": 375,
+        "promo": true,
+        "fresh": true,
+        "tour": false,
+        "live": true
+      }
+    ],
+    "promoOff": 0,
+    "promoOn": 0,
+    "freshChanges": 0,
+    "tourStarts": 0,
+    "errors": []
+  },
+  "theme-1440-light": {
+    "load": {
+      "theme": "light",
+      "body": "rgb(250, 251, 252)",
+      "hero": "rgb(10, 10, 20)",
+      "store": "rgb(250, 251, 252)",
+      "storeText": "rgb(26, 26, 46)",
+      "admin": "rgba(0, 0, 0, 0)"
+    },
+    "hint": {
+      "exists": true,
+      "text": "переключите — витрина поменяется",
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "12px",
+      "color": "rgb(232, 232, 240)",
+      "bg": "rgb(10, 10, 20)",
+      "rect": {
+        "left": 850,
+        "top": 636,
+        "right": 1135,
+        "width": 285,
+        "height": 34
+      },
+      "insideFigure": true,
+      "insideViewportX": true,
+      "lines": 4,
+      "notCovered": true,
+      "monoFonts": [
+        "martianMono:loaded"
+      ]
+    },
+    "afterToggle": {
+      "theme": "dark",
+      "body": "rgb(18, 18, 31)",
+      "hero": "rgb(10, 10, 20)",
+      "store": "rgb(18, 18, 31)",
+      "storeText": "rgb(232, 232, 240)",
+      "admin": "rgba(0, 0, 0, 0)"
+    }
+  },
+  "theme-1440-dark": {
+    "load": {
+      "theme": "dark",
+      "body": "rgb(18, 18, 31)",
+      "hero": "rgb(10, 10, 20)",
+      "store": "rgb(18, 18, 31)",
+      "storeText": "rgb(232, 232, 240)",
+      "admin": "rgba(0, 0, 0, 0)"
+    },
+    "hint": {
+      "exists": true,
+      "text": "переключите — витрина поменяется",
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "12px",
+      "color": "rgb(232, 232, 240)",
+      "bg": "rgb(10, 10, 20)",
+      "rect": {
+        "left": 850,
+        "top": 636,
+        "right": 1135,
+        "width": 285,
+        "height": 34
+      },
+      "insideFigure": true,
+      "insideViewportX": true,
+      "lines": 4,
+      "notCovered": true,
+      "monoFonts": [
+        "martianMono:loaded"
+      ]
+    },
+    "afterToggle": {
+      "theme": "light",
+      "body": "rgb(250, 251, 252)",
+      "hero": "rgb(10, 10, 20)",
+      "store": "rgb(250, 251, 252)",
+      "storeText": "rgb(26, 26, 46)",
+      "admin": "rgba(0, 0, 0, 0)"
+    }
+  },
+  "theme-390-light": {
+    "load": {
+      "theme": "light",
+      "body": "rgb(250, 251, 252)",
+      "hero": "rgb(10, 10, 20)",
+      "store": "rgb(250, 251, 252)",
+      "storeText": "rgb(26, 26, 46)",
+      "admin": "rgba(0, 0, 0, 0)"
+    },
+    "hint": {
+      "exists": true,
+      "text": "переключите — витрина поменяется",
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "11.9px",
+      "color": "rgb(232, 232, 240)",
+      "bg": "rgb(10, 10, 20)",
+      "rect": {
+        "left": 20,
+        "top": 930,
+        "right": 173,
+        "width": 153,
+        "height": 50
+      },
+      "insideFigure": true,
+      "insideViewportX": true,
+      "lines": 5,
+      "notCovered": false,
+      "monoFonts": [
+        "martianMono:loaded"
+      ]
+    }
+  },
+  "theme-390-dark": {
+    "load": {
+      "theme": "dark",
+      "body": "rgb(18, 18, 31)",
+      "hero": "rgb(10, 10, 20)",
+      "store": "rgb(18, 18, 31)",
+      "storeText": "rgb(232, 232, 240)",
+      "admin": "rgba(0, 0, 0, 0)"
+    },
+    "hint": {
+      "exists": true,
+      "text": "переключите — витрина поменяется",
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "11.9px",
+      "color": "rgb(232, 232, 240)",
+      "bg": "rgb(10, 10, 20)",
+      "rect": {
+        "left": 20,
+        "top": 930,
+        "right": 173,
+        "width": 153,
+        "height": 50
+      },
+      "insideFigure": true,
+      "insideViewportX": true,
+      "lines": 5,
+      "notCovered": false,
+      "monoFonts": [
+        "martianMono:loaded"
+      ]
+    }
+  }
+}

@@ -1,0 +1,3 @@
+{"at":"2026-09-29T13:23:18.687Z","source":"quiz","name":"ТЕСТ verify квиз","contact":"test-quiz@example.invalid","comment":"Проверка с клавиатуры, удалить","answers":{"business":["Одежда и обувь"],"siteType":["Интернет-магазин"],"features":["Онлайн-оплата","Личный кабинет"],"integrations":["СДЭК"],"volume":["До 100 товаров"]},"sdekContract":true,"page":"/"}
+{"at":"2026-09-29T13:49:35.064Z","source":"contact","name":"ТЕСТ verify форма","contact":"test-form@example.invalid","comment":"Проверка формы, удалить","answers":{},"sdekContract":false,"page":"/"}
+{"at":"2026-09-29T13:51:49.622Z","source":"contact","name":"ТЕСТ verify без JS","contact":"test-nojs@example.invalid","comment":"Проверка без JS, удалить","answers":{},"sdekContract":false,"page":"/"}

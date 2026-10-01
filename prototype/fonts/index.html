@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>ЗелёнаяКоробка — выбор шрифтов</title>
+<style>
+  :root { --ink: #1A1A2E; --paper: #FFFFFF; --muted: #A0A0B8; --accent: #00E676; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0A0A14; color: #E8E8F0; font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { padding: 32px clamp(16px, 4vw, 64px) 120px; }
+  h1 { margin: 0 0 6px; font-size: 22px; }
+  .lead { margin: 0 0 28px; color: var(--muted); max-width: 70ch; }
+  .shot { margin: 0 0 36px; }
+  .shot figcaption { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+  .shot img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); }
+  .pair { display: grid; grid-template-columns: minmax(0, 3.2fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  @media (max-width: 760px) { .pair { grid-template-columns: 1fr; } }
+  .switcher { position: fixed; left: 16px; bottom: 16px; z-index: 10; font-size: 14px; }
+  .switcher__toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px 0 12px; border: 0; border-radius: 999px; background: var(--paper); color: var(--ink); font: inherit; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,.4); cursor: pointer; }
+  .switcher__dot { width: 8px; height: 8px; border-radius: 50%; background: #00C853; }
+  .switcher__menu { position: absolute; left: 0; bottom: calc(100% + 10px); width: min(360px, calc(100vw - 32px)); padding: 8px; border-radius: 16px; background: var(--paper); color: var(--ink); box-shadow: 0 16px 40px rgba(0,0,0,.45); display: none; }
+  .switcher[data-open] .switcher__menu { display: block; }
+  .item { display: grid; grid-template-columns: 12px 1fr; gap: 2px 10px; width: 100%; padding: 10px; border: 0; border-radius: 10px; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+  .item:hover { background: #F0F2F5; }
+  .item[aria-current="true"] { background: rgba(0, 200, 83, .12); }
+  .radio { width: 12px; height: 12px; margin-top: 5px; border-radius: 50%; border: 2px solid #8888A0; }
+  .item[aria-current="true"] .radio { border-color: #00C853; background: #00C853; }
+  .name { font-weight: 700; }
+  .tag { margin-left: 6px; color: #008638; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+  .desc { grid-column: 2; color: #4A4A68; font-size: 13px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main id="view"></main>
+<nav class="switcher" id="switcher" aria-label="Варианты шрифтов">
+  <div class="switcher__menu" id="menu"></div>
+  <button class="switcher__toggle" id="toggle" type="button" aria-expanded="false" aria-controls="menu"><span class="switcher__dot" aria-hidden="true"></span><span id="current">Шрифты</span></button>
+</nav>
+<script>
+(() => {
+  const V = [
+    { id: 'current', name: 'Сейчас: Unbounded + Onest', tag: '', desc: 'Заголовки Unbounded, текст Onest.',
+      shots: [['current-hero-1440', 'current-hero-390', 'Первый экран, 1440 и 390'], ['compare-faq', null, 'Вопросы и ответы — сравнение вариантов'], ['type-specimen', null, 'Образцы гарнитур']] },
+    { id: 'martian', name: 'Martian Grotesk + Onest', tag: 'совет критики', desc: 'Заголовки Martian Grotesk (широкий, «чертёжный»), текст Onest, подписи фона Martian Mono с кириллицей.',
+      shots: [['martian-hero-1440', 'martian-hero-390', 'Первый экран, 1440 и 390'], ['martian-difference-1440', null, '«Не просто сайт»'], ['martian-why-1440', null, '«Почему ЗелёнаяКоробка»'], ['martian-faq-1440', null, 'Вопросы и ответы']] },
+    { id: 'geist-all', name: 'Geist везде', tag: 'ваш вариант', desc: 'Geist в заголовках и в тексте. Минус: это шрифт по умолчанию create-next-app/Vercel.',
+      shots: [['geist-all-hero-1440', 'geist-all-hero-390', 'Первый экран, 1440 и 390'], ['geist-all-difference-1440', null, '«Не просто сайт»'], ['geist-all-why-1440', null, '«Почему ЗелёнаяКоробка»'], ['geist-all-faq-1440', null, 'Вопросы и ответы']] },
+    { id: 'geist-head', name: 'Geist в заголовках + Onest', tag: '', desc: 'Заголовки Geist 600, текст Onest.',
+      shots: [['geist-head-hero-1440', 'geist-head-hero-390', 'Первый экран, 1440 и 390'], ['geist-head-difference-1440', null, '«Не просто сайт»'], ['geist-head-why-1440', null, '«Почему ЗелёнаяКоробка»'], ['geist-head-faq-1440', null, 'Вопросы и ответы']] },
+  ];
+  const $ = (id) => document.getElementById(id);
+  const view = $('view'), menu = $('menu'), sw = $('switcher'), toggle = $('toggle');
+  const img = (n) => `<img src="img/${n}.png" alt="" loading="lazy">`;
+  function show(id) {
+    const v = V.find((x) => x.id === id) || V[0];
+    $('current').textContent = v.name;
+    history.replaceState(null, '', '#' + v.id);
+    view.innerHTML = `<h1>${v.name}</h1><p class="lead">${v.desc} Кнопка слева снизу — переключить вариант. Снимки сделаны подменой шрифта на живом сайте, композиция и тексты те же.</p>` +
+      v.shots.map(([a, b, cap]) => `<figure class="shot"><figcaption>${cap}</figcaption>${b ? `<div class="pair">${img(a)}${img(b)}</div>` : img(a)}</figure>`).join('');
+    for (const el of menu.children) el.setAttribute('aria-current', String(el.dataset.id === v.id));
+    scrollTo(0, 0);
+  }
+  for (const v of V) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'item'; b.dataset.id = v.id;
+    b.innerHTML = `<span class="radio" aria-hidden="true"></span><span><span class="name"></span>${v.tag ? '<span class="tag"></span>' : ''}</span><span class="desc"></span>`;
+    b.querySelector('.name').textContent = v.name; if (v.tag) b.querySelector('.tag').textContent = v.tag; b.querySelector('.desc').textContent = v.desc;
+    b.addEventListener('click', () => { show(v.id); sw.removeAttribute('data-open'); toggle.setAttribute('aria-expanded', 'false'); });
+    menu.appendChild(b);
+  }
+  toggle.addEventListener('click', () => { const o = !sw.hasAttribute('data-open'); sw.toggleAttribute('data-open', o); toggle.setAttribute('aria-expanded', String(o)); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { sw.removeAttribute('data-open'); toggle.setAttribute('aria-expanded', 'false'); } });
+  show(location.hash.slice(1) || 'current');
+})();
+</script>
+</body>
+</html>

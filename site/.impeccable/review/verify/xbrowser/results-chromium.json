@@ -1,0 +1,481 @@
+{
+  "chromium-320": {
+    "first": {
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "bodyScrollWidth": 320,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 20,
+        "ctaRight": null,
+        "burgerRight": 20,
+        "titleLeft": 20,
+        "footerLogoLeft": 20
+      },
+      "header": {
+        "nav": false,
+        "cta": false,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 12790
+    },
+    "after": {
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "bodyScrollWidth": 320,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 20,
+        "ctaRight": null,
+        "burgerRight": 20,
+        "titleLeft": 20,
+        "footerLogoLeft": 20
+      },
+      "header": {
+        "nav": false,
+        "cta": false,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 12790
+    },
+    "logs": [],
+    "text": null
+  },
+  "chromium-390": {
+    "first": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyScrollWidth": 390,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 20,
+        "ctaRight": null,
+        "burgerRight": 20,
+        "titleLeft": 20,
+        "footerLogoLeft": 20
+      },
+      "header": {
+        "nav": false,
+        "cta": false,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 12710
+    },
+    "after": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyScrollWidth": 390,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 20,
+        "ctaRight": null,
+        "burgerRight": 20,
+        "titleLeft": 20,
+        "footerLogoLeft": 20
+      },
+      "header": {
+        "nav": false,
+        "cta": false,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 12710
+    },
+    "logs": [],
+    "text": null
+  },
+  "chromium-768": {
+    "first": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "bodyScrollWidth": 768,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 40,
+        "ctaRight": 92,
+        "burgerRight": 40,
+        "titleLeft": 40,
+        "footerLogoLeft": 40
+      },
+      "header": {
+        "nav": false,
+        "cta": true,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 11476
+    },
+    "after": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "bodyScrollWidth": 768,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 40,
+        "ctaRight": 92,
+        "burgerRight": 40,
+        "titleLeft": 40,
+        "footerLogoLeft": 40
+      },
+      "header": {
+        "nav": false,
+        "cta": true,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 11476
+    },
+    "logs": [],
+    "text": null
+  },
+  "chromium-1024": {
+    "first": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 64,
+        "ctaRight": 116,
+        "burgerRight": 64,
+        "titleLeft": 64,
+        "footerLogoLeft": 64
+      },
+      "header": {
+        "nav": false,
+        "cta": true,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 16360
+    },
+    "after": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 64,
+        "ctaRight": 116,
+        "burgerRight": 64,
+        "titleLeft": 64,
+        "footerLogoLeft": 64
+      },
+      "header": {
+        "nav": false,
+        "cta": true,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 16360
+    },
+    "logs": [],
+    "text": null
+  },
+  "chromium-1280": {
+    "first": {
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "bodyScrollWidth": 1280,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 100,
+        "ctaRight": 100,
+        "burgerRight": null,
+        "titleLeft": 100,
+        "footerLogoLeft": 100
+      },
+      "header": {
+        "nav": true,
+        "cta": true,
+        "burger": false,
+        "partner": true
+      },
+      "pageHeight": 17646
+    },
+    "after": {
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "bodyScrollWidth": 1280,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 100,
+        "ctaRight": 100,
+        "burgerRight": null,
+        "titleLeft": 100,
+        "footerLogoLeft": 100
+      },
+      "header": {
+        "nav": true,
+        "cta": true,
+        "burger": false,
+        "partner": true
+      },
+      "pageHeight": 17646
+    },
+    "logs": [],
+    "text": null
+  },
+  "chromium-1440": {
+    "first": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 100,
+        "ctaRight": 100,
+        "burgerRight": null,
+        "titleLeft": 100,
+        "footerLogoLeft": 100
+      },
+      "header": {
+        "nav": true,
+        "cta": true,
+        "burger": false,
+        "partner": true
+      },
+      "pageHeight": 18650
+    },
+    "after": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 100,
+        "ctaRight": 100,
+        "burgerRight": null,
+        "titleLeft": 100,
+        "footerLogoLeft": 100
+      },
+      "header": {
+        "nav": true,
+        "cta": true,
+        "burger": false,
+        "partner": true
+      },
+      "pageHeight": 18650
+    },
+    "logs": [],
+    "text": null
+  },
+  "chromium-1920": {
+    "first": {
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 100,
+        "ctaRight": 100,
+        "burgerRight": null,
+        "titleLeft": 100,
+        "footerLogoLeft": 100
+      },
+      "header": {
+        "nav": true,
+        "cta": true,
+        "burger": false,
+        "partner": true
+      },
+      "pageHeight": 21244
+    },
+    "after": {
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 100,
+        "ctaRight": 100,
+        "burgerRight": null,
+        "titleLeft": 100,
+        "footerLogoLeft": 100
+      },
+      "header": {
+        "nav": true,
+        "cta": true,
+        "burger": false,
+        "partner": true
+      },
+      "pageHeight": 21244
+    },
+    "logs": [],
+    "text": null
+  },
+  "chromium-2560": {
+    "first": {
+      "scrollWidth": 2560,
+      "clientWidth": 2560,
+      "bodyScrollWidth": 2560,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 100,
+        "ctaRight": 100,
+        "burgerRight": null,
+        "titleLeft": 100,
+        "footerLogoLeft": 100
+      },
+      "header": {
+        "nav": true,
+        "cta": true,
+        "burger": false,
+        "partner": true
+      },
+      "pageHeight": 22509
+    },
+    "after": {
+      "scrollWidth": 2560,
+      "clientWidth": 2560,
+      "bodyScrollWidth": 2560,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 100,
+        "ctaRight": 100,
+        "burgerRight": null,
+        "titleLeft": 100,
+        "footerLogoLeft": 100
+      },
+      "header": {
+        "nav": true,
+        "cta": true,
+        "burger": false,
+        "partner": true
+      },
+      "pageHeight": 22509
+    },
+    "logs": [],
+    "text": null
+  },
+  "chromium-390-font200": {
+    "first": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyScrollWidth": 390,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 20,
+        "ctaRight": null,
+        "burgerRight": 20,
+        "titleLeft": 20,
+        "footerLogoLeft": 20
+      },
+      "header": {
+        "nav": false,
+        "cta": false,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 27257
+    },
+    "after": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyScrollWidth": 390,
+      "hScroll": false,
+      "offenders": [],
+      "offendersCount": 0,
+      "margins": {
+        "logoLeft": 20,
+        "ctaRight": null,
+        "burgerRight": 20,
+        "titleLeft": 20,
+        "footerLogoLeft": 20
+      },
+      "header": {
+        "nav": false,
+        "cta": false,
+        "burger": true,
+        "partner": false
+      },
+      "pageHeight": 27257
+    },
+    "logs": [],
+    "text": [
+      {
+        "el": "button.burger",
+        "text": "Меню",
+        "over": 3,
+        "left": 323,
+        "right": 370,
+        "overflowX": "visible"
+      },
+      {
+        "el": "li.",
+        "text": "Акция на главной",
+        "over": 5,
+        "left": 210,
+        "right": 344,
+        "overflowX": "visible"
+      },
+      {
+        "el": "li.",
+        "text": "Блок “Новинки”",
+        "over": 5,
+        "left": 210,
+        "right": 344,
+        "overflowX": "visible"
+      },
+      {
+        "el": "a.btn.btn--secondary",
+        "text": "Получить бесплатный макет",
+        "over": 4,
+        "left": 76,
+        "right": 314,
+        "overflowX": "visible"
+      }
+    ]
+  },
+  "device-Pixel 7": {
+    "engine": "chromium",
+    "viewport": {
+      "width": 412,
+      "height": 839
+    },
+    "hScroll": false,
+    "scrollWidth": 412,
+    "clientWidth": 412,
+    "menuOpen": true,
+    "menuClosed": true,
+    "switchToggled": true,
+    "logs": []
+  }
+}

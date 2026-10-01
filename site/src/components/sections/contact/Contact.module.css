@@ -1,0 +1,157 @@
+/* Финал (#contact, тёмная сцена): заголовок, форма, прямые контакты.
+   Телефон — одной колонкой в порядке разметки. От 1024 px (заказчик 30.09.2026): сверху заголовок с лидом
+   слева и прямые контакты справа, под ними форма от левого края на всю ширину блока — рядами: имя, способ
+   связи и контакт в три колонки, комментарий и согласие во всю строку, кнопка и пояснение одной строкой. */
+
+/* Колонки minmax(0, …): иначе длинное слово заголовка при крупном шрифте раздвигает сетку вбок. */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 'copy' 'form' 'direct';
+  gap: var(--space-head);
+}
+
+.copy {
+  grid-area: copy;
+}
+
+.formArea {
+  grid-area: form;
+  min-width: 0;
+}
+
+.direct {
+  grid-area: direct;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-areas:
+      'copy direct'
+      'form form';
+    align-items: end;
+    column-gap: var(--gap-lg);
+    row-gap: var(--space-head);
+  }
+}
+
+/* ---------- Форма ---------- */
+
+.form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* Кнопка и что будет после отправки. Узко — кнопка во всю ширину, пояснение под ней. */
+.actions {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.after {
+  max-width: 36ch;
+  color: var(--text-2);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 640px) {
+  /* Кнопка своей ширины, пояснение справа от неё. */
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem 2rem;
+  }
+
+  .submit {
+    flex: none;
+    min-width: 16rem;
+  }
+}
+
+/* Широко — форма во всю ширину блока рядами. Колонки — как сетка страницы: одна треть на поле. */
+@media (min-width: 1024px) {
+  .form {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--gap);
+    row-gap: 1.5rem;
+    align-items: start;
+  }
+
+  .form > :global(.check-field),
+  .form > [role='alert'],
+  .actions {
+    grid-column: 1 / -1;
+  }
+
+  /* Успех — отметка и сообщение слева, сводка справа, как у квиза. */
+  .sent {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 'm s' 't s' '. s';
+    column-gap: var(--gap-lg);
+  }
+
+  .sent > :first-child {
+    grid-area: m;
+  }
+
+  .sent > h3 {
+    grid-area: t;
+  }
+
+  .sent > dl {
+    grid-area: s;
+    margin-top: 0;
+  }
+}
+
+/* ---------- Прямые контакты ---------- */
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding-block: 1.125rem;
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--text);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.35;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color var(--dur-hover) var(--ease-out);
+}
+
+.direct li:first-child .link {
+  border-top: 1px solid var(--line-strong);
+}
+
+.linkIcon {
+  color: var(--accent-ink);
+}
+
+.linkArrow {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-left: auto;
+  color: var(--text-2);
+  stroke-width: 2;
+  transition:
+    transform var(--dur-move) var(--ease-out),
+    color var(--dur-hover) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--accent-ink);
+  }
+
+  .link:hover .linkArrow {
+    color: var(--accent-ink);
+    transform: translate(2px, -2px);
+  }
+}

@@ -1,0 +1,192 @@
+/* Токены дизайн-системы «Стандарт категории». Документ: docs/03-design-system.md.
+   Палитра greenboxweb.ru 1:1 (значения закреплены клиентом, не менять). Сверх палитры только
+   производные: прозрачности палитровых цветов, --accent-ink #008638 (тот же тон #00C853, светлота
+   до контраста 4.5:1) и --error.
+
+   Сцена = фон + свои токены текста, линий и поверхностей. Любой элемент с data-scene становится
+   сценой, компоненты внутри берут токены ближайшей. Тема (html[data-theme] или система без JS)
+   переключает значения через вариант dark (объявлен ниже), он покрывает оба случая. */
+
+/* Вариант dark = тема, а не сцена: явный выбор (html[data-theme='dark']) или система без JS
+   (атрибута нет). Им же работают утилиты dark: в разметке. */
+@custom-variant dark {
+  &:where([data-theme='dark'], [data-theme='dark'] *) {
+    @slot;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme]), :root:not([data-theme]) *) {
+      @slot;
+    }
+  }
+}
+
+/* В слое base: утилиты разметки могут переопределить токен у элемента. */
+@layer base {
+  /* ---------- Не зависят от темы ---------- */
+
+  :root {
+    /* Сетка: поля по бокам 20 / 40 / 64 / 100 px (решение заказчика). Контент тянется между
+       полями на любой ширине, у контейнера нет max-width: ограничивается только мера текста. */
+    --gutter: 20px;
+    --gap: clamp(1rem, 0.75rem + 1vw, 1.75rem); /* между колонками: 16 → 28 */
+    --gap-lg: clamp(2rem, 1.25rem + 3vw, 4rem); /* сплит «заголовок | содержимое»: 32 → 64 */
+    --measure: 68ch; /* мера текстового блока, держим 60–72ch */
+
+    /* Вертикальный ритм: 72 px на 390, 144 на 1440, потолок 160 */
+    --section-y: clamp(4rem, 2.83rem + 6.86vw, 10rem);
+    --space-head: clamp(2.5rem, 1.75rem + 3.05vw, 4.5rem); /* заголовок секции → содержимое: 40 → 72 */
+    --space-lead: clamp(1.25rem, 1rem + 0.75vw, 1.75rem); /* заголовок → лид: 20 → 28 */
+
+    --header-h: 64px; /* шапка у верха страницы */
+    --header-h-compact: 64px; /* шапка после прокрутки; по ней отступ якорей */
+
+    --radius-panel: clamp(1.25rem, 1rem + 0.6vw, 1.5rem); /* 20 → 24 */
+    --radius-card: 1rem;
+    --radius-control: 1rem;
+    --radius-pill: 999px;
+
+    /* Движение: одна кривая (экспоненциальное замедление) и шкала длительностей по роли */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --dur-hover: 250ms; /* цвет, рамка, подложка */
+    --dur-move: 400ms; /* мелкие сдвиги: ползунки, стрелки, значки, шапка */
+    --dur-reveal: 600ms; /* появление и сворачивание: шаги квиза, ответы, линии */
+    --dur-enter: 700ms; /* вход первого экрана */
+    --dur-draw: 1300ms; /* прочерчивание контуров «Сетки макета», медленный наезд картинки */
+    --stagger: 70ms;
+
+    --cyan: #00e5ff; /* только градиент слова «Интернет-магазины» первого экрана, больше нигде */
+    --gradient-hero: linear-gradient(90deg, #00c853, var(--cyan));
+  }
+
+  @media (min-width: 640px) {
+    :root {
+      --gutter: 40px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --gutter: 64px;
+      --header-h: 80px;
+      --header-h-compact: 68px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    :root {
+      --gutter: 100px;
+    }
+  }
+
+  /* ---------- Сцены ---------- */
+
+  /* Светлая сцена — она же корень. Тёмная тема: #12121F. */
+  :root,
+  [data-scene='light'],
+  [data-scene='light-2'] {
+    color-scheme: light;
+    --bg: #fafbfc;
+    --bg-2: #f0f2f5;
+    --surface: #ffffff;
+    --surface-hover: #f8f9fa;
+    --inset: rgb(26 26 46 / 0.05);
+    --text: #1a1a2e;
+    --text-2: #4a4a68;
+    --text-3: #8888a0; /* только крупный текст (≥ 24 px или 19 px жирный) */
+    --accent: #00c853;
+    --accent-hover: #00e676;
+    --on-accent: #0a0a14;
+    --accent-ink: #008638; /* зелёный для текста и иконок */
+    /* Зелёная часть заголовков h1–h2, как «Зелёная» в логотипе: только крупный текст (≥ 3:1 — и на #F0F2F5, 4.19:1). */
+    --accent-display: #008638;
+    --accent-tint: rgb(0 200 83 / 0.1);
+    /* Чистого чёрного на сайте нет (решение заказчика 30.09.2026): линии — прозрачные чернила #1A1A2E,
+       тени тёмной темы — глубокая ночь rgb(4 4 12): темнее фона #0A0A14, поэтому видны. */
+    --line: rgb(26 26 46 / 0.08);
+    --line-strong: rgb(26 26 46 / 0.15);
+    --line-control: #8888a0; /* граница полей и чипов, ≥ 3:1 к фону */
+    --focus: #008638;
+    --error: #c62828;
+    --scroll-thumb: #8888a0;
+    --elev-1: 0 1px 2px rgb(26 26 46 / 0.04), 0 10px 30px -18px rgb(26 26 46 / 0.16);
+    --elev-2: 0 2px 4px rgb(26 26 46 / 0.05), 0 30px 60px -30px rgb(26 26 46 / 0.34);
+    --elev-3: 0 2px 6px rgb(26 26 46 / 0.06), 0 40px 90px -40px rgb(26 26 46 / 0.45);
+
+    @variant dark {
+      color-scheme: dark;
+      --bg: #12121f;
+      --bg-2: #0a0a14;
+      --surface: #1a1a2e;
+      --surface-hover: #222240;
+      --inset: rgb(232 232 240 / 0.06);
+      --text: #e8e8f0;
+      --text-2: #a0a0b8;
+      --text-3: #6a6a80;
+      --accent: #00e676;
+      --accent-hover: #69f0ae;
+      --on-accent: #0a0a14;
+      --accent-ink: #00e676;
+      --accent-display: #00e676;
+      --accent-tint: rgb(0 230 118 / 0.12);
+      --line: rgb(255 255 255 / 0.06);
+      --line-strong: rgb(255 255 255 / 0.12);
+      --line-control: #6a6a80;
+      --focus: #00e676;
+      --error: #ff8a80;
+      --scroll-thumb: #4a4a68;
+      --elev-1: 0 1px 2px rgb(4 4 12 / 0.3), 0 12px 32px -18px rgb(4 4 12 / 0.6);
+      --elev-2: 0 2px 4px rgb(4 4 12 / 0.35), 0 32px 64px -28px rgb(4 4 12 / 0.75);
+      --elev-3: 0 2px 6px rgb(4 4 12 / 0.4), 0 40px 90px -40px rgb(4 4 12 / 0.85);
+    }
+  }
+
+  /* Светлая-2: #F0F2F5, в тёмной теме #1A1A2E. Зелёного текста на #F0F2F5 нет (#008638 даёт 4.19:1),
+     поэтому --accent-ink здесь цвета текста. Каждый токен, заданный тут, задан и в варианте dark. */
+  [data-scene='light-2'] {
+    --bg: #f0f2f5;
+    --bg-2: #fafbfc;
+    --surface: #ffffff;
+    --surface-hover: #fafbfc;
+    --inset: rgb(26 26 46 / 0.06);
+    --accent-ink: #1a1a2e;
+
+    @variant dark {
+      --bg: #1a1a2e;
+      --bg-2: #12121f;
+      --surface: #222240;
+      --surface-hover: color-mix(in srgb, #222240 88%, #e8e8f0);
+      --inset: rgb(232 232 240 / 0.07);
+      --accent-ink: #00e676;
+      --accent-display: #00e676;
+    }
+  }
+
+  /* Тёмная сцена: #0A0A14 в обеих темах (в тёмной — глубже базовой #12121F). */
+  [data-scene='dark'] {
+    color-scheme: dark;
+    --bg: #0a0a14;
+    --bg-2: #12121f;
+    --surface: #1a1a2e;
+    --surface-hover: #222240;
+    --inset: rgb(232 232 240 / 0.06);
+    --text: #e8e8f0;
+    --text-2: #a0a0b8;
+    --text-3: #6a6a80;
+    --accent: #00e676;
+    --accent-hover: #69f0ae;
+    --on-accent: #0a0a14;
+    --accent-ink: #00e676;
+    --accent-display: #00e676;
+    --accent-tint: rgb(0 230 118 / 0.12);
+    --line: rgb(255 255 255 / 0.06);
+    --line-strong: rgb(255 255 255 / 0.12);
+    --line-control: #6a6a80;
+    --focus: #00e676;
+    --error: #ff8a80;
+    --scroll-thumb: #4a4a68;
+    --elev-1: 0 1px 2px rgb(4 4 12 / 0.3), 0 12px 32px -18px rgb(4 4 12 / 0.6);
+    --elev-2: 0 2px 4px rgb(4 4 12 / 0.35), 0 32px 64px -28px rgb(4 4 12 / 0.75);
+    --elev-3: 0 2px 6px rgb(4 4 12 / 0.4), 0 40px 90px -40px rgb(4 4 12 / 0.85);
+  }
+}

@@ -1,0 +1,2464 @@
+{
+  "390-light": [
+    {
+      "target": [
+        ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;section class=\"hero\"&gt;</span>",
+      "hidden": true,
+      "text": "<section class=\"hero\">",
+      "color": "color(srgb 0.542745 0.542745 0.633726)",
+      "size": "11px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__pick > b"
+      ],
+      "key": "bgOverlap",
+      "html": "<b>&lt;section class=\"hero\"&gt;<span></span></b>",
+      "hidden": true,
+      "text": "<section class=\"hero\">",
+      "color": "rgb(0, 230, 118)",
+      "size": "11px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".text-gradient-hero"
+      ],
+      "key": "bgGradient",
+      "html": "<span class=\"text-gradient-hero\">Интернет-магазины</span>",
+      "hidden": false,
+      "text": "Интернет-магазины",
+      "color": "rgb(0, 230, 118)",
+      "size": "40px",
+      "weight": "650",
+      "verdict": "по пикселям",
+      "axeStill": "bgGradient",
+      "pixel": {
+        "fg": "rgb(0,230,118)",
+        "bg": "rgb(10,10,20)",
+        "bgShare": 0.67,
+        "ratio": 11.8
+      }
+    },
+    {
+      "target": [
+        "a[href$=\"#why\"]"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<a href=\"#why\">Скидка 60% на&nbsp;разработку при договоре со&nbsp;СДЭК</a>",
+      "hidden": false,
+      "text": "Скидка 60% на разработку при договоре со СДЭК",
+      "color": "rgb(160, 160, 184)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "по пикселям",
+      "axeStill": "elmPartiallyObscuring",
+      "pixel": {
+        "fg": "rgb(160,160,184)",
+        "bg": "rgb(10,10,20)",
+        "bgShare": 0.56,
+        "ratio": 7.7
+      }
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__headline"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<span class=\"Demo-module__UzFtbW__headline\">Новая коллекция</span>",
+      "hidden": true,
+      "text": "Новая коллекция",
+      "color": "rgb(255, 255, 255)",
+      "size": "11.515px",
+      "weight": "700",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__product:nth-child(3) > .Demo-module__UzFtbW__productName"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Demo-module__UzFtbW__productName\">Глиняная кружка</span>",
+      "hidden": true,
+      "text": "Глиняная кружка",
+      "color": "rgb(26, 26, 46)",
+      "size": "5.20918px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__product:nth-child(4) > .Demo-module__UzFtbW__productName"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Demo-module__UzFtbW__productName\">Деревянный стул</span>",
+      "hidden": true,
+      "text": "Деревянный стул",
+      "color": "rgb(26, 26, 46)",
+      "size": "5.20918px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__hint > span"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<span>переключите&nbsp;— витрина поменяется</span>",
+      "hidden": true,
+      "text": "переключите — витрина поменяется",
+      "color": "rgb(232, 232, 240)",
+      "size": "11.9px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".text-ink-3"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"text-ink-3\">Не&nbsp;просто сайт&nbsp;—</span>",
+      "hidden": false,
+      "text": "Не просто сайт —",
+      "color": "rgb(136, 136, 160)",
+      "size": "30px",
+      "weight": "650",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#8888a0",
+        "bg": "#fafbfc",
+        "ratio": 3.33,
+        "expected": "3:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(1) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">thecaseform.ru</span>",
+      "hidden": true,
+      "text": "thecaseform.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">tkachevmoscow.ru</span>",
+      "hidden": true,
+      "text": "tkachevmoscow.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .text-h3"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<h3 class=\"font-display text-h3\">Клиника Ткачева</h3>",
+      "hidden": false,
+      "text": "Клиника Ткачева",
+      "color": "rgb(232, 232, 240)",
+      "size": "22px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__category.Cases-module__cMnabG__pill"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill Cases-module__cMnabG__category\">Медицина</li>",
+      "hidden": false,
+      "text": "Медицина",
+      "color": "rgb(0, 230, 118)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#00e676",
+        "bg": "#092420",
+        "ratio": 9.79,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(2)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Корпоративный сайт</li>",
+      "hidden": false,
+      "text": "Корпоративный сайт",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(3)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Запись онлайн</li>",
+      "hidden": false,
+      "text": "Запись онлайн",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Задача</dt>",
+      "hidden": false,
+      "text": "Задача",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[задача]</span>",
+      "hidden": false,
+      "text": "[задача]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Что сделали</dt>",
+      "hidden": false,
+      "text": "Что сделали",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dd"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dd>Сайт московской клиники лечения грыж позвоночника с&nbsp;записью на&nbsp;консультацию<",
+      "hidden": false,
+      "text": "Сайт московской клиники лечения грыж позвоночника ",
+      "color": "rgb(232, 232, 240)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Результат</dt>",
+      "hidden": false,
+      "text": "Результат",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[результат]</span>",
+      "hidden": false,
+      "text": "[результат]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__link.btn--text[href$=\"tkachevmoscow.ru/\"] > .btn__label"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"btn__label\">Открыть сайт<span class=\"sr-only\"> <!-- -->Клиника Ткачева</span>",
+      "hidden": false,
+      "text": "Открыть сайт Клиника Ткачева",
+      "color": "rgb(232, 232, 240)",
+      "size": "16px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">perspektivaot.ru</span>",
+      "hidden": true,
+      "text": "perspektivaot.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .text-h3"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<h3 class=\"font-display text-h3\">Учебный центр «Перспектива»</h3>",
+      "hidden": false,
+      "text": "Учебный центр «Перспектива»",
+      "color": "rgb(232, 232, 240)",
+      "size": "22px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__category.Cases-module__cMnabG__pill"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill Cases-module__cMnabG__category\">Образование</li>",
+      "hidden": false,
+      "text": "Образование",
+      "color": "rgb(0, 230, 118)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#00e676",
+        "bg": "#092420",
+        "ratio": 9.79,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(2)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Охрана труда</li>",
+      "hidden": false,
+      "text": "Охрана труда",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(3)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Онлайн-обучение</li>",
+      "hidden": false,
+      "text": "Онлайн-обучение",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Задача</dt>",
+      "hidden": false,
+      "text": "Задача",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[задача]</span>",
+      "hidden": false,
+      "text": "[задача]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Что сделали</dt>",
+      "hidden": false,
+      "text": "Что сделали",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dd"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dd>Сайт центра охраны труда: обучение и&nbsp;переподготовка рабочих и&nbsp;служащих</dd>",
+      "hidden": false,
+      "text": "Сайт центра охраны труда: обучение и переподготовк",
+      "color": "rgb(232, 232, 240)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Результат</dt>",
+      "hidden": false,
+      "text": "Результат",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[результат]</span>",
+      "hidden": false,
+      "text": "[результат]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__link.btn--text[href$=\"perspektivaot.ru/\"] > .btn__label"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"btn__label\">Открыть сайт<span class=\"sr-only\"> <!-- -->Учебный центр «Перспек",
+      "hidden": false,
+      "text": "Открыть сайт Учебный центр «Перспектива»",
+      "color": "rgb(232, 232, 240)",
+      "size": "16px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">opt-ypmgroup.ru</span>",
+      "hidden": true,
+      "text": "opt-ypmgroup.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .text-h3"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<h3 class=\"font-display text-h3\">YPM Group</h3>",
+      "hidden": false,
+      "text": "YPM Group",
+      "color": "rgb(232, 232, 240)",
+      "size": "22px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__category.Cases-module__cMnabG__pill"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill Cases-module__cMnabG__category\">B2B</li>",
+      "hidden": false,
+      "text": "B2B",
+      "color": "rgb(0, 230, 118)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#00e676",
+        "bg": "#092420",
+        "ratio": 9.79,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(2)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Автозапчасти</li>",
+      "hidden": false,
+      "text": "Автозапчасти",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(3)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Калькулятор</li>",
+      "hidden": false,
+      "text": "Калькулятор",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Задача</dt>",
+      "hidden": false,
+      "text": "Задача",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[задача]</span>",
+      "hidden": false,
+      "text": "[задача]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Что сделали</dt>",
+      "hidden": false,
+      "text": "Что сделали",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dd"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dd>Сайт поставщика машинокомплектов из&nbsp;Англии и&nbsp;ЕС&nbsp;с&nbsp;калькулятором ст",
+      "hidden": false,
+      "text": "Сайт поставщика машинокомплектов из Англии и ЕС с ",
+      "color": "rgb(232, 232, 240)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Результат</dt>",
+      "hidden": false,
+      "text": "Результат",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[результат]</span>",
+      "hidden": false,
+      "text": "[результат]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__link.btn--text[href$=\"opt-ypmgroup.ru/\"] > .btn__label"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"btn__label\">Открыть сайт<span class=\"sr-only\"> <!-- -->YPM Group</span></span",
+      "hidden": false,
+      "text": "Открыть сайт YPM Group",
+      "color": "rgb(232, 232, 240)",
+      "size": "16px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">centerkran.com</span>",
+      "hidden": true,
+      "text": "centerkran.com",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .text-h3"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<h3 class=\"font-display text-h3\">Центр кранового оборудования</h3>",
+      "hidden": false,
+      "text": "Центр кранового оборудования",
+      "color": "rgb(232, 232, 240)",
+      "size": "22px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__category.Cases-module__cMnabG__pill"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill Cases-module__cMnabG__category\">Промышленность</li>",
+      "hidden": false,
+      "text": "Промышленность",
+      "color": "rgb(0, 230, 118)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#00e676",
+        "bg": "#092420",
+        "ratio": 9.79,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(2)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Ремонт</li>",
+      "hidden": false,
+      "text": "Ремонт",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(3)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Запчасти</li>",
+      "hidden": false,
+      "text": "Запчасти",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Задача</dt>",
+      "hidden": false,
+      "text": "Задача",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[задача]</span>",
+      "hidden": false,
+      "text": "[задача]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Что сделали</dt>",
+      "hidden": false,
+      "text": "Что сделали",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dd"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dd>Сайт центра ремонта кранового оборудования и&nbsp;продажи запчастей</dd>",
+      "hidden": false,
+      "text": "Сайт центра ремонта кранового оборудования и прода",
+      "color": "rgb(232, 232, 240)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Результат</dt>",
+      "hidden": false,
+      "text": "Результат",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[результат]</span>",
+      "hidden": false,
+      "text": "[результат]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__link.btn--text[href$=\"centerkran.com/\"] > .btn__label"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"btn__label\">Открыть сайт<span class=\"sr-only\"> <!-- -->Центр кранового оборуд",
+      "hidden": false,
+      "text": "Открыть сайт Центр кранового оборудования",
+      "color": "rgb(232, 232, 240)",
+      "size": "16px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".block"
+      ],
+      "key": "shortTextContent",
+      "html": "<span aria-hidden=\"true\" class=\"block h-[0.46em] font-display text-[clamp(4rem,2.25rem+4.5",
+      "hidden": true,
+      "text": "«",
+      "color": "rgb(0, 200, 83)",
+      "size": "64px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    }
+  ],
+  "390-dark": [
+    {
+      "target": [
+        ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;section class=\"hero\"&gt;</span>",
+      "hidden": true,
+      "text": "<section class=\"hero\">",
+      "color": "color(srgb 0.542745 0.542745 0.633726)",
+      "size": "11px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__pick > b"
+      ],
+      "key": "bgOverlap",
+      "html": "<b>&lt;section class=\"hero\"&gt;<span></span></b>",
+      "hidden": true,
+      "text": "<section class=\"hero\">",
+      "color": "rgb(0, 230, 118)",
+      "size": "11px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".text-gradient-hero"
+      ],
+      "key": "bgGradient",
+      "html": "<span class=\"text-gradient-hero\">Интернет-магазины</span>",
+      "hidden": false,
+      "text": "Интернет-магазины",
+      "color": "rgb(0, 230, 118)",
+      "size": "40px",
+      "weight": "650",
+      "verdict": "по пикселям",
+      "axeStill": "bgGradient",
+      "pixel": {
+        "fg": "rgb(0,230,118)",
+        "bg": "rgb(10,10,20)",
+        "bgShare": 0.67,
+        "ratio": 11.8
+      }
+    },
+    {
+      "target": [
+        "a[href$=\"#why\"]"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<a href=\"#why\">Скидка 60% на&nbsp;разработку при договоре со&nbsp;СДЭК</a>",
+      "hidden": false,
+      "text": "Скидка 60% на разработку при договоре со СДЭК",
+      "color": "rgb(160, 160, 184)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "по пикселям",
+      "axeStill": "elmPartiallyObscuring",
+      "pixel": {
+        "fg": "rgb(160,160,184)",
+        "bg": "rgb(10,10,20)",
+        "bgShare": 0.56,
+        "ratio": 7.7
+      }
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__headline"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<span class=\"Demo-module__UzFtbW__headline\">Новая коллекция</span>",
+      "hidden": true,
+      "text": "Новая коллекция",
+      "color": "rgb(255, 255, 255)",
+      "size": "11.515px",
+      "weight": "700",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__product:nth-child(3) > .Demo-module__UzFtbW__productName"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Demo-module__UzFtbW__productName\">Глиняная кружка</span>",
+      "hidden": true,
+      "text": "Глиняная кружка",
+      "color": "rgb(232, 232, 240)",
+      "size": "5.20918px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__product:nth-child(4) > .Demo-module__UzFtbW__productName"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Demo-module__UzFtbW__productName\">Деревянный стул</span>",
+      "hidden": true,
+      "text": "Деревянный стул",
+      "color": "rgb(232, 232, 240)",
+      "size": "5.20918px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__hint > span"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<span>переключите&nbsp;— витрина поменяется</span>",
+      "hidden": true,
+      "text": "переключите — витрина поменяется",
+      "color": "rgb(232, 232, 240)",
+      "size": "11.9px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".text-ink-3"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"text-ink-3\">Не&nbsp;просто сайт&nbsp;—</span>",
+      "hidden": false,
+      "text": "Не просто сайт —",
+      "color": "rgb(106, 106, 128)",
+      "size": "30px",
+      "weight": "650",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#6a6a80",
+        "bg": "#12121f",
+        "ratio": 3.52,
+        "expected": "3:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(1) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">thecaseform.ru</span>",
+      "hidden": true,
+      "text": "thecaseform.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">tkachevmoscow.ru</span>",
+      "hidden": true,
+      "text": "tkachevmoscow.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .text-h3"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<h3 class=\"font-display text-h3\">Клиника Ткачева</h3>",
+      "hidden": false,
+      "text": "Клиника Ткачева",
+      "color": "rgb(232, 232, 240)",
+      "size": "22px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__category.Cases-module__cMnabG__pill"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill Cases-module__cMnabG__category\">Медицина</li>",
+      "hidden": false,
+      "text": "Медицина",
+      "color": "rgb(0, 230, 118)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#00e676",
+        "bg": "#092420",
+        "ratio": 9.79,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(2)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Корпоративный сайт</li>",
+      "hidden": false,
+      "text": "Корпоративный сайт",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(3)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Запись онлайн</li>",
+      "hidden": false,
+      "text": "Запись онлайн",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Задача</dt>",
+      "hidden": false,
+      "text": "Задача",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[задача]</span>",
+      "hidden": false,
+      "text": "[задача]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Что сделали</dt>",
+      "hidden": false,
+      "text": "Что сделали",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dd"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dd>Сайт московской клиники лечения грыж позвоночника с&nbsp;записью на&nbsp;консультацию<",
+      "hidden": false,
+      "text": "Сайт московской клиники лечения грыж позвоночника ",
+      "color": "rgb(232, 232, 240)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Результат</dt>",
+      "hidden": false,
+      "text": "Результат",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[результат]</span>",
+      "hidden": false,
+      "text": "[результат]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__link.btn--text[href$=\"tkachevmoscow.ru/\"] > .btn__label"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"btn__label\">Открыть сайт<span class=\"sr-only\"> <!-- -->Клиника Ткачева</span>",
+      "hidden": false,
+      "text": "Открыть сайт Клиника Ткачева",
+      "color": "rgb(232, 232, 240)",
+      "size": "16px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">perspektivaot.ru</span>",
+      "hidden": true,
+      "text": "perspektivaot.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .text-h3"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<h3 class=\"font-display text-h3\">Учебный центр «Перспектива»</h3>",
+      "hidden": false,
+      "text": "Учебный центр «Перспектива»",
+      "color": "rgb(232, 232, 240)",
+      "size": "22px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__category.Cases-module__cMnabG__pill"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill Cases-module__cMnabG__category\">Образование</li>",
+      "hidden": false,
+      "text": "Образование",
+      "color": "rgb(0, 230, 118)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#00e676",
+        "bg": "#092420",
+        "ratio": 9.79,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(2)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Охрана труда</li>",
+      "hidden": false,
+      "text": "Охрана труда",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(3)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Онлайн-обучение</li>",
+      "hidden": false,
+      "text": "Онлайн-обучение",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Задача</dt>",
+      "hidden": false,
+      "text": "Задача",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[задача]</span>",
+      "hidden": false,
+      "text": "[задача]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Что сделали</dt>",
+      "hidden": false,
+      "text": "Что сделали",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dd"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dd>Сайт центра охраны труда: обучение и&nbsp;переподготовка рабочих и&nbsp;служащих</dd>",
+      "hidden": false,
+      "text": "Сайт центра охраны труда: обучение и переподготовк",
+      "color": "rgb(232, 232, 240)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Результат</dt>",
+      "hidden": false,
+      "text": "Результат",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[результат]</span>",
+      "hidden": false,
+      "text": "[результат]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__link.btn--text[href$=\"perspektivaot.ru/\"] > .btn__label"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"btn__label\">Открыть сайт<span class=\"sr-only\"> <!-- -->Учебный центр «Перспек",
+      "hidden": false,
+      "text": "Открыть сайт Учебный центр «Перспектива»",
+      "color": "rgb(232, 232, 240)",
+      "size": "16px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">opt-ypmgroup.ru</span>",
+      "hidden": true,
+      "text": "opt-ypmgroup.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .text-h3"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<h3 class=\"font-display text-h3\">YPM Group</h3>",
+      "hidden": false,
+      "text": "YPM Group",
+      "color": "rgb(232, 232, 240)",
+      "size": "22px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__category.Cases-module__cMnabG__pill"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill Cases-module__cMnabG__category\">B2B</li>",
+      "hidden": false,
+      "text": "B2B",
+      "color": "rgb(0, 230, 118)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#00e676",
+        "bg": "#092420",
+        "ratio": 9.79,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(2)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Автозапчасти</li>",
+      "hidden": false,
+      "text": "Автозапчасти",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(3)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Калькулятор</li>",
+      "hidden": false,
+      "text": "Калькулятор",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Задача</dt>",
+      "hidden": false,
+      "text": "Задача",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[задача]</span>",
+      "hidden": false,
+      "text": "[задача]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Что сделали</dt>",
+      "hidden": false,
+      "text": "Что сделали",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dd"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dd>Сайт поставщика машинокомплектов из&nbsp;Англии и&nbsp;ЕС&nbsp;с&nbsp;калькулятором ст",
+      "hidden": false,
+      "text": "Сайт поставщика машинокомплектов из Англии и ЕС с ",
+      "color": "rgb(232, 232, 240)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Результат</dt>",
+      "hidden": false,
+      "text": "Результат",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[результат]</span>",
+      "hidden": false,
+      "text": "[результат]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__link.btn--text[href$=\"opt-ypmgroup.ru/\"] > .btn__label"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"btn__label\">Открыть сайт<span class=\"sr-only\"> <!-- -->YPM Group</span></span",
+      "hidden": false,
+      "text": "Открыть сайт YPM Group",
+      "color": "rgb(232, 232, 240)",
+      "size": "16px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">centerkran.com</span>",
+      "hidden": true,
+      "text": "centerkran.com",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .text-h3"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<h3 class=\"font-display text-h3\">Центр кранового оборудования</h3>",
+      "hidden": false,
+      "text": "Центр кранового оборудования",
+      "color": "rgb(232, 232, 240)",
+      "size": "22px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__category.Cases-module__cMnabG__pill"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill Cases-module__cMnabG__category\">Промышленность</li>",
+      "hidden": false,
+      "text": "Промышленность",
+      "color": "rgb(0, 230, 118)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#00e676",
+        "bg": "#092420",
+        "ratio": 9.79,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(2)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Ремонт</li>",
+      "hidden": false,
+      "text": "Ремонт",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__pills > .Cases-module__cMnabG__pill:nth-child(3)"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<li class=\"Cases-module__cMnabG__pill\">Запчасти</li>",
+      "hidden": false,
+      "text": "Запчасти",
+      "color": "rgb(160, 160, 184)",
+      "size": "13px",
+      "weight": "500",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#171721",
+        "ratio": 6.95,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Задача</dt>",
+      "hidden": false,
+      "text": "Задача",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(1) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[задача]</span>",
+      "hidden": false,
+      "text": "[задача]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Что сделали</dt>",
+      "hidden": false,
+      "text": "Что сделали",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(2) > dd"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dd>Сайт центра ремонта кранового оборудования и&nbsp;продажи запчастей</dd>",
+      "hidden": false,
+      "text": "Сайт центра ремонта кранового оборудования и прода",
+      "color": "rgb(232, 232, 240)",
+      "size": "15px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dt"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<dt>Результат</dt>",
+      "hidden": false,
+      "text": "Результат",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__body > .Cases-module__cMnabG__facts > .Cases-module__cMnabG__fact:nth-child(3) > dd > .placeholder--block.placeholder"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"placeholder placeholder--block\">[результат]</span>",
+      "hidden": false,
+      "text": "[результат]",
+      "color": "rgb(160, 160, 184)",
+      "size": "14px",
+      "weight": "400",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#a0a0b8",
+        "bg": "#0a0a14",
+        "ratio": 7.7,
+        "expected": "4.5:1"
+      }
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__link.btn--text[href$=\"centerkran.com/\"] > .btn__label"
+      ],
+      "key": "elmPartiallyObscured",
+      "html": "<span class=\"btn__label\">Открыть сайт<span class=\"sr-only\"> <!-- -->Центр кранового оборуд",
+      "hidden": false,
+      "text": "Открыть сайт Центр кранового оборудования",
+      "color": "rgb(232, 232, 240)",
+      "size": "16px",
+      "weight": "600",
+      "verdict": "axe: пройдено",
+      "axe": {
+        "fg": "#e8e8f0",
+        "bg": "#0a0a14",
+        "ratio": 16.15,
+        "expected": "4.5:1"
+      }
+    }
+  ],
+  "1440-light": [
+    {
+      "target": [
+        ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;section class=\"hero\"&gt;</span>",
+      "hidden": true,
+      "text": "<section class=\"hero\">",
+      "color": "color(srgb 0.542745 0.542745 0.633726)",
+      "size": "11px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".text-gradient-hero"
+      ],
+      "key": "bgGradient",
+      "html": "<span class=\"text-gradient-hero\">Интернет-магазины</span>",
+      "hidden": false,
+      "text": "Интернет-магазины",
+      "color": "rgb(0, 230, 118)",
+      "size": "75.2px",
+      "weight": "650",
+      "verdict": "по пикселям",
+      "axeStill": "bgGradient",
+      "pixel": {
+        "fg": "rgb(0,230,118)",
+        "bg": "rgb(10,10,20)",
+        "bgShare": 0.69,
+        "ratio": 11.8
+      }
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__headline"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<span class=\"Demo-module__UzFtbW__headline\">Новая коллекция</span>",
+      "hidden": true,
+      "text": "Новая коллекция",
+      "color": "rgb(255, 255, 255)",
+      "size": "19.3206px",
+      "weight": "700",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__hint > span"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<span>переключите&nbsp;— витрина поменяется</span>",
+      "hidden": true,
+      "text": "переключите — витрина поменяется",
+      "color": "rgb(232, 232, 240)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Process-module__PhXd_W__step:nth-child(1) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+      ],
+      "key": "pseudoContent",
+      "html": "<span class=\"Process-module__PhXd_W__num\" aria-hidden=\"true\">1</span>",
+      "hidden": true,
+      "text": "1",
+      "color": "rgb(10, 10, 20)",
+      "size": "18px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Process-module__PhXd_W__step:nth-child(2) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+      ],
+      "key": "pseudoContent",
+      "html": "<span class=\"Process-module__PhXd_W__num\" aria-hidden=\"true\">2</span>",
+      "hidden": true,
+      "text": "2",
+      "color": "rgb(10, 10, 20)",
+      "size": "18px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Process-module__PhXd_W__step:nth-child(3) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+      ],
+      "key": "pseudoContent",
+      "html": "<span class=\"Process-module__PhXd_W__num\" aria-hidden=\"true\">3</span>",
+      "hidden": true,
+      "text": "3",
+      "color": "rgb(10, 10, 20)",
+      "size": "18px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Process-module__PhXd_W__step:nth-child(4) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+      ],
+      "key": "pseudoContent",
+      "html": "<span class=\"Process-module__PhXd_W__num\" aria-hidden=\"true\">4</span>",
+      "hidden": true,
+      "text": "4",
+      "color": "rgb(10, 10, 20)",
+      "size": "18px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(1) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">thecaseform.ru</span>",
+      "hidden": true,
+      "text": "thecaseform.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">tkachevmoscow.ru</span>",
+      "hidden": true,
+      "text": "tkachevmoscow.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">perspektivaot.ru</span>",
+      "hidden": true,
+      "text": "perspektivaot.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">opt-ypmgroup.ru</span>",
+      "hidden": true,
+      "text": "opt-ypmgroup.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">centerkran.com</span>",
+      "hidden": true,
+      "text": "centerkran.com",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".block"
+      ],
+      "key": "shortTextContent",
+      "html": "<span aria-hidden=\"true\" class=\"block h-[0.46em] font-display text-[clamp(4rem,2.25rem+4.5",
+      "hidden": true,
+      "text": "«",
+      "color": "rgb(0, 200, 83)",
+      "size": "100.8px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    }
+  ],
+  "1440-dark": [
+    {
+      "target": [
+        ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;section class=\"hero\"&gt;</span>",
+      "hidden": true,
+      "text": "<section class=\"hero\">",
+      "color": "color(srgb 0.542745 0.542745 0.633726)",
+      "size": "11px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".text-gradient-hero"
+      ],
+      "key": "bgGradient",
+      "html": "<span class=\"text-gradient-hero\">Интернет-магазины</span>",
+      "hidden": false,
+      "text": "Интернет-магазины",
+      "color": "rgb(0, 230, 118)",
+      "size": "75.2px",
+      "weight": "650",
+      "verdict": "по пикселям",
+      "axeStill": "bgGradient",
+      "pixel": {
+        "fg": "rgb(0,230,118)",
+        "bg": "rgb(10,10,20)",
+        "bgShare": 0.69,
+        "ratio": 11.8
+      }
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__headline"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<span class=\"Demo-module__UzFtbW__headline\">Новая коллекция</span>",
+      "hidden": true,
+      "text": "Новая коллекция",
+      "color": "rgb(255, 255, 255)",
+      "size": "19.3206px",
+      "weight": "700",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Demo-module__UzFtbW__hint > span"
+      ],
+      "key": "elmPartiallyObscuring",
+      "html": "<span>переключите&nbsp;— витрина поменяется</span>",
+      "hidden": true,
+      "text": "переключите — витрина поменяется",
+      "color": "rgb(232, 232, 240)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Process-module__PhXd_W__step:nth-child(1) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+      ],
+      "key": "pseudoContent",
+      "html": "<span class=\"Process-module__PhXd_W__num\" aria-hidden=\"true\">1</span>",
+      "hidden": true,
+      "text": "1",
+      "color": "rgb(10, 10, 20)",
+      "size": "18px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Process-module__PhXd_W__step:nth-child(2) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+      ],
+      "key": "pseudoContent",
+      "html": "<span class=\"Process-module__PhXd_W__num\" aria-hidden=\"true\">2</span>",
+      "hidden": true,
+      "text": "2",
+      "color": "rgb(10, 10, 20)",
+      "size": "18px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Process-module__PhXd_W__step:nth-child(3) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+      ],
+      "key": "pseudoContent",
+      "html": "<span class=\"Process-module__PhXd_W__num\" aria-hidden=\"true\">3</span>",
+      "hidden": true,
+      "text": "3",
+      "color": "rgb(10, 10, 20)",
+      "size": "18px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Process-module__PhXd_W__step:nth-child(4) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+      ],
+      "key": "pseudoContent",
+      "html": "<span class=\"Process-module__PhXd_W__num\" aria-hidden=\"true\">4</span>",
+      "hidden": true,
+      "text": "4",
+      "color": "rgb(10, 10, 20)",
+      "size": "18px",
+      "weight": "500",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(1) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">thecaseform.ru</span>",
+      "hidden": true,
+      "text": "thecaseform.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(2) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">tkachevmoscow.ru</span>",
+      "hidden": true,
+      "text": "tkachevmoscow.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(3) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">perspektivaot.ru</span>",
+      "hidden": true,
+      "text": "perspektivaot.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(4) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">opt-ypmgroup.ru</span>",
+      "hidden": true,
+      "text": "opt-ypmgroup.ru",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    },
+    {
+      "target": [
+        ".Cases-module__cMnabG__item[data-item=\"true\"]:nth-child(5) > article > .Cases-module__cMnabG__frame > .Cases-module__cMnabG__chrome > .Cases-module__cMnabG__url"
+      ],
+      "key": "bgOverlap",
+      "html": "<span class=\"Cases-module__cMnabG__url\">centerkran.com</span>",
+      "hidden": true,
+      "text": "centerkran.com",
+      "color": "rgb(160, 160, 184)",
+      "size": "12px",
+      "weight": "400",
+      "verdict": "декоративный (aria-hidden)"
+    }
+  ]
+}

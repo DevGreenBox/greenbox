@@ -1,0 +1,388 @@
+/* Кейсы: одна разметка, три раскладки.
+   1. Лента со scroll-snap (до 1024 px): карточка на ширину экрана минус поле, край следующей виден,
+      свайп и клавиатура нативные. Счётчик «.case 03 / 05» ведёт CasesScroller, без JS он скрыт.
+   2. Сетка: от 1024 px без JS, при reduced-motion и в окне ниже 640 px. Первая работа — лидер на всю
+      ширину (кадр слева, текст справа, как в прототипе), остальные по две в ряд; при нечётном остатке
+      последняя тоже на всю ширину, так что от 3 до 12 работ сетка без дыр.
+   3. Закреплённая горизонтальная прокрутка: от 1024 px, с JS, движение разрешено, окно от 640 px.
+      Высота секции = экран + длина ленты / --speed (лента быстрее прокрутки). Она считается в CSS из --n (число работ), поэтому известна
+      до загрузки GSAP, и якоря ниже секции не прыгают. Сцена липкая (sticky), ленту по прогрессу
+      прокрутки двигает ScrollTrigger (CasesScroller). Условие совпадает с PIN в CasesScroller.tsx. */
+
+.section {
+  /* Лента на телефоне: зазор между карточками не меньше отступов внутри карточки (1.5rem до названия). */
+  --item-gap: 1.5rem;
+}
+
+/* ---------- Заголовок и прогресс ---------- */
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.progress {
+  display: none;
+  flex: none;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 0.5rem;
+  color: var(--text-2);
+  font-size: 0.8125rem;
+  line-height: 1;
+  font-variant-ligatures: none;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+:global(html.js) .progress {
+  display: flex;
+}
+
+/* Подпись в языке фона «Сетка макета»: Martian Mono, как размерные подписи чертежа первого экрана.
+   Шрифт включается после гидрации (CasesScroller ставит data-live): найденный в CSS до отрисовки, он
+   качался бы наравне со шрифтами заголовка и задерживал LCP. Счётчик виден только с JS — запасного
+   варианта «без JS» нет. */
+.pin[data-live] .progress {
+  font-family: var(--font-martian-mono);
+}
+
+.now {
+  color: var(--text);
+}
+
+.bar {
+  position: relative;
+  width: min(clamp(3.5rem, 2rem + 5vw, 9rem), 30vw);
+  height: 2px;
+  overflow: hidden;
+  border-radius: 1px;
+  background: var(--line-strong);
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform-origin: left center;
+}
+
+/* ---------- Лента (база) ---------- */
+
+/* position: relative — чтобы скрытые подписи ссылок (.sr-only, position: absolute) обрезались лентой,
+   а не растягивали страницу вбок. */
+.viewport {
+  position: relative;
+  margin-top: var(--space-head);
+  padding-bottom: 0.75rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: thin;
+}
+
+.track {
+  display: flex;
+  gap: var(--item-gap);
+  width: max-content;
+  margin: 0;
+  padding: 0 var(--gutter);
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex: none;
+  width: min(100vw - 2 * var(--gutter) - 1.5rem, 34rem);
+  scroll-snap-align: start;
+}
+
+/* ---------- Карточка ---------- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  box-shadow: var(--elev-1);
+  transition:
+    transform var(--dur-reveal) var(--ease-out),
+    box-shadow var(--dur-reveal) var(--ease-out);
+}
+
+.chrome {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, auto) 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  height: 2.25rem;
+  padding-inline: 0.875rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.dots {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.dots span {
+  width: 0.5625rem;
+  height: 0.5625rem;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.url {
+  min-width: 0;
+  overflow: hidden;
+  padding: 0.1875rem 0.875rem;
+  border-radius: 0.375rem;
+  background: var(--inset);
+  color: var(--text-2);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.view {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--inset);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  transition: transform var(--dur-draw) var(--ease-out);
+}
+
+/* Кадр целиком — ссылка на сайт для мыши и пальца. Для клавиатуры и скринридера ссылка одна: «Открыть сайт». */
+.hit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .frame:has(.hit):hover {
+    transform: translateY(-4px);
+    box-shadow: var(--elev-2);
+  }
+
+  .frame:has(.hit):hover .img {
+    transform: scale(1.03);
+  }
+}
+
+.card:focus-within .img {
+  transform: scale(1.03);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  container-type: inline-size;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pill {
+  padding: 0.3125rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--inset);
+  color: var(--text-2);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* Категория — первый тег в данных; показываем её один раз, отдельным цветом. */
+.category {
+  background: var(--accent-tint);
+  color: var(--accent-ink);
+}
+
+.facts {
+  margin: 0.25rem 0 0;
+}
+
+.fact {
+  display: grid;
+  gap: 0.25rem;
+  padding-block: 0.75rem;
+  border-top: 1px solid var(--line-strong);
+}
+
+.fact dt {
+  color: var(--text-2);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.fact dd {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* Метка слева, значение справа; на самых узких карточках (320 px) — метка над значением. */
+@container (min-width: 19rem) {
+  .fact {
+    grid-template-columns: 6rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: baseline;
+  }
+
+  .fact dt {
+    font-size: 0.875rem;
+  }
+}
+
+.link {
+  align-self: flex-start;
+}
+
+/* ---------- Сетка: от 1024 px без закрепления ---------- */
+
+@media (min-width: 1024px) {
+  .viewport {
+    padding-bottom: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(3.5rem, 1.5rem + 3vw, 5.5rem) var(--gap-lg);
+    width: auto;
+  }
+
+  .item {
+    width: auto;
+  }
+
+  /* Лидер — первая работа; если после неё нечётное число, то и последняя: во всю ширину сетки,
+     кадр слева (7/12), текст справа. Остальные — по две в ряд. */
+  .item:first-child,
+  .item:last-child:nth-child(even) {
+    grid-column: 1 / -1;
+  }
+
+  /* :where() обнуляет специфичность: в закреплённой раскладке (ниже) правила html.js .card / .body
+     сильнее и перекрывают все эти свойства, лента едет как прежде. */
+  :where(.item:first-child, .item:last-child:nth-child(even)) .card {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    column-gap: var(--gap-lg);
+    align-items: center;
+  }
+
+  :where(.item:first-child, .item:last-child:nth-child(even)) .body {
+    padding-top: 0;
+  }
+
+  /* Ссылки карточек одного ряда — на одной линии. */
+  .link {
+    margin-top: auto;
+  }
+
+  :global(html.js) .progress {
+    display: none;
+  }
+}
+
+/* ---------- Закреплённая горизонтальная прокрутка ---------- */
+
+@media (min-width: 1024px) and (min-height: 640px) and (prefers-reduced-motion: no-preference) {
+  .section {
+    /* Кадр: 48% ширины, но не выше, чем помещается в экран под шапкой, и не шире 62rem. */
+    --frame-w: min(48vw, (100vh - 16.5rem) * 1.6, 62rem);
+    --text-w: clamp(19rem, 14rem + 7vw, 26rem);
+    --col-gap: clamp(2rem, 0.5rem + 2.5vw, 3.5rem);
+    --item-gap: clamp(3.5rem, 1rem + 4vw, 6rem);
+    --card-w: calc(var(--frame-w) + var(--col-gap) + var(--text-w));
+    --distance: max(0px, var(--n) * var(--card-w) + (var(--n) - 1) * var(--item-gap) + 2 * var(--gutter) - 100vw);
+    /* Лента едет в --speed раз быстрее прокрутки страницы (заказчик 30.09.2026: «быстрее, но плавно»):
+       прокрутка сцены — путь ленты / --speed (~0.7 экрана на карточку на 1440). Плавность держит scrub
+       в CasesScroller: лента догоняет прокрутку с мягким запаздыванием, а не рывками. */
+    --speed: 1.8;
+  }
+
+  :global(html.js) .section {
+    padding-block: 0;
+    /* Якорь #cases ставит начало сцены к верху окна: шапка ложится на её верхний отступ. */
+    scroll-margin-top: calc(-1 * var(--header-h-compact));
+  }
+
+  :global(html.js) .pin {
+    height: calc(100vh + var(--distance) / var(--speed));
+  }
+
+  :global(html.js) .stage {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+    height: 100vh;
+    padding-block: calc(var(--header-h-compact) + 2rem) 2rem;
+  }
+
+  :global(html.js) .progress {
+    display: flex;
+  }
+
+  :global(html.js) .viewport {
+    margin-top: clamp(1.5rem, 5vh - 0.5rem, 3.5rem);
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  :global(html.js) .track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+  }
+
+  :global(html.js) .item {
+    width: var(--card-w);
+  }
+
+  :global(html.js) .card {
+    display: grid;
+    grid-template-columns: var(--frame-w) minmax(0, 1fr);
+    column-gap: var(--col-gap);
+    align-items: start;
+  }
+
+  :global(html.js) .body {
+    align-self: stretch;
+    padding-top: 0.25rem;
+  }
+}

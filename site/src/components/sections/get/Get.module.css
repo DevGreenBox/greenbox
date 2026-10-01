@@ -1,0 +1,68 @@
+/* Строки «Что вы получаете». Линейки — псевдоэлементы, чтобы прочертить их при появлении: над каждой
+   строкой (::before) и закрывающая под последней (::after). */
+
+.list {
+  container-type: inline-size;
+}
+
+.row {
+  position: relative;
+  display: grid;
+  gap: 0.625rem;
+  padding-block: 1.75rem;
+}
+
+.row::before,
+.row:last-child::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: var(--line-strong);
+  transform-origin: 0 50%;
+}
+
+.row:last-child::after {
+  inset: auto 0 0;
+}
+
+/* Название и описание рядом — когда самому списку хватает ширины (от 520 px): так на 1024–1279, где
+   список — половина экрана, строки остаются столбиком и не тесны. */
+@container (min-width: 32.5rem) {
+  .row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: 2.5rem;
+    padding-block: 2.5rem;
+  }
+}
+
+/* Авторское движение секции (фазы — motion/Reveal.tsx): линейка строки прочерчивается слева направо
+   зелёным, как перо, и остывает до цвета линии, когда дошла до края; каскадом по строкам, вошедшим
+   в экран вместе. Текст стоит на месте — движется только графика. Без JS и при reduced-motion Reveal
+   не включается — линейки на месте сразу. */
+@media (prefers-reduced-motion: no-preference) {
+  .row {
+    --draw: calc(var(--dur-reveal) * 1.5);
+    --wait: calc(var(--i, 0) * var(--stagger) * 1.5);
+  }
+
+  /* Закрывающая линейка — на шаг каскада позже линейки последней строки. */
+  .row:last-child::after {
+    --wait: calc((var(--i, 0) + 1) * var(--stagger) * 1.5);
+  }
+
+  :global(.reveal-on) .row:not([data-revealed])::before,
+  :global(.reveal-on) .row:last-child:not([data-revealed])::after {
+    transform: scaleX(0);
+    background-color: var(--accent);
+  }
+
+  :global(.reveal-on) .row[data-revealed]::before,
+  :global(.reveal-on) .row:last-child[data-revealed]::after {
+    transition:
+      transform var(--draw) var(--ease-out),
+      background-color var(--dur-reveal) var(--ease-out);
+    transition-delay: var(--wait), calc(var(--wait) + var(--draw));
+  }
+}

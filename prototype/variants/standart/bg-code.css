@@ -1,0 +1,213 @@
+/* ЗелёнаяКоробка · «Стандарт категории»: фоны первого экрана из кода, слой вставляет bg-code.js.
+   ?bg=11 «Код витрины», ?bg=12 «Сетка макета». Анимируются только transform и opacity;
+   исходное состояние — готовый кадр, анимации лишь стартуют из него (reduced motion = статика). */
+
+.hero__code,
+.hero__plan {
+  position: absolute; inset: 0; overflow: hidden;
+  pointer-events: none; user-select: none;
+  font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-variant-ligatures: none; /* лигатуры рвались бы пополам при наборе по символу */
+}
+/* подпись макетов — как подпись на чертеже: линии и бегущий код под ней прерываются */
+.hero__code ~ .container figcaption,
+.hero__plan ~ .container figcaption { width: fit-content; padding-right: 8px; background: #0A0A14; }
+
+/* ---------- ?bg=11 «Код витрины» ---------- */
+
+.hero__code {
+  --lh: 24px;
+  --a: .22; /* общая непрозрачность кода */
+  font-size: 14px; line-height: var(--lh);
+  color: rgb(160 160 184 / var(--a)); /* строки и текст */
+  opacity: 0; transition: opacity 1.2s var(--ease);
+  /* к левому краю и под шапку уходит в #0A0A14, снизу — к светлой секции */
+  mask-image:
+    linear-gradient(90deg, transparent 42%, #000 60%),
+    linear-gradient(transparent 64px, #000 120px, #000 calc(100% - 150px), transparent);
+  mask-composite: intersect;
+}
+.hero__code.is-on { opacity: 1; }
+.hero__code .g { color: rgb(0 230 118 / var(--a)); }   /* теги */
+.hero__code .c { color: rgb(0 229 255 / var(--a)); }   /* атрибуты */
+.hero__code .s { color: rgb(106 106 128 / var(--a)); } /* служебное */
+
+.hero__code-feed { position: absolute; top: 104px; left: 44%; white-space: pre; }
+.hero__code-feed.is-running {
+  animation: code-feed var(--loop) linear var(--start) infinite;
+  will-change: transform;
+}
+@keyframes code-feed { to { transform: translateY(calc(-100% / var(--k))); } } /* ровно одна копия */
+
+.cl { height: var(--lh); }
+.cl .w, .cl .w > span { display: inline-block; vertical-align: top; }
+.cl .w { position: relative; overflow: hidden; }
+/* набор: окно и текст шагают навстречу по символу — текст стоит на месте, окно открывает его слева направо */
+.cl.is-typed .w { animation: code-window var(--d) steps(var(--n)) var(--t) backwards; }
+.cl.is-typed .w > span { animation: code-text var(--d) steps(var(--n)) var(--t) backwards; }
+@keyframes code-window { from { transform: translateX(-100%); } }
+@keyframes code-text { from { transform: translateX(100%); } }
+/* каретка на кромке окна: горит, пока строка набирается; на последней мигает и гаснет перед лентой */
+.cl .w::after {
+  content: ""; position: absolute; right: 0; top: calc((var(--lh) - 1.15em) / 2);
+  width: 2px; height: 1.15em;
+  background: rgb(0 230 118 / .6); opacity: 0;
+}
+.cl.is-typed .w::after { animation: caret-on var(--d) var(--t); }
+.cl.is-last .w::after { animation: caret-on var(--d) var(--t), caret-blink 1.06s step-end calc(var(--t) + var(--d)) 3; }
+.cl.is-behind .w::after { animation: none; }
+@keyframes caret-on { from, to { opacity: 1; } }
+@keyframes caret-blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+
+/* ---------- ?bg=12 «Сетка макета» ---------- */
+
+.hero__plan {
+  --cols: 12; --gap: 24px;
+  --pl-grid: rgb(255 255 255 / .06);
+  --pl-line: rgb(255 255 255 / .12);
+  --pl-dim: rgb(0 229 255 / .45);
+  --pl-sel: rgb(0 230 118 / .8);
+  font-size: 11px; line-height: 14px; color: #6A6A80;
+  mask-image:
+    linear-gradient(90deg, transparent 43%, #000 51%),
+    linear-gradient(transparent 60px, #000 80px, #000 calc(100% - 110px), transparent);
+  mask-composite: intersect;
+}
+
+/* страница в границах .container: колонка --cw, блоки встают по колонкам (--c — с какой, --s — сколько) */
+.pl-page {
+  --cw: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  position: absolute; inset: 0 var(--gutter);
+}
+.pl-grid {
+  position: absolute; inset: 0;
+  display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); column-gap: var(--gap);
+}
+.pl-grid i {
+  border-inline: 1px solid var(--pl-grid);
+  transform-origin: top; animation: pl-y 1.8s var(--ease) calc(.1s + var(--i) * 45ms) backwards;
+}
+
+.pl-blk {
+  --d: .3s; /* когда прочерчивается */
+  position: absolute;
+  left: calc(var(--c) * (var(--cw) + var(--gap)));
+  width: calc(var(--s) * var(--cw) + (var(--s) - 1) * var(--gap));
+}
+/* контур волосяной линией: верх и низ тянутся слева, бока — сверху */
+.pl-blk::before, .pl-blk::after { content: ""; position: absolute; inset: 0; }
+.pl-blk::before { border-block: 1px solid var(--pl-line); transform-origin: left; animation: pl-x 1.3s var(--ease) var(--d) backwards; }
+.pl-blk::after { inset-block: 1px; border-inline: 1px solid var(--pl-line); transform-origin: top; animation: pl-y 1.3s var(--ease) var(--d) backwards; }
+.pl-blk > i { position: absolute; animation: pl-fade 1s var(--ease) calc(var(--d) + .6s) backwards; }
+
+.pl-hdr { --c: 6; --s: 6; top: 96px; height: 48px; }
+.pl-hero { --c: 6; --s: 6; --d: .45s; top: 168px; height: calc(var(--db) - 112px); } /* низ — 56 px под макетами */
+.pl-card { --s: 2; top: calc(var(--db) + 80px); height: 200px; }
+.pl-c1 { --c: 6; --d: .6s; }
+.pl-c2 { --c: 8; --d: .7s; }
+.pl-c3 { --c: 10; --d: .8s; }
+
+/* начинка: шапка витрины и карточка товара, как в каркасе */
+.pl-logo, .pl-cart { top: 15px; width: 18px; height: 18px; border: 1px solid var(--pl-line); }
+.pl-logo { left: 16px; border-radius: 5px; }
+.pl-cart { right: 16px; border-radius: 50%; }
+.pl-nav {
+  left: 30%; top: 21px; width: 152px; height: 6px;
+  background: repeating-linear-gradient(90deg, var(--pl-grid) 0 40px, transparent 40px 56px);
+}
+.pl-img {
+  inset: 12px 12px auto; height: 52%;
+  border: 1px solid var(--pl-grid);
+  background:
+    linear-gradient(to top right, transparent calc(50% - .6px), var(--pl-grid) 50%, transparent calc(50% + .6px)),
+    linear-gradient(to bottom right, transparent calc(50% - .6px), var(--pl-grid) 50%, transparent calc(50% + .6px));
+}
+.pl-bar { left: 12px; top: calc(52% + 28px); width: 62%; height: 6px; border-radius: 3px; background: var(--pl-grid); }
+.pl-bar--s { top: calc(52% + 44px); width: 30%; }
+
+/* подписи у углов: фон страницы вырезает под текстом линии сетки */
+.pl-lbl, .pl-sel b, .pl-note, .pl-dim b { position: absolute; background: #0A0A14; white-space: nowrap; font-weight: 400; }
+.pl-lbl, .pl-sel b { left: 0; bottom: 100%; margin-bottom: 3px; padding-right: 6px; }
+.pl-lbl { animation: pl-fade .8s var(--ease) calc(var(--d) + .5s) backwards; }
+.pl-note { right: 0; top: 79px; padding-left: 6px; animation: pl-fade .8s var(--ease) 1s backwards; }
+
+/* выделение, как у инспектора: зелёный контур, маркеры по углам, тег и размер */
+.pl-sel { position: absolute; inset: 0; opacity: 0; }
+.pl-sel::before { content: ""; position: absolute; inset: 0; border: 1px solid var(--pl-sel); }
+.pl-sel i { position: absolute; width: 7px; height: 7px; margin: -3px; border: 1px solid var(--pl-sel); background: #0A0A14; }
+.pl-sel i:nth-child(1) { left: 0; top: 0; }
+.pl-sel i:nth-child(2) { right: 0; top: 0; }
+.pl-sel i:nth-child(3) { left: 0; bottom: 0; }
+.pl-sel i:nth-child(4) { right: 0; bottom: 0; }
+.pl-sel b { color: #00E676; }
+.pl-sel b span { margin-left: 1ch; color: rgb(0 230 118 / .55); }
+/* выделение проходит шапку → первый экран и остаётся на карточке */
+.pl-hdr .pl-sel { animation: pl-pick 1.4s linear 1.5s; }
+.pl-hero .pl-sel { animation: pl-pick 1.4s linear 2.9s; }
+.pl-c2 .pl-sel { opacity: 1; animation: pl-fade .25s linear 4.3s backwards; }
+
+/* размерные линии с отступом в px */
+.pl-dim { position: absolute; color: rgb(0 229 255 / .7); animation: pl-fade 1s var(--ease) 1.3s backwards; }
+.pl-dim--v {
+  width: 7px; margin-left: -3px;
+  background:
+    linear-gradient(var(--pl-dim) 0 0) 50% 0 / 1px 100% no-repeat,
+    linear-gradient(var(--pl-dim) 0 0) top / 100% 1px no-repeat,
+    linear-gradient(var(--pl-dim) 0 0) bottom / 100% 1px no-repeat;
+}
+.pl-dim--h {
+  height: 7px; margin-top: -3px;
+  background:
+    linear-gradient(var(--pl-dim) 0 0) 0 50% / 100% 1px no-repeat,
+    linear-gradient(var(--pl-dim) 0 0) left / 1px 100% no-repeat,
+    linear-gradient(var(--pl-dim) 0 0) right / 1px 100% no-repeat;
+}
+.pl-dim--v b { left: 100%; top: 50%; margin: -7px 0 0 4px; padding: 0 2px; }
+.pl-dim--h b { left: 0; right: 0; bottom: 100%; margin-bottom: 1px; text-align: center; background: none; }
+.pl-dim--gap { right: 44px; top: 144px; height: 24px; }
+.pl-dim--pad { left: calc(6 * (var(--cw) + var(--gap)) + var(--cw) / 2); top: 168px; height: calc(var(--lt) - 168px); }
+.pl-dim--cards { left: calc(10 * (var(--cw) + var(--gap)) - var(--gap)); width: var(--gap); top: calc(var(--db) + 124px); }
+.pl-dim--gutter { left: 100%; width: var(--gutter); top: 120px; }
+
+@keyframes pl-x { from { transform: scaleX(0); } }
+@keyframes pl-y { from { transform: scaleY(0); } }
+@keyframes pl-fade { from { opacity: 0; } }
+@keyframes pl-pick { 0%, 100% { opacity: 0; } 6%, 94% { opacity: 1; } }
+
+/* ---------- макеты под текстом (до 960): фон — полоса за устройствами ---------- */
+
+@media (max-width: 960px) {
+  .hero__code {
+    --lh: 22px; font-size: 13px;
+    mask-image: linear-gradient(transparent calc(var(--dt) - 56px), #000 calc(var(--dt) - 8px), #000 calc(100% - 96px), transparent);
+  }
+  .hero__code-feed { top: calc(var(--dt) - 30px); left: var(--gutter); }
+
+  .hero__plan {
+    --cols: 8;
+    mask-image: linear-gradient(transparent calc(var(--dt) - 48px), #000 calc(var(--dt) - 30px), #000 calc(100% - 80px), transparent);
+  }
+  .pl-grid i:nth-child(n + 9) { display: none; }
+  .pl-hdr, .pl-c3, .pl-dim--gap, .pl-dim--gutter { display: none; }
+  .pl-hero { --c: 0; --s: var(--cols); top: calc(var(--dt) - 16px); height: calc(var(--db) - var(--dt) + 68px); }
+  .pl-card { --s: calc(var(--cols) / 2); top: calc(var(--db) + 52px + var(--gap)); }
+  .pl-c1 { --c: 0; }
+  .pl-c2 { --c: calc(var(--cols) / 2); }
+  .pl-note { top: calc(var(--dt) - 33px); }
+  .pl-dim--pad { left: calc(var(--cw) / 2); top: calc(var(--dt) - 16px); height: calc(var(--lt) - var(--dt) + 16px); }
+  .pl-dim--cards { left: calc(var(--cols) / 2 * (var(--cw) + var(--gap)) - var(--gap)); top: calc(var(--db) + 96px + var(--gap)); }
+  /* в кадре только первый экран — выделение сразу на нём и остаётся */
+  .pl-hero .pl-sel { opacity: 1; animation: pl-fade .25s linear 1.5s backwards; }
+  .pl-c2 .pl-sel { opacity: 0; animation: none; }
+}
+
+@media (max-width: 640px) {
+  .hero__plan { --cols: 4; --gap: 16px; }
+  .pl-grid i:nth-child(n + 5) { display: none; }
+  .pl-sel b span { display: none; } /* в строку с подписью сетки размер уже не помещается */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__code *, .hero__code *::after,
+  .hero__plan *, .hero__plan *::before, .hero__plan *::after { animation: none !important; }
+}

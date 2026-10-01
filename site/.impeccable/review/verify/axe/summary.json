@@ -1,0 +1,430 @@
+[
+  {
+    "key": "home-1440-light",
+    "url": "/",
+    "width": 1440,
+    "theme": "light",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "wcag": true,
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": ".GridBackdrop-module__0j9sMW__hdr > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;header&gt;</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #6a6a80, background color: #0a0a14, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;section class=\"hero\"&gt;</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #6a6a80, background color: #0a0a14, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "wcag": true,
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 2.09:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e8e8f0, surrounding text: #a0a0b8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "count": 93
+      }
+    ]
+  },
+  {
+    "key": "home-1440-dark",
+    "url": "/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "wcag": true,
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": ".GridBackdrop-module__0j9sMW__hdr > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;header&gt;</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #6a6a80, background color: #0a0a14, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">&lt;section class=\"hero\"&gt;</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #6a6a80, background color: #0a0a14, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "wcag": true,
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 2.09:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e8e8f0, surrounding text: #a0a0b8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "count": 92
+      }
+    ]
+  },
+  {
+    "key": "home-390-light",
+    "url": "/",
+    "width": 390,
+    "theme": "light",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "wcag": true,
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": ".GridBackdrop-module__0j9sMW__c2 > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">.product-card</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #6a6a80, background color: #0a0a14, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "wcag": true,
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 2.09:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e8e8f0, surrounding text: #a0a0b8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      },
+      {
+        "id": "color-contrast",
+        "count": 94
+      }
+    ]
+  },
+  {
+    "key": "home-390-dark",
+    "url": "/",
+    "width": 390,
+    "theme": "dark",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "wcag": true,
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": ".GridBackdrop-module__0j9sMW__c2 > .GridBackdrop-module__0j9sMW__lbl",
+            "html": "<span class=\"GridBackdrop-module__0j9sMW__lbl\">.product-card</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.73 (foreground color: #6a6a80, background color: #0a0a14, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#6a6a80",
+              "bgColor": "#0a0a14",
+              "contrastRatio": 3.73,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "wcag": true,
+        "help": "Links must be distinguishable without relying on color",
+        "nodes": [
+          {
+            "target": "a[aria-describedby=\"_R_dd5flb_\"]",
+            "html": "<a href=\"/privacy\" target=\"_blank\" rel=\"noopener\" aria-describedby=\"_R_dd5flb_\">персональных данных</a>",
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 2.09:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e8e8f0, surrounding text: #a0a0b8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+            "data": {
+              "messageKey": "fgContrast",
+              "contrastRatio": 2.09,
+              "requiredContrastRatio": 3,
+              "nodeColor": "#e8e8f0",
+              "parentColor": "#a0a0b8"
+            }
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      },
+      {
+        "id": "color-contrast",
+        "count": 93
+      }
+    ]
+  },
+  {
+    "key": "privacy-1440-light",
+    "url": "/privacy",
+    "width": 1440,
+    "theme": "light",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "privacy-1440-dark",
+    "url": "/privacy",
+    "width": 1440,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "privacy-390-light",
+    "url": "/privacy",
+    "width": 390,
+    "theme": "light",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "key": "privacy-390-dark",
+    "url": "/privacy",
+    "width": 390,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "key": "lead-sent-1440-light",
+    "url": "/lead/sent?from=quiz",
+    "width": 1440,
+    "theme": "light",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-sent-1440-dark",
+    "url": "/lead/sent?from=quiz",
+    "width": 1440,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-sent-390-light",
+    "url": "/lead/sent?from=quiz",
+    "width": 390,
+    "theme": "light",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "key": "lead-sent-390-dark",
+    "url": "/lead/sent?from=quiz",
+    "width": 390,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "key": "lead-error-1440-light",
+    "url": "/lead/error?from=contact&field=name,consent",
+    "width": 1440,
+    "theme": "light",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-error-1440-dark",
+    "url": "/lead/error?from=contact&field=name,consent",
+    "width": 1440,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-error-390-light",
+    "url": "/lead/error?from=contact&field=name,consent",
+    "width": 390,
+    "theme": "light",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "key": "lead-error-390-dark",
+    "url": "/lead/error?from=contact&field=name,consent",
+    "width": 390,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "key": "lead-error-generic-1440-light",
+    "url": "/lead/error?from=quiz",
+    "width": 1440,
+    "theme": "light",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-error-generic-1440-dark",
+    "url": "/lead/error?from=quiz",
+    "width": 1440,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-error-generic-390-light",
+    "url": "/lead/error?from=quiz",
+    "width": 390,
+    "theme": "light",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "key": "lead-error-generic-390-dark",
+    "url": "/lead/error?from=quiz",
+    "width": 390,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1
+      }
+    ]
+  }
+]

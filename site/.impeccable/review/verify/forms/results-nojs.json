@@ -1,0 +1,30 @@
+{
+  "required": {
+    "url": "/#contact",
+    "posted": false
+  },
+  "sent": {
+    "url": "/lead/sent?from=contact",
+    "h1": "Заявка отправлена",
+    "text": "Заявка отправлена Мы свяжемся с вами. Если вопрос срочный, напишите нам в Telegram @infogreenbox (откроется в новой вкладке) . Вернуться на сайт",
+    "links": [
+      "@infogreenbox (откроется в новой вкладке) → https://t.me/infogreenbox",
+      "Вернуться на сайт → /#contact"
+    ]
+  },
+  "error": {
+    "url": "/lead/error?from=quiz&field=name",
+    "h1": "Заявка не отправлена",
+    "text": "Заявка не отправлена Проверьте: «Имя» . Обязательно укажите имя и способ связи — телефон, Telegram или email — и отметьте согласие на обработку персональных данных. Вернуться к опросу Telegram @infogreenbox (откроется в новой вкладке)",
+    "links": [
+      "Вернуться к опросу → /#quiz",
+      "Telegram @infogreenbox (откроется в новой вкладке) → https://t.me/infogreenbox"
+    ]
+  },
+  "hops": [
+    "POST /api/lead → 303 → /lead/sent?from=contact",
+    "GET /lead/sent?from=contact → 200",
+    "POST /api/lead → 303 → /lead/error?from=quiz&field=name",
+    "GET /lead/error?from=quiz&field=name → 200"
+  ]
+}

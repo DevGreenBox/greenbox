@@ -1,0 +1,388 @@
+[
+  {
+    "key": "home-390-light",
+    "url": "/",
+    "status": 200,
+    "width": 390,
+    "theme": "light",
+    "passes": 52,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "count": 59,
+        "targets": [
+          ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl",
+          ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__pick > b",
+          ".text-gradient-hero",
+          "a[href$=\"#why\"]",
+          ".Demo-module__UzFtbW__headline",
+          ".Demo-module__UzFtbW__product:nth-child(3) > .Demo-module__UzFtbW__productName"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "home-390-dark",
+    "url": "/",
+    "status": 200,
+    "width": 390,
+    "theme": "dark",
+    "passes": 52,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "count": 58,
+        "targets": [
+          ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl",
+          ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__pick > b",
+          ".text-gradient-hero",
+          "a[href$=\"#why\"]",
+          ".Demo-module__UzFtbW__headline",
+          ".Demo-module__UzFtbW__product:nth-child(3) > .Demo-module__UzFtbW__productName"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "home-1440-light",
+    "url": "/",
+    "status": 200,
+    "width": 1440,
+    "theme": "light",
+    "passes": 51,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "count": 57,
+        "targets": [
+          ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl",
+          ".text-gradient-hero",
+          ".Demo-module__UzFtbW__hint > span",
+          ".Process-module__PhXd_W__step:nth-child(1) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]",
+          ".Process-module__PhXd_W__step:nth-child(2) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]",
+          ".Process-module__PhXd_W__step:nth-child(3) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "home-1440-dark",
+    "url": "/",
+    "status": 200,
+    "width": 1440,
+    "theme": "dark",
+    "passes": 51,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "count": 56,
+        "targets": [
+          ".GridBackdrop-module__0j9sMW__main > .GridBackdrop-module__0j9sMW__lbl",
+          ".text-gradient-hero",
+          ".Demo-module__UzFtbW__hint > span",
+          ".Process-module__PhXd_W__step:nth-child(1) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]",
+          ".Process-module__PhXd_W__step:nth-child(2) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]",
+          ".Process-module__PhXd_W__step:nth-child(3) > .Process-module__PhXd_W__num[aria-hidden=\"true\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "privacy-390-light",
+    "url": "/privacy",
+    "status": 200,
+    "width": 390,
+    "theme": "light",
+    "passes": 41,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "privacy-390-dark",
+    "url": "/privacy",
+    "status": 200,
+    "width": 390,
+    "theme": "dark",
+    "passes": 41,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "privacy-1440-light",
+    "url": "/privacy",
+    "status": 200,
+    "width": 1440,
+    "theme": "light",
+    "passes": 41,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "privacy-1440-dark",
+    "url": "/privacy",
+    "status": 200,
+    "width": 1440,
+    "theme": "dark",
+    "passes": 41,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-sent-390-light",
+    "url": "/lead/sent?from=quiz",
+    "status": 200,
+    "width": 390,
+    "theme": "light",
+    "passes": 40,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "lead-sent-390-dark",
+    "url": "/lead/sent?from=quiz",
+    "status": 200,
+    "width": 390,
+    "theme": "dark",
+    "passes": 40,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "lead-sent-1440-light",
+    "url": "/lead/sent?from=quiz",
+    "status": 200,
+    "width": 1440,
+    "theme": "light",
+    "passes": 40,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-sent-1440-dark",
+    "url": "/lead/sent?from=quiz",
+    "status": 200,
+    "width": 1440,
+    "theme": "dark",
+    "passes": 40,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-error-390-light",
+    "url": "/lead/error?from=contact&field=name,consent",
+    "status": 200,
+    "width": 390,
+    "theme": "light",
+    "passes": 39,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "lead-error-390-dark",
+    "url": "/lead/error?from=contact&field=name,consent",
+    "status": 200,
+    "width": 390,
+    "theme": "dark",
+    "passes": 39,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "lead-error-1440-light",
+    "url": "/lead/error?from=contact&field=name,consent",
+    "status": 200,
+    "width": 1440,
+    "theme": "light",
+    "passes": 39,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-error-1440-dark",
+    "url": "/lead/error?from=contact&field=name,consent",
+    "status": 200,
+    "width": 1440,
+    "theme": "dark",
+    "passes": 39,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-error-generic-390-light",
+    "url": "/lead/error?from=quiz",
+    "status": 200,
+    "width": 390,
+    "theme": "light",
+    "passes": 39,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "lead-error-generic-390-dark",
+    "url": "/lead/error?from=quiz",
+    "status": 200,
+    "width": 390,
+    "theme": "dark",
+    "passes": 39,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "lead-error-generic-1440-light",
+    "url": "/lead/error?from=quiz",
+    "status": 200,
+    "width": 1440,
+    "theme": "light",
+    "passes": 39,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "lead-error-generic-1440-dark",
+    "url": "/lead/error?from=quiz",
+    "status": 200,
+    "width": 1440,
+    "theme": "dark",
+    "passes": 39,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "404-390-light",
+    "url": "/no-such-page",
+    "status": 404,
+    "width": 390,
+    "theme": "light",
+    "passes": 39,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "404-390-dark",
+    "url": "/no-such-page",
+    "status": 404,
+    "width": 390,
+    "theme": "dark",
+    "passes": 39,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "count": 1,
+        "targets": [
+          "button[aria-haspopup=\"dialog\"]"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "404-1440-light",
+    "url": "/no-such-page",
+    "status": 404,
+    "width": 1440,
+    "theme": "light",
+    "passes": 39,
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "key": "404-1440-dark",
+    "url": "/no-such-page",
+    "status": 404,
+    "width": 1440,
+    "theme": "dark",
+    "passes": 39,
+    "violations": [],
+    "incomplete": []
+  }
+]

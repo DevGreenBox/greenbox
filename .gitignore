@@ -1,0 +1,17 @@
+# Репозиторий сайта студии «ЗелёнаяКоробка». Сборки, зависимости и секреты — в site/.gitignore.
+node_modules/
+.next/
+.vercel/
+.env*
+!.env.example
+*.log
+*.tsbuildinfo
+.DS_Store
+
+# Фактура проверок /impeccable: скриншоты и отчёты Lighthouse (~135 МБ) остаются локально — в репозитории
+# отчёты (md), скрипты съёмки и замеров; снимки пересобираются этими скриптами.
+.impeccable/tmp/
+.impeccable/review/**/*.png
+site/.impeccable/review/**/*.png
+site/.impeccable/critique/**/*.png
+site/.impeccable/review/**/lh/*.json

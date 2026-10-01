@@ -1,0 +1,255 @@
+{
+  "reduced-1440": {
+    "early": {
+      "hidden": [],
+      "revealCount": 38,
+      "badReveal": [],
+      "htmlClass": "onest_50c97335-module__yTIXea__variable unbounded_f3df02b6-module__nmHWUq__variable js",
+      "theme": "light"
+    },
+    "perSection": {
+      "difference": 0,
+      "get": 0,
+      "quiz": 0,
+      "process": 0,
+      "cases": 0,
+      "reviews": 0,
+      "team": 0,
+      "why": 0,
+      "faq": 0,
+      "contact": 0
+    },
+    "runningAfter": [],
+    "casesLayout": {
+      "cards": 8,
+      "allInsideWidth": true,
+      "rows": 4
+    }
+  },
+  "reduced-390": {
+    "early": {
+      "hidden": [],
+      "revealCount": 38,
+      "badReveal": [],
+      "htmlClass": "onest_50c97335-module__yTIXea__variable unbounded_f3df02b6-module__nmHWUq__variable js",
+      "theme": "light"
+    },
+    "perSection": {
+      "difference": 0,
+      "get": 0,
+      "quiz": 0,
+      "process": 0,
+      "cases": 0,
+      "reviews": 0,
+      "team": 0,
+      "why": 0,
+      "faq": 0,
+      "contact": 0
+    },
+    "runningAfter": [],
+    "casesLayout": {
+      "cards": 8,
+      "allInsideWidth": false,
+      "rows": 1
+    }
+  },
+  "nojs-light-1440": {
+    "content": {
+      "hidden": [],
+      "revealCount": 38,
+      "badReveal": [],
+      "htmlClass": "onest_50c97335-module__yTIXea__variable unbounded_f3df02b6-module__nmHWUq__variable",
+      "theme": null
+    },
+    "scenes": {
+      "body": "rgb(250, 251, 252)",
+      "quizScene": "rgb(250, 251, 252)",
+      "faqScene": "rgb(250, 251, 252)",
+      "colorScheme": "light",
+      "quizSteps": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "quizSubmit": true,
+      "quizNext": false,
+      "contactForm": true,
+      "contactSubmit": true,
+      "themeToggle": false,
+      "burger": false,
+      "headerCta": true,
+      "headerNav": true,
+      "honeypotVisible": true,
+      "faqOpenable": 8
+    }
+  },
+  "nojs-light-390": {
+    "content": {
+      "hidden": [],
+      "revealCount": 38,
+      "badReveal": [],
+      "htmlClass": "onest_50c97335-module__yTIXea__variable unbounded_f3df02b6-module__nmHWUq__variable",
+      "theme": null
+    },
+    "scenes": {
+      "body": "rgb(250, 251, 252)",
+      "quizScene": "rgb(250, 251, 252)",
+      "faqScene": "rgb(250, 251, 252)",
+      "colorScheme": "light",
+      "quizSteps": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "quizSubmit": true,
+      "quizNext": false,
+      "contactForm": true,
+      "contactSubmit": true,
+      "themeToggle": false,
+      "burger": false,
+      "headerCta": false,
+      "headerNav": false,
+      "honeypotVisible": true,
+      "faqOpenable": 8
+    }
+  },
+  "nojs-dark-1440": {
+    "content": {
+      "hidden": [],
+      "revealCount": 38,
+      "badReveal": [],
+      "htmlClass": "onest_50c97335-module__yTIXea__variable unbounded_f3df02b6-module__nmHWUq__variable",
+      "theme": null
+    },
+    "scenes": {
+      "body": "rgb(18, 18, 31)",
+      "quizScene": "rgb(18, 18, 31)",
+      "faqScene": "rgb(18, 18, 31)",
+      "colorScheme": "dark",
+      "quizSteps": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "quizSubmit": true,
+      "quizNext": false,
+      "contactForm": true,
+      "contactSubmit": true,
+      "themeToggle": false,
+      "burger": false,
+      "headerCta": true,
+      "headerNav": true,
+      "honeypotVisible": true,
+      "faqOpenable": 8
+    }
+  },
+  "nojs-dark-390": {
+    "content": {
+      "hidden": [],
+      "revealCount": 38,
+      "badReveal": [],
+      "htmlClass": "onest_50c97335-module__yTIXea__variable unbounded_f3df02b6-module__nmHWUq__variable",
+      "theme": null
+    },
+    "scenes": {
+      "body": "rgb(18, 18, 31)",
+      "quizScene": "rgb(18, 18, 31)",
+      "faqScene": "rgb(18, 18, 31)",
+      "colorScheme": "dark",
+      "quizSteps": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "quizSubmit": true,
+      "quizNext": false,
+      "contactForm": true,
+      "contactSubmit": true,
+      "themeToggle": false,
+      "burger": false,
+      "headerCta": false,
+      "headerNav": false,
+      "honeypotVisible": true,
+      "faqOpenable": 8
+    }
+  },
+  "idle-1440": {
+    "window0_10": {
+      "raf": 637,
+      "rafPerSec": 63.7,
+      "layouts": 70,
+      "styles": 268,
+      "taskSec": 0.786,
+      "scriptSec": 0.084,
+      "runningAt10s": []
+    },
+    "window10_20": {
+      "raf": 643,
+      "rafPerSec": 64.3,
+      "layouts": 0,
+      "styles": 0,
+      "taskSec": 0.173,
+      "scriptSec": 0.028,
+      "runningAt20s": []
+    }
+  },
+  "idle-390": {
+    "window0_10": {
+      "raf": 0,
+      "rafPerSec": 0,
+      "layouts": 73,
+      "styles": 146,
+      "taskSec": 0.466,
+      "scriptSec": 0.094,
+      "runningAt10s": []
+    },
+    "window10_20": {
+      "raf": 0,
+      "rafPerSec": 0,
+      "layouts": 0,
+      "styles": 0,
+      "taskSec": 0.001,
+      "scriptSec": 0,
+      "runningAt20s": []
+    }
+  },
+  "idle-1440-cases": {
+    "window0_10": {
+      "raf": 788,
+      "rafPerSec": 78.8,
+      "layouts": 109,
+      "styles": 313,
+      "taskSec": 0.706,
+      "scriptSec": 0.077,
+      "runningAt10s": []
+    },
+    "window10_20": {
+      "raf": 641,
+      "rafPerSec": 64.1,
+      "layouts": 0,
+      "styles": 0,
+      "taskSec": 0.167,
+      "scriptSec": 0.034,
+      "runningAt20s": []
+    }
+  },
+  "webkit-reduced-390": {
+    "hidden": [],
+    "revealCount": 38,
+    "badReveal": [],
+    "htmlClass": "onest_50c97335-module__yTIXea__variable unbounded_f3df02b6-module__nmHWUq__variable js",
+    "theme": "light"
+  }
+}

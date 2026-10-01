@@ -1,0 +1,280 @@
+{
+  "chromium-390": [
+    {
+      "card": 1,
+      "text": "Открыть сайт Клиника Ткачева (",
+      "linkLeft": 20,
+      "linkRight": 153,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 0,
+      "snap": "x mandatory",
+      "counter": "01"
+    },
+    {
+      "card": 2,
+      "text": "Открыть сайт THE CASE (откроет",
+      "linkLeft": 362,
+      "linkRight": 495,
+      "visiblePx": 28,
+      "width": 133,
+      "scrollLeft": 0,
+      "snap": "x mandatory",
+      "counter": "01"
+    },
+    {
+      "card": 3,
+      "text": "Открыть сайт Учебный центр «Пе",
+      "linkLeft": 20,
+      "linkRight": 153,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 684,
+      "snap": "x mandatory",
+      "counter": "03"
+    },
+    {
+      "card": 4,
+      "text": "Открыть сайт Happy Kids (откро",
+      "linkLeft": 362,
+      "linkRight": 495,
+      "visiblePx": 28,
+      "width": 133,
+      "scrollLeft": 684,
+      "snap": "x mandatory",
+      "counter": "03"
+    }
+  ],
+  "chromium-768": [
+    {
+      "card": 1,
+      "text": "Открыть сайт Клиника Ткачева (",
+      "linkLeft": 40,
+      "linkRight": 173,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 0,
+      "snap": "x mandatory",
+      "counter": "01"
+    },
+    {
+      "card": 2,
+      "text": "Открыть сайт THE CASE (откроет",
+      "linkLeft": 600,
+      "linkRight": 733,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 0,
+      "snap": "x mandatory",
+      "counter": "01"
+    },
+    {
+      "card": 3,
+      "text": "Открыть сайт Учебный центр «Пе",
+      "linkLeft": 40,
+      "linkRight": 173,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 1120,
+      "snap": "x mandatory",
+      "counter": "03"
+    },
+    {
+      "card": 4,
+      "text": "Открыть сайт Happy Kids (откро",
+      "linkLeft": 600,
+      "linkRight": 733,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 1120,
+      "snap": "x mandatory",
+      "counter": "03"
+    }
+  ],
+  "chromium-links-/": [
+    {
+      "text": "персональных данных",
+      "decoration": "none",
+      "color": "rgb(26, 26, 46)",
+      "parentColor": "rgb(74, 74, 104)",
+      "weight": "400",
+      "parentWeight": "400"
+    },
+    {
+      "text": "персональных данных",
+      "decoration": "none",
+      "color": "rgb(232, 232, 240)",
+      "parentColor": "rgb(160, 160, 184)",
+      "weight": "400",
+      "parentWeight": "400"
+    }
+  ],
+  "chromium-links-/privacy": [
+    {
+      "text": "info.greenboxweb@gmail.com",
+      "decoration": "none",
+      "color": "rgb(26, 26, 46)",
+      "parentColor": "rgb(26, 26, 46)",
+      "weight": "400",
+      "parentWeight": "400"
+    },
+    {
+      "text": "@infogreenbox",
+      "decoration": "none",
+      "color": "rgb(26, 26, 46)",
+      "parentColor": "rgb(26, 26, 46)",
+      "weight": "400",
+      "parentWeight": "400"
+    }
+  ],
+  "chromium-links-/lead/error?from=contact&field=consent": [],
+  "chromium-links-/lead/sent?from=quiz": [
+    {
+      "text": "@infogreenbox (откроется в новой вкладке",
+      "decoration": "none",
+      "color": "rgb(74, 74, 104)",
+      "parentColor": "rgb(74, 74, 104)",
+      "weight": "400",
+      "parentWeight": "400"
+    }
+  ],
+  "webkit-390": [
+    {
+      "card": 1,
+      "text": "Открыть сайт Клиника Ткачева (",
+      "linkLeft": 20,
+      "linkRight": 153,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 0,
+      "snap": "x mandatory",
+      "counter": "01"
+    },
+    {
+      "card": 2,
+      "text": "Открыть сайт THE CASE (откроет",
+      "linkLeft": 362,
+      "linkRight": 495,
+      "visiblePx": 28,
+      "width": 133,
+      "scrollLeft": 0,
+      "snap": "x mandatory",
+      "counter": "01"
+    },
+    {
+      "card": 3,
+      "text": "Открыть сайт Учебный центр «Пе",
+      "linkLeft": 20,
+      "linkRight": 153,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 684,
+      "snap": "x mandatory",
+      "counter": "03"
+    },
+    {
+      "card": 4,
+      "text": "Открыть сайт Happy Kids (откро",
+      "linkLeft": 362,
+      "linkRight": 495,
+      "visiblePx": 28,
+      "width": 133,
+      "scrollLeft": 684,
+      "snap": "x mandatory",
+      "counter": "03"
+    }
+  ],
+  "webkit-768": [
+    {
+      "card": 1,
+      "text": "Открыть сайт Клиника Ткачева (",
+      "linkLeft": 40,
+      "linkRight": 173,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 0,
+      "snap": "x mandatory",
+      "counter": "01"
+    },
+    {
+      "card": 2,
+      "text": "Открыть сайт THE CASE (откроет",
+      "linkLeft": 600,
+      "linkRight": 733,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 0,
+      "snap": "x mandatory",
+      "counter": "01"
+    },
+    {
+      "card": 3,
+      "text": "Открыть сайт Учебный центр «Пе",
+      "linkLeft": 40,
+      "linkRight": 173,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 1120,
+      "snap": "x mandatory",
+      "counter": "03"
+    },
+    {
+      "card": 4,
+      "text": "Открыть сайт Happy Kids (откро",
+      "linkLeft": 600,
+      "linkRight": 733,
+      "visiblePx": 132.875,
+      "width": 133,
+      "scrollLeft": 1120,
+      "snap": "x mandatory",
+      "counter": "03"
+    }
+  ],
+  "webkit-links-/": [
+    {
+      "text": "персональных данных",
+      "decoration": "none",
+      "color": "rgb(26, 26, 46)",
+      "parentColor": "rgb(74, 74, 104)",
+      "weight": "400",
+      "parentWeight": "400"
+    },
+    {
+      "text": "персональных данных",
+      "decoration": "none",
+      "color": "rgb(232, 232, 240)",
+      "parentColor": "rgb(160, 160, 184)",
+      "weight": "400",
+      "parentWeight": "400"
+    }
+  ],
+  "webkit-links-/privacy": [
+    {
+      "text": "info.greenboxweb@gmail.com",
+      "decoration": "none",
+      "color": "rgb(26, 26, 46)",
+      "parentColor": "rgb(26, 26, 46)",
+      "weight": "400",
+      "parentWeight": "400"
+    },
+    {
+      "text": "@infogreenbox",
+      "decoration": "none",
+      "color": "rgb(26, 26, 46)",
+      "parentColor": "rgb(26, 26, 46)",
+      "weight": "400",
+      "parentWeight": "400"
+    }
+  ],
+  "webkit-links-/lead/error?from=contact&field=consent": [],
+  "webkit-links-/lead/sent?from=quiz": [
+    {
+      "text": "@infogreenbox (откроется в новой вкладке",
+      "decoration": "none",
+      "color": "rgb(74, 74, 104)",
+      "parentColor": "rgb(74, 74, 104)",
+      "weight": "400",
+      "parentWeight": "400"
+    }
+  ]
+}

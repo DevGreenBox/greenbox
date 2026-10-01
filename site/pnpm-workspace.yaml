@@ -1,0 +1,12 @@
+# Свой workspace: сайт не зависит от корневого pnpm-workspace.yaml монорепо.
+# Скрипты установки не нужны: sharp и unrs-resolver берут готовые бинарники
+# из optional-зависимостей (@img/sharp-*, @unrs/resolver-binding-*).
+# У @tailwindcss/oxide 4.3 скрипта установки нет.
+# Список пакетов — для pnpm 9: Vercel выбирает версию pnpm по lockfile, а pnpm 9 без него не ставит
+# зависимости («packages field missing»). pnpm 9, 10 и 11 ставят по lockfile без изменений (проверено 01.10.2026).
+packages:
+  - .
+
+allowBuilds:
+  sharp: false
+  unrs-resolver: false

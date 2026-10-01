@@ -1,0 +1,405 @@
+{
+ "note": "Lighthouse 13.5, по 3 прогона, «до» (:3202, сборка до правок) и «после» (:3200) вперемешку. ab1 — режим с задержкой первого кадра headless (~1,2 с), ab2 — первый кадр сразу.",
+ "runs": {
+  "ab1-mobile-before": [
+   {
+    "LCP": 3372.856,
+    "FCP": 1074.571,
+    "TBT": 413.715,
+    "CLS": 0.008,
+    "SI": 3230.531,
+    "scores": {
+     "performance": 81,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 1237,
+    "benchmarkIndex": 1090
+   },
+   {
+    "LCP": 3667.678,
+    "FCP": 1094.393,
+    "TBT": 1125.5,
+    "CLS": 0.008,
+    "SI": 3441.991,
+    "scores": {
+     "performance": 65,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 1258,
+    "benchmarkIndex": 1031
+   },
+   {
+    "LCP": 3456.47,
+    "FCP": 1070.313,
+    "TBT": 464,
+    "CLS": 0.008,
+    "SI": 3068.64,
+    "scores": {
+     "performance": 79,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 1211,
+    "benchmarkIndex": 1081
+   }
+  ],
+  "ab1-mobile-after": [
+   {
+    "LCP": 3003.259,
+    "FCP": 1080.506,
+    "TBT": 420.5,
+    "CLS": 0.008,
+    "SI": 3075.489,
+    "scores": {
+     "performance": 84,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 1195,
+    "benchmarkIndex": 1075
+   },
+   {
+    "LCP": 3026.134,
+    "FCP": 1081.089,
+    "TBT": 474.955,
+    "CLS": 0.008,
+    "SI": 3104.667,
+    "scores": {
+     "performance": 81,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 1236,
+    "benchmarkIndex": 1094
+   },
+   {
+    "LCP": 3294.96,
+    "FCP": 1083.973,
+    "TBT": 706.014,
+    "CLS": 0.008,
+    "SI": 3233.043,
+    "scores": {
+     "performance": 74,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 1298,
+    "benchmarkIndex": 1071
+   }
+  ],
+  "ab1-desktop-before": [
+   {
+    "LCP": 498.746,
+    "FCP": 298.746,
+    "TBT": 52,
+    "CLS": 0.005,
+    "SI": 695.308,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 263,
+    "benchmarkIndex": 1086
+   },
+   {
+    "LCP": 542.032,
+    "FCP": 302.032,
+    "TBT": 30,
+    "CLS": 0.005,
+    "SI": 641.628,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 272,
+    "benchmarkIndex": 1047
+   },
+   {
+    "LCP": 561.818,
+    "FCP": 321.818,
+    "TBT": 38.091,
+    "CLS": 0.005,
+    "SI": 690.673,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 354,
+    "benchmarkIndex": 1078
+   }
+  ],
+  "ab1-desktop-after": [
+   {
+    "LCP": 471.886,
+    "FCP": 311.886,
+    "TBT": 52,
+    "CLS": 0.005,
+    "SI": 635.945,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 303,
+    "benchmarkIndex": 1062
+   },
+   {
+    "LCP": 520.389,
+    "FCP": 306.926,
+    "TBT": 39,
+    "CLS": 0.005,
+    "SI": 638.336,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 313,
+    "benchmarkIndex": 920
+   },
+   {
+    "LCP": 518.856,
+    "FCP": 305.904,
+    "TBT": 43,
+    "CLS": 0.005,
+    "SI": 605.752,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 272,
+    "benchmarkIndex": 1146
+   }
+  ],
+  "ab2-mobile-before": [
+   {
+    "LCP": 2425.487,
+    "FCP": 1075.487,
+    "TBT": 235,
+    "CLS": 0.008,
+    "SI": 1698.963,
+    "scores": {
+     "performance": 93,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 199,
+    "benchmarkIndex": 1291
+   },
+   {
+    "LCP": 2424.015,
+    "FCP": 1074.015,
+    "TBT": 232.992,
+    "CLS": 0.008,
+    "SI": 1598.476,
+    "scores": {
+     "performance": 93,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 221,
+    "benchmarkIndex": 1304
+   },
+   {
+    "LCP": 2417.628,
+    "FCP": 1067.628,
+    "TBT": 286.5,
+    "CLS": 0.008,
+    "SI": 1545.801,
+    "scores": {
+     "performance": 92,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 217,
+    "benchmarkIndex": 1426
+   }
+  ],
+  "ab2-mobile-after": [
+   {
+    "LCP": 2118.258,
+    "FCP": 1062.172,
+    "TBT": 212.5,
+    "CLS": 0.008,
+    "SI": 1656.409,
+    "scores": {
+     "performance": 95,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 163,
+    "benchmarkIndex": 1372
+   },
+   {
+    "LCP": 2123.762,
+    "FCP": 1065.842,
+    "TBT": 247,
+    "CLS": 0.008,
+    "SI": 1439.174,
+    "scores": {
+     "performance": 94,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 185,
+    "benchmarkIndex": 1318
+   },
+   {
+    "LCP": 2915.825,
+    "FCP": 1075.216,
+    "TBT": 325.892,
+    "CLS": 0.008,
+    "SI": 2007.893,
+    "scores": {
+     "performance": 88,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 265,
+    "benchmarkIndex": 1271
+   }
+  ],
+  "ab2-desktop-before": [
+   {
+    "LCP": 508.847,
+    "FCP": 299.231,
+    "TBT": 32,
+    "CLS": 0.005,
+    "SI": 543.437,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 203,
+    "benchmarkIndex": 1440
+   },
+   {
+    "LCP": 682.076,
+    "FCP": 304.717,
+    "TBT": 35,
+    "CLS": 0.005,
+    "SI": 609.898,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 313,
+    "benchmarkIndex": 1273
+   },
+   {
+    "LCP": 560.132,
+    "FCP": 306.754,
+    "TBT": 132,
+    "CLS": 0.005,
+    "SI": 773.219,
+    "scores": {
+     "performance": 98,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 170,
+    "observedFCP": 315,
+    "benchmarkIndex": 1243
+   }
+  ],
+  "ab2-desktop-after": [
+   {
+    "LCP": 507.265,
+    "FCP": 298.176,
+    "TBT": 22,
+    "CLS": 0.005,
+    "SI": 502.737,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 205,
+    "benchmarkIndex": 1383
+   },
+   {
+    "LCP": 461.623,
+    "FCP": 301.623,
+    "TBT": 40,
+    "CLS": 0.005,
+    "SI": 639.472,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 205,
+    "benchmarkIndex": 1299
+   },
+   {
+    "LCP": 461.44,
+    "FCP": 301.44,
+    "TBT": 27.36,
+    "CLS": 0.005,
+    "SI": 623.952,
+    "scores": {
+     "performance": 100,
+     "accessibility": 100,
+     "best-practices": 100,
+     "seo": 100
+    },
+    "jsKB": 149,
+    "observedFCP": 256,
+    "benchmarkIndex": 1235
+   }
+  ]
+ }
+}

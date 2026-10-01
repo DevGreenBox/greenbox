@@ -1,0 +1,1080 @@
+{
+  "390": {
+    "current": {
+      "etag": "\"3d40zc0ulf5hxl\"",
+      "h1": {
+        "box": {
+          "x": 20,
+          "y": 104,
+          "w": 288,
+          "h": 124.8
+        },
+        "fontSize": "40px",
+        "lineHeight": "41.6px",
+        "letterSpacing": "-1.2px",
+        "maxWidth": "288px",
+        "family": "unbounded, \"unbounded Fallback\", sans-serif, onest, \"onest Fallback\", sans-serif, sans-serif",
+        "weight": "500",
+        "lines": [
+          {
+            "text": "",
+            "width": null
+          },
+          {
+            "text": "Интернет-",
+            "width": 241.6
+          },
+          {
+            "text": "магазины",
+            "width": 244.1
+          },
+          {
+            "text": "под ключ",
+            "width": 228.2
+          }
+        ]
+      },
+      "lead": {
+        "box": {
+          "x": 20,
+          "y": 248.8,
+          "w": 350,
+          "h": 105.4
+        },
+        "fontSize": "17px",
+        "lineHeight": "26.35px",
+        "letterSpacing": "normal",
+        "maxWidth": "510px",
+        "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+        "weight": "400",
+        "lines": [
+          {
+            "text": "Пишем магазин под ваш бизнес — без",
+            "width": 312.3
+          },
+          {
+            "text": "шаблонов и конструкторов —",
+            "width": 239.8
+          },
+          {
+            "text": "на собственной платформе управления.",
+            "width": 329.1
+          },
+          {
+            "text": "Запуск в среднем за 2–⁠2,5 недели.",
+            "width": 285.5
+          }
+        ]
+      },
+      "rects": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 1071.4,
+          "bottom": 1071.4
+        },
+        "textColumn": {
+          "x": 20,
+          "y": 104,
+          "w": 350,
+          "h": 406.2,
+          "bottom": 510.2
+        },
+        "cta": {
+          "x": 20,
+          "y": 386.2,
+          "w": 350,
+          "h": 124,
+          "bottom": 510.2
+        },
+        "demo": {
+          "x": 20,
+          "y": 566.2,
+          "w": 350,
+          "h": 433.2,
+          "bottom": 999.3
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 65,
+          "bottom": 65
+        }
+      },
+      "cta": [
+        {
+          "text": "Обсудить проект",
+          "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 350
+        },
+        {
+          "text": "Рассказать о проекте",
+          "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 350
+        }
+      ],
+      "rendered": {
+        "h1": [
+          {
+            "familyName": "Unbounded",
+            "postScriptName": "Unbounded-Regular",
+            "isCustomFont": true,
+            "glyphCount": 25
+          }
+        ],
+        "h1GradientWord": [
+          {
+            "familyName": "Unbounded",
+            "postScriptName": "Unbounded-Regular",
+            "isCustomFont": true,
+            "glyphCount": 17
+          }
+        ],
+        "lead": [
+          {
+            "familyName": "Onest",
+            "postScriptName": "Onest-Regular",
+            "isCustomFont": true,
+            "glyphCount": 130
+          }
+        ],
+        "cta": [
+          {
+            "familyName": "Onest",
+            "postScriptName": "Onest-Regular",
+            "isCustomFont": true,
+            "glyphCount": 15
+          }
+        ]
+      },
+      "geistLoaded": [],
+      "familyArea": [
+        {
+          "family": "Onest",
+          "px2": 41150,
+          "pctViewport": 12.5,
+          "pctOfText": 47.9
+        },
+        {
+          "family": "Unbounded",
+          "px2": 35694,
+          "pctViewport": 10.84,
+          "pctOfText": 41.6
+        },
+        {
+          "family": "JetBrains Mono (под маской фона)",
+          "px2": 6239,
+          "pctViewport": 1.9,
+          "pctOfText": 7.3
+        },
+        {
+          "family": "Логотип SVG: кривые Inter 800 (bbox)",
+          "px2": 2762,
+          "pctViewport": 0.84,
+          "pctOfText": 3.2
+        }
+      ]
+    },
+    "geist-text": {
+      "etag": "\"3d40zc0ulf5hxl\"",
+      "h1": {
+        "box": {
+          "x": 20,
+          "y": 104,
+          "w": 288,
+          "h": 124.8
+        },
+        "fontSize": "40px",
+        "lineHeight": "41.6px",
+        "letterSpacing": "-1.2px",
+        "maxWidth": "288px",
+        "family": "unbounded, \"unbounded Fallback\", sans-serif, Geist, sans-serif, sans-serif",
+        "weight": "500",
+        "lines": [
+          {
+            "text": "",
+            "width": null
+          },
+          {
+            "text": "Интернет-",
+            "width": 241.6
+          },
+          {
+            "text": "магазины",
+            "width": 244.1
+          },
+          {
+            "text": "под ключ",
+            "width": 228.2
+          }
+        ]
+      },
+      "lead": {
+        "box": {
+          "x": 20,
+          "y": 248.8,
+          "w": 350,
+          "h": 105.4
+        },
+        "fontSize": "17px",
+        "lineHeight": "26.35px",
+        "letterSpacing": "normal",
+        "maxWidth": "510px",
+        "family": "Geist, sans-serif, system-ui, sans-serif",
+        "weight": "400",
+        "lines": [
+          {
+            "text": "Пишем магазин под ваш бизнес — без",
+            "width": 310
+          },
+          {
+            "text": "шаблонов и конструкторов —",
+            "width": 239.9
+          },
+          {
+            "text": "на собственной платформе управления.",
+            "width": 326.5
+          },
+          {
+            "text": "Запуск в среднем за 2–⁠2,5 недели.",
+            "width": 282.9
+          }
+        ]
+      },
+      "rects": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 1071.4,
+          "bottom": 1071.4
+        },
+        "textColumn": {
+          "x": 20,
+          "y": 104,
+          "w": 350,
+          "h": 406.2,
+          "bottom": 510.2
+        },
+        "cta": {
+          "x": 20,
+          "y": 386.2,
+          "w": 350,
+          "h": 124,
+          "bottom": 510.2
+        },
+        "demo": {
+          "x": 20,
+          "y": 566.2,
+          "w": 350,
+          "h": 433.2,
+          "bottom": 999.3
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 65,
+          "bottom": 65
+        }
+      },
+      "cta": [
+        {
+          "text": "Обсудить проект",
+          "family": "Geist, sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 350
+        },
+        {
+          "text": "Рассказать о проекте",
+          "family": "Geist, sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 350
+        }
+      ],
+      "rendered": {
+        "h1": [
+          {
+            "familyName": "Unbounded",
+            "postScriptName": "Unbounded-Regular",
+            "isCustomFont": true,
+            "glyphCount": 25
+          }
+        ],
+        "h1GradientWord": [
+          {
+            "familyName": "Unbounded",
+            "postScriptName": "Unbounded-Regular",
+            "isCustomFont": true,
+            "glyphCount": 17
+          }
+        ],
+        "lead": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 130
+          }
+        ],
+        "cta": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 15
+          }
+        ]
+      },
+      "geistLoaded": [
+        "U+301, U+400-45F, U+",
+        "U+0-FF, U+131, U+152"
+      ],
+      "familyArea": [
+        {
+          "family": "Geist",
+          "px2": 42276,
+          "pctViewport": 12.84,
+          "pctOfText": 48.6
+        },
+        {
+          "family": "Unbounded",
+          "px2": 35694,
+          "pctViewport": 10.84,
+          "pctOfText": 41
+        },
+        {
+          "family": "JetBrains Mono (под маской фона)",
+          "px2": 6239,
+          "pctViewport": 1.9,
+          "pctOfText": 7.2
+        },
+        {
+          "family": "Логотип SVG: кривые Inter 800 (bbox)",
+          "px2": 2762,
+          "pctViewport": 0.84,
+          "pctOfText": 3.2
+        }
+      ]
+    },
+    "geist-all": {
+      "etag": "\"3d40zc0ulf5hxl\"",
+      "h1": {
+        "box": {
+          "x": 20,
+          "y": 104,
+          "w": 288,
+          "h": 124.8
+        },
+        "fontSize": "40px",
+        "lineHeight": "41.6px",
+        "letterSpacing": "-1.2px",
+        "maxWidth": "288px",
+        "family": "Geist, sans-serif, Geist, sans-serif, sans-serif",
+        "weight": "500",
+        "lines": [
+          {
+            "text": "",
+            "width": null
+          },
+          {
+            "text": "Интернет-",
+            "width": 193.5
+          },
+          {
+            "text": "магазины",
+            "width": 178.1
+          },
+          {
+            "text": "под ключ",
+            "width": 176.7
+          }
+        ]
+      },
+      "lead": {
+        "box": {
+          "x": 20,
+          "y": 248.8,
+          "w": 350,
+          "h": 105.4
+        },
+        "fontSize": "17px",
+        "lineHeight": "26.35px",
+        "letterSpacing": "normal",
+        "maxWidth": "510px",
+        "family": "Geist, sans-serif, system-ui, sans-serif",
+        "weight": "400",
+        "lines": [
+          {
+            "text": "Пишем магазин под ваш бизнес — без",
+            "width": 310
+          },
+          {
+            "text": "шаблонов и конструкторов —",
+            "width": 239.9
+          },
+          {
+            "text": "на собственной платформе управления.",
+            "width": 326.5
+          },
+          {
+            "text": "Запуск в среднем за 2–⁠2,5 недели.",
+            "width": 282.9
+          }
+        ]
+      },
+      "rects": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 1071.4,
+          "bottom": 1071.4
+        },
+        "textColumn": {
+          "x": 20,
+          "y": 104,
+          "w": 350,
+          "h": 406.2,
+          "bottom": 510.2
+        },
+        "cta": {
+          "x": 20,
+          "y": 386.2,
+          "w": 350,
+          "h": 124,
+          "bottom": 510.2
+        },
+        "demo": {
+          "x": 20,
+          "y": 566.2,
+          "w": 350,
+          "h": 433.2,
+          "bottom": 999.3
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 65,
+          "bottom": 65
+        }
+      },
+      "cta": [
+        {
+          "text": "Обсудить проект",
+          "family": "Geist, sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 350
+        },
+        {
+          "text": "Рассказать о проекте",
+          "family": "Geist, sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 350
+        }
+      ],
+      "rendered": {
+        "h1": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 25
+          }
+        ],
+        "h1GradientWord": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 17
+          }
+        ],
+        "lead": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 130
+          }
+        ],
+        "cta": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 15
+          }
+        ]
+      },
+      "geistLoaded": [
+        "U+301, U+400-45F, U+",
+        "U+0-FF, U+131, U+152"
+      ],
+      "familyArea": [
+        {
+          "family": "Geist",
+          "px2": 70790,
+          "pctViewport": 21.51,
+          "pctOfText": 88.7
+        },
+        {
+          "family": "JetBrains Mono (под маской фона)",
+          "px2": 6239,
+          "pctViewport": 1.9,
+          "pctOfText": 7.8
+        },
+        {
+          "family": "Логотип SVG: кривые Inter 800 (bbox)",
+          "px2": 2762,
+          "pctViewport": 0.84,
+          "pctOfText": 3.5
+        }
+      ]
+    }
+  },
+  "1440": {
+    "current": {
+      "etag": "\"3d40zc0ulf5hxl\"",
+      "h1": {
+        "box": {
+          "x": 100,
+          "y": 255.1,
+          "w": 534.9,
+          "h": 234.6
+        },
+        "fontSize": "75.2px",
+        "lineHeight": "78.208px",
+        "letterSpacing": "-2.256px",
+        "maxWidth": "541.44px",
+        "family": "unbounded, \"unbounded Fallback\", sans-serif, onest, \"onest Fallback\", sans-serif, sans-serif",
+        "weight": "500",
+        "lines": [
+          {
+            "text": "",
+            "width": null
+          },
+          {
+            "text": "Интернет-",
+            "width": 454.1
+          },
+          {
+            "text": "магазины",
+            "width": 458.8
+          },
+          {
+            "text": "под ключ",
+            "width": 428.9
+          }
+        ]
+      },
+      "lead": {
+        "box": {
+          "x": 100,
+          "y": 516.5,
+          "w": 534.9,
+          "h": 88.3
+        },
+        "fontSize": "19px",
+        "lineHeight": "29.45px",
+        "letterSpacing": "normal",
+        "maxWidth": "570px",
+        "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+        "weight": "400",
+        "lines": [
+          {
+            "text": "Пишем магазин под ваш бизнес — без шаблонов",
+            "width": 444.9
+          },
+          {
+            "text": "и конструкторов — на собственной платформе",
+            "width": 428.2
+          },
+          {
+            "text": "управления. Запуск в среднем за 2–⁠2,5 недели.",
+            "width": 435.9
+          }
+        ]
+      },
+      "rects": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "bottom": 900
+        },
+        "textColumn": {
+          "x": 100,
+          "y": 255.1,
+          "w": 534.9,
+          "h": 445.7,
+          "bottom": 700.8
+        },
+        "cta": {
+          "x": 100,
+          "y": 644.8,
+          "w": 534.9,
+          "h": 56,
+          "bottom": 700.8
+        },
+        "demo": {
+          "x": 698.1,
+          "y": 249.1,
+          "w": 641.9,
+          "h": 457.8,
+          "bottom": 706.9
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 81,
+          "bottom": 81
+        }
+      },
+      "cta": [
+        {
+          "text": "Обсудить проект",
+          "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 221
+        },
+        {
+          "text": "Рассказать о проекте",
+          "family": "onest, \"onest Fallback\", sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 229
+        }
+      ],
+      "rendered": {
+        "h1": [
+          {
+            "familyName": "Unbounded",
+            "postScriptName": "Unbounded-Regular",
+            "isCustomFont": true,
+            "glyphCount": 25
+          }
+        ],
+        "h1GradientWord": [
+          {
+            "familyName": "Unbounded",
+            "postScriptName": "Unbounded-Regular",
+            "isCustomFont": true,
+            "glyphCount": 17
+          }
+        ],
+        "lead": [
+          {
+            "familyName": "Onest",
+            "postScriptName": "Onest-Regular",
+            "isCustomFont": true,
+            "glyphCount": 131
+          }
+        ],
+        "cta": [
+          {
+            "familyName": "Onest",
+            "postScriptName": "Onest-Regular",
+            "isCustomFont": true,
+            "glyphCount": 15
+          }
+        ]
+      },
+      "geistLoaded": [],
+      "familyArea": [
+        {
+          "family": "Unbounded",
+          "px2": 124789,
+          "pctViewport": 9.63,
+          "pctOfText": 59.9
+        },
+        {
+          "family": "Onest",
+          "px2": 69667,
+          "pctViewport": 5.38,
+          "pctOfText": 33.5
+        },
+        {
+          "family": "JetBrains Mono (под маской фона)",
+          "px2": 10341,
+          "pctViewport": 0.8,
+          "pctOfText": 5
+        },
+        {
+          "family": "Логотип SVG: кривые Inter 800 (bbox)",
+          "px2": 3410,
+          "pctViewport": 0.26,
+          "pctOfText": 1.6
+        }
+      ]
+    },
+    "geist-text": {
+      "etag": "\"3d40zc0ulf5hxl\"",
+      "h1": {
+        "box": {
+          "x": 100,
+          "y": 255.1,
+          "w": 534.9,
+          "h": 234.6
+        },
+        "fontSize": "75.2px",
+        "lineHeight": "78.208px",
+        "letterSpacing": "-2.256px",
+        "maxWidth": "541.44px",
+        "family": "unbounded, \"unbounded Fallback\", sans-serif, Geist, sans-serif, sans-serif",
+        "weight": "500",
+        "lines": [
+          {
+            "text": "",
+            "width": null
+          },
+          {
+            "text": "Интернет-",
+            "width": 454.1
+          },
+          {
+            "text": "магазины",
+            "width": 458.8
+          },
+          {
+            "text": "под ключ",
+            "width": 428.9
+          }
+        ]
+      },
+      "lead": {
+        "box": {
+          "x": 100,
+          "y": 516.5,
+          "w": 534.9,
+          "h": 88.3
+        },
+        "fontSize": "19px",
+        "lineHeight": "29.45px",
+        "letterSpacing": "normal",
+        "maxWidth": "570px",
+        "family": "Geist, sans-serif, system-ui, sans-serif",
+        "weight": "400",
+        "lines": [
+          {
+            "text": "Пишем магазин под ваш бизнес — без шаблонов",
+            "width": 441.9
+          },
+          {
+            "text": "и конструкторов — на собственной платформе",
+            "width": 425.9
+          },
+          {
+            "text": "управления. Запуск в среднем за 2–⁠2,5 недели.",
+            "width": 432.7
+          }
+        ]
+      },
+      "rects": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "bottom": 900
+        },
+        "textColumn": {
+          "x": 100,
+          "y": 255.1,
+          "w": 534.9,
+          "h": 445.7,
+          "bottom": 700.8
+        },
+        "cta": {
+          "x": 100,
+          "y": 644.8,
+          "w": 534.9,
+          "h": 56,
+          "bottom": 700.8
+        },
+        "demo": {
+          "x": 698.1,
+          "y": 249.1,
+          "w": 641.9,
+          "h": 457.8,
+          "bottom": 706.9
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 81,
+          "bottom": 81
+        }
+      },
+      "cta": [
+        {
+          "text": "Обсудить проект",
+          "family": "Geist, sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 222.5
+        },
+        {
+          "text": "Рассказать о проекте",
+          "family": "Geist, sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 231.1
+        }
+      ],
+      "rendered": {
+        "h1": [
+          {
+            "familyName": "Unbounded",
+            "postScriptName": "Unbounded-Regular",
+            "isCustomFont": true,
+            "glyphCount": 25
+          }
+        ],
+        "h1GradientWord": [
+          {
+            "familyName": "Unbounded",
+            "postScriptName": "Unbounded-Regular",
+            "isCustomFont": true,
+            "glyphCount": 17
+          }
+        ],
+        "lead": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 131
+          }
+        ],
+        "cta": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 15
+          }
+        ]
+      },
+      "geistLoaded": [
+        "U+301, U+400-45F, U+",
+        "U+0-FF, U+131, U+152"
+      ],
+      "familyArea": [
+        {
+          "family": "Unbounded",
+          "px2": 124789,
+          "pctViewport": 9.63,
+          "pctOfText": 59.5
+        },
+        {
+          "family": "Geist",
+          "px2": 71015,
+          "pctViewport": 5.48,
+          "pctOfText": 33.9
+        },
+        {
+          "family": "JetBrains Mono (под маской фона)",
+          "px2": 10341,
+          "pctViewport": 0.8,
+          "pctOfText": 4.9
+        },
+        {
+          "family": "Логотип SVG: кривые Inter 800 (bbox)",
+          "px2": 3410,
+          "pctViewport": 0.26,
+          "pctOfText": 1.6
+        }
+      ]
+    },
+    "geist-all": {
+      "etag": "\"3d40zc0ulf5hxl\"",
+      "h1": {
+        "box": {
+          "x": 100,
+          "y": 255.1,
+          "w": 534.9,
+          "h": 234.6
+        },
+        "fontSize": "75.2px",
+        "lineHeight": "78.208px",
+        "letterSpacing": "-2.256px",
+        "maxWidth": "541.44px",
+        "family": "Geist, sans-serif, Geist, sans-serif, sans-serif",
+        "weight": "500",
+        "lines": [
+          {
+            "text": "",
+            "width": null
+          },
+          {
+            "text": "Интернет-",
+            "width": 363.8
+          },
+          {
+            "text": "магазины",
+            "width": 334.8
+          },
+          {
+            "text": "под ключ",
+            "width": 332.1
+          }
+        ]
+      },
+      "lead": {
+        "box": {
+          "x": 100,
+          "y": 516.5,
+          "w": 534.9,
+          "h": 88.3
+        },
+        "fontSize": "19px",
+        "lineHeight": "29.45px",
+        "letterSpacing": "normal",
+        "maxWidth": "570px",
+        "family": "Geist, sans-serif, system-ui, sans-serif",
+        "weight": "400",
+        "lines": [
+          {
+            "text": "Пишем магазин под ваш бизнес — без шаблонов",
+            "width": 441.9
+          },
+          {
+            "text": "и конструкторов — на собственной платформе",
+            "width": 425.9
+          },
+          {
+            "text": "управления. Запуск в среднем за 2–⁠2,5 недели.",
+            "width": 432.7
+          }
+        ]
+      },
+      "rects": {
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "bottom": 900
+        },
+        "textColumn": {
+          "x": 100,
+          "y": 255.1,
+          "w": 534.9,
+          "h": 445.7,
+          "bottom": 700.8
+        },
+        "cta": {
+          "x": 100,
+          "y": 644.8,
+          "w": 534.9,
+          "h": 56,
+          "bottom": 700.8
+        },
+        "demo": {
+          "x": 698.1,
+          "y": 249.1,
+          "w": 641.9,
+          "h": 457.8,
+          "bottom": 706.9
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 81,
+          "bottom": 81
+        }
+      },
+      "cta": [
+        {
+          "text": "Обсудить проект",
+          "family": "Geist, sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 222.5
+        },
+        {
+          "text": "Рассказать о проекте",
+          "family": "Geist, sans-serif, system-ui, sans-serif",
+          "weight": "600",
+          "size": "16px",
+          "w": 231.1
+        }
+      ],
+      "rendered": {
+        "h1": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 25
+          }
+        ],
+        "h1GradientWord": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 17
+          }
+        ],
+        "lead": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 131
+          }
+        ],
+        "cta": [
+          {
+            "familyName": "Geist",
+            "postScriptName": "Geist-Regular",
+            "isCustomFont": true,
+            "glyphCount": 15
+          }
+        ]
+      },
+      "geistLoaded": [
+        "U+301, U+400-45F, U+",
+        "U+0-FF, U+131, U+152"
+      ],
+      "familyArea": [
+        {
+          "family": "Geist",
+          "px2": 172023,
+          "pctViewport": 13.27,
+          "pctOfText": 92.6
+        },
+        {
+          "family": "JetBrains Mono (под маской фона)",
+          "px2": 10341,
+          "pctViewport": 0.8,
+          "pctOfText": 5.6
+        },
+        {
+          "family": "Логотип SVG: кривые Inter 800 (bbox)",
+          "px2": 3410,
+          "pctViewport": 0.26,
+          "pctOfText": 1.8
+        }
+      ]
+    }
+  }
+}

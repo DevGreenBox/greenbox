@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FAFBFC">
+<title>ЗелёнаяКоробка — Маршрут</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300..900&family=Onest:wght@300..800&family=Inter:wght@800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="top__in">
+    <a class="logo" href="#hero" aria-label="ЗелёнаяКоробка — наверх"><span class="logo__g">Зелёная</span>Коробка</a>
+
+    <nav class="scheme" aria-label="Разделы страницы">
+      <ol class="scheme__line">
+        <li class="scheme__st" data-nav="difference"><a href="#difference"><i aria-hidden="true"></i><span>Что делаем</span></a></li>
+        <li class="scheme__st" data-nav="process"><a href="#process"><i aria-hidden="true"></i><span>Как работаем</span></a></li>
+        <li class="scheme__st" data-nav="cases"><a href="#cases"><i aria-hidden="true"></i><span>Кейсы</span></a></li>
+        <li class="scheme__st is-planned"><span><i aria-hidden="true"></i><span>Отзывы</span></span></li>
+        <li class="scheme__st is-planned"><span><i aria-hidden="true"></i><span>Вопросы</span></span></li>
+      </ol>
+    </nav>
+
+    <div class="top__end">
+      <a class="top__partner" href="https://greenboxweb.ru/partner.html">Стать партнёром</a>
+      <a class="btn btn--main btn--sm" href="#final">Обсудить проект</a>
+    </div>
+  </div>
+  <div class="top__progress" aria-hidden="true"><b></b></div>
+</header>
+
+<main id="main">
+  <svg class="route" aria-hidden="true" focusable="false">
+    <defs><clipPath id="darkclip" clipPathUnits="userSpaceOnUse"></clipPath></defs>
+    <path class="route__ghost"/>
+    <g class="route__branches"></g>
+    <path class="route__line"/>
+    <path class="route__line route__line--dark" clip-path="url(#darkclip)"/>
+  </svg>
+  <div class="train" aria-hidden="true"></div>
+
+  <!-- 1. Первый экран -->
+  <section class="scene hero" id="hero" aria-labelledby="hero-title">
+    <div class="wrap split">
+      <span class="via via--entry" data-node aria-hidden="true"></span>
+      <div class="hero__copy">
+        <h1 class="hero__title" id="hero-title">Интернет-магазины под&nbsp;ключ</h1>
+        <p class="hero__sub">Пишем магазин под ваш бизнес — без шаблонов и конструкторов — на собственной платформе управления. Запуск в среднем за 2–2,5 недели.</p>
+        <div class="hero__cta">
+          <a class="btn btn--main" href="#final">Обсудить проект</a>
+          <a class="btn btn--ghost" href="#final">Рассказать о проекте</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <!-- Станция «Витрина» -->
+        <div class="station station--big" data-node data-stop data-route="v" data-at="0.78">
+          <span class="stop" aria-hidden="true"></span>
+          <div class="fact fact--row">
+            <span class="fact__num">01</span>
+            <h2 class="fact__name"><span class="reveal">Витрина</span></h2>
+            <span class="fact__note">Пример интерфейса</span>
+          </div>
+          <figure class="panel shop" aria-label="Пример интерфейса: витрина магазина">
+            <div aria-hidden="true">
+              <div class="shop__bar">
+                <span class="shop__mark"></span>
+                <span class="shop__nav"><span>Каталог</span><span>Новинки</span><span>Доставка</span></span>
+                <span class="shop__icons">
+                  <svg viewBox="0 0 20 20"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+                  <svg viewBox="0 0 20 20"><path d="M4.5 7h11l-1 10h-9z"/><path d="M7.5 7V5.5a2.5 2.5 0 0 1 5 0V7"/></svg>
+                </span>
+              </div>
+              <div class="shop__banner">
+                <span class="shop__promo">Новая коллекция</span>
+                <span class="shop__btn">Смотреть</span>
+              </div>
+              <ul class="shop__grid">
+                <li><span class="shop__img t1"><svg viewBox="0 0 40 40"><path d="M11 13h15v13a5 5 0 0 1-5 5h-5a5 5 0 0 1-5-5z"/><path d="M26 16h2.5a3.5 3.5 0 0 1 0 7H26"/></svg></span><span class="shop__name">Керамическая кружка</span><span class="shop__price"></span></li>
+                <li><span class="shop__img t2"><svg viewBox="0 0 40 40"><path d="M15 9l5 3 5-3 7 5-3 5-3-2v14H14V17l-3 2-3-5z"/></svg></span><span class="shop__name">Льняная рубашка</span><span class="shop__price"></span></li>
+                <li><span class="shop__img t3"><svg viewBox="0 0 40 40"><path d="M14 20l3-11h6l3 11z"/><path d="M20 20v10M14 31h12"/></svg></span><span class="shop__name">Настольная лампа</span><span class="shop__price"></span></li>
+                <li><span class="shop__img t4"><svg viewBox="0 0 40 40"><path d="M10 15h20l-2 16H12z"/><path d="M15 15a5 5 0 0 1 10 0"/></svg></span><span class="shop__name">Холщовая сумка</span><span class="shop__price"></span></li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+
+        <!-- Станция «Админка» (пересадка) -->
+        <div class="station station--big station--xfer" data-node data-stop>
+          <span class="stop" aria-hidden="true"></span>
+          <span class="stop stop--partner" id="adm-partner" aria-hidden="true"></span>
+          <div class="fact fact--row">
+            <span class="fact__num">02</span>
+            <h2 class="fact__name"><span class="reveal">Админка</span></h2>
+            <span class="fact__note">Пример интерфейса</span>
+          </div>
+          <figure class="panel admin" aria-label="Пример интерфейса: панель управления магазином">
+            <div class="admin__body" aria-hidden="true">
+              <div class="admin__orders">
+                <p class="admin__h">Заказы</p>
+                <ul>
+                  <li><b>№ 1043</b><span class="pill pill--ok">Оплачен</span><span class="admin__dlv">СДЭК</span></li>
+                  <li><b>№ 1042</b><span class="pill">Собран</span></li>
+                  <li><b>№ 1041</b><span class="pill">Передан в доставку</span></li>
+                </ul>
+              </div>
+              <div class="admin__side">
+                <p class="admin__h">Главная</p>
+                <ul class="admin__toggles">
+                  <li><span>Акция на главной</span><i class="tgl is-on"></i></li>
+                  <li><span>Блок “Новинки”</span><i class="tgl is-on"></i></li>
+                </ul>
+                <p class="admin__h">Интеграции</p>
+                <ul class="admin__int">
+                  <li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.6 8.3l2.2 2.2 4.6-4.8"/></svg>СДЭК</li>
+                  <li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.6 8.3l2.2 2.2 4.6-4.8"/></svg>1С</li>
+                  <li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.6 8.3l2.2 2.2 4.6-4.8"/></svg>amoCRM</li>
+                </ul>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Пересадки от «Админки» -->
+      <div class="xfer" data-branch="ink" role="group" aria-label="Пересадки: СДЭК, 1С, amoCRM">
+        <span data-bnode data-from="#adm-partner"></span>
+        <span class="xfer__st" data-bnode data-route="vh" data-ch="40"><i></i><span>amoCRM</span></span>
+        <span class="xfer__st" data-bnode><i></i><span>1С</span></span>
+        <span class="xfer__st" data-bnode><i></i><span>СДЭК</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Не просто сайт — тоннель -->
+  <section class="scene scene--dark tunnel" id="difference" aria-labelledby="diff-title">
+    <div class="wrap split">
+      <div class="tunnel__head">
+        <h2 class="h2" id="diff-title">Не просто сайт — платформа для продаж</h2>
+      </div>
+      <ol class="tunnel__list">
+        <li class="station" data-node data-stop>
+          <span class="stop" aria-hidden="true"></span>
+          <div class="fact">
+            <span class="fact__num">01</span>
+            <h3 class="fact__name"><span class="reveal">Без шаблонов</span></h3>
+            <p class="fact__text">Код пишем под ваш бизнес. Не Tilda, не WordPress, не конструктор.</p>
+          </div>
+        </li>
+        <li class="station" data-node data-stop>
+          <span class="stop" aria-hidden="true"></span>
+          <div class="fact">
+            <span class="fact__num">02</span>
+            <h3 class="fact__name"><span class="reveal">Своя система управления</span></h3>
+            <p class="fact__text">Магазин работает на нашей админ-панели: товары, заказы и страницы в одном месте.</p>
+          </div>
+        </li>
+        <li class="station station--xfer" data-node data-stop>
+          <span class="stop" aria-hidden="true"></span>
+          <span class="stop stop--partner stop--grey" aria-hidden="true"></span>
+          <div class="stub" data-branch="grey" aria-hidden="true">
+            <span data-bnode data-from=".stop--grey"></span>
+            <span class="stub__end" data-bnode data-route="vh" data-ch="28"><i></i></span>
+          </div>
+          <div class="fact">
+            <span class="fact__num">03</span>
+            <h3 class="fact__name"><span class="reveal">Интеграции</span></h3>
+            <p class="fact__text">СДЭК, Почта России, 1С, МойСклад, Битрикс24, amoCRM и другие сервисы.</p>
+          </div>
+        </li>
+        <li class="station" data-node data-stop>
+          <span class="stop" aria-hidden="true"></span>
+          <div class="stub stub--plan" data-branch="plan" aria-hidden="true">
+            <span data-bnode data-from="self"></span>
+            <span class="stub__b" data-bnode></span>
+          </div>
+          <div class="fact">
+            <span class="fact__num">04</span>
+            <h3 class="fact__name"><span class="reveal">Растёт вместе с вами</span></h3>
+            <p class="fact__text">Добавляем функции и сервисы, когда бизнесу это нужно.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3. Что вы получаете -->
+  <section class="scene gets" aria-labelledby="gets-title">
+    <div class="wrap gets__in">
+      <span class="via via--gets-b" data-node data-route="vh" data-ch="44" aria-hidden="true"></span>
+      <span class="via via--gets-c" data-node data-route="v" data-at="0" aria-hidden="true"></span>
+      <h2 class="h2" id="gets-title">Что вы получаете</h2>
+      <dl class="board">
+        <div class="board__row"><dt>Дизайн</dt><dd>Индивидуальный визуал и структура магазина.</dd></div>
+        <div class="board__row"><dt>Управление</dt><dd>Товары, заказы, страницы и контент — через админку.</dd></div>
+        <div class="board__row"><dt>Интеграции</dt><dd>CRM, 1С, доставка, API — всё, что нужно для работы.</dd></div>
+        <div class="board__row"><dt>SEO-фундамент</dt><dd>Настройка любой страницы и карточки товара для поиска.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 4. Как мы работаем -->
+  <section class="scene process" id="process" aria-labelledby="process-title">
+    <div class="wrap process__in">
+      <h2 class="h2" id="process-title">Как мы работаем</h2>
+      <p class="span"><span class="span__label">В среднем 2–2,5 недели от старта до запуска.</span></p>
+      <ol class="steps">
+        <li class="station" data-node data-stop data-route="vh" data-ch="44">
+          <span class="stop" aria-hidden="true"></span>
+          <div class="fact">
+            <span class="fact__num">01</span>
+            <h3 class="fact__name"><span class="reveal">Обсуждаем</span></h3>
+            <p class="fact__text">Разбираемся в задаче.</p>
+          </div>
+        </li>
+        <li class="station" data-node data-stop data-route="h">
+          <span class="stop" aria-hidden="true"></span>
+          <div class="fact">
+            <span class="fact__num">02</span>
+            <h3 class="fact__name"><span class="reveal">Проектируем</span></h3>
+            <p class="fact__text">Структура, дизайн, техническое решение.</p>
+          </div>
+        </li>
+        <li class="station" data-node data-stop data-route="h">
+          <span class="stop" aria-hidden="true"></span>
+          <div class="fact">
+            <span class="fact__num">03</span>
+            <h3 class="fact__name"><span class="reveal">Разрабатываем</span></h3>
+            <p class="fact__text">Создаём магазин и нужные функции.</p>
+          </div>
+        </li>
+        <li class="station" data-node data-stop data-route="h">
+          <span class="stop" aria-hidden="true"></span>
+          <div class="fact">
+            <span class="fact__num">04</span>
+            <h3 class="fact__name"><span class="reveal">Запускаем</span></h3>
+            <p class="fact__text">Подключаем интеграции и передаём готовый проект.</p>
+          </div>
+        </li>
+        <li class="via via--proc-out" data-node aria-hidden="true"></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5. Кейсы -->
+  <section class="scene cases" id="cases" aria-labelledby="cases-title">
+    <div class="wrap">
+      <h2 class="h2 cases__title" id="cases-title">Кейсы</h2>
+
+      <article class="case station" data-node data-stop data-route="v" data-at="0.45">
+        <a class="case__shot" href="https://thecaseform.ru/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="../../media/cases/the-case.jpg" width="1600" height="806" alt="" loading="lazy" decoding="async">
+        </a>
+        <span class="stop" aria-hidden="true"></span>
+        <div class="case__info">
+          <div class="fact">
+            <span class="fact__num">01</span>
+            <h3 class="fact__name"><span class="reveal">THE CASE</span></h3>
+            <p class="fact__text">Интернет-магазин</p>
+          </div>
+          <dl class="case__facts">
+            <div><dt>Задача</dt><dd class="empty">[задача]</dd></div>
+            <div><dt>Что сделали</dt><dd>Интернет-магазин минималистичной одежды с каталогом и корзиной</dd></div>
+            <div><dt>Результат</dt><dd class="empty">[результат]</dd></div>
+          </dl>
+          <ul class="tags"><li>Интернет-магазин</li><li>Fashion</li><li>Каталог</li></ul>
+          <a class="case__link" href="https://thecaseform.ru/" target="_blank" rel="noopener">Открыть сайт<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+
+      <article class="case station" data-node data-stop>
+        <a class="case__shot" href="https://tkachevmoscow.ru/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="../../media/cases/tkachev.jpg" width="1280" height="893" alt="" loading="lazy" decoding="async">
+        </a>
+        <span class="stop" aria-hidden="true"></span>
+        <div class="case__info">
+          <div class="fact">
+            <span class="fact__num">02</span>
+            <h3 class="fact__name"><span class="reveal">Клиника Ткачева</span></h3>
+            <p class="fact__text">Медицина</p>
+          </div>
+          <dl class="case__facts">
+            <div><dt>Задача</dt><dd class="empty">[задача]</dd></div>
+            <div><dt>Что сделали</dt><dd>Сайт московской клиники лечения грыж позвоночника с записью на консультацию</dd></div>
+            <div><dt>Результат</dt><dd class="empty">[результат]</dd></div>
+          </dl>
+          <ul class="tags"><li>Медицина</li><li>Корпоративный сайт</li><li>Запись онлайн</li></ul>
+          <a class="case__link" href="https://tkachevmoscow.ru/" target="_blank" rel="noopener">Открыть сайт<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+
+      <article class="case station" data-node data-stop>
+        <a class="case__shot" href="https://godmodde.github.io/UI-UX-Happy-kids-/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="../../media/cases/happy-kids.jpg" width="1600" height="828" alt="" loading="lazy" decoding="async">
+        </a>
+        <span class="stop" aria-hidden="true"></span>
+        <div class="case__info">
+          <div class="fact">
+            <span class="fact__num">03</span>
+            <h3 class="fact__name"><span class="reveal">Happy Kids</span></h3>
+            <p class="fact__text">Интернет-магазин</p>
+          </div>
+          <dl class="case__facts">
+            <div><dt>Задача</dt><dd class="empty">[задача]</dd></div>
+            <div><dt>Что сделали</dt><dd>Интернет-магазин развивающих детских конструкторов с каталогом и доставкой</dd></div>
+            <div><dt>Результат</dt><dd class="empty">[результат]</dd></div>
+          </dl>
+          <ul class="tags"><li>Интернет-магазин</li><li>Детские товары</li><li>Каталог</li></ul>
+          <a class="case__link" href="https://godmodde.github.io/UI-UX-Happy-kids-/" target="_blank" rel="noopener">Открыть сайт<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 6. Финал — конечная -->
+  <section class="scene scene--dark final" id="final" aria-labelledby="final-title">
+    <div class="wrap final__in">
+      <div class="station station--end" data-node data-stop data-route="v" data-at="0.85">
+        <span class="stop" aria-hidden="true"></span>
+        <p class="fact__name final__stop"><span class="reveal">Ваш магазин</span></p>
+      </div>
+      <h2 class="final__title" id="final-title">Расскажите, какой магазин вам нужен</h2>
+      <p class="final__text">Если пока не знаете, какой сайт нужен — поможем определить.</p>
+      <a class="btn btn--main btn--lg" href="https://t.me/infogreenbox" target="_blank" rel="noopener">Обсудить проект</a>
+      <p class="final__contacts">
+        <a href="mailto:info.greenboxweb@gmail.com">info.greenboxweb@gmail.com</a>
+        <a href="https://t.me/infogreenbox" target="_blank" rel="noopener">Telegram @infogreenbox</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="logo" href="#hero" aria-label="ЗелёнаяКоробка — наверх"><span class="logo__g">Зелёная</span>Коробка</a>
+    <a href="https://greenboxweb.ru/partner.html">Стать партнёром</a>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

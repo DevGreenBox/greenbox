@@ -1,0 +1,76 @@
+/* Страница «Стать партнёром» (/partner): вступление, условия, анкета. Анкета — как финальная форма главной
+   (contact/Contact.module.css), только поля по два в ряд: кто (ФИО, должность), как связаться (телефон,
+   почта), затем запрос во всю строку. */
+
+/* ---------- Анкета ---------- */
+
+.form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.actions {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.after {
+  max-width: 36ch;
+  color: var(--text-2);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 640px) {
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem 2rem;
+  }
+
+  .submit {
+    flex: none;
+    min-width: 16rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--gap);
+    row-gap: 1.5rem;
+    align-items: start;
+  }
+
+  .wide,
+  .form > :global(.check-field),
+  .form > [role='alert'],
+  .actions {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Успех — отметка и сообщение слева, сводка справа, как у финальной формы. */
+@media (min-width: 1024px) {
+  .sent {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 'm s' 't s' '. s';
+    column-gap: var(--gap-lg);
+  }
+
+  .sent > :first-child {
+    grid-area: m;
+  }
+
+  .sent > h3 {
+    grid-area: t;
+  }
+
+  .sent > dl {
+    grid-area: s;
+    margin-top: 0;
+  }
+}

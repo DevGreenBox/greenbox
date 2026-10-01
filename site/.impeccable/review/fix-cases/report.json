@@ -1,0 +1,1028 @@
+{
+  "base": "http://localhost:3101",
+  "grid-1440": {
+    "imgs": [
+      {
+        "file": "image",
+        "ok": true
+      },
+      {
+        "file": "image",
+        "ok": true
+      },
+      {
+        "file": "image",
+        "ok": true
+      },
+      {
+        "file": "image",
+        "ok": true
+      },
+      {
+        "file": "image",
+        "ok": true
+      }
+    ],
+    "metrics": {
+      "track": {
+        "w": 1440,
+        "display": "grid",
+        "cols": "588.406px 588.406px",
+        "gap": "67.2px 63.2px"
+      },
+      "items": [
+        {
+          "item": {
+            "x": 100,
+            "y": 0,
+            "w": 1240,
+            "h": 466
+          },
+          "frame": {
+            "x": 100,
+            "y": 0,
+            "w": 686,
+            "h": 466
+          },
+          "body": {
+            "x": 850,
+            "y": 62,
+            "w": 490,
+            "h": 342
+          },
+          "cardDisplay": "grid",
+          "cardCols": "686.469px 490.344px",
+          "gridColumn": "1 / -1"
+        },
+        {
+          "item": {
+            "x": 100,
+            "y": 533,
+            "w": 588,
+            "h": 771
+          },
+          "frame": {
+            "x": 100,
+            "y": 533,
+            "w": 588,
+            "h": 405
+          },
+          "body": {
+            "x": 100,
+            "y": 937,
+            "w": 588,
+            "h": 366
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 752,
+            "y": 533,
+            "w": 588,
+            "h": 771
+          },
+          "frame": {
+            "x": 752,
+            "y": 533,
+            "w": 588,
+            "h": 405
+          },
+          "body": {
+            "x": 752,
+            "y": 937,
+            "w": 588,
+            "h": 366
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 100,
+            "y": 1371,
+            "w": 588,
+            "h": 771
+          },
+          "frame": {
+            "x": 100,
+            "y": 1371,
+            "w": 588,
+            "h": 405
+          },
+          "body": {
+            "x": 100,
+            "y": 1775,
+            "w": 588,
+            "h": 366
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 752,
+            "y": 1371,
+            "w": 588,
+            "h": 771
+          },
+          "frame": {
+            "x": 752,
+            "y": 1371,
+            "w": 588,
+            "h": 405
+          },
+          "body": {
+            "x": 752,
+            "y": 1775,
+            "w": 588,
+            "h": 366
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "n": 1,
+        "w": [
+          1240
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [],
+        "ok": true
+      },
+      {
+        "n": 2,
+        "w": [
+          588,
+          588
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [
+          63
+        ],
+        "ok": true
+      },
+      {
+        "n": 2,
+        "w": [
+          588,
+          588
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [
+          63
+        ],
+        "ok": true
+      }
+    ],
+    "counter": {
+      "display": "none"
+    },
+    "errors": []
+  },
+  "grid-1440-variants": {
+    "3": "1 | 2",
+    "4": "1 | 2 | 1",
+    "5": "1 | 2 | 2",
+    "6": "1 | 2 | 2 | 1",
+    "7": "1 | 2 | 2 | 2",
+    "8": "1 | 2 | 2 | 2 | 1",
+    "9": "1 | 2 | 2 | 2 | 2",
+    "10": "1 | 2 | 2 | 2 | 2 | 1",
+    "11": "1 | 2 | 2 | 2 | 2 | 2",
+    "12": "1 | 2 | 2 | 2 | 2 | 2 | 1"
+  },
+  "grid-1920": {
+    "imgs": [
+      {
+        "file": "image",
+        "ok": true
+      },
+      {
+        "file": "image",
+        "ok": true
+      },
+      {
+        "file": "image",
+        "ok": true
+      },
+      {
+        "file": "image",
+        "ok": true
+      },
+      {
+        "file": "image",
+        "ok": true
+      }
+    ],
+    "metrics": {
+      "track": {
+        "w": 1920,
+        "display": "grid",
+        "cols": "828px 828px",
+        "gap": "81.6px 64px"
+      },
+      "items": [
+        {
+          "item": {
+            "x": 100,
+            "y": 0,
+            "w": 1720,
+            "h": 641
+          },
+          "frame": {
+            "x": 100,
+            "y": 0,
+            "w": 966,
+            "h": 641
+          },
+          "body": {
+            "x": 1130,
+            "y": 160,
+            "w": 690,
+            "h": 321
+          },
+          "cardDisplay": "grid",
+          "cardCols": "966px 690px",
+          "gridColumn": "1 / -1"
+        },
+        {
+          "item": {
+            "x": 100,
+            "y": 722,
+            "w": 828,
+            "h": 899
+          },
+          "frame": {
+            "x": 100,
+            "y": 722,
+            "w": 828,
+            "h": 554
+          },
+          "body": {
+            "x": 100,
+            "y": 1276,
+            "w": 828,
+            "h": 345
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 992,
+            "y": 722,
+            "w": 828,
+            "h": 899
+          },
+          "frame": {
+            "x": 992,
+            "y": 722,
+            "w": 828,
+            "h": 554
+          },
+          "body": {
+            "x": 992,
+            "y": 1276,
+            "w": 828,
+            "h": 345
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 100,
+            "y": 1703,
+            "w": 828,
+            "h": 899
+          },
+          "frame": {
+            "x": 100,
+            "y": 1703,
+            "w": 828,
+            "h": 554
+          },
+          "body": {
+            "x": 100,
+            "y": 2257,
+            "w": 828,
+            "h": 345
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 992,
+            "y": 1703,
+            "w": 828,
+            "h": 899
+          },
+          "frame": {
+            "x": 992,
+            "y": 1703,
+            "w": 828,
+            "h": 554
+          },
+          "body": {
+            "x": 992,
+            "y": 2257,
+            "w": 828,
+            "h": 345
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "n": 1,
+        "w": [
+          1720
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [],
+        "ok": true
+      },
+      {
+        "n": 2,
+        "w": [
+          828,
+          828
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [
+          64
+        ],
+        "ok": true
+      },
+      {
+        "n": 2,
+        "w": [
+          828,
+          828
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [
+          64
+        ],
+        "ok": true
+      }
+    ],
+    "counter": {
+      "display": "none"
+    },
+    "errors": []
+  },
+  "nojs-1440": {
+    "trackW": 1440,
+    "items": [
+      {
+        "x": 100,
+        "w": 1240,
+        "y": 0,
+        "h": 466
+      },
+      {
+        "x": 100,
+        "w": 588,
+        "y": 533,
+        "h": 771
+      },
+      {
+        "x": 752,
+        "w": 588,
+        "y": 533,
+        "h": 771
+      },
+      {
+        "x": 100,
+        "w": 588,
+        "y": 1371,
+        "h": 771
+      },
+      {
+        "x": 752,
+        "w": 588,
+        "y": 1371,
+        "h": 771
+      }
+    ],
+    "progress": "none"
+  },
+  "ribbon-1440": {
+    "geo": {
+      "top": 4442,
+      "height": 5254,
+      "vh": 900
+    },
+    "p0": {
+      "scrollY": 4442,
+      "counter": ".case 01 / 05",
+      "now": "01",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "13px",
+      "color": "rgb(160, 160, 184)",
+      "monoLoaded": [
+        "martianMono"
+      ],
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "items": [
+        {
+          "left": 100,
+          "right": 1160
+        },
+        {
+          "left": 1223,
+          "right": 2283
+        },
+        {
+          "left": 2346,
+          "right": 3406
+        },
+        {
+          "left": 3470,
+          "right": 4530
+        },
+        {
+          "left": 4593,
+          "right": 5653
+        }
+      ],
+      "card1": {
+        "display": "grid",
+        "cols": "691.188px 324.812px",
+        "align": "start",
+        "colGap": "44px"
+      },
+      "body1": {
+        "alignSelf": "stretch",
+        "paddingTop": "4px"
+      }
+    },
+    "p50": {
+      "scrollY": 6619,
+      "counter": ".case 03 / 05",
+      "now": "03",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "13px",
+      "color": "rgb(160, 160, 184)",
+      "monoLoaded": [
+        "martianMono"
+      ],
+      "transform": "matrix(1, 0, 0, 1, -2156.5, 0)",
+      "items": [
+        {
+          "left": -2056,
+          "right": -996
+        },
+        {
+          "left": -933,
+          "right": 127
+        },
+        {
+          "left": 190,
+          "right": 1250
+        },
+        {
+          "left": 1313,
+          "right": 2373
+        },
+        {
+          "left": 2436,
+          "right": 3496
+        }
+      ],
+      "card1": {
+        "display": "grid",
+        "cols": "691.188px 324.812px",
+        "align": "start",
+        "colGap": "44px"
+      },
+      "body1": {
+        "alignSelf": "stretch",
+        "paddingTop": "4px"
+      }
+    },
+    "p100": {
+      "scrollY": 8796,
+      "counter": ".case 05 / 05",
+      "now": "05",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "13px",
+      "color": "rgb(160, 160, 184)",
+      "monoLoaded": [
+        "martianMono"
+      ],
+      "transform": "matrix(1, 0, 0, 1, -4313, 0)",
+      "items": [
+        {
+          "left": -4213,
+          "right": -3153
+        },
+        {
+          "left": -3090,
+          "right": -2030
+        },
+        {
+          "left": -1967,
+          "right": -907
+        },
+        {
+          "left": -843,
+          "right": 217
+        },
+        {
+          "left": 280,
+          "right": 1340
+        }
+      ],
+      "card1": {
+        "display": "grid",
+        "cols": "691.188px 324.812px",
+        "align": "start",
+        "colGap": "44px"
+      },
+      "body1": {
+        "alignSelf": "stretch",
+        "paddingTop": "4px"
+      }
+    },
+    "tabs": [
+      {
+        "el": "Открыть сайт THE CASE (откро",
+        "card": 1,
+        "inView": true,
+        "left": 835,
+        "right": 968,
+        "scrollY": 4442,
+        "now": "01"
+      },
+      {
+        "el": "Открыть сайт Клиника Ткачева",
+        "card": 2,
+        "inView": true,
+        "left": 835,
+        "right": 968,
+        "scrollY": 5576,
+        "now": "02"
+      },
+      {
+        "el": "Открыть сайт Учебный центр «",
+        "card": 3,
+        "inView": true,
+        "left": 835,
+        "right": 968,
+        "scrollY": 6710,
+        "now": "03"
+      },
+      {
+        "el": "Открыть сайт YPM Group (откр",
+        "card": 4,
+        "inView": true,
+        "left": 835,
+        "right": 968,
+        "scrollY": 7844,
+        "now": "04"
+      },
+      {
+        "el": "Открыть сайт Центр кранового",
+        "card": 5,
+        "inView": true,
+        "left": 1015,
+        "right": 1148,
+        "scrollY": 8796,
+        "now": "05"
+      },
+      {
+        "el": "Получить бесплатный макет",
+        "card": null,
+        "inView": true,
+        "left": 145,
+        "right": 454,
+        "scrollY": 12257,
+        "now": "05"
+      }
+    ],
+    "errors": []
+  },
+  "mobile-390": {
+    "info": {
+      "counter": ".case 01 / 05",
+      "fontFamily": "martianMono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "fontSize": "13px",
+      "monoLoaded": [
+        "martianMono"
+      ],
+      "progressBox": {
+        "left": 180,
+        "right": 370,
+        "top": 5095,
+        "h": 13
+      },
+      "headBox": {
+        "left": 0,
+        "right": 390,
+        "h": 33
+      },
+      "snap": "x mandatory",
+      "overflowX": false
+    },
+    "afterSwipe": {
+      "counter": ".case 03 / 05",
+      "scrollLeft": 684
+    },
+    "tabs": [
+      {
+        "card": 1,
+        "visiblePx": 132.875,
+        "width": 133,
+        "scrollLeft": 0,
+        "now": "01"
+      },
+      {
+        "card": 2,
+        "visiblePx": 132.875,
+        "width": 133,
+        "scrollLeft": 342,
+        "now": "02"
+      },
+      {
+        "card": 3,
+        "visiblePx": 132.875,
+        "width": 133,
+        "scrollLeft": 684,
+        "now": "03"
+      },
+      {
+        "card": 4,
+        "visiblePx": 132.875,
+        "width": 133,
+        "scrollLeft": 1026,
+        "now": "04"
+      },
+      {
+        "card": 5,
+        "visiblePx": 132.875,
+        "width": 133,
+        "scrollLeft": 1344,
+        "now": "05"
+      }
+    ],
+    "errors": [
+      "[mobile shot] error: A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  <QuizForm>\n    <form ref={{current:null}} action=\"/api/lead\" method=\"post\" encType=\"multipart/...\" className=\"Quiz-modul...\" ...>\n      <div ref={{current:null}} className=\"panel Quiz...\">\n        <div>\n        <div className=\"Quiz-modul...\">\n          <fieldset className=\"Quiz-modul...\" data-step={0} data-active={true}>\n            <legend>\n            <div className=\"Quiz-modul...\">\n              <Chip type=\"radio\" name=\"answers.bu...\" value=\"Одежда и о...\">\n                <label className=\"chip\">\n                  <input\n                    name=\"answers.business\"\n                    value=\"Одежда и обувь\"\n                    type=\"radio\"\n                    className=\"chip__input\"\n-                   style={{caret-color:\"transparent\"}}\n                  >\n                  ...\n              <Chip type=\"ra"
+    ]
+  },
+  "grid-1024": {
+    "metrics": {
+      "track": {
+        "w": 1024,
+        "display": "grid",
+        "cols": "422.641px 422.641px",
+        "gap": "56px 50.72px"
+      },
+      "items": [
+        {
+          "item": {
+            "x": 64,
+            "y": 0,
+            "w": 896,
+            "h": 362
+          },
+          "frame": {
+            "x": 64,
+            "y": 8,
+            "w": 493,
+            "h": 345
+          },
+          "body": {
+            "x": 608,
+            "y": 0,
+            "w": 352,
+            "h": 362
+          },
+          "cardDisplay": "grid",
+          "cardCols": "493.078px 352.188px",
+          "gridColumn": "1 / -1"
+        },
+        {
+          "item": {
+            "x": 64,
+            "y": 418,
+            "w": 423,
+            "h": 693
+          },
+          "frame": {
+            "x": 64,
+            "y": 418,
+            "w": 423,
+            "h": 301
+          },
+          "body": {
+            "x": 64,
+            "y": 718,
+            "w": 423,
+            "h": 392
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 537,
+            "y": 418,
+            "w": 423,
+            "h": 693
+          },
+          "frame": {
+            "x": 537,
+            "y": 418,
+            "w": 423,
+            "h": 301
+          },
+          "body": {
+            "x": 537,
+            "y": 718,
+            "w": 423,
+            "h": 392
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 64,
+            "y": 1167,
+            "w": 423,
+            "h": 693
+          },
+          "frame": {
+            "x": 64,
+            "y": 1167,
+            "w": 423,
+            "h": 301
+          },
+          "body": {
+            "x": 64,
+            "y": 1468,
+            "w": 423,
+            "h": 392
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 537,
+            "y": 1167,
+            "w": 423,
+            "h": 693
+          },
+          "frame": {
+            "x": 537,
+            "y": 1167,
+            "w": 423,
+            "h": 301
+          },
+          "body": {
+            "x": 537,
+            "y": 1468,
+            "w": 423,
+            "h": 392
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "n": 1,
+        "w": [
+          896
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [],
+        "ok": true
+      },
+      {
+        "n": 2,
+        "w": [
+          423,
+          423
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [
+          51
+        ],
+        "ok": true
+      },
+      {
+        "n": 2,
+        "w": [
+          423,
+          423
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [
+          51
+        ],
+        "ok": true
+      }
+    ],
+    "errors": []
+  },
+  "short-1440x600": {
+    "metrics": {
+      "track": {
+        "w": 1440,
+        "display": "grid",
+        "cols": "588.406px 588.406px",
+        "gap": "67.2px 63.2px"
+      },
+      "items": [
+        {
+          "item": {
+            "x": 100,
+            "y": 0,
+            "w": 1240,
+            "h": 466
+          },
+          "frame": {
+            "x": 100,
+            "y": 0,
+            "w": 686,
+            "h": 466
+          },
+          "body": {
+            "x": 850,
+            "y": 62,
+            "w": 490,
+            "h": 342
+          },
+          "cardDisplay": "grid",
+          "cardCols": "686.469px 490.344px",
+          "gridColumn": "1 / -1"
+        },
+        {
+          "item": {
+            "x": 100,
+            "y": 533,
+            "w": 588,
+            "h": 771
+          },
+          "frame": {
+            "x": 100,
+            "y": 533,
+            "w": 588,
+            "h": 405
+          },
+          "body": {
+            "x": 100,
+            "y": 937,
+            "w": 588,
+            "h": 366
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 752,
+            "y": 533,
+            "w": 588,
+            "h": 771
+          },
+          "frame": {
+            "x": 752,
+            "y": 533,
+            "w": 588,
+            "h": 405
+          },
+          "body": {
+            "x": 752,
+            "y": 937,
+            "w": 588,
+            "h": 366
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 100,
+            "y": 1371,
+            "w": 588,
+            "h": 771
+          },
+          "frame": {
+            "x": 100,
+            "y": 1371,
+            "w": 588,
+            "h": 405
+          },
+          "body": {
+            "x": 100,
+            "y": 1775,
+            "w": 588,
+            "h": 366
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        },
+        {
+          "item": {
+            "x": 752,
+            "y": 1371,
+            "w": 588,
+            "h": 771
+          },
+          "frame": {
+            "x": 752,
+            "y": 1371,
+            "w": 588,
+            "h": 405
+          },
+          "body": {
+            "x": 752,
+            "y": 1775,
+            "w": 588,
+            "h": 366
+          },
+          "cardDisplay": "flex",
+          "cardCols": "none",
+          "gridColumn": "auto"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "n": 1,
+        "w": [
+          1240
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [],
+        "ok": true
+      },
+      {
+        "n": 2,
+        "w": [
+          588,
+          588
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [
+          63
+        ],
+        "ok": true
+      },
+      {
+        "n": 2,
+        "w": [
+          588,
+          588
+        ],
+        "left": 0,
+        "right": 0,
+        "between": [
+          63
+        ],
+        "ok": true
+      }
+    ],
+    "errors": []
+  }
+}

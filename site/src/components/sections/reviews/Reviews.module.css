@@ -1,0 +1,20 @@
+/* Маркер по главной фразе отзыва — полоса цвета акцента под нижней половиной строчных. Фон строчного
+   элемента режется на строки как одна полоса, поэтому при появлении маркер идёт по строкам подряд, как
+   рукой. Зелёный — прозрачность акцента сцены (на светлой и в тёмной теме свой). */
+.mark {
+  --mark: color-mix(in srgb, var(--accent) 26%, transparent);
+  background: linear-gradient(var(--mark), var(--mark)) 0 88% / 100% 0.4em no-repeat;
+  color: inherit;
+}
+
+/* Появление (фазы — motion/Reveal.tsx): отзыв вошёл в экран — маркер проводится слева направо.
+   Без JS и при reduced-motion маркер на месте сразу. */
+@media (prefers-reduced-motion: no-preference) {
+  :global(.reveal-on) [data-reveal]:not([data-revealed]) .mark {
+    background-size: 0% 0.4em;
+  }
+
+  :global(.reveal-on) [data-revealed] .mark {
+    transition: background-size var(--dur-draw) var(--ease-out) 0.35s;
+  }
+}

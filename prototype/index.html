@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>ЗелёнаяКоробка — выбор направления</title>
+<style>
+  :root { --ink: #1A1A2E; --paper: #FFFFFF; --muted: #A0A0B8; --accent: #00E676; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: #FAFBFC; font: 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+
+  .switcher { position: fixed; left: 16px; bottom: 16px; z-index: 10; font-size: 14px; }
+  .switcher__toggle {
+    display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px 0 12px;
+    border: 0; border-radius: 999px; background: var(--ink); color: var(--paper); font: inherit; font-weight: 600;
+    box-shadow: 0 8px 24px rgba(10, 10, 20, .28), 0 1px 3px rgba(10, 10, 20, .2); cursor: pointer;
+  }
+  .switcher__toggle:focus-visible, .switcher__item:focus-visible, .switcher__open:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .switcher__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .switcher__chev { width: 12px; height: 12px; transition: transform .2s ease; }
+  .switcher[data-open] .switcher__chev { transform: rotate(180deg); }
+
+  .switcher__menu {
+    position: absolute; left: 0; bottom: calc(100% + 10px); width: min(340px, calc(100vw - 32px));
+    padding: 8px; border-radius: 16px; background: var(--ink); color: var(--paper);
+    box-shadow: 0 16px 40px rgba(10, 10, 20, .35); display: none;
+  }
+  .switcher[data-open] .switcher__menu { display: block; }
+  .switcher__head { padding: 8px 10px 10px; color: var(--muted); font-size: 12px; line-height: 1.35; }
+  .switcher__item {
+    display: grid; grid-template-columns: 12px 1fr; gap: 4px 10px; width: 100%; padding: 10px; border: 0; border-radius: 10px;
+    background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer;
+  }
+  .switcher__item:hover { background: rgba(255, 255, 255, .06); }
+  .switcher__item[aria-current="true"] { background: rgba(0, 230, 118, .12); }
+  .switcher__radio { width: 12px; height: 12px; margin-top: 4px; border-radius: 50%; border: 2px solid var(--muted); }
+  .switcher__item[aria-current="true"] .switcher__radio { border-color: var(--accent); background: var(--accent); }
+  .switcher__name { font-weight: 700; }
+  .switcher__tag { margin-left: 6px; color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
+  .switcher__desc { grid-column: 2; color: var(--muted); font-size: 13px; }
+  .switcher__open { display: block; margin: 6px 10px 4px; color: var(--paper); font-size: 13px; text-underline-offset: 3px; }
+
+  .switcher__group { margin-top: 6px; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, .08); }
+  .switcher__group[hidden] { display: none; }
+  .switcher__bgs { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .switcher__bg { display: flex; align-items: center; gap: 8px; width: 100%; padding: 8px 10px; border: 0; border-radius: 10px; background: transparent; color: inherit; font: inherit; font-size: 13px; text-align: left; cursor: pointer; }
+  .switcher__bg:hover { background: rgba(255, 255, 255, .06); }
+  .switcher__bg[aria-current="true"] { background: rgba(0, 230, 118, .12); }
+  .switcher__bg:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .switcher__bg .switcher__radio { margin-top: 0; flex: none; }
+  .switcher__bg[aria-current="true"] .switcher__radio { border-color: var(--accent); background: var(--accent); }
+  .switcher__star { color: var(--accent); font-size: 11px; font-weight: 600; }
+  .pending { position: fixed; inset: 0; display: none; place-items: center; padding: 24px; text-align: center; color: #4A4A68; }
+  .pending[data-show] { display: grid; }
+  .pending strong { display: block; margin-bottom: 6px; color: var(--ink); font-size: 18px; }
+</style>
+</head>
+<body>
+<iframe id="frame" title="Прототип варианта"></iframe>
+
+<div class="pending" id="pending" role="status"><div><strong>Вариант ещё собирается</strong>Агент заканчивает работу — обновите страницу через пару минут или выберите другой вариант.</div></div>
+
+<nav class="switcher" id="switcher" aria-label="Варианты направления">
+  <div class="switcher__menu" id="menu">
+    <div class="switcher__head">Это прототип для выбора направления: здесь нет отзывов, FAQ, команды и формы. Готовый сайт со всеми 11 секциями — <a href="https://3100--main--novi--albert.devgreenboxweb.ru/" target="_top" style="color:#00E676">открыть сайт ↗</a></div>
+    <div id="items"></div>
+    <div class="switcher__group" id="bggroup" hidden>
+      <div class="switcher__head">Фон первого экрана</div>
+      <div class="switcher__bgs" id="bgs"></div>
+    </div>
+    <a class="switcher__open" id="open" href="#" target="_blank" rel="noopener">Открыть вариант отдельно ↗</a>
+  </div>
+  <button class="switcher__toggle" id="toggle" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="switcher__dot" aria-hidden="true"></span>
+    <span id="current">Вариант</span>
+    <svg class="switcher__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 8l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</nav>
+
+<script>
+(() => {
+  const variants = [
+    { id: 'standart', name: 'Стандарт категории', tag: 'выбран', desc: 'Как обычно делают веб-студии, но на полном уровне исполнения. Поля по бокам 100 px.' },
+  ];
+  const backgrounds = [
+    { n: 0, name: 'Без фона' },
+    { n: 12, name: 'Сетка макета · в коде', star: true },
+    { n: 11, name: 'Код витрины · в коде' },
+    { n: 7, name: 'HTML-код крупно' },
+    { n: 8, name: 'Световые линии данных' },
+    { n: 9, name: 'Монитор с кодом' },
+    { n: 10, name: 'Клавиатура в темноте' },
+  ];
+  const DEFAULT_BG = 12;
+  const $ = (id) => document.getElementById(id);
+  const frame = $('frame'), switcher = $('switcher'), toggle = $('toggle'), items = $('items'), pending = $('pending');
+  const bgGroup = $('bggroup'), bgs = $('bgs');
+  let current = { id: variants[0].id, bg: DEFAULT_BG };
+
+  const urlFor = (id, bg) => {
+    const u = new URL(`variants/${id}/index.html`, location.href);
+    if (id === 'standart' && bg > 0) u.searchParams.set('bg', String(bg));
+    return u;
+  };
+  const parseHash = () => {
+    const [id, bg] = location.hash.slice(1).split('/');
+    return { id, bg: bg === undefined ? undefined : Number(bg) };
+  };
+  const initial = () => {
+    const h = parseHash();
+    let id = variants.some((v) => v.id === h.id) ? h.id : null;
+    let bg = Number.isInteger(h.bg) && backgrounds.some((b) => b.n === h.bg) ? h.bg : DEFAULT_BG;
+    if (!id) { try { const saved = localStorage.getItem('gb-variant'); if (variants.some((v) => v.id === saved)) id = saved; } catch (e) {} }
+    return { id: id || variants[0].id, bg };
+  };
+
+  async function show(id, bg) {
+    current = { id, bg };
+    const v = variants.find((x) => x.id === id);
+    const b = backgrounds.find((x) => x.n === bg);
+    $('current').textContent = id === 'standart' ? `${v.name} · ${b.name}` : v.name;
+    const url = urlFor(id, bg);
+    $('open').href = url.pathname + url.search;
+    history.replaceState(null, '', '#' + id + (id === 'standart' ? '/' + bg : ''));
+    try { localStorage.setItem('gb-variant', id); } catch (e) {}
+    for (const el of items.children) el.setAttribute('aria-current', String(el.dataset.id === id));
+    for (const el of bgs.children) el.setAttribute('aria-current', String(Number(el.dataset.bg) === bg));
+    bgGroup.hidden = id !== 'standart';
+    let ok = true;
+    try { ok = (await fetch(url.pathname, { method: 'HEAD', cache: 'no-store' })).ok; } catch (e) { ok = false; }
+    pending.toggleAttribute('data-show', !ok);
+    frame.style.visibility = ok ? 'visible' : 'hidden';
+    if (ok) { url.searchParams.set('t', String(Date.now())); frame.src = url.pathname + url.search; }
+  }
+
+  const setOpen = (open) => {
+    switcher.toggleAttribute('data-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    if (open) items.querySelector('[aria-current="true"]')?.focus();
+  };
+
+  for (const v of variants) {
+    const el = document.createElement('button');
+    el.type = 'button'; el.className = 'switcher__item'; el.dataset.id = v.id;
+    el.innerHTML = `<span class="switcher__radio" aria-hidden="true"></span><span><span class="switcher__name"></span><span class="switcher__tag"></span></span><span class="switcher__desc"></span>`;
+    el.querySelector('.switcher__name').textContent = v.name;
+    el.querySelector('.switcher__tag').textContent = v.tag;
+    el.querySelector('.switcher__desc').textContent = v.desc;
+    el.addEventListener('click', () => { show(v.id, current.bg); if (v.id !== 'standart') { setOpen(false); toggle.focus(); } });
+    items.appendChild(el);
+  }
+  for (const b of backgrounds) {
+    const el = document.createElement('button');
+    el.type = 'button'; el.className = 'switcher__bg'; el.dataset.bg = String(b.n);
+    el.innerHTML = `<span class="switcher__radio" aria-hidden="true"></span><span></span>`;
+    el.lastElementChild.textContent = b.name;
+    if (b.star) { const s = document.createElement('span'); s.className = 'switcher__star'; s.textContent = ' ★'; s.setAttribute('aria-label', 'рекомендую'); el.lastElementChild.appendChild(s); }
+    el.addEventListener('click', () => show('standart', b.n));
+    bgs.appendChild(el);
+  }
+
+  toggle.addEventListener('click', () => setOpen(!switcher.hasAttribute('data-open')));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && switcher.hasAttribute('data-open')) { setOpen(false); toggle.focus(); } });
+  document.addEventListener('click', (e) => { if (!switcher.contains(e.target)) setOpen(false); });
+  frame.addEventListener('load', () => { try { frame.contentWindow.addEventListener('click', () => setOpen(false)); } catch (e) {} });
+  window.addEventListener('hashchange', () => { const i = initial(); show(i.id, i.bg); });
+
+  const i = initial();
+  show(i.id, i.bg);
+})();
+</script>
+</body>
+</html>

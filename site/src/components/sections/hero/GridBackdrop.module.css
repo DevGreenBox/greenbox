@@ -1,0 +1,475 @@
+/* «Сетка макета» — фон первого экрана (выбор заказчика, раунд 2; прототип ?bg=12).
+   Страница рисует саму себя: 12 колонок в полях сайта, контуры <header> / <section class="hero"> /
+   .product-card, размерные линии, выделение как в инспекторе. Слой декоративный: aria-hidden
+   и pointer-events: none — у обёртки (HeroBackdrop).
+
+   Координаты макетов (--dt/--db/--lt: верх и низ устройств, верх ноутбука от верха секции) и
+   подписи размеров (--v-*) меряет GridLive по живой вёрстке. Здесь — разумные значения без JS:
+   на десктопе из той же формулы, что раскладка первого экрана, ниже 1024 — типичные для ширины.
+   Подписи — сгенерированный текст из переменных: клиент меняет только их, не разметку React.
+
+   Движение — только после замера (data-live): без JS и при reduced-motion — готовый кадр.
+  Выделение инспектора замирает на <section class="hero"> (правка по критике 29.09.2026): раньше
+  оно оставалось на .product-card, обрезанной нижним краем экрана. */
+
+.plan {
+  --cols: 12;
+  --pgap: 24px;
+  --grid-line: var(--line); /* колонки: 6% белого */
+  --stroke: var(--line-strong); /* контуры блоков: 12% */
+  /* Размерные линии — нейтральные, светлее контуров блоков: циан только в слове первого экрана. */
+  --dim-line: color-mix(in srgb, var(--text-2) 40%, transparent);
+  --pick: color-mix(in srgb, var(--accent) 80%, transparent);
+
+  /* Макеты: колонка 1.2fr из 2.2fr, устройства 100:60.5, по центру экрана (Hero.module.css);
+     телефон — у верха фигуры, ноутбук на 2cqi ниже (Demo.module.css). */
+  --devh: calc((100cqw - 2 * var(--gutter) - var(--gap-lg)) * 1.2 / 2.2 * 0.605);
+  --dt: calc(28px + 50cqh - var(--devh) / 2);
+  --db: calc(var(--dt) + var(--devh));
+  --lt: var(--dt);
+
+  --v-note: 'grid: 12 col · gap 24';
+  --v-gap: '24';
+  --v-gutter: '100';
+  --v-hdr: '608 × 48';
+  --v-hero: '608 × 561';
+  --v-card: '187 × 200';
+  --v-pad: '40';
+
+  position: absolute;
+  inset: 0;
+  container-type: size;
+  /* Подписи 11 px: ≈ #8A8AA2, 5,8:1 на #0A0A14. Слой aria-hidden, но axe и Lighthouse считают контраст
+     и у него, а --text-3 (#6A6A80, 3,7:1) — только для крупного текста. */
+  color: color-mix(in srgb, var(--text-2) 60%, var(--text-3));
+  font-size: 11px;
+  line-height: 14px;
+  font-variant-ligatures: none;
+  user-select: none;
+  /* к левому краю (под текстом) и под шапку уходит в фон, снизу — к следующей секции */
+  mask-image:
+    linear-gradient(90deg, transparent 43%, black 51%),
+    linear-gradient(transparent 60px, black 80px, black calc(100% - 110px), transparent);
+  mask-composite: intersect;
+}
+
+/* С JS слой ждёт замера, чтобы не прочертиться заново поверх готового кадра. */
+:global(.js) .plan:not([data-live]) {
+  visibility: hidden;
+}
+
+/* Моноширинный шрифт подписей — Martian Mono (lib/fonts.ts): без JS сразу, с JS — после замера. */
+:global(html:not(.js)) .plan,
+.plan[data-live] {
+  font-family: var(--font-martian-mono);
+}
+
+/* Страница в полях сайта: колонка --cw, блок встаёт с колонки --c шириной в --s колонок. */
+.page {
+  --cw: calc((100% - (var(--cols) - 1) * var(--pgap)) / var(--cols));
+  position: absolute;
+  inset: 0 var(--gutter);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  column-gap: var(--pgap);
+}
+
+.grid i {
+  border-inline: 1px solid var(--grid-line);
+  transform-origin: top;
+}
+
+.blk {
+  --d: 0.3s; /* когда прочерчивается */
+  position: absolute;
+  left: calc(var(--c) * (var(--cw) + var(--pgap)));
+  width: calc(var(--s) * var(--cw) + (var(--s) - 1) * var(--pgap));
+}
+
+/* Контур волосяной линией: верх и низ тянутся слева, бока — сверху. */
+.blk::before,
+.blk::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.blk::before {
+  border-block: 1px solid var(--stroke);
+  transform-origin: left;
+}
+
+.blk::after {
+  inset-block: 1px;
+  border-inline: 1px solid var(--stroke);
+  transform-origin: top;
+}
+
+.blk > i {
+  position: absolute;
+}
+
+.hdr {
+  --c: 6;
+  --s: 6;
+  top: 96px;
+  height: 48px;
+}
+
+.main {
+  --c: 6;
+  --s: 6;
+  --d: 0.45s;
+  top: 168px;
+  height: calc(var(--db) - 112px); /* низ — 56 px под макетами */
+}
+
+.card {
+  --s: 2;
+  top: calc(var(--db) + 80px);
+  height: 200px;
+}
+
+.c1 {
+  --c: 6;
+  --d: 0.6s;
+}
+
+.c2 {
+  --c: 8;
+  --d: 0.7s;
+}
+
+.c3 {
+  --c: 10;
+  --d: 0.8s;
+}
+
+/* Начинка: шапка витрины и карточка товара, как в каркасе. */
+.logo,
+.cart {
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--stroke);
+}
+
+.logo {
+  left: 16px;
+  border-radius: 5px;
+}
+
+.cart {
+  right: 16px;
+  border-radius: 50%;
+}
+
+.nav {
+  left: 30%;
+  top: 21px;
+  width: 152px;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, var(--grid-line) 0 40px, transparent 40px 56px);
+}
+
+.img {
+  inset: 12px 12px auto;
+  height: 52%;
+  border: 1px solid var(--grid-line);
+  background:
+    linear-gradient(
+      to top right,
+      transparent calc(50% - 0.6px),
+      var(--grid-line) 50%,
+      transparent calc(50% + 0.6px)
+    ),
+    linear-gradient(
+      to bottom right,
+      transparent calc(50% - 0.6px),
+      var(--grid-line) 50%,
+      transparent calc(50% + 0.6px)
+    );
+}
+
+.bar {
+  left: 12px;
+  top: calc(52% + 28px);
+  width: 62%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--grid-line);
+}
+
+.barShort {
+  top: calc(52% + 44px);
+  width: 30%;
+}
+
+/* Подписи у углов: фон сцены вырезает под текстом линии сетки, как на чертеже. */
+.lbl,
+.pick b,
+.note,
+.dim b {
+  position: absolute;
+  background: var(--bg);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.lbl,
+.pick b {
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 3px;
+  padding-right: 6px;
+}
+
+.note {
+  right: 0;
+  top: 79px;
+  padding-left: 6px;
+}
+
+.note::after {
+  content: var(--v-note);
+}
+
+/* Выделение, как у инспектора: зелёный контур, маркеры по углам, тег и размер. */
+.pick {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.pick::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--pick);
+}
+
+.pick i {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  margin: -3px;
+  border: 1px solid var(--pick);
+  background: var(--bg);
+}
+
+.pick i:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.pick i:nth-child(2) {
+  right: 0;
+  top: 0;
+}
+
+.pick i:nth-child(3) {
+  left: 0;
+  bottom: 0;
+}
+
+.pick i:nth-child(4) {
+  right: 0;
+  bottom: 0;
+}
+
+.pick b {
+  color: var(--accent);
+}
+
+.pick b span {
+  margin-left: 1ch;
+  color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.hdr .pick b span::after {
+  content: var(--v-hdr);
+}
+
+.main .pick b span::after {
+  content: var(--v-hero);
+}
+
+.c2 .pick b span::after {
+  content: var(--v-card);
+}
+
+/* Готовый кадр: выделение осталось на первом экране. */
+.main .pick {
+  opacity: 1;
+}
+
+/* Размерные линии с подписью в px. Цифры — цвет подписей чертежа (5,8:1). */
+.dim {
+  position: absolute;
+}
+
+.dimV {
+  width: 7px;
+  margin-left: -3px;
+  background:
+    linear-gradient(var(--dim-line) 0 0) 50% 0 / 1px 100% no-repeat,
+    linear-gradient(var(--dim-line) 0 0) top / 100% 1px no-repeat,
+    linear-gradient(var(--dim-line) 0 0) bottom / 100% 1px no-repeat;
+}
+
+.dimH {
+  height: 7px;
+  margin-top: -3px;
+  background:
+    linear-gradient(var(--dim-line) 0 0) 0 50% / 100% 1px no-repeat,
+    linear-gradient(var(--dim-line) 0 0) left / 1px 100% no-repeat,
+    linear-gradient(var(--dim-line) 0 0) right / 1px 100% no-repeat;
+}
+
+.dimV b {
+  left: 100%;
+  top: 50%;
+  margin: -7px 0 0 4px;
+  padding: 0 2px;
+}
+
+.dimH b {
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 1px;
+  background: none;
+  text-align: center;
+}
+
+.gapDim {
+  right: 44px;
+  top: 144px;
+  height: 24px;
+}
+
+.padDim {
+  left: calc(6 * (var(--cw) + var(--pgap)) + var(--cw) / 2);
+  top: 168px;
+  height: calc(var(--lt) - 168px);
+}
+
+.cardsDim {
+  left: calc(10 * (var(--cw) + var(--pgap)) - var(--pgap));
+  top: calc(var(--db) + 124px);
+  width: var(--pgap);
+}
+
+.gutterDim {
+  left: 100%;
+  top: 120px;
+  width: var(--gutter);
+}
+
+.gapDim b::after,
+.cardsDim b::after {
+  content: var(--v-gap);
+}
+
+.padDim b::after {
+  content: var(--v-pad);
+}
+
+.gutterDim b::after {
+  content: var(--v-gutter);
+}
+
+/* ---------- Движение: контуры прочерчиваются, выделение идёт шапка → карточка → первый экран ----------
+   Длительности — токены (--dur-draw, --dur-enter, --dur-hover), кривая — --ease-out. Своя только хронология:
+   выделение держится 1.4 s на блоке и переходит дальше (задержки 1.5 → 2.9 → 4.3 s), на первом экране остаётся. */
+
+@keyframes draw-x {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes draw-y {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pick {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  6%,
+  94% {
+    opacity: 1;
+  }
+}
+
+.plan[data-live] .grid i {
+  animation: draw-y calc(var(--dur-draw) * 1.4) var(--ease-out) calc(0.1s + var(--i) * 45ms) backwards;
+}
+
+.plan[data-live] .blk::before {
+  animation: draw-x var(--dur-draw) var(--ease-out) var(--d) backwards;
+}
+
+.plan[data-live] .blk::after {
+  animation: draw-y var(--dur-draw) var(--ease-out) var(--d) backwards;
+}
+
+.plan[data-live] .blk > i {
+  animation: fade var(--dur-enter) var(--ease-out) calc(var(--d) + 0.6s) backwards;
+}
+
+.plan[data-live] .lbl {
+  animation: fade var(--dur-enter) var(--ease-out) calc(var(--d) + 0.5s) backwards;
+}
+
+.plan[data-live] .note {
+  animation: fade var(--dur-enter) var(--ease-out) 1s backwards;
+}
+
+.plan[data-live] .dim {
+  animation: fade var(--dur-enter) var(--ease-out) 1.3s backwards;
+}
+
+.plan[data-live] .hdr .pick {
+  animation: pick 1.4s var(--ease-out) 1.5s;
+}
+
+.plan[data-live] .c2 .pick {
+  animation: pick 1.4s var(--ease-out) 2.9s;
+}
+
+.plan[data-live] .main .pick {
+  animation: fade var(--dur-hover) var(--ease-out) 4.3s backwards;
+}
+
+/* ---------- До 1024 чертежа нет ----------
+   Иллюстрация стоит над заголовком, и зелёная сетка вокруг неё на телефоне и планшете лишняя (заказчик
+   30.09.2026): слой скрыт целиком. */
+
+@media (max-width: 1023px) {
+  .plan {
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  .plan {
+    --v-gutter: '64';
+  }
+}

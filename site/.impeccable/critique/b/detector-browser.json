@@ -1,0 +1,838 @@
+{
+  "390": {
+    "etag": "\"3d40zc0ulf5hxl\"",
+    "preflight": {
+      "title": "[Human] ЗелёнаяКоробка — интернет-магазины под ключ",
+      "script": true
+    },
+    "injected": true,
+    "console": [
+      {
+        "type": "startGroup",
+        "text": "%c[impeccable] 12 anti-patterns found color: oklch(84% 0.19 80.46); font-weight: bold"
+      }
+    ],
+    "consoleAll": 20,
+    "findings": [
+      {
+        "selector": "span.GridBackdrop-module__0j9sMW__dim.GridBackdrop-module__0j9sMW__dimV:nth-of-type(2)",
+        "tagName": "span",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "isPageLevel": false,
+        "isHidden": true,
+        "findings": [
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan neon text on dark background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "span.GridBackdrop-module__0j9sMW__dim.GridBackdrop-module__0j9sMW__dimV:nth-of-type(3)",
+        "tagName": "span",
+        "rect": {
+          "x": 54.75,
+          "y": 550.15625,
+          "width": 7,
+          "height": 76,
+          "top": 550.15625,
+          "right": 61.75,
+          "bottom": 626.15625,
+          "left": 54.75
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan neon text on dark background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "span.GridBackdrop-module__0j9sMW__dim.GridBackdrop-module__0j9sMW__dimH:nth-of-type(4)",
+        "tagName": "span",
+        "rect": {
+          "x": 187,
+          "y": 1074.15625,
+          "width": 16,
+          "height": 7,
+          "top": 1074.15625,
+          "right": 203,
+          "bottom": 1081.15625,
+          "left": 187
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan neon text on dark background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "span.GridBackdrop-module__0j9sMW__dim.GridBackdrop-module__0j9sMW__dimH:nth-of-type(5)",
+        "tagName": "span",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "isPageLevel": false,
+        "isHidden": true,
+        "findings": [
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan neon text on dark background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "span.text-gradient-hero",
+        "tagName": "span",
+        "rect": {
+          "x": 20,
+          "y": 99,
+          "width": 244.09375,
+          "height": 91.59375,
+          "top": 99,
+          "right": 264.09375,
+          "bottom": 190.59375,
+          "left": 20
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "gradient-text",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "background-clip: text + gradient",
+            "ignoreValue": "",
+            "name": "Gradient text",
+            "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "#hero-demo-showcase",
+        "tagName": "p",
+        "rect": {
+          "x": 202.609375,
+          "y": 736.890625,
+          "width": 149.28125,
+          "height": 9.125,
+          "top": 736.890625,
+          "right": 351.890625,
+          "bottom": 746.015625,
+          "left": 202.609375
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "undersized-ui-text",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "7.61527px functional text \"Витрина\" (below 11px floor)",
+            "ignoreValue": "",
+            "name": "Undersized functional text",
+            "description": "Interactive and content-bearing UI text (links, buttons, nav items, labels, table cells, meta rows, timecodes) below 11px is a legibility failure, not a style choice. WCAG sets no absolute pixel floor, but functional text under 11px is a defensible quality bar: it fails on high-DPI and small viewports and it degrades tap and read targets. The 11px floor holds even inside a footer; only non-interactive legal smallprint gets the softer 10px floor. Being ON the DESIGN.md size ramp does not exempt a value here: adding 8px to the ramp launders the token but not the legibility problem, and that is exactly the escape hatch this rule closes. Exempts sup/sub, visually-hidden (sr-only) text, and code/terminal contexts. Decorative letterspaced micro-labels are still functional and stay in scope."
+          }
+        ]
+      },
+      {
+        "selector": "li:nth-of-type(1) > label.Demo-module__UzFtbW__toggle > span:nth-of-type(1)",
+        "tagName": "span",
+        "rect": {
+          "x": 210.359375,
+          "y": 757.96875,
+          "width": 75.71875,
+          "height": 10.78125,
+          "top": 757.96875,
+          "right": 286.078125,
+          "bottom": 768.75,
+          "left": 210.359375
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "undersized-ui-text",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "8.98211px functional text \"Акция на главной\" (below 11px floor)",
+            "ignoreValue": "",
+            "name": "Undersized functional text",
+            "description": "Interactive and content-bearing UI text (links, buttons, nav items, labels, table cells, meta rows, timecodes) below 11px is a legibility failure, not a style choice. WCAG sets no absolute pixel floor, but functional text under 11px is a defensible quality bar: it fails on high-DPI and small viewports and it degrades tap and read targets. The 11px floor holds even inside a footer; only non-interactive legal smallprint gets the softer 10px floor. Being ON the DESIGN.md size ramp does not exempt a value here: adding 8px to the ramp launders the token but not the legibility problem, and that is exactly the escape hatch this rule closes. Exempts sup/sub, visually-hidden (sr-only) text, and code/terminal contexts. Decorative letterspaced micro-labels are still functional and stay in scope."
+          }
+        ]
+      },
+      {
+        "selector": "li:nth-of-type(2) > label.Demo-module__UzFtbW__toggle > span:nth-of-type(1)",
+        "tagName": "span",
+        "rect": {
+          "x": 210.359375,
+          "y": 786.8125,
+          "width": 68.578125,
+          "height": 10.78125,
+          "top": 786.8125,
+          "right": 278.9375,
+          "bottom": 797.59375,
+          "left": 210.359375
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "undersized-ui-text",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "8.98211px functional text \"Блок “Новинки”\" (below 11px floor)",
+            "ignoreValue": "",
+            "name": "Undersized functional text",
+            "description": "Interactive and content-bearing UI text (links, buttons, nav items, labels, table cells, meta rows, timecodes) below 11px is a legibility failure, not a style choice. WCAG sets no absolute pixel floor, but functional text under 11px is a defensible quality bar: it fails on high-DPI and small viewports and it degrades tap and read targets. The 11px floor holds even inside a footer; only non-interactive legal smallprint gets the softer 10px floor. Being ON the DESIGN.md size ramp does not exempt a value here: adding 8px to the ramp launders the token but not the legibility problem, and that is exactly the escape hatch this rule closes. Exempts sup/sub, visually-hidden (sr-only) text, and code/terminal contexts. Decorative letterspaced micro-labels are still functional and stay in scope."
+          }
+        ]
+      },
+      {
+        "selector": "div:nth-of-type(2) > div.flex.h-full > p.max-w-\\[18em\\].font-display",
+        "tagName": "p",
+        "rect": {
+          "x": 50.94000244140625,
+          "y": 10023.3994140625,
+          "width": 288.1199951171875,
+          "height": 103.451171875,
+          "top": 10023.3994140625,
+          "right": 339.05999755859375,
+          "bottom": 10126.8505859375,
+          "left": 50.94000244140625
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "tight-leading",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "line-height 1.20x (need >=1.3)",
+            "ignoreValue": "",
+            "name": "Tight line height",
+            "description": "Line height below 1.3x the font size makes multi-line text hard to read. Use 1.5 to 1.7 for body text so lines have room to breathe."
+          }
+        ]
+      },
+      {
+        "selector": "div:nth-of-type(1) > ul.Demo-module__UzFtbW__card",
+        "tagName": "ul",
+        "rect": {
+          "x": 201.09375,
+          "y": 654.078125,
+          "width": 152.3125,
+          "height": 74.0625,
+          "top": 654.078125,
+          "right": 353.40625,
+          "bottom": 728.140625,
+          "left": 201.09375
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "nested-cards",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Card inside card",
+            "ignoreValue": "",
+            "name": "Nested cards",
+            "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers."
+          }
+        ]
+      },
+      {
+        "selector": "div:nth-of-type(2) > ul.Demo-module__UzFtbW__card",
+        "tagName": "ul",
+        "rect": {
+          "x": 201.09375,
+          "y": 749.4375,
+          "width": 152.3125,
+          "height": 56.6875,
+          "top": 749.4375,
+          "right": 353.40625,
+          "bottom": 806.125,
+          "left": 201.09375
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "nested-cards",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Card inside card",
+            "ignoreValue": "",
+            "name": "Nested cards",
+            "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers."
+          }
+        ]
+      },
+      {
+        "selector": "body",
+        "tagName": "body",
+        "rect": null,
+        "isPageLevel": true,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "gradient-text",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "background-clip: text + gradient",
+            "ignoreValue": "",
+            "name": "Gradient text",
+            "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text."
+          },
+          {
+            "type": "repeating-stripes-gradient",
+            "category": "slop",
+            "severity": "advisory",
+            "advisory": true,
+            "detail": "repeating-gradient decorative stripes",
+            "ignoreValue": "",
+            "name": "Repeating-gradient stripes",
+            "description": "Repeating-gradient stripes used as surface decoration are a recurring generated-UI signature. Reach for a deliberate texture or leave the surface plain."
+          }
+        ]
+      }
+    ]
+  },
+  "1440": {
+    "etag": "\"3d40zc0ulf5hxl\"",
+    "preflight": {
+      "title": "[Human] ЗелёнаяКоробка — интернет-магазины под ключ",
+      "script": true
+    },
+    "injected": true,
+    "console": [
+      {
+        "type": "startGroup",
+        "text": "%c[impeccable] 13 anti-patterns found color: oklch(84% 0.19 80.46); font-weight: bold"
+      }
+    ],
+    "consoleAll": 21,
+    "findings": [
+      {
+        "selector": "span.GridBackdrop-module__0j9sMW__dim.GridBackdrop-module__0j9sMW__dimV:nth-of-type(2)",
+        "tagName": "span",
+        "rect": {
+          "x": 1289,
+          "y": 144,
+          "width": 7,
+          "height": 24,
+          "top": 144,
+          "right": 1296,
+          "bottom": 168,
+          "left": 1289
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan neon text on dark background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "span.GridBackdrop-module__0j9sMW__dim.GridBackdrop-module__0j9sMW__dimV:nth-of-type(3)",
+        "tagName": "span",
+        "rect": {
+          "x": 769.65625,
+          "y": 168,
+          "width": 7,
+          "height": 128.078125,
+          "top": 168,
+          "right": 776.65625,
+          "bottom": 296.078125,
+          "left": 769.65625
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan neon text on dark background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "span.GridBackdrop-module__0j9sMW__dim.GridBackdrop-module__0j9sMW__dimH:nth-of-type(4)",
+        "tagName": "span",
+        "rect": {
+          "x": 1129.328125,
+          "y": 793.71875,
+          "width": 24,
+          "height": 7,
+          "top": 793.71875,
+          "right": 1153.328125,
+          "bottom": 800.71875,
+          "left": 1129.328125
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan neon text on dark background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "span.GridBackdrop-module__0j9sMW__dim.GridBackdrop-module__0j9sMW__dimH:nth-of-type(5)",
+        "tagName": "span",
+        "rect": {
+          "x": 1340,
+          "y": 117,
+          "width": 100,
+          "height": 7,
+          "top": 117,
+          "right": 1440,
+          "bottom": 124,
+          "left": 1340
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan neon text on dark background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "span.text-gradient-hero",
+        "tagName": "span",
+        "rect": {
+          "x": 100,
+          "y": 247.125,
+          "width": 458.796875,
+          "height": 171.203125,
+          "top": 247.125,
+          "right": 558.796875,
+          "bottom": 418.328125,
+          "left": 100
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "gradient-text",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "background-clip: text + gradient",
+            "ignoreValue": "",
+            "name": "Gradient text",
+            "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text."
+          },
+          {
+            "type": "ai-color-palette",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Cyan gradient background",
+            "ignoreValue": "",
+            "name": "AI color palette",
+            "description": "Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs. Choose a distinctive, intentional palette."
+          }
+        ]
+      },
+      {
+        "selector": "#hero-demo-showcase",
+        "tagName": "p",
+        "rect": {
+          "x": 1166.21875,
+          "y": 435.765625,
+          "width": 154.96875,
+          "height": 9.484375,
+          "top": 435.765625,
+          "right": 1321.1875,
+          "bottom": 445.25,
+          "left": 1166.21875
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "undersized-ui-text",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "7.9052px functional text \"Витрина\" (below 11px floor)",
+            "ignoreValue": "",
+            "name": "Undersized functional text",
+            "description": "Interactive and content-bearing UI text (links, buttons, nav items, labels, table cells, meta rows, timecodes) below 11px is a legibility failure, not a style choice. WCAG sets no absolute pixel floor, but functional text under 11px is a defensible quality bar: it fails on high-DPI and small viewports and it degrades tap and read targets. The 11px floor holds even inside a footer; only non-interactive legal smallprint gets the softer 10px floor. Being ON the DESIGN.md size ramp does not exempt a value here: adding 8px to the ramp launders the token but not the legibility problem, and that is exactly the escape hatch this rule closes. Exempts sup/sub, visually-hidden (sr-only) text, and code/terminal contexts. Decorative letterspaced micro-labels are still functional and stay in scope."
+          }
+        ]
+      },
+      {
+        "selector": "li:nth-of-type(1) > label.Demo-module__UzFtbW__toggle > span:nth-of-type(1)",
+        "tagName": "span",
+        "rect": {
+          "x": 1174.265625,
+          "y": 457.640625,
+          "width": 78.609375,
+          "height": 11.1875,
+          "top": 457.640625,
+          "right": 1252.875,
+          "bottom": 468.828125,
+          "left": 1174.265625
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "undersized-ui-text",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "9.32408px functional text \"Акция на главной\" (below 11px floor)",
+            "ignoreValue": "",
+            "name": "Undersized functional text",
+            "description": "Interactive and content-bearing UI text (links, buttons, nav items, labels, table cells, meta rows, timecodes) below 11px is a legibility failure, not a style choice. WCAG sets no absolute pixel floor, but functional text under 11px is a defensible quality bar: it fails on high-DPI and small viewports and it degrades tap and read targets. The 11px floor holds even inside a footer; only non-interactive legal smallprint gets the softer 10px floor. Being ON the DESIGN.md size ramp does not exempt a value here: adding 8px to the ramp launders the token but not the legibility problem, and that is exactly the escape hatch this rule closes. Exempts sup/sub, visually-hidden (sr-only) text, and code/terminal contexts. Decorative letterspaced micro-labels are still functional and stay in scope."
+          }
+        ]
+      },
+      {
+        "selector": "li:nth-of-type(2) > label.Demo-module__UzFtbW__toggle > span:nth-of-type(1)",
+        "tagName": "span",
+        "rect": {
+          "x": 1174.265625,
+          "y": 487.53125,
+          "width": 71.203125,
+          "height": 11.1875,
+          "top": 487.53125,
+          "right": 1245.46875,
+          "bottom": 498.71875,
+          "left": 1174.265625
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "undersized-ui-text",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "9.32408px functional text \"Блок “Новинки”\" (below 11px floor)",
+            "ignoreValue": "",
+            "name": "Undersized functional text",
+            "description": "Interactive and content-bearing UI text (links, buttons, nav items, labels, table cells, meta rows, timecodes) below 11px is a legibility failure, not a style choice. WCAG sets no absolute pixel floor, but functional text under 11px is a defensible quality bar: it fails on high-DPI and small viewports and it degrades tap and read targets. The 11px floor holds even inside a footer; only non-interactive legal smallprint gets the softer 10px floor. Being ON the DESIGN.md size ramp does not exempt a value here: adding 8px to the ramp launders the token but not the legibility problem, and that is exactly the escape hatch this rule closes. Exempts sup/sub, visually-hidden (sr-only) text, and code/terminal contexts. Decorative letterspaced micro-labels are still functional and stay in scope."
+          }
+        ]
+      },
+      {
+        "selector": "div.Cases-module__cMnabG__viewport",
+        "tagName": "div",
+        "rect": {
+          "x": 0,
+          "y": 4782.875,
+          "width": 1440,
+          "height": 468.734375,
+          "top": 4782.875,
+          "right": 1440,
+          "bottom": 5251.609375,
+          "left": 0
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "clipped-overflow-container",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "div.Cases-module__cMnabG__viewport clips a positioned child",
+            "ignoreValue": "",
+            "name": "Positioned child clipped by overflow container",
+            "description": "A clipping container (overflow hidden or clip) wrapping an absolutely-positioned child cuts off tooltips, menus, and popovers that need to escape. Let the overflow be visible, or move the positioned layer out of the clip."
+          }
+        ]
+      },
+      {
+        "selector": "div:nth-of-type(2) > div.flex.h-full > p.max-w-\\[18em\\].font-display",
+        "tagName": "p",
+        "rect": {
+          "x": 783.1565551757812,
+          "y": 16069.185546875,
+          "width": 476.98431396484375,
+          "height": 95.412109375,
+          "top": 16069.185546875,
+          "right": 1260.140869140625,
+          "bottom": 16164.59765625,
+          "left": 783.1565551757812
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "tight-leading",
+            "category": "quality",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "line-height 1.20x (need >=1.3)",
+            "ignoreValue": "",
+            "name": "Tight line height",
+            "description": "Line height below 1.3x the font size makes multi-line text hard to read. Use 1.5 to 1.7 for body text so lines have room to breathe."
+          }
+        ]
+      },
+      {
+        "selector": "div:nth-of-type(1) > ul.Demo-module__UzFtbW__card",
+        "tagName": "ul",
+        "rect": {
+          "x": 1164.640625,
+          "y": 349.765625,
+          "width": 158.125,
+          "height": 76.921875,
+          "top": 349.765625,
+          "right": 1322.765625,
+          "bottom": 426.6875,
+          "left": 1164.640625
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "nested-cards",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Card inside card",
+            "ignoreValue": "",
+            "name": "Nested cards",
+            "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers."
+          }
+        ]
+      },
+      {
+        "selector": "div:nth-of-type(2) > ul.Demo-module__UzFtbW__card",
+        "tagName": "ul",
+        "rect": {
+          "x": 1164.640625,
+          "y": 448.796875,
+          "width": 158.125,
+          "height": 58.78125,
+          "top": 448.796875,
+          "right": 1322.765625,
+          "bottom": 507.578125,
+          "left": 1164.640625
+        },
+        "isPageLevel": false,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "nested-cards",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "Card inside card",
+            "ignoreValue": "",
+            "name": "Nested cards",
+            "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers."
+          }
+        ]
+      },
+      {
+        "selector": "body",
+        "tagName": "body",
+        "rect": null,
+        "isPageLevel": true,
+        "isHidden": false,
+        "findings": [
+          {
+            "type": "gradient-text",
+            "category": "slop",
+            "severity": "warning",
+            "advisory": false,
+            "detail": "background-clip: text + gradient",
+            "ignoreValue": "",
+            "name": "Gradient text",
+            "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text."
+          },
+          {
+            "type": "repeating-stripes-gradient",
+            "category": "slop",
+            "severity": "advisory",
+            "advisory": true,
+            "detail": "repeating-gradient decorative stripes",
+            "ignoreValue": "",
+            "name": "Repeating-gradient stripes",
+            "description": "Repeating-gradient stripes used as surface decoration are a recurring generated-UI signature. Reach for a deliberate texture or leave the surface plain."
+          }
+        ]
+      }
+    ]
+  }
+}

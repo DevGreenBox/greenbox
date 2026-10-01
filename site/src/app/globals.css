@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+@import '../styles/tokens.css';
+@import '../styles/base.css';
+@import '../styles/components.css';
+
+/* Утилиты Tailwind видят только систему: стандартные цвета, кегли, шрифты, тени и кривые
+   отключены, вместо них токены. Цвета — ссылки на токены сцены (inline), поэтому bg-surface
+   внутри тёмной секции сам станет тёмным. Шкала и правила: docs/03-design-system.md. */
+@theme {
+  --color-*: initial;
+  --text-*: initial;
+  --font-*: initial;
+  --shadow-*: initial;
+  --ease-*: initial;
+
+  /* Заголовки — Martian Grotesk: h1–h2 широкий инстанс (ширина 115, вес 650), h3–h4 обычной ширины, 600.
+     Семейство выбирает Heading (утилиты font-wide / font-display). Кегль растёт от 390 к 1440 px и дальше
+     до потолка. Потолок в vw: при увеличенном системном шрифте (200 %) заголовки не растут шире экрана.
+     У h2 он 7.7vw: самое длинное слово h2 «ЗелёнойКоробкой» (11.3em) целиком влезает от 320 px. */
+  --text-h1: min(clamp(2.5rem, 1.1rem + 4vw, 6rem), 12.5vw);
+  --text-h1--line-height: 1.04;
+  --text-h1--letter-spacing: -0.035em;
+  --text-h1--font-weight: 650;
+  --text-h2: min(clamp(1.875rem, 1.05rem + 2.4vw, 3.25rem), 7.7vw);
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.025em;
+  --text-h2--font-weight: 650;
+  --text-h3: min(clamp(1.375rem, 1.15rem + 0.6vw, 1.75rem), 6vw);
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.015em;
+  --text-h3--font-weight: 600;
+  --text-h4: min(clamp(1.125rem, 1.05rem + 0.25vw, 1.25rem), 5vw);
+  --text-h4--line-height: 1.3;
+  --text-h4--letter-spacing: -0.01em;
+  --text-h4--font-weight: 600;
+
+  /* Текст — Onest. */
+  --text-lead: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --text-lead--line-height: 1.55;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.45;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.4;
+
+  --radius-panel: clamp(1.25rem, 1rem + 0.6vw, 1.5rem);
+  --radius-card: 1rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --default-transition-duration: 250ms;
+  --default-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --font-sans: var(--font-onest), system-ui, sans-serif;
+  --font-display: var(--font-martian), var(--font-onest), sans-serif;
+  --font-wide: var(--font-martian-wide), var(--font-onest), sans-serif;
+
+  --color-scene: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-inset: var(--inset);
+  --color-ink: var(--text);
+  --color-ink-2: var(--text-2);
+  --color-ink-3: var(--text-3);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-display: var(--accent-display);
+  --color-accent-tint: var(--accent-tint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-control: var(--line-control);
+  --color-focus: var(--focus);
+  --color-error: var(--error);
+
+  --shadow-soft: var(--elev-1);
+  --shadow-lift: var(--elev-2);
+  --shadow-float: var(--elev-3);
+}

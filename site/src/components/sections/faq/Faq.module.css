@@ -1,0 +1,129 @@
+/* FAQ: нативный эксклюзивный аккордеон <details name="faq">. Работает без JS и с клавиатуры.
+   Плавное раскрытие — прогрессивное улучшение: где браузер умеет interpolate-size и ::details-content,
+   высота анимируется; где нет или при reduced-motion — ответ открывается сразу. */
+
+.list {
+  border-bottom: 1px solid var(--line-strong);
+}
+
+/* До 1024 колонки идут одна под другой: нижняя линейка первой легла бы вплотную к верхней второй. */
+@media (max-width: 1023px) {
+  .list:first-child {
+    border-bottom: 0;
+  }
+}
+
+.item {
+  border-top: 1px solid var(--line-strong);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: clamp(1.25rem, 1rem + 0.8vw, 1.75rem);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  list-style: none;
+  transition: color var(--dur-hover) var(--ease-out);
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary:focus-visible {
+  outline-offset: 4px;
+}
+
+/* Кружок — знак состояния; нажимается вся строка вопроса. */
+.toggle {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--text);
+  transition:
+    background-color var(--dur-hover) var(--ease-out),
+    border-color var(--dur-hover) var(--ease-out),
+    color var(--dur-hover) var(--ease-out);
+}
+
+.toggle svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+@media (min-width: 640px) {
+  .summary {
+    gap: 1.5rem;
+  }
+
+  .toggle {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .toggle svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Плюс → минус: вертикальная черта сжимается. */
+.toggle path:last-child {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform var(--dur-move) var(--ease-out);
+}
+
+.item[open] .toggle {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.item[open] .toggle path:last-child {
+  transform: scaleY(0);
+}
+
+@media (hover: hover) {
+  .summary:hover {
+    color: var(--accent-ink);
+  }
+
+  .summary:hover .toggle {
+    border-color: var(--accent);
+  }
+}
+
+.answer {
+  padding: 0 clamp(0rem, 4vw, 4.25rem) clamp(1.5rem, 1.1rem + 1vw, 2.25rem) 0;
+}
+
+@supports (interpolate-size: allow-keywords) {
+  @media (prefers-reduced-motion: no-preference) {
+    .list {
+      interpolate-size: allow-keywords;
+    }
+
+    .item::details-content {
+      block-size: 0;
+      overflow-y: clip;
+      opacity: 0;
+      transition:
+        block-size var(--dur-move) var(--ease-out),
+        opacity var(--dur-move) var(--ease-out),
+        content-visibility var(--dur-move) allow-discrete;
+    }
+
+    .item[open]::details-content {
+      block-size: auto;
+      opacity: 1;
+    }
+  }
+}

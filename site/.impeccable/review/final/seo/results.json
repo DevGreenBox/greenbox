@@ -1,0 +1,896 @@
+{
+  "/": {
+    "status": 200,
+    "headers": {
+      "cache-control": "s-maxage=31536000",
+      "content-encoding": "gzip",
+      "content-type": "text/html; charset=utf-8",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+      "x-content-type-options": "nosniff"
+    },
+    "head": {
+      "lang": "ru",
+      "title": "ЗелёнаяКоробка — интернет-магазины под ключ",
+      "description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+      "robots": [],
+      "canonical": [
+        "https://greenboxweb.ru"
+      ],
+      "og": {
+        "og:title": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "og:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "og:url": "https://greenboxweb.ru",
+        "og:site_name": "ЗелёнаяКоробка",
+        "og:locale": "ru_RU",
+        "og:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "og:image:type": "image/png",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "og:type": "website"
+      },
+      "twitter": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "twitter:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "twitter:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "twitter:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "twitter:image:type": "image/png",
+        "twitter:image:width": "1200",
+        "twitter:image:height": "630"
+      },
+      "yandex": [
+        "35ded4ecd9b4aad3"
+      ],
+      "themeColor": [
+        "#0A0A14"
+      ],
+      "colorScheme": [
+        "light dark"
+      ],
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.ico?favicon.3yr4znk9cgqp8.ico",
+          "sizes": "48x45",
+          "type": "image/x-icon"
+        },
+        {
+          "rel": "icon",
+          "href": "/icon.png?icon.32jqjky8mfuzi.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-icon.png?apple-icon.24osm27h0kqk5.png",
+          "sizes": "180x180",
+          "type": "image/png"
+        }
+      ],
+      "manifest": [],
+      "preloads": [
+        "font: /_next/static/media/MartianGrotesk_wdth115_wght650-s.p.003ufijvgcdgd.woff2",
+        "font: /_next/static/media/Onest_var-s.p.3grfyx3_17jd5.woff2",
+        "script: /_next/static/chunks/2ax9psyilv0py.js"
+      ],
+      "jsonLd": [
+        {
+          "valid": true,
+          "type": "Organization",
+          "context": "https://schema.org",
+          "keys": [
+            "@context",
+            "@type",
+            "name",
+            "legalName",
+            "url",
+            "logo",
+            "email",
+            "sameAs",
+            "address"
+          ]
+        }
+      ],
+      "h1": [
+        "Интернет-магазины под ключ"
+      ],
+      "headings": [
+        1,
+        2,
+        3,
+        3,
+        3,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "landmarks": {
+        "header": 1,
+        "nav": 3,
+        "main": 1,
+        "footer": 1,
+        "section": 11,
+        "article": 5,
+        "form": 2,
+        "fieldset": 6
+      },
+      "imgsNoAlt": 0,
+      "imgs": 7,
+      "bytes": 239662
+    },
+    "previewImages": [
+      {
+        "url": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "local": "/opengraph-image?75802f1d5ec47700",
+        "status": 200,
+        "type": "image/png",
+        "size": 75855,
+        "png": {
+          "width": 1200,
+          "height": 630
+        },
+        "cache": "public, max-age=0, must-revalidate"
+      }
+    ]
+  },
+  "/privacy": {
+    "status": 200,
+    "headers": {
+      "cache-control": "s-maxage=31536000",
+      "content-encoding": "gzip",
+      "content-type": "text/html; charset=utf-8",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+      "x-content-type-options": "nosniff"
+    },
+    "head": {
+      "lang": "ru",
+      "title": "Политика конфиденциальности — ЗелёнаяКоробка",
+      "description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+      "robots": [],
+      "canonical": [
+        "https://greenboxweb.ru/privacy"
+      ],
+      "og": {
+        "og:title": "Политика конфиденциальности — ЗелёнаяКоробка",
+        "og:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "og:url": "https://greenboxweb.ru/privacy",
+        "og:site_name": "ЗелёнаяКоробка",
+        "og:locale": "ru_RU",
+        "og:image": "https://greenboxweb.ru/privacy/opengraph-image?2ce8b72dec0462eb",
+        "og:image:type": "image/png",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "og:type": "website"
+      },
+      "twitter": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Политика конфиденциальности — ЗелёнаяКоробка",
+        "twitter:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "twitter:image": "https://greenboxweb.ru/privacy/opengraph-image?2ce8b72dec0462eb",
+        "twitter:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "twitter:image:type": "image/png",
+        "twitter:image:width": "1200",
+        "twitter:image:height": "630"
+      },
+      "yandex": [
+        "35ded4ecd9b4aad3"
+      ],
+      "themeColor": [
+        "#0A0A14"
+      ],
+      "colorScheme": [
+        "light dark"
+      ],
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.ico?favicon.3yr4znk9cgqp8.ico",
+          "sizes": "48x45",
+          "type": "image/x-icon"
+        },
+        {
+          "rel": "icon",
+          "href": "/icon.png?icon.32jqjky8mfuzi.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-icon.png?apple-icon.24osm27h0kqk5.png",
+          "sizes": "180x180",
+          "type": "image/png"
+        }
+      ],
+      "manifest": [],
+      "preloads": [
+        "font: /_next/static/media/MartianGrotesk_wdth115_wght650-s.p.003ufijvgcdgd.woff2",
+        "font: /_next/static/media/Onest_var-s.p.3grfyx3_17jd5.woff2",
+        "script: /_next/static/chunks/2ax9psyilv0py.js"
+      ],
+      "jsonLd": [
+        {
+          "valid": true,
+          "type": "Organization",
+          "context": "https://schema.org",
+          "keys": [
+            "@context",
+            "@type",
+            "name",
+            "legalName",
+            "url",
+            "logo",
+            "email",
+            "sameAs",
+            "address"
+          ]
+        }
+      ],
+      "h1": [
+        "Политика конфиденциальности"
+      ],
+      "headings": [
+        1,
+        2,
+        2
+      ],
+      "landmarks": {
+        "header": 1,
+        "nav": 3,
+        "main": 1,
+        "footer": 1,
+        "section": 2,
+        "article": 0,
+        "form": 0,
+        "fieldset": 0
+      },
+      "imgsNoAlt": 0,
+      "imgs": 0,
+      "bytes": 83310
+    },
+    "previewImages": [
+      {
+        "url": "https://greenboxweb.ru/privacy/opengraph-image?2ce8b72dec0462eb",
+        "local": "/privacy/opengraph-image?2ce8b72dec0462eb",
+        "status": 200,
+        "type": "image/png",
+        "size": 75855,
+        "png": {
+          "width": 1200,
+          "height": 630
+        },
+        "cache": "public, max-age=0, must-revalidate"
+      }
+    ]
+  },
+  "/lead/sent?from=quiz": {
+    "status": 200,
+    "headers": {
+      "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "content-encoding": "gzip",
+      "content-type": "text/html; charset=utf-8",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+      "x-content-type-options": "nosniff"
+    },
+    "head": {
+      "lang": "ru",
+      "title": "Заявка отправлена — ЗелёнаяКоробка",
+      "description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "canonical": [],
+      "og": {
+        "og:title": "Заявка отправлена — ЗелёнаяКоробка",
+        "og:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "og:url": "https://greenboxweb.ru",
+        "og:site_name": "ЗелёнаяКоробка",
+        "og:locale": "ru_RU",
+        "og:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "og:image:type": "image/png",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "og:type": "website"
+      },
+      "twitter": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Заявка отправлена — ЗелёнаяКоробка",
+        "twitter:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "twitter:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "twitter:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "twitter:image:type": "image/png",
+        "twitter:image:width": "1200",
+        "twitter:image:height": "630"
+      },
+      "yandex": [
+        "35ded4ecd9b4aad3"
+      ],
+      "themeColor": [
+        "#0A0A14"
+      ],
+      "colorScheme": [
+        "light dark"
+      ],
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.ico?favicon.3yr4znk9cgqp8.ico",
+          "sizes": "48x45",
+          "type": "image/x-icon"
+        },
+        {
+          "rel": "icon",
+          "href": "/icon.png?icon.32jqjky8mfuzi.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-icon.png?apple-icon.24osm27h0kqk5.png",
+          "sizes": "180x180",
+          "type": "image/png"
+        }
+      ],
+      "manifest": [],
+      "preloads": [
+        "script: /_next/static/chunks/2ax9psyilv0py.js"
+      ],
+      "jsonLd": [
+        {
+          "valid": true,
+          "type": "Organization",
+          "context": "https://schema.org",
+          "keys": [
+            "@context",
+            "@type",
+            "name",
+            "legalName",
+            "url",
+            "logo",
+            "email",
+            "sameAs",
+            "address"
+          ]
+        }
+      ],
+      "h1": [
+        "Заявка отправлена"
+      ],
+      "headings": [
+        1
+      ],
+      "landmarks": {
+        "header": 1,
+        "nav": 3,
+        "main": 1,
+        "footer": 1,
+        "section": 0,
+        "article": 0,
+        "form": 0,
+        "fieldset": 0
+      },
+      "imgsNoAlt": 0,
+      "imgs": 0,
+      "bytes": 81685
+    },
+    "previewImages": [
+      {
+        "url": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "local": "/opengraph-image?75802f1d5ec47700",
+        "status": 200,
+        "type": "image/png",
+        "size": 75855,
+        "png": {
+          "width": 1200,
+          "height": 630
+        },
+        "cache": "public, max-age=0, must-revalidate"
+      }
+    ]
+  },
+  "/lead/error?from=contact&field=consent": {
+    "status": 200,
+    "headers": {
+      "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "content-encoding": "gzip",
+      "content-type": "text/html; charset=utf-8",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+      "x-content-type-options": "nosniff"
+    },
+    "head": {
+      "lang": "ru",
+      "title": "Заявка не отправлена — ЗелёнаяКоробка",
+      "description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "canonical": [],
+      "og": {
+        "og:title": "Заявка не отправлена — ЗелёнаяКоробка",
+        "og:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "og:url": "https://greenboxweb.ru",
+        "og:site_name": "ЗелёнаяКоробка",
+        "og:locale": "ru_RU",
+        "og:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "og:image:type": "image/png",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "og:type": "website"
+      },
+      "twitter": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Заявка не отправлена — ЗелёнаяКоробка",
+        "twitter:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "twitter:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "twitter:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "twitter:image:type": "image/png",
+        "twitter:image:width": "1200",
+        "twitter:image:height": "630"
+      },
+      "yandex": [
+        "35ded4ecd9b4aad3"
+      ],
+      "themeColor": [
+        "#0A0A14"
+      ],
+      "colorScheme": [
+        "light dark"
+      ],
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.ico?favicon.3yr4znk9cgqp8.ico",
+          "sizes": "48x45",
+          "type": "image/x-icon"
+        },
+        {
+          "rel": "icon",
+          "href": "/icon.png?icon.32jqjky8mfuzi.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-icon.png?apple-icon.24osm27h0kqk5.png",
+          "sizes": "180x180",
+          "type": "image/png"
+        }
+      ],
+      "manifest": [],
+      "preloads": [
+        "script: /_next/static/chunks/2ax9psyilv0py.js"
+      ],
+      "jsonLd": [
+        {
+          "valid": true,
+          "type": "Organization",
+          "context": "https://schema.org",
+          "keys": [
+            "@context",
+            "@type",
+            "name",
+            "legalName",
+            "url",
+            "logo",
+            "email",
+            "sameAs",
+            "address"
+          ]
+        }
+      ],
+      "h1": [
+        "Заявка не отправлена"
+      ],
+      "headings": [
+        1
+      ],
+      "landmarks": {
+        "header": 1,
+        "nav": 3,
+        "main": 1,
+        "footer": 1,
+        "section": 0,
+        "article": 0,
+        "form": 0,
+        "fieldset": 0
+      },
+      "imgsNoAlt": 0,
+      "imgs": 0,
+      "bytes": 82307
+    }
+  },
+  "/no-such-page": {
+    "status": 404,
+    "headers": {
+      "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "content-encoding": "gzip",
+      "content-type": "text/html; charset=utf-8",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+      "x-content-type-options": "nosniff"
+    },
+    "head": {
+      "lang": "ru",
+      "title": "Страница не найдена — ЗелёнаяКоробка",
+      "description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+      "robots": [
+        "noindex"
+      ],
+      "canonical": [],
+      "og": {
+        "og:title": "Страница не найдена — ЗелёнаяКоробка",
+        "og:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "og:url": "https://greenboxweb.ru",
+        "og:site_name": "ЗелёнаяКоробка",
+        "og:locale": "ru_RU",
+        "og:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "og:image:type": "image/png",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "og:type": "website"
+      },
+      "twitter": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Страница не найдена — ЗелёнаяКоробка",
+        "twitter:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "twitter:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "twitter:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "twitter:image:type": "image/png",
+        "twitter:image:width": "1200",
+        "twitter:image:height": "630"
+      },
+      "yandex": [
+        "35ded4ecd9b4aad3"
+      ],
+      "themeColor": [
+        "#0A0A14"
+      ],
+      "colorScheme": [
+        "light dark"
+      ],
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.ico?favicon.3yr4znk9cgqp8.ico",
+          "sizes": "48x45",
+          "type": "image/x-icon"
+        },
+        {
+          "rel": "icon",
+          "href": "/icon.png?icon.32jqjky8mfuzi.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-icon.png?apple-icon.24osm27h0kqk5.png",
+          "sizes": "180x180",
+          "type": "image/png"
+        }
+      ],
+      "manifest": [],
+      "preloads": [
+        "script: /_next/static/chunks/2ax9psyilv0py.js"
+      ],
+      "jsonLd": [
+        {
+          "valid": true,
+          "type": "Organization",
+          "context": "https://schema.org",
+          "keys": [
+            "@context",
+            "@type",
+            "name",
+            "legalName",
+            "url",
+            "logo",
+            "email",
+            "sameAs",
+            "address"
+          ]
+        }
+      ],
+      "h1": [
+        "Такой страницы нет"
+      ],
+      "headings": [
+        1
+      ],
+      "landmarks": {
+        "header": 1,
+        "nav": 3,
+        "main": 1,
+        "footer": 1,
+        "section": 0,
+        "article": 0,
+        "form": 0,
+        "fieldset": 0
+      },
+      "imgsNoAlt": 0,
+      "imgs": 0,
+      "bytes": 79797
+    },
+    "previewImages": [
+      {
+        "url": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "local": "/opengraph-image?75802f1d5ec47700",
+        "status": 200,
+        "type": "image/png",
+        "size": 75855,
+        "png": {
+          "width": 1200,
+          "height": 630
+        },
+        "cache": "public, max-age=0, must-revalidate"
+      }
+    ]
+  },
+  "/ds": {
+    "status": 404,
+    "headers": {
+      "cache-control": "s-maxage=31536000",
+      "content-encoding": "gzip",
+      "content-type": "text/html; charset=utf-8",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+      "x-content-type-options": "nosniff"
+    },
+    "head": {
+      "lang": null,
+      "title": "Страница не найдена — ЗелёнаяКоробка",
+      "description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+      "robots": [
+        "noindex"
+      ],
+      "canonical": [],
+      "og": {
+        "og:title": "Страница не найдена — ЗелёнаяКоробка",
+        "og:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "og:url": "https://greenboxweb.ru",
+        "og:site_name": "ЗелёнаяКоробка",
+        "og:locale": "ru_RU",
+        "og:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "og:image:type": "image/png",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "og:type": "website"
+      },
+      "twitter": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Страница не найдена — ЗелёнаяКоробка",
+        "twitter:description": "Индивидуальные интернет-магазины под ключ на собственной платформе: дизайн, админка, интеграции с доставкой, 1С и CRM. Запуск в среднем за 2–2,5 недели.",
+        "twitter:image": "https://greenboxweb.ru/opengraph-image?75802f1d5ec47700",
+        "twitter:image:alt": "ЗелёнаяКоробка — интернет-магазины под ключ",
+        "twitter:image:type": "image/png",
+        "twitter:image:width": "1200",
+        "twitter:image:height": "630"
+      },
+      "yandex": [
+        "35ded4ecd9b4aad3"
+      ],
+      "themeColor": [
+        "#0A0A14"
+      ],
+      "colorScheme": [
+        "light dark"
+      ],
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.ico?favicon.3yr4znk9cgqp8.ico",
+          "sizes": "48x45",
+          "type": "image/x-icon"
+        },
+        {
+          "rel": "icon",
+          "href": "/icon.png?icon.32jqjky8mfuzi.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-icon.png?apple-icon.24osm27h0kqk5.png",
+          "sizes": "180x180",
+          "type": "image/png"
+        }
+      ],
+      "manifest": [],
+      "preloads": [
+        "script: /_next/static/chunks/2ax9psyilv0py.js",
+        "style: /_next/static/chunks/2_owwrjy85_bh.css"
+      ],
+      "jsonLd": [],
+      "h1": [],
+      "headings": [],
+      "landmarks": {
+        "header": 0,
+        "nav": 0,
+        "main": 0,
+        "footer": 0,
+        "section": 0,
+        "article": 0,
+        "form": 0,
+        "fieldset": 0
+      },
+      "imgsNoAlt": 0,
+      "imgs": 0,
+      "bytes": 34581
+    }
+  },
+  "/legal.html": {
+    "status": 308,
+    "location": "/privacy",
+    "size": 8,
+    "png": null,
+    "final": {
+      "url": "/privacy",
+      "status": 200
+    }
+  },
+  "/index.html": {
+    "status": 308,
+    "location": "/",
+    "size": 1,
+    "png": null,
+    "final": {
+      "url": "/",
+      "status": 200
+    }
+  },
+  "/privacy/": {
+    "status": 308,
+    "location": "/privacy",
+    "size": 8,
+    "png": null
+  },
+  "/robots.txt": {
+    "status": 200,
+    "type": "text/plain",
+    "cache": "public, max-age=0, must-revalidate",
+    "size": 97,
+    "png": null,
+    "text": "User-Agent: *\nAllow: /\n\nHost: https://greenboxweb.ru\nSitemap: https://greenboxweb.ru/sitemap.xml\n"
+  },
+  "/sitemap.xml": {
+    "status": 200,
+    "type": "application/xml",
+    "cache": "public, max-age=0, must-revalidate",
+    "size": 212,
+    "png": null,
+    "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>https://greenboxweb.ru</loc>\n</url>\n<url>\n<loc>https://greenboxweb.ru/privacy</loc>\n</url>\n</urlset>\n"
+  },
+  "/favicon.ico": {
+    "status": 200,
+    "type": "image/x-icon",
+    "cache": "public, max-age=0, must-revalidate",
+    "size": 14154,
+    "png": null
+  },
+  "/icon.png": {
+    "status": 200,
+    "type": "image/png",
+    "cache": "public, max-age=0, must-revalidate",
+    "size": 69124,
+    "png": {
+      "width": 512,
+      "height": 512
+    }
+  },
+  "/apple-icon.png": {
+    "status": 200,
+    "type": "image/png",
+    "cache": "public, max-age=0, must-revalidate",
+    "size": 10530,
+    "png": {
+      "width": 180,
+      "height": 180
+    }
+  },
+  "/brand/logo.svg": {
+    "status": 200,
+    "type": "image/svg+xml",
+    "cache": "public, max-age=0",
+    "size": 4878,
+    "png": null,
+    "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16984 1992\" width=\"546\" height=\"64\"><title>ЗелёнаяКоробка</title><path fill=\"#00C853\" d=\"M581 1594q-169 0-299-58-131-58-206-160-75-103-76-237h354q2 49 32 87 30 38 82 59 51 21 116 21 65 0 115-23 49-23 77-63 28-41 28-95 0-54-30-95-31-41-87-64-57-24-133-24h-145v-252h145q66 0 117-23 51-23 80-62 28-40 28-93 0-51-24-89-25-39-68-60-44-22-102-22-61 0-110 22-49 21-78 59-29 38-29 91h-339q1-132 74-233 72-102 198-159 125-57 285-57 158 0 279 56 121 56 188 153 67 96 67 217 0 124-81 207-82 82-211 101v11q114 13 191 60 77 46 116 119 39 72 39 164 0 128-75 229"
+  },
+  "/manifest.webmanifest": {
+    "status": 404,
+    "type": "text/html; charset=utf-8",
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "size": 83485,
+    "png": null,
+    "text": "<!DOCTYPE html><html lang=\"ru\" class=\"onest_4aaef082-module__P2SsXW__variable martianwide_28ee58bf-module__wv036W__variable martian_35d9b504-module__XyuJsW__variable martianmono_f67a3de4-module__cQnRHW__variable\" data-scroll-behavior=\"smooth\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/2_owwrjy85_bh.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/2ax9psyilv0py.js\"/><script src=\"/_next/static/chunks/0v0og8l__m11g.js\" async=\"\"></scrip"
+  },
+  "/opengraph-image": {
+    "status": 200,
+    "type": "image/png",
+    "cache": "public, max-age=0, must-revalidate",
+    "size": 75855,
+    "png": {
+      "width": 1200,
+      "height": 630
+    }
+  },
+  "/privacy/opengraph-image": {
+    "status": 200,
+    "type": "image/png",
+    "cache": "public, max-age=0, must-revalidate",
+    "size": 75855,
+    "png": {
+      "width": 1200,
+      "height": 630
+    }
+  },
+  "/_next/static/chunks/2_owwrjy85_bh.css": {
+    "status": 200,
+    "type": "text/css; charset=UTF-8",
+    "encoding": "gzip",
+    "cache": "public, max-age=31536000, immutable"
+  },
+  "/_next/static/chunks/0v0og8l__m11g.js": {
+    "status": 200,
+    "type": "application/javascript; charset=UTF-8",
+    "encoding": "gzip",
+    "cache": "public, max-age=31536000, immutable"
+  }
+}

@@ -1,0 +1,252 @@
+/* Общие состояния отправки квиза и финальной формы. Цвета — токены сцены (светлая и тёмная). */
+
+/* ---------- Способ связи (LeadInputs.tsx) ---------- */
+
+/* Сегменты во всю ширину поля: выбранный — поверхность сцены с мягкой тенью, как «таблетка».
+   Контейнер — сам выбор: в узкой колонке (форма в ряд, 1024 px) иконки уходят, остаются подписи. */
+.channelPick {
+  container-type: inline-size;
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--inset);
+}
+
+.channel {
+  position: relative;
+  display: flex;
+  min-width: 0;
+}
+
+/* Настоящий radio поверх сегмента: клик, стрелки и скринридер работают сами. */
+.channelInput {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.channelBody {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem; /* + поля 0.25rem × 2 = 3.5rem — высота поля ввода рядом */
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-pill);
+  color: var(--text-2);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+  transition:
+    background-color var(--dur-hover) var(--ease-out),
+    color var(--dur-hover) var(--ease-out),
+    box-shadow var(--dur-hover) var(--ease-out);
+}
+
+.channelIcon {
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.channelInput:hover + .channelBody {
+  color: var(--text);
+}
+
+.channelInput:checked + .channelBody {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--elev-1);
+}
+
+.channelInput:focus-visible + .channelBody {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@container (max-width: 21rem) {
+  .channelIcon {
+    display: none;
+  }
+}
+
+/* ---------- Комментарий по желанию (LeadInputs.tsx) ---------- */
+
+/* С JS поле спрятано за ссылкой (без сдвига при гидрации — класс .js стоит до отрисовки), без JS — видно. */
+.addComment {
+  display: none;
+  align-items: center;
+  justify-self: start;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.addComment:hover {
+  color: var(--accent-ink);
+}
+
+.addCommentIcon {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--accent-ink);
+}
+
+.comment {
+  display: grid;
+  grid-column: 1 / -1; /* в широкой форме — вся строка (Contact.module.css) */
+}
+
+:global(html.js) .comment:not([data-open]) .addComment {
+  display: inline-flex;
+}
+
+:global(html.js) .comment:not([data-open]) > :global(.field) {
+  display: none;
+}
+
+/* ---------- Выбранный оффер (над полями) ---------- */
+
+.offer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-card);
+  background: var(--accent-tint);
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  animation: lead-in var(--dur-reveal) var(--ease-out) both;
+}
+
+.offerIcon {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 2.5;
+  color: var(--accent-ink);
+}
+
+/* ---------- Ошибка сервера или сети ---------- */
+
+.error {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem 0.875rem;
+  padding: 1.125rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--error) 50%, transparent);
+  border-radius: var(--radius-card);
+  background: color-mix(in srgb, var(--error) 7%, var(--surface));
+  color: var(--text);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  animation: lead-in var(--dur-reveal) var(--ease-out) both;
+}
+
+.errorIcon {
+  width: 1.375rem;
+  height: 1.375rem;
+  color: var(--error);
+}
+
+.errorActions {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+
+/* При крупном шрифте подписи кнопок переносятся, а не вылезают за плашку. */
+.errorActions :global(.btn) {
+  white-space: normal;
+}
+
+/* ---------- Успех ---------- */
+
+.sent {
+  animation: lead-in var(--dur-reveal) var(--ease-out) both;
+}
+
+.sentMark {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.sentMark :global(.icon) {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 2.25;
+}
+
+.sentTitle {
+  max-width: 22ch;
+  margin-top: 1.5rem;
+}
+
+/* Программный фокус на сообщении: для скринридера, контролом оно не становится. */
+.sentTitle:focus {
+  outline: none;
+}
+
+.summary {
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.summary > div {
+  display: grid;
+  gap: 0.25rem;
+  padding-block: 0.875rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.summary dt {
+  color: var(--text-2);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.summary dd {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 640px) {
+  .summary > div {
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@keyframes lead-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
