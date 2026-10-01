@@ -68,7 +68,7 @@ PORT=3000 HOSTNAME=127.0.0.1 node .next/standalone/server.js
 
 ## Vercel
 
-Готово к выкату (01.10.2026): `vercel.json` (регион функций `fra1`), standalone только вне Vercel, доставка заявок без файла лога, `pnpm-workspace.yaml` совместим с pnpm 9–11. В проекте Vercel: Root Directory — `projects/new/greenbox/site` (если импорт из репозитория `novi`), переменные `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID`. Без Git — `npx vercel` / `npx vercel --prod` из этой папки. Подробно — [`../docs/04-handoff.md`](../docs/04-handoff.md), раздел «Выкат на Vercel».
+Готово к выкату (01.10.2026): `vercel.json` (регион функций `fra1`), standalone только вне Vercel, доставка заявок без файла лога, `pnpm-workspace.yaml` совместим с pnpm 9–11. Репозиторий — `DevGreenBox/greenbox`; в проекте Vercel Root Directory — `site`, переменные `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID`. Без Git — `npx vercel` / `npx vercel --prod` из этой папки. Подробно — [`../docs/04-handoff.md`](../docs/04-handoff.md), раздел «Выкат на Vercel».
 
 ## Структура
 

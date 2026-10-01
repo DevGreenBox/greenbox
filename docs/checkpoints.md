@@ -476,4 +476,8 @@
   - `vercel.json` — регион функций `fra1`; `.gitignore` — `.vercel/`; `.env.example` — пояснения для Vercel.
   - `pnpm-workspace.yaml` — `packages: ['.']`: pnpm 9 без него падал («packages field missing»); проверено, что pnpm 9, 10 и 11 ставят по lockfile без изменений.
   - Проверка: сборка `VERCEL=1` (без standalone; OG-картинки статические) и `next start` — страницы 200, `/ds` 404, редиректы 308, заголовки, заявка без бота — 502, файла лога нет; обычная сборка — standalone и лог как раньше; тесты 19/19.
-  - Инструкция — `docs/04-handoff.md`, «Выкат на Vercel»: Root Directory `projects/new/greenbox/site` или CLI из `site/`, переменные окружения, домен, тариф Pro (сайт коммерческий).
+  - Инструкция — `docs/04-handoff.md`, «Выкат на Vercel»: Root Directory `site` или CLI из `site/`, переменные окружения, домен, тариф Pro (сайт коммерческий).
+- **Репозиторий на GitHub компании** (заказчик 01.10.2026: «запушь репо в гитхаб компании GreenBox»): **`DevGreenBox/greenbox`**, приватный, ветка `main`.
+  - Корень репозитория — папка `projects/new/greenbox` (свой git внутри монорепо `novi`, в `novi` исключён через `.git/info/exclude`): весь `novi` не пушится — в нём проекты других клиентов.
+  - В репозитории сайт, документы, исходники медиа и прототип вариантов; не входят сборки, зависимости, логи, `.env` и ~135 МБ скриншотов и отчётов Lighthouse из `.impeccable/review` (остаются локально, корневой `.gitignore`).
+  - Создан помощником окружения `publish` (приватный `DevGreenBox/<имя папки>`). Для Vercel Root Directory — `site`.

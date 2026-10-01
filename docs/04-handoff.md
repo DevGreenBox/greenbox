@@ -107,7 +107,7 @@
 
 **1. Откуда Vercel берёт код** — один из вариантов:
 
-- **Git.** Папка `projects/new/greenbox` пока не в истории репозитория: закоммитить и запушить на GitHub / GitLab / Bitbucket. В Vercel: Add New → Project → импорт репозитория, **Root Directory — `projects/new/greenbox/site`**. Пуш в основную ветку — продакшен, остальные ветки — превью.
+- **Git.** Репозиторий — **`DevGreenBox/greenbox`** (приватный, GitHub организации студии, 01.10.2026). В Vercel: Add New → Project → импорт репозитория, **Root Directory — `site`**. Пуш в `main` — продакшен, остальные ветки — превью. Приватный репозиторий организации Vercel подключает на тарифе Pro.
 - **Без Git.** Vercel CLI из папки `site/`: `npx vercel` — вход, привязка проекта и первое превью; `npx vercel --prod` — продакшен.
 
 **2. Настройки проекта** — определяются сами, менять не нужно: Framework Preset — Next.js, установка — pnpm (по lockfile), Build Command — `pnpm run build`, Output — по умолчанию. Node.js — 22.x или 24.x (Next 16 нужен ≥ 20.9).
