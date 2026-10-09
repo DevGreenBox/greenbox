@@ -37,6 +37,35 @@
   }
 }
 
+/* От 64rem список идёт в два столбца: четыре строки в один столбец были вдвое выше заголовка, и слева
+   зияла пустая половина экрана. Строки внутри столбца снова встают текстом под названием — ширины
+   столбца на две колонки уже не хватает (контейнерный запрос выше это и делает сам). */
+@media (min-width: 64rem) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--gap-lg, 2.5rem);
+  }
+
+  /* Отменяем двухколоночную строку, которую включил контейнерный запрос выше: он мерит ширину всего
+     списка, а строка теперь живёт в столбце вдвое уже — название и описание налезали друг на друга.
+     Правило идёт после @container, специфичность та же, поэтому побеждает порядком. */
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+  }
+
+  /* Закрывающая линейка нужна под обеими строками нижнего ряда, а не только под последней. */
+  .row:nth-last-child(-n + 2)::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0;
+    height: 1px;
+    background: var(--line-strong);
+    transform-origin: 0 50%;
+  }
+}
+
 /* Авторское движение секции (фазы — motion/Reveal.tsx): линейка строки прочерчивается слева направо
    зелёным, как перо, и остывает до цвета линии, когда дошла до края; каскадом по строкам, вошедшим
    в экран вместе. Текст стоит на месте — движется только графика. Без JS и при reduced-motion Reveal
@@ -47,19 +76,22 @@
     --wait: calc(var(--i, 0) * var(--stagger) * 1.5);
   }
 
-  /* Закрывающая линейка — на шаг каскада позже линейки последней строки. */
-  .row:last-child::after {
+  /* Закрывающая линейка — на шаг каскада позже линейки своей строки (в два столбца таких строк две). */
+  .row:last-child::after,
+  .row:nth-last-child(-n + 2)::after {
     --wait: calc((var(--i, 0) + 1) * var(--stagger) * 1.5);
   }
 
   :global(.reveal-on) .row:not([data-revealed])::before,
-  :global(.reveal-on) .row:last-child:not([data-revealed])::after {
+  :global(.reveal-on) .row:last-child:not([data-revealed])::after,
+  :global(.reveal-on) .row:nth-last-child(-n + 2):not([data-revealed])::after {
     transform: scaleX(0);
     background-color: var(--accent);
   }
 
   :global(.reveal-on) .row[data-revealed]::before,
-  :global(.reveal-on) .row:last-child[data-revealed]::after {
+  :global(.reveal-on) .row:last-child[data-revealed]::after,
+  :global(.reveal-on) .row:nth-last-child(-n + 2)[data-revealed]::after {
     transition:
       transform var(--draw) var(--ease-out),
       background-color var(--dur-reveal) var(--ease-out);

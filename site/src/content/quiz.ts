@@ -41,7 +41,7 @@ export const quizSteps: readonly QuizStep[] = [
     question: 'Какие интеграции?',
     type: 'multi',
     options: ['СДЭК', 'Почта России', 'ПЭК', 'Деловые линии', 'DPD', '1С', 'МойСклад', 'Битрикс24', 'amoCRM', 'Пока не нужны'],
-    toggle: { id: 'sdekContract', label: 'Есть договор со СДЭК', hint: 'скидка 60% на разработку' },
+    toggle: { id: 'sdekContract', label: 'Есть договор со СДЭК', hint: 'интеграцию подключим бесплатно' },
   },
   {
     id: 'volume',

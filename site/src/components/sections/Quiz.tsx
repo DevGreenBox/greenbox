@@ -16,8 +16,8 @@ export function Quiz() {
         {typograf(quizUi.title)}
       </Heading>
       <p className="mt-(--space-lead) max-w-[46ch] text-lead text-ink-2">{typograf(quizUi.lead)}</p>
-      {/* id — якорь оффера СДЭК (site.offers.sdek.anchor): квиз отмечает договор со СДЭК и шлёт оффер в заявке. */}
-      <div id="sdek" className="mt-(--space-head)">
+      {/* Якоря #sdek здесь больше нет: оффер со скидкой снят 09.10.2026, вести на квиз стало нечему. */}
+      <div className="mt-(--space-head)">
         <QuizForm />
       </div>
     </Section>

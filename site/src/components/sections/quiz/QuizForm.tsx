@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from 'react'
+import { useRef, useState, type FormEvent, type KeyboardEvent } from 'react'
 import { flushSync } from 'react-dom'
 import { quizSteps, quizUi } from '@/content/quiz'
 import { cx } from '@/lib/cx'
@@ -8,9 +8,8 @@ import { typograf } from '@/lib/typograf'
 import { Button } from '@/components/ui/Button'
 import { Checkbox } from '@/components/ui/Checkbox'
 import { Chip } from '@/components/ui/Chip'
-import { contactRows, LeadError, LeadFields, LeadSent, OfferNote, type SummaryRow } from '../contact/LeadParts'
+import { contactRows, LeadError, LeadFields, LeadSent, type SummaryRow } from '../contact/LeadParts'
 import { useLeadForm } from '../contact/useLeadForm'
-import { useOffer } from '../contact/useOffer'
 import s from './Quiz.module.css'
 
 /** Индекс шага «Контакты»: после пяти вопросов. */
@@ -56,13 +55,6 @@ export function QuizForm() {
   const panel = useRef<HTMLDivElement>(null)
   const [step, setStep] = useState(0)
   const [dir, setDir] = useState<'next' | 'back'>()
-  // Пришли по «Обсудить со скидкой» (якорь #sdek, Quiz.tsx): флаг «Есть договор со СДЭК» на шаге
-  // интеграций сразу отмечен, снять его можно.
-  const sdek = useOffer('sdek')
-  useEffect(() => {
-    const flag = formRef.current?.querySelector<HTMLInputElement>('input[name="answers.sdekContract"]')
-    if (sdek && flag) flag.checked = true
-  }, [sdek, formRef])
 
   function go(to: number) {
     const box = panel.current
@@ -134,9 +126,6 @@ export function QuizForm() {
               </span>
               {step < LAST && <span className={s.skipNote}>{quizUi.skipNote}</span>}
             </div>
-
-            {/* Флаг СДЭК уже отмечен — в сводке после отправки он своей строкой, отдельная строка оффера не нужна. */}
-            {sdek && <OfferNote offer="sdek" className={s.offerNote} />}
 
             <div className={s.steps}>
               {quizSteps.map((q, i) => (

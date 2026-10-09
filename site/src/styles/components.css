@@ -1072,3 +1072,60 @@
     }
   }
 }
+
+@layer components {
+  /* Уведомление о файлах cookie (CookieNotice.tsx). Панель внизу экрана, поверх содержимого, но не
+     модальная: она не перехватывает фокус и не запрещает читать страницу — запрет был бы неуместен,
+     раз необходимые cookie работают и так, а выбор можно сделать в любой момент. */
+  .cookie-notice {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 60;
+    padding: 0 var(--gutter) max(var(--gutter), env(safe-area-inset-bottom));
+    animation: cookie-rise var(--dur-move) var(--ease-out) both;
+  }
+
+  .cookie-notice__body {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 64rem;
+    margin-inline: auto;
+    padding: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-panel);
+    background: var(--surface);
+    box-shadow: var(--elev-3);
+  }
+
+  .cookie-notice__text {
+    color: var(--text-2);
+    font-size: var(--text-small);
+    line-height: 1.5;
+  }
+
+  .cookie-notice__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  /* От 48rem текст и кнопки встают в строку: на широком экране панель не должна занимать два этажа. */
+  @media (min-width: 48rem) {
+    .cookie-notice__body {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .cookie-notice__actions {
+      flex-wrap: nowrap;
+    }
+  }
+
+  @keyframes cookie-rise {
+    from {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+}

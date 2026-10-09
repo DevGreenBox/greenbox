@@ -12,10 +12,9 @@ const ANSWERS = {
 type AnswerKey = keyof typeof ANSWERS
 const ANSWER_KEYS = Object.keys(ANSWERS) as AnswerKey[]
 
-/** Оффер, по кнопке которого пришли к форме (якорь #mockup / #sdek, content/site.ts): подпись в сообщении. */
+/** Оффер, по кнопке которого пришли к форме (якорь #mockup, content/site.ts): подпись в сообщении. */
 const OFFERS = {
   mockup: 'макет за 2 дня',
-  sdek: 'скидка 60% по договору со СДЭК',
 } as const
 export type Offer = keyof typeof OFFERS
 

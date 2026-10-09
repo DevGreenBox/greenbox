@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { CookieNotice } from '@/components/ui/CookieNotice'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { organizationLd, webSiteLd } from '@/lib/seo'
 import { martian, martianMono, martianWide, onest } from '@/lib/fonts'
@@ -62,6 +63,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Перейти к содержанию
         </a>
         {children}
+        {/* Уведомление о файлах cookie — последним в body: оно перекрывает низ страницы и не должно
+            попадать в поток содержимого раньше основного текста (порядок чтения скринридером). */}
+        <CookieNotice />
       </body>
     </html>
   )

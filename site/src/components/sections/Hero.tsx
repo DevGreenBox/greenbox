@@ -21,7 +21,7 @@ const step = (i: number) => ({ '--i': i }) as CSSProperties
 // в разметке заголовок первым, скринридер и Tab начинают с него, демо — пояснение к нему.
 export function Hero() {
   const { title, subtitle, primaryCta, secondaryCta } = copy.hero
-  const offers = [site.offers.mockup, site.offers.sdek]
+  const offers = [site.offers.mockup]
   const [word, ...rest] = title.split(' ')
 
   return (
@@ -43,8 +43,8 @@ export function Hero() {
               {secondaryCta.label}
             </ButtonLink>
           </div>
-          {/* Два оффера тихим списком, не плашками (правка по критике 30.09.2026: макет за 2 дня был только
-              в «Почему»). Ссылки — сразу на форму оффера: #mockup — заявка, #sdek — квиз (site.offers). */}
+          {/* Оффер тихой строкой, не плашкой (правка по критике 30.09.2026: макет за 2 дня был только
+              в «Почему»). Ссылка — сразу на форму оффера: #mockup — заявка (site.offers). */}
           <ul className={cx(s.offers, s.enter)} style={step(3)}>
             {offers.map((offer) => (
               <li key={offer.anchor}>

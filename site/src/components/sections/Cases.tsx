@@ -6,7 +6,6 @@ import { imageProps } from '@/lib/image'
 import { typograf } from '@/lib/typograf'
 import { ButtonLink } from '@/components/ui/Button'
 import { Heading } from '@/components/ui/Heading'
-import { Placeholder } from '@/components/ui/Placeholder'
 import { Section } from '@/components/ui/Section'
 import { CasesScroller } from './cases/CasesScroller'
 import styles from './cases/Cases.module.css'
@@ -100,19 +99,26 @@ function CaseCard({ item }: { item: Case }) {
             </li>
           ))}
         </ul>
+        {/* Задача и результат показываются, только когда они есть. Раньше на их месте стояли видимые
+            заглушки «[задача]» и «[результат]» — на боевом сайте они были во всех карточках сразу и
+            читались как недоделка. Поля в content/cases.ts остались: впишете текст — строка вернётся. */}
         <dl className={styles.facts}>
-          <div className={styles.fact}>
-            <dt>Задача</dt>
-            <dd>{task ? typograf(task) : <Placeholder block>[задача]</Placeholder>}</dd>
-          </div>
+          {task && (
+            <div className={styles.fact}>
+              <dt>Задача</dt>
+              <dd>{typograf(task)}</dd>
+            </div>
+          )}
           <div className={styles.fact}>
             <dt>Что сделали</dt>
             <dd>{typograf(did)}</dd>
           </div>
-          <div className={styles.fact}>
-            <dt>Результат</dt>
-            <dd>{result ? typograf(result) : <Placeholder block>[результат]</Placeholder>}</dd>
-          </div>
+          {result && (
+            <div className={styles.fact}>
+              <dt>Результат</dt>
+              <dd>{typograf(result)}</dd>
+            </div>
+          )}
         </dl>
         {linkEnabled && (
           <ButtonLink href={url} variant="text" external className={styles.link}>

@@ -89,7 +89,7 @@ export function OfferNote({ offer, className }: { offer: Offer; className?: stri
 /** Сводка после отправки: выбранный оффер первой строкой. */
 export function offerRow(data: FormData): SummaryRow[] {
   const offer = data.get('offer')
-  return offer === 'mockup' || offer === 'sdek' ? [['Оффер', site.offers[offer].short]] : []
+  return offer === 'mockup' ? [['Оффер', site.offers[offer].short]] : []
 }
 
 /** Сервер не принял заявку или нет связи: текст, «Попробовать ещё раз» и запасной путь — Telegram. */

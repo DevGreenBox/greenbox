@@ -14,8 +14,16 @@ export function Get() {
 
   return (
     <Section id="get" scene="dark">
-      <div className="grid gap-(--space-head) lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-(--gap-lg)">
-        <Heading id="get-title" accent={accent}>
+      {/* Колонки 5 : 7, а не поровну: список идёт в два столбца и занимает больше места, чем заголовок.
+          Заголовок липкий — иначе под ним на широком экране оставалась пустая половина высоты списка
+          (правка по замечанию владельца 09.10.2026: «пустот таких быть не должно»). Прилипает ниже
+          шапки, чтобы она его не перекрывала. */}
+      <div className="grid gap-(--space-head) lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-(--gap-lg)">
+        <Heading
+          id="get-title"
+          accent={accent}
+          className="lg:sticky lg:top-[calc(var(--header-h)+2rem)] lg:self-start"
+        >
           {typograf(title)}
         </Heading>
         <dl className={s.list}>

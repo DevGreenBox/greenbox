@@ -1,7 +1,9 @@
-// Кейсы: боевые проекты студии. Состав и ниши — список владельца от 09.10.2026; картинки — свежие
+// Кейсы: боевые проекты студии — ровно список владельца от 09.10.2026 («Перспектива» и YPM Group
+// сняты оттуда же); картинки — свежие
 // снимки первых экранов самих сайтов, снятые 09.10.2026 в 1280×800 при двойной плотности
 // (скрипт съёмки прятал баннеры cookie и выбора региона, чтобы в кадр попала сама витрина).
-// Порядок — от самых выразительных витрин к служебным, афиша последней.
+// Порядок — решение владельца: «Новый Минерал», сразу за ним афиша DEYA MUSIC, дальше остальные
+// витрины от самых выразительных к служебным.
 //
 // Rubber Department (rubberdpt.ru) в портфолио НЕ входит по решению владельца: сайт 18+.
 // Carré Russe (carrerusse.com) ждёт снимка: сайт не открывается из сети разработки, его сервер
@@ -45,6 +47,18 @@ export const cases: readonly Case[] = [
     task: null,
     result: null,
     image: { src: '/media/cases/noviymineral.jpg', ...SHOT, alt: 'Новый Минерал — магазин коллекционных минералов' },
+    linkEnabled: true,
+  },
+  {
+    slug: 'deya',
+    title: 'DEYA MUSIC',
+    category: 'Афиша',
+    did: 'Афиша концертов с расписанием и продажей билетов',
+    tags: ['Афиша', 'Билеты', 'Расписание'],
+    url: 'https://events.deyamusic.com/',
+    task: null,
+    result: null,
+    image: { src: '/media/cases/deya.jpg', ...SHOT, alt: 'DEYA MUSIC — афиша концертов с расписанием и билетами' },
     linkEnabled: true,
   },
   {
@@ -153,42 +167,6 @@ export const cases: readonly Case[] = [
     task: null,
     result: null,
     image: { src: '/media/cases/prom.jpg', ...SHOT, alt: 'Пром-Материалы — магазин промышленной автоматики и электрооборудования' },
-    linkEnabled: true,
-  },
-  {
-    slug: 'perspektiva',
-    title: 'Учебный центр «Перспектива»',
-    category: 'Образование',
-    did: 'Сайт центра обучения и переподготовки рабочих и служащих',
-    tags: ['Образование', 'Корпоративный сайт', 'Заявки'],
-    url: 'https://perspektivaot.ru/',
-    task: null,
-    result: null,
-    image: { src: '/media/cases/perspektiva.jpg', ...SHOT, alt: 'Учебный центр «Перспектива» — обучение и переподготовка рабочих' },
-    linkEnabled: true,
-  },
-  {
-    slug: 'ypm-group',
-    title: 'YPM Group',
-    category: 'B2B',
-    did: 'Сайт поставки машинокомплектов из Англии, Швеции и Германии',
-    tags: ['B2B', 'Поставки', 'Запросы цен'],
-    url: 'https://opt-ypmgroup.ru/',
-    task: null,
-    result: null,
-    image: { src: '/media/cases/ypm-group.jpg', ...SHOT, alt: 'YPM Group — поставка машинокомплектов из Англии и ЕС' },
-    linkEnabled: true,
-  },
-  {
-    slug: 'deya',
-    title: 'DEYA MUSIC',
-    category: 'Афиша',
-    did: 'Афиша концертов с расписанием и продажей билетов',
-    tags: ['Афиша', 'Билеты', 'Расписание'],
-    url: 'https://events.deyamusic.com/',
-    task: null,
-    result: null,
-    image: { src: '/media/cases/deya.jpg', ...SHOT, alt: 'DEYA MUSIC — афиша концертов с расписанием и билетами' },
     linkEnabled: true,
   },
 ]
