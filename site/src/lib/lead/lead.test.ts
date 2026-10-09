@@ -92,7 +92,7 @@ test('лимит: 5 заявок за 10 минут с одного IP', () => {
 test('оффер: из белого списка попадает в заявку и в сообщение, чужой отбрасывается', () => {
   const lead = parseLead({ ...valid, source: 'contact', offer: 'mockup' }).lead!
   assert.equal(lead.offer, 'mockup')
-  assert.match(formatMessage(lead), /<b>Заявка: Форма<\/b>\nОффер: бесплатный макет за 24 часа\nИмя:/)
+  assert.match(formatMessage(lead), /<b>Заявка: Форма<\/b>\nОффер: макет за 2 дня\nИмя:/)
   assert.equal('offer' in parseLead({ ...valid, offer: 'toString' }).lead!, false)
   assert.equal('offer' in parseLead({ ...valid, offer: '<b>' }).lead!, false)
 })

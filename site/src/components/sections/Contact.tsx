@@ -26,7 +26,7 @@ export function Contact() {
           </p>
         </div>
 
-        {/* id — якорь оффера «Бесплатный макет» (site.offers.mockup.anchor): форма показывает его и шлёт в заявке. */}
+        {/* id — якорь оффера «Макет за 2 дня» (site.offers.mockup.anchor): форма показывает его и шлёт в заявке. */}
         <div id="mockup" className={s.formArea}>
           <ContactForm />
         </div>

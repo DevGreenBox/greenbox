@@ -12,7 +12,7 @@ import s from './Contact.module.css'
 export function ContactForm() {
   const { formRef, sentRef, status, fields, error, data, onSubmit, onChange, retry } = useLeadForm()
   const { commentLabel, submit } = copy.final.form
-  // Пришли по «Получить бесплатный макет» (якорь #mockup у этой формы, Contact.tsx).
+  // Пришли по «Получить макет» (якорь #mockup у этой формы, Contact.tsx).
   const mockup = useOffer('mockup')
 
   if (status === 'sent' && data) {
