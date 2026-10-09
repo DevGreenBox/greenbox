@@ -11,7 +11,6 @@ import { Hero } from '@/components/sections/Hero'
 import { Process } from '@/components/sections/Process'
 import { Quiz } from '@/components/sections/Quiz'
 import { Reviews } from '@/components/sections/Reviews'
-import { Team } from '@/components/sections/Team'
 import { Why } from '@/components/sections/Why'
 import { Reveal } from '@/motion/Reveal'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -21,7 +20,10 @@ import { faqPageLd, serviceLd } from '@/lib/seo'
 export const metadata: Metadata = { alternates: { canonical: '/' } }
 
 // Порядок секций — docs/02-ux-structure.md, ритм сцен — docs/03-design-system.md:
-// тёмная → светлая → тёмная → светлая → светлая-2 → тёмная → светлая → светлая-2 → тёмная → светлая → тёмная.
+// тёмная → светлая → тёмная → светлая → светлая-2 → тёмная → светлая → тёмная → светлая → тёмная.
+// Блок команды с главной снят по решению владельца 09.10.2026; на странице «О нас» он остался —
+// там это содержание страницы, а не врезка. Чередование фонов не пострадало: «Отзывы» (светлая)
+// теперь соседствуют с «С нами проще» (тёмная).
 export default function Home() {
   return (
     <>
@@ -38,7 +40,6 @@ export default function Home() {
         <Process />
         <Cases />
         <Reviews />
-        <Team />
         <Why />
         <Faq />
         <Contact />
