@@ -14,6 +14,8 @@ import { Reviews } from '@/components/sections/Reviews'
 import { Team } from '@/components/sections/Team'
 import { Why } from '@/components/sections/Why'
 import { Reveal } from '@/motion/Reveal'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { faqPageLd, serviceLd } from '@/lib/seo'
 
 // canonical — только у главной: в корневом layout его наследовали бы 404 и прочие страницы.
 export const metadata: Metadata = { alternates: { canonical: '/' } }
@@ -23,6 +25,10 @@ export const metadata: Metadata = { alternates: { canonical: '/' } }
 export default function Home() {
   return (
     <>
+      {/* Разметка главной: услуга студии и блок вопросов (секция Faq ниже — то же содержимое,
+          разметка без видимого текста считается нарушением у обоих поисковиков). */}
+      <JsonLd data={serviceLd} />
+      <JsonLd data={faqPageLd} />
       <Header overlay />
       <main id="main">
         <Hero />

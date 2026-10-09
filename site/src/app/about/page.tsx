@@ -9,6 +9,8 @@ import { ButtonLink } from '@/components/ui/Button'
 import { brandFit, Heading } from '@/components/ui/Heading'
 import { Section } from '@/components/ui/Section'
 import { Reveal } from '@/motion/Reveal'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbsLd } from '@/lib/seo'
 
 // «О нас» (решение заказчика 01.10.2026): блок «О нас» старой главной greenboxweb.ru отдельной страницей.
 // Тексты — content/about.ts. Ритм сцен: тёмная (вступление) → светлая (подход и ценности) → светлая-2
@@ -26,6 +28,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbsLd({ name: 'О нас', path: '/about' })} />
       <Header current="about" />
       <main id="main">
         <Section id="about" scene="dark" className="pt-[calc(var(--header-h)+var(--section-y))]">

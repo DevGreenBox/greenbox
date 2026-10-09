@@ -7,6 +7,8 @@ import { ButtonLink } from '@/components/ui/Button'
 import { brandFit, Heading } from '@/components/ui/Heading'
 import { Section } from '@/components/ui/Section'
 import { PartnerForm } from '@/components/sections/islands'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbsLd } from '@/lib/seo'
 
 // «Стать партнёром» (решение заказчика 01.10.2026): старая страница greenboxweb.ru/partner.html в стиле сайта.
 // Тексты — content/partner.ts. Ритм сцен: тёмная (вступление) → светлая (условия) → тёмная (анкета).
@@ -25,6 +27,7 @@ export default function PartnerPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbsLd({ name: 'Стать партнёром', path: '/partner' })} />
       <Header current="partner" />
       <main id="main">
         <Section id="partner" scene="dark" className="pt-[calc(var(--header-h)+var(--section-y))]">

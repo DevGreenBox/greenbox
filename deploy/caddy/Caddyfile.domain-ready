@@ -1,0 +1,93 @@
+# =============================================================================
+# Caddy — «ЗелёнаяКоробка». ДОМЕННЫЙ РЕЖИМ с HTTPS (включать ПОСЛЕ смены DNS)
+# =============================================================================
+# Включение — две команды на сервере:
+#   cp /opt/greenbox/caddy/Caddyfile.domain-ready /opt/greenbox/caddy/Caddyfile
+#   docker compose -f /opt/greenbox/docker-compose.yml up -d --force-recreate caddy
+#
+# 🔴 Только когда A-запись greenboxweb.ru (и www) уже указывает на 130.49.143.37
+# и это видно снаружи: `dig +short greenboxweb.ru @8.8.8.8`. Иначе проверка
+# Let's Encrypt уйдёт на старый хостинг, провалится и сожжёт лимит неудачных
+# валидаций (5 в час на домен).
+#
+# Проверить после включения:
+#   curl -sI https://greenboxweb.ru/ | head -20
+#   curl -sI http://greenboxweb.ru/ | head -5     # ждём 308 на https
+# =============================================================================
+
+# Глобальных настроек нет намеренно. Директива `email` (адрес для писем
+# Let's Encrypt об истечении сертификата) не указана: Caddy продлевает
+# сертификат сам, а пустое значение сломало бы разбор конфига. Нужны письма —
+# добавьте сюда блок `{ email адрес@домен }` и пересоздайте контейнер caddy.
+
+# -----------------------------------------------------------------------------
+# Общие заголовки. Отличие от режима без домена — добавлен HSTS: по HTTPS он
+# уместен и обязателен для сайта, который принимает персональные данные.
+# -----------------------------------------------------------------------------
+(security_headers) {
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+		# Политика та же, что в режиме без домена: сайту нечего грузить со
+		# стороны — шрифты self-hosted, внешних счётчиков нет, Telegram
+		# вызывает только сервер. Пояснения по каждой директиве — в Caddyfile.
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'"
+	}
+}
+
+(json_log) {
+	log {
+		output stdout
+		format json
+	}
+}
+
+(site_proxy) {
+	# Фото кейсов, портреты и логотип (public/) — без хэша в имени, кэш на сутки.
+	@public_media path /media/* /brand/*
+	header @public_media Cache-Control "public, max-age=86400"
+
+	@api path /api/*
+	request_body @api {
+		max_size 64KB
+	}
+
+	reverse_proxy app:3000 {
+		# 🔴 Перезапись, а не добавление: /api/lead берёт первый адрес из
+		# X-Forwarded-For для лимита заявок по IP. Подробнее — в Caddyfile.
+		header_up X-Forwarded-For {http.request.remote.host}
+		header_up X-Real-IP {http.request.remote.host}
+	}
+}
+
+# -----------------------------------------------------------------------------
+# www → apex: канонический адрес один (canonical и OG в layout.tsx указывают
+# на https://greenboxweb.ru), дубля в поиске быть не должно.
+# -----------------------------------------------------------------------------
+www.greenboxweb.ru {
+	import security_headers
+	redir https://greenboxweb.ru{uri} permanent
+}
+
+# -----------------------------------------------------------------------------
+# Боевой сайт
+# -----------------------------------------------------------------------------
+greenboxweb.ru {
+	import security_headers
+	import json_log
+	import site_proxy
+}
+
+# -----------------------------------------------------------------------------
+# Доступ по IP остаётся для приёмки и диагностики, но закрыт от индексации.
+# Без этого блока запрос на голый IP получал бы ошибку Caddy «no such site».
+# -----------------------------------------------------------------------------
+http://130.49.143.37 {
+	import security_headers
+	import json_log
+	header X-Robots-Tag "noindex, nofollow"
+	import site_proxy
+}

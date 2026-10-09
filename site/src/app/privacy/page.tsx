@@ -5,9 +5,15 @@ import { Header } from '@/components/layout/Header'
 import { Heading } from '@/components/ui/Heading'
 import { Placeholder } from '@/components/ui/Placeholder'
 import { Container } from '@/components/ui/Section'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbsLd } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Политика конфиденциальности',
+  // Своё описание: без него страница унаследовала бы описание главной — про разработку магазинов,
+  // к политике отношения не имеющее, и в выдаче сниппет противоречил бы заголовку.
+  description:
+    'Как ЗелёнаяКоробка обрабатывает персональные данные, оставленные через формы сайта, и реквизиты исполнителя.',
   alternates: { canonical: '/privacy' },
   // openGraph сливается неглубоко: без повтора полей страница унаследовала бы og:url главной.
   openGraph: { type: 'website', locale: 'ru_RU', siteName: 'ЗелёнаяКоробка', url: '/privacy' },
@@ -24,6 +30,7 @@ export default function PrivacyPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbsLd({ name: 'Политика конфиденциальности', path: '/privacy' })} />
       <Header />
       <main id="main" data-scene="light" className="section pt-[calc(var(--header-h)+var(--section-y))]">
         <Container>

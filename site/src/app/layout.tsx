@@ -1,15 +1,19 @@
 import type { Metadata, Viewport } from 'next'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { organizationLd, webSiteLd } from '@/lib/seo'
 import { martian, martianMono, martianWide, onest } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://greenboxweb.ru'),
   title: {
-    default: 'ЗелёнаяКоробка — интернет-магазины под ключ',
+    // Запрос, по которому студию ищут, стоит первым: поисковик и человек в выдаче читают начало строки,
+    // а хвост заголовка в сниппете часто обрезается. Бренд остаётся — он замыкает обе формы.
+    default: 'Разработка интернет-магазинов под ключ — ЗелёнаяКоробка',
     template: '%s — ЗелёнаяКоробка',
   },
   description:
-    'Делаем интернет-магазины под ключ на своей платформе: дизайн, админка, доставка, 1С и CRM. Обычно запускаем за 2–2,5 недели.',
+    'Разрабатываем интернет-магазины под ключ на своей платформе: индивидуальный дизайн, админка, интеграции с 1С, CRM и службами доставки. Запуск за 2–2,5 недели.',
   openGraph: { type: 'website', locale: 'ru_RU', siteName: 'ЗелёнаяКоробка', url: '/' },
   twitter: { card: 'summary_large_image' },
   verification: { yandex: '35ded4ecd9b4aad3' },
@@ -34,25 +38,6 @@ const fallbackOnly = (font: { style: { fontFamily: string } }) =>
   font.style.fontFamily.slice(font.style.fontFamily.indexOf(',') + 1).trim()
 const lateFontsCss = `html.js:not(.late-fonts){--font-martian:${fallbackOnly(martian)};--font-martian-mono:${fallbackOnly(martianMono)}}`
 
-const organization = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'ЗелёнаяКоробка',
-  legalName: 'ИП Дробышев Илья Станиславович',
-  url: 'https://greenboxweb.ru',
-  logo: 'https://greenboxweb.ru/brand/logo.svg',
-  email: 'info.greenboxweb@gmail.com',
-  sameAs: ['https://t.me/infogreenbox'],
-  address: {
-    '@type': 'PostalAddress',
-    postalCode: '350080',
-    addressRegion: 'Краснодарский край',
-    addressLocality: 'Краснодар',
-    streetAddress: 'ул. им. 30-й Иркутской Дивизии',
-    addressCountry: 'RU',
-  },
-}
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
@@ -64,10 +49,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <style dangerouslySetInnerHTML={{ __html: lateFontsCss }} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, '\\u003c') }}
-        />
+        {/* Сквозная разметка: кто исполнитель и что это за сайт. Страничная (FAQ, услуга,
+            хлебные крошки) добавляется на самих страницах — см. lib/seo.ts. */}
+        <JsonLd data={organizationLd} />
+        <JsonLd data={webSiteLd} />
       </head>
       <body>
         <a

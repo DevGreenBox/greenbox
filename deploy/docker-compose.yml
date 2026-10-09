@@ -1,0 +1,104 @@
+# =============================================================================
+# «ЗелёнаяКоробка» — сайт студии на своём сервере (130.49.143.37)
+# =============================================================================
+# Два контейнера: приложение (standalone-сборка Next 16 под Node) и Caddy
+# на 80/443. Наружу публикует порты только Caddy — Node слушает внутри сети.
+#
+# Почему не systemd, как в docs/04-handoff.md: handoff описывает форму («пути и
+# юзер — по вашей практике»), а практика этого сервера и остальных машин студии —
+# docker compose + Caddy. Все требования handoff соблюдены: standalone целиком,
+# X-Forwarded-For перезаписан (Caddyfile), LEAD_LOG_PATH вне папки сборки (./data),
+# атомарная подмена релиза симлинком ./current (deploy/README.md).
+#
+# Выкладка: releases/<метка>/ ← распакованный .next/standalone, current → релиз.
+# Смена релиза = перевесить симлинк + `docker compose up -d --force-recreate app`.
+# =============================================================================
+
+services:
+  # ---------------------------------------------------------------------------
+  # Приложение: standalone-сервер Next (server.js) на официальном образе Node
+  # ---------------------------------------------------------------------------
+  # Своего Dockerfile нет намеренно: standalone-папка самодостаточна (в ней уже
+  # лежит урезанный node_modules со sharp, .next/static и public/), собирается
+  # на машине разработки и переносится как есть. Образу остаётся дать Node.
+  #
+  # Версия Node зафиксирована мажорно и совпадает с той, на которой шла сборка
+  # (24.x, glibc): бинарники sharp в standalone собраны под linux-x64-glibc,
+  # на alpine/musl они не запустятся.
+  app:
+    image: node:24-slim
+    working_dir: /app
+    command: ["node", "server.js"]
+    # uid:gid пользователя node в образе. Процесс сайта не должен быть root:
+    # он пишет только кеш next/image в /app/.next/cache и лог заявок в /var/lib/greenbox.
+    user: "1000:1000"
+    environment:
+      NODE_ENV: production
+      # HOSTNAME=0.0.0.0 обязателен: по умолчанию standalone-сервер слушает
+      # localhost внутри контейнера, и Caddy из другого контейнера его не видит.
+      HOSTNAME: 0.0.0.0
+      PORT: "3000"
+      # Лог заявок — в томе ./data, вне папки сборки (handoff п. 3): подмена
+      # релиза не уносит с собой заявки.
+      LEAD_LOG_PATH: /var/lib/greenbox/leads.log
+    # Токен и chat_id Telegram — только здесь, файл с правами 600 (не в git).
+    env_file:
+      - app.env
+    volumes:
+      # Текущий релиз. Симлинк на releases/<метка>; после его смены контейнер
+      # нужно пересоздать (--force-recreate), а не просто перезапустить.
+      - ./current:/app
+      - ./data:/var/lib/greenbox
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+    healthcheck:
+      # «Жив» = корневая страница отвечает. fetch есть в Node 24 из коробки.
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      - greenbox
+
+  # ---------------------------------------------------------------------------
+  # Caddy — вход 80/443, TLS появится вместе с доменом
+  # ---------------------------------------------------------------------------
+  caddy:
+    image: caddy:2-alpine
+    depends_on:
+      app:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Монтируется КАТАЛОГ, а не одиночный файл: bind-mount одного файла
+      # привязан к inode, и правка Caddyfile редактором внутрь контейнера
+      # не попадает (урок carrerusse.com, 08.10.2026 — месяц не работали
+      # уже сделанные правки). Каталог этой ловушки лишён.
+      - ./caddy:/etc/caddy:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+    networks:
+      - greenbox
+
+volumes:
+  # Сертификаты и ключи ACME. Том переживает пересоздание контейнера —
+  # без него каждый up заново просил бы сертификат и сжёг лимит Let's Encrypt.
+  caddy_data:
+  caddy_config:
+
+networks:
+  greenbox:
+    driver: bridge
